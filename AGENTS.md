@@ -52,6 +52,10 @@ Do not commit secrets. Use GitHub Secrets and reference the secret name through 
 
 Do not manually delete entries unless intentionally reprocessing articles.
 
+## Run Limit
+
+`scripts/check_and_summarize.py` caps processing with `MAX_NEW_ARTICLES_PER_RUN`, defaulting to 6. Keep this guard unless the user explicitly wants a historical backfill.
+
 ## Design Rules
 
 Keep the site a quiet dashboard:

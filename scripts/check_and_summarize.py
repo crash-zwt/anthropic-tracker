@@ -30,6 +30,7 @@ RUNS_PATH = DATA_DIR / "daily_runs.json"
 
 USER_AGENT = "anthropic-tracker/1.0 (+https://github.com/crash-zwt/anthropic-tracker)"
 MAX_ARTICLE_CHARS = 30000
+MAX_NEW_ARTICLES_PER_RUN = int(os.getenv("MAX_NEW_ARTICLES_PER_RUN", "6"))
 
 
 class LinkParser(HTMLParser):
@@ -312,10 +313,15 @@ def main() -> int:
     new_articles: list[dict[str, Any]] = []
 
     for source in sources:
+        if len(new_articles) >= MAX_NEW_ARTICLES_PER_RUN:
+            run["source_counts"][source["id"]] = 0
+            continue
         try:
             candidates = discover_articles(source)
             source_new = 0
             for candidate in candidates:
+                if len(new_articles) >= MAX_NEW_ARTICLES_PER_RUN:
+                    break
                 url = candidate["url"]
                 if seen.get(url) or url in existing_urls:
                     continue

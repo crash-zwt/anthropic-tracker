@@ -63,3 +63,13 @@ Open `docs/index.html` in a browser.
 The workflow runs at `01:00 UTC`, which is `09:00 Asia/Shanghai`.
 
 Manual runs are available from `Actions -> Daily Anthropic Tracker -> Run workflow`.
+
+## Safety Limit
+
+By default, each run summarizes at most 6 new articles:
+
+```text
+MAX_NEW_ARTICLES_PER_RUN=6
+```
+
+This prevents the first run from treating a full historical archive as one huge daily update. Increase it temporarily only when intentionally backfilling old posts.

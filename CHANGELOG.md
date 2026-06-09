@@ -9,3 +9,4 @@
 - Added data files for seen URLs, summarized articles, and run history.
 - Added static dashboard rendering into `docs/index.html` for GitHub Pages.
 - Added `AGENTS.md` with maintenance instructions for future AI-assisted changes.
+- Added a default `MAX_NEW_ARTICLES_PER_RUN=6` guard so first runs do not summarize an entire historical archive.
