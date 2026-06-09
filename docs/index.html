@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="layout">
+  <main class="layout" id="top">
     <aside class="sidebar">
       <header>
         <p class="eyebrow">AI Lab Watch</p>
@@ -93,8 +93,38 @@
         </div>
       </section>
 
+      <section class="panel">
+        <h2>Archive</h2>
+        <nav class="archive-list" aria-label="Article archive by publish date">
+          <a href="#date-2026-06-09"><span>2026-06-09</span><strong>18</strong></a>
+<a href="#date-2026-06-05"><span>2026-06-05</span><strong>1</strong></a>
+<a href="#date-2026-06-03"><span>2026-06-03</span><strong>2</strong></a>
+<a href="#date-2026-06-02"><span>2026-06-02</span><strong>1</strong></a>
+<a href="#date-2026-05-27"><span>2026-05-27</span><strong>2</strong></a>
+<a href="#date-2026-05-20"><span>2026-05-20</span><strong>1</strong></a>
+<a href="#date-2026-05-14"><span>2026-05-14</span><strong>1</strong></a>
+<a href="#date-2026-05-13"><span>2026-05-13</span><strong>1</strong></a>
+<a href="#date-2026-05-12"><span>2026-05-12</span><strong>1</strong></a>
+<a href="#date-2026-05-01"><span>2026-05-01</span><strong>1</strong></a>
+<a href="#date-2026-04-30"><span>2026-04-30</span><strong>2</strong></a>
+<a href="#date-2026-04-29"><span>2026-04-29</span><strong>2</strong></a>
+<a href="#date-2026-04-28"><span>2026-04-28</span><strong>1</strong></a>
+<a href="#date-2026-04-22"><span>2026-04-22</span><strong>1</strong></a>
+<a href="#date-2026-04-20"><span>2026-04-20</span><strong>1</strong></a>
+<a href="#date-2026-04-16"><span>2026-04-16</span><strong>1</strong></a>
+<a href="#date-2026-04-15"><span>2026-04-15</span><strong>1</strong></a>
+<a href="#date-2026-04-10"><span>2026-04-10</span><strong>2</strong></a>
+<a href="#date-2026-04-02"><span>2026-04-02</span><strong>1</strong></a>
+<a href="#date-2026-03-05"><span>2026-03-05</span><strong>1</strong></a>
+<a href="#date-2026-02-24"><span>2026-02-24</span><strong>2</strong></a>
+<a href="#date-2026-01-30"><span>2026-01-30</span><strong>1</strong></a>
+<a href="#date-2026-01-23"><span>2026-01-23</span><strong>1</strong></a>
+<a href="#date-2026-01-22"><span>2026-01-22</span><strong>1</strong></a>
+        </nav>
+      </section>
+
       <footer>
-        Generated: 2026-06-09 13:53 Asia/Shanghai
+        Generated: 2026-06-09 13:57 Asia/Shanghai
       </footer>
     </aside>
 
@@ -107,847 +137,12 @@
         <a class="repo-link" href="https://github.com/crash-zwt/anthropic-tracker">GitHub</a>
       </div>
       
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Apr 15, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Using Claude Code: session management and 1M context</h2>
-      <a class="original-link" href="https://claude.com/blog/using-claude-code-session-management-and-1m-context" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>这是一篇关于 Claude Code session 管理的实用指南，重点讲解如何在 1M context window 下高效使用 Continue、/rewind、/clear、/compact 和 Subagents 五种策略，以及如何避免 context rot 导致的性能下降。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Context rot 是真实问题：即使有 1M context，随着 context 增长，model performance 会因 attention 分散而下降，老内容会干扰当前任务</li><li>/rewind (双击 Esc) 比「纠正式 prompting」更高效：回退到失败尝试前，保留有用的 file reads，用学到的经验重新 prompt</li><li>/compact vs /clear 的关键区别：compact 让 model 自动总结（有损但省力），clear 由你手动提炼关键信息后重新开始（更精准但费时）</li><li>Bad autocompact 的根因：model 在 compact 时处于「最不聪明」的状态（context rot 最严重），无法预测你接下来的工作方向，可能丢掉重要信息</li><li>Subagents 的判断标准：如果只需要结论而不需要中间 tool outputs，就 spawn subagent 让它在独立 context 中工作</li><li>核心原则：新任务开新 session，相关任务可延续，主动管理 context 比被动等 autocompact 更可控</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>1M context 让长任务成为可能，但也让 context 管理变得 critical。理解这些机制能显著提升 Claude Code 的实际 productivity，避免在关键时刻因 bad compact 或 context rot 翻车。这是目前最系统的 Claude Code workflow 优化指南。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章填补了 Claude Code 使用经验的重要空白——官方终于承认 context rot 是真实存在的问题，并给出了具体的 mitigation 策略。实用的启发式规则：主动 compact 带指令 &gt; 被动等 autocompact；rewind &gt; 纠正式对话；subagent 适合「只要结论」的场景。建议重度用户把文中的 decision table 存下来当 cheatsheet 用。</p>
-      </section>
-      <div class="tags"><span>claude-code</span><span>context-management</span><span>workflow</span><span>best-practices</span><span>agents</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Apr 16, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Best practices for using Claude Opus 4.7 with Claude Code</h2>
-      <a class="original-link" href="https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Opus 4.7 是 Anthropic 目前最强的 coding 和 agentic tasks 模型，但 token 用量和行为与 4.6 有明显差异。本文核心是指导用户如何调优：新增 xhigh effort level 作为默认值、adaptive thinking 替代 fixed thinking budget、以及交互策略从 pair programming 转向 delegation 模式。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>新增 xhigh effort level（介于 high 和 max 之间）作为默认推荐，平衡 reasoning 能力和 token 成本，避免 max 的 overthinking 问题</li><li>Adaptive thinking 取代 fixed thinking budget——模型自主决定何时思考、何时跳过，简单查询响应更快，复杂任务才投入 thinking tokens</li><li>交互策略转变：把 Claude 当作 capable engineer delegation 而非 pair programmer，第一轮就给足 context（intent、constraints、acceptance criteria），减少 turn 数量</li><li>Auto mode（Shift+Tab）适合长任务，可让模型自主执行减少 check-in 开销</li><li>行为变化：response length 按 task complexity 动态调整（不再默认 verbose）、tool call 频率降低、subagent spawn 更谨慎——如需更多 tool use 或并行 subagent 需显式 prompt</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇是 Opus 4.7 的实战调优指南，直接关系到 token 成本控制和 coding 效率。如果你在用 Claude Code 做生产级开发，不调整 effort level 和交互策略可能导致成本超预期或效果不达预期。Adaptive thinking 的引入也意味着 prompt engineering 需要相应调整。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>Anthropic 在 effort level 上做了更细粒度的控制，xhigh 这个档位很务实——max 容易 overthinking 且成本失控，xhigh 是大多数场景的甜点。Adaptive thinking 是正确方向，但用户需要重新学习如何 prompt（想要更多思考要显式说 &#x27;think carefully&#x27;，想省 token 要说 &#x27;prioritize responding quickly&#x27;）。整体来看，Opus 4.7 更适合 autonomous agents 而非 interactive coding，这对 agent workflow 设计有指导意义。</p>
-      </section>
-      <div class="tags"><span>Opus 4.7</span><span>Claude Code</span><span>effort levels</span><span>adaptive thinking</span><span>agentic coding</span><span>token optimization</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Apr 20, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Meet the winners of our Built with Opus 4.6 Claude Code hackathon</h2>
-      <a class="original-link" href="https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 公布了 Opus 4.6 Claude Code hackathon 的五位获奖者，展示了非专业开发者用 Claude Code 构建实用 agent 应用的案例：加州建筑许可自动化、儿童可视化 IDE、医疗随访助手、乌干达道路评估工具、以及实时 AI 音乐伴奏。值得注意的是，5 位获奖者中有 4 位不是职业程序员。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>CrossBeam (一等奖): 个人伤害律师构建，用 parallel sub-agents 自动化加州建筑许可审批流程，将数周工作压缩到 20 分钟，Buena Park 市政府有意采用</li><li>Elisa (二等奖): 专为儿童设计的可视化 IDE，用户通过拖拽 primitives 构建 spec，AI 在后台生成代码，30 小时完成 39k+ LOC 和 1500+ tests</li><li>PostVisit.ai (三等奖): 心脏科医生构建的诊疗后随访助手，整合病历、临床证据和就诊记录，用 plain language 解释诊断</li><li>TARA (Keep Thinking 奖): 用 Opus 4.6 vision 能力分析 dashcam 画面，自动生成道路投资评估报告，将 9-14 个月的可行性研究压缩到 5 小时</li><li>Conductr (创意探索奖): 实时 AI 乐队伴奏，WebAssembly 引擎每 15ms 生成音符，latency 达到 &#x27;musically invisible&#x27;</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇文章的核心价值是验证了一个趋势：domain experts 借助 Claude Code 可以在不写代码的情况下构建生产级 agent 应用。CrossBeam 已有真实政府客户意向，PostVisit 是医生多年想做的产品，TARA 解决的是真实的基础设施痛点。这些不是 demo，而是有实际落地场景的工具。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>文章本身是 hackathon 获奖者展示，技术深度有限，但案例选择有代表性——覆盖了 document processing、visual IDE、healthcare、vision analysis、real-time audio 五个方向。最值得关注的信号是：非程序员用 Claude Code 构建复杂 multi-agent workflow 已成为现实。CrossBeam 的 parallel sub-agents 设计和 Elisa 的 meta-planner + task graph 架构值得研究。文章末尾提到 Opus 4.7 hackathon 已启动，说明 Anthropic 在持续投入社区生态建设。</p>
-      </section>
-      <div class="tags"><span>claude-code</span><span>hackathon</span><span>agents</span><span>opus-4.6</span><span>domain-experts</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Apr 28, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Onboarding Claude Code like a new developer: Lessons from 17 years of development</h2>
-      <a class="original-link" href="https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>这是一篇关于如何将 Claude Code 像 onboarding 新开发者一样引入大型 legacy codebase 的实战案例。Brendan MacLean 用 17 年的 developer onboarding 经验，成功让 Claude Code 理解并维护 70 万行 C# 的 Skyline 项目，核心方法是建立独立的 context repository (pwiz-ai)、构建 skills library、以及用 MCP 让 Claude 访问真实数据。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Context 是可维护的 artifact：把 AI context 放在独立 repo (pwiz-ai)，与代码库分离，跨 branch 和 time point 适用，需要像项目产物一样 version 和 maintain</li><li>Skills library 编码领域知识：如 debugging skill 强制 Claude 先做 root cause analysis 而非 &#x27;guess and test&#x27;，遵循 &#x27;reference do not embed&#x27; 原则保持轻量</li><li>MCP integrations 让 Claude 访问真实数据：自动生成 daily summary email，整合 nightly test failures、exceptions、support threads</li><li>实际产出：两周完成搁置一年的 Files View panel；一天内完成三年想加的功能；自动化 2000+ tutorial screenshots 的 reproduction</li><li>团队成员从写代码转向 instructing Claude Code，连 skeptics 也用 Claude Code 建了新的 mobilogram pane visualization</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇 blog 直接回答了一个核心问题：Claude Code 如何处理大型、长期维护的 legacy codebase？答案不是靠 model 能力，而是靠系统化地构建 context layer。对于维护大型项目的团队，这套方法论可复制——特别是 skills 和 MCP 的组合使用，展示了 agentic coding 从 &#x27;chat-based helper&#x27; 到 &#x27;embedded team member&#x27; 的路径。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这是一篇高质量的实战案例，核心洞察是 &#x27;context is just another artifact to maintain&#x27;。Brendan 的做法很务实：不指望 Claude 自动理解项目，而是像 onboarding 新人一样系统化地提供 context。pwiz-ai repo 的设计很聪明——独立于 codebase，避免污染版本历史。值得注意的细节：debugging skill 强制 root cause analysis 而非 guess-and-test，这其实是在做 prompt engineering/alignment 工作。对于中国开发者，这套方法对大型企业 legacy 系统尤其有价值，但需要投入 upfront effort 构建 context layer，不是 plug-and-play。</p>
-      </section>
-      <div class="tags"><span>Claude Code</span><span>legacy codebase</span><span>skills</span><span>MCP</span><span>context engineering</span><span>agentic coding</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Apr 30, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Lessons from building Claude Code: Prompt caching is everything</h2>
-      <a class="original-link" href="https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Claude Code 团队分享了在生产环境中优化 prompt caching 的实战经验。核心观点：prompt caching 是 long-running agents 可行的经济基础，Claude Code 整个架构都围绕它设计，甚至会对 cache hit rate 设告警。文章详细解释了 prefix matching 机制、如何组织 prompt 结构、避免 mid-session 改动 tools/models、以及 cache-safe forking 做 compaction 的技巧。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Prompt caching 是 prefix matching，任何 prefix 变动都会 invalidate 整个 cache，所以要把 static content 放前面、dynamic content 放后面</li><li>不要 mid-session 更换 model 或增删 tools——这会 break cache。用 tools 本身来建模状态转换（如 EnterPlanMode/ExitPlanMode），而非改变 tool set</li><li>用 messages 传递更新信息而非修改 system prompt，例如用 &lt;system-reminder&gt; tag 在 user message 里传递时间戳或文件变更</li><li>Tool search + defer_loading 模式：用 lightweight stubs 占位，model 需要时再 load full schema，保持 prefix 稳定</li><li>Compaction 要用 cache-safe forking：复用 parent conversation 的 system prompt、tools、context，只在末尾 append compaction request，这样才能复用 cache</li><li>Cache hit rate 要像 uptime 一样监控，几个百分点的 miss 就会显著影响成本和延迟</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>对于构建 agents 的开发者，这是 Anthropic 官方给出的 prompt caching 最佳实践，直接来自 Claude Code 生产环境。这些技巧决定了你的 agent 产品在经济上是否可行——long-running agents 没有 caching 会非常昂贵。文章揭示了很多反直觉的坑，比如 mid-session 换 model 到 Haiku 反而更贵、compaction 调用可能产生巨额 uncached cost。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这是一篇非常实用的 engineering post，干货密度高。最关键的设计原则是：把整个系统架构围绕 caching constraint 来设计，而不是事后优化。几个技巧值得直接抄作业：1) prompt 结构分层（static → project-level → session-level → conversation）；2) 用 tools 做状态机而非改 tool set；3) fork 操作复用 parent prefix。Compaction 部分 Anthropic 说已经内置到 API 里了，但理解原理对调试和自定义场景仍有价值。如果你在构建 multi-turn agents，这篇文章是必读。</p>
-      </section>
-      <div class="tags"><span>prompt-caching</span><span>agents</span><span>Claude-Code</span><span>engineering-practices</span><span>cost-optimization</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>May 01, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>How a non-technical project manager built and shipped a stress management app with Claude Code in six weeks</h2>
-      <a class="original-link" href="https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>一个零编程经验的 project manager 用 Claude Code 在 6 周内从零构建并上架了一个 iOS stress management app (Respiro)，包含 15+ specialized subagents 的 multi-agent architecture，已获数百用户。核心洞察：PM 技能直接迁移到 agent orchestration。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>完全无 coding background，用 Claude Code 完成 ideation → App Store 上架全流程</li><li>自建 multi-agent architecture：TCA architect、Swift developer、Metal specialist、code reviewer 等 15+ agents 并行工作</li><li>React Native MVP → Swift 完整重写，Claude Code 几小时内搞定</li><li>Vision capabilities 被低估：截图问 Claude 帮他 navigate Apple Developer Program、Meta API token 等复杂 UX</li><li>已影响主业：Mythical Games 工程团队开始采用他的 Claude workflow</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Claude Code &#x27;democratizing shipping&#x27; 的强案例——非技术背景者能独立完成 full-stack app development。对关注 agents 的读者，multi-agent orchestration by a non-engineer 是关键信号：agent management 正在变成一种通用技能，不依赖传统编程能力。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>故事 impressive 但需注意：founder 有十年 PM 经验，这让他擅长 decompose tasks 和 manage &#x27;agent team&#x27;。纯小白能否复刻存疑。multi-agent architecture 部分细节较薄，不清楚具体 orchestration 机制。不过 vision capabilities 用于 navigate 复杂第三方平台这个用法很实用，值得借鉴。整体是 Claude Code 营销 narrative，但确实展示了 tool 的上限。</p>
-      </section>
-      <div class="tags"><span>claude_code</span><span>multi_agent</span><span>ios_dev</span><span>non_technical_founder</span><span>vision_capabilities</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>May 12, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>How Anthropic&#x27;s cybersecurity team built a threat detection platform with Claude Code</h2>
-      <a class="original-link" href="https://claude.com/blog/how-anthropic-uses-claude-cybersecurity" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 内部安全团队用 Claude Code 搭建了 CLUE（Claude Looks Up Evidence），一个 threat detection 和 response platform。核心价值：用 natural language interface + tool use 连接内部系统（Slack、code repos、data warehouses），实现 alert triage 自动化和 investigation 加速。数据亮眼：false positive rate 从 33% 降到 7%，30 天内自动化了约 12,000 queries，节省估计 1,870 小时人工。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>CLUE 架构：CLUE Triage 做 first-pass alert enrichment 和 disposition（false/true positive, malicious, expected behavior）；CLUE Investigate 用 natural language 转 SQL，跑 agentic loop（orchestrator → sub-agents → synthesis）</li><li>开发效率：PoC 一天跑通，design doc + implementation 一周完成。Jackie Bow 原话：Claude Code 是 design partner + collaborator，突破了她自己的 technical limitations</li><li>核心差异化：internal context——能查 Slack conversations、internal docs、code repos，这是外部 security platform 做不到的</li><li>量化指标：每 session 平均 25 tool calls、11 queries；调查时间从 hours 降到 3-4 分钟；false positive rate 从 ~33% 降到 7%</li><li>哲学转变：引用 &#x27;the bitter lesson&#x27;——与其给 Claude 写死 investigation playbooks（SOAR 思路），不如给 tools + goal，让它自己找路径。非确定性是 feature 不是 bug</li><li>未来方向：从 reactive（等 alert）转向 proactive hunting；investigation transcripts 变成 organizational memory；parallel investigation strategies</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic &#x27;dogfooding&#x27; Claude Code 的真实案例，展示了 agents 在 enterprise security 场景的落地路径。对关注 agents 和 Claude Code 的开发者来说，这篇文章提供了具体的架构思路（tool use + agentic loop + internal context integration）和量化的 ROI 数据。同时暗示了 Responsible Scaling Policy 的执行依赖——安全能力直接绑定 product release 节奏。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>文章质量不错，有具体架构、有量化数据、有哲学思考。但要注意：这是 Anthropic 自家的 use case，数据未经第三方验证；而且他们的 internal context 集成（Slack、docs）对大多数公司来说需要大量基础设施工作。真正可借鉴的是设计思路——让 agent 有 tools 和 goal 而非 rigid playbooks，以及 investigation transcripts 作为可审计、可学习的 knowledge base。CLUE 本质是一个 internal-facing security agent，思路可迁移到其他需要 cross-system correlation 的场景。</p>
-      </section>
-      <div class="tags"><span>claude-code</span><span>security-agents</span><span>threat-detection</span><span>dogfooding</span><span>agentic-loop</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>May 14, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>The founder&#x27;s playbook: Building an AI-native startup</h2>
-      <a class="original-link" href="https://claude.com/blog/the-founders-playbook" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>这是一篇索引/导流文章，介绍了一个关于 AI-native startup 的 playbook eBook。文章本身很薄，只概述了四个核心阶段（Idea、MVP、Launch、Scale）的内容框架，实际干货需要点击外链获取。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>将 startup lifecycle 重新映射为四个阶段：Idea → MVP → Launch → Scale，每个阶段有 goals、exit criteria、failure modes 和 AI-powered exercises</li><li>提到如何用 AI 做 problem hypothesis validation、competitive landscape mapping 和 customer discovery</li><li>涉及 AI-generated MVP codebase 的 architecture、scope 和 security practices，避免 technical debt</li><li>提供了一个 product matrix，指导何时使用 Chat、Claude Cowork、Claude Code</li><li>包含 Ambral、Anything、Carta Healthcare、HumanLayer 等公司的 founder stories</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>对关注 Claude Code 和 agents 的读者来说，这篇文章的价值在于它指向的 playbook 可能包含实用的 prompts 和 workflows。但文章本身只是 teaser，没有具体技术细节或可操作内容。日期标注为 2026 年，可能是未来日期或错误。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章是典型的营销导流页，内容稀薄，核心价值在外链的 eBook。如果你在追踪 Claude Code 的实际能力边界或 agentic workflows 的具体实现，这篇文章本身没什么可看的。建议直接跳转到 playbook 链接看是否有实质内容。作为 model releases/alignment 追踪者，可以忽略。</p>
-      </section>
-      <div class="tags"><span>startup-playbook</span><span>claude-code</span><span>agentic-workflows</span><span>thin-content</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>May 20, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Using Claude Code: The unreasonable effectiveness of HTML</h2>
-      <a class="original-link" href="https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Claude Code 团队成员分享了一个实用模式：用 HTML 替代 Markdown 作为 agent 输出格式。核心论点是 HTML 提供更高的信息密度、视觉清晰度、易分享性和双向交互能力——当 agent 生成的文档越来越长、你越来越依赖 agent 编辑而非手改时，Markdown 的优势在减弱。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>HTML 信息密度远超 Markdown：支持 tables、CSS、SVG、交互元素、canvas 等，几乎能表达 Claude 能读取的任何信息类型</li><li>可读性和分享性：&gt;100 行的 Markdown 文件没人愿意读；HTML 可做 tabs、导航、mobile responsive，直接丢链接就能分享</li><li>双向交互：可以让 Claude 生成带 sliders、knobs 的编辑界面，配合 &#x27;copy as prompt&#x27; 按钮把调整结果贴回 Claude Code</li><li>Claude Code 的 context 优势：可 ingest 文件系统、MCP (Slack/Linear)、浏览器、git history，比 Claude.ai 更适合生成复杂 HTML 报告</li><li>主要 use cases：specs/planning、code review、设计原型、报告生成、custom editing interfaces（如拖拽排序 tickets、编辑 feature flags）</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这揭示了一个 agent 时代的工作流演变：当人类从「编辑文档」变成「审阅 agent 输出 + prompt 调整」时，输出格式的选择逻辑完全不同。HTML 作为 agent-human communication layer 的价值被低估了。对重度 Claude Code 用户，这是可以直接抄的实战模式。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>观点本身有道理，但作者承认自己是 &#x27;HTML maximalist&#x27;，有过度推广倾向。实际中 Markdown 在快速笔记、git commit messages、简单 specs 场景仍有价值。真正值得采纳的是「复杂输出用 HTML」这个原则，而非一刀切。文中提到的 custom editing interfaces + export pattern（生成一次性编辑器，最后 copy back to prompt）是个很聪明的 tight loop 设计，值得尝试。GitHub gallery 如果有实际模板会更有参考价值。</p>
-      </section>
-      <div class="tags"><span>claude_code</span><span>html_vs_markdown</span><span>agent_workflow</span><span>output_format</span><span>ux_pattern</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>May 27, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>How CodeRabbit used Claude to build an agent orchestration system</h2>
-      <a class="original-link" href="https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>CodeRabbit 构建了一个 agent orchestration system，在 Claude Code 生成代码之前插入一个结构化 planning phase。核心洞察：AI 生成的代码经常 compile 通过、tests 通过，但没解决真正的问题——因为开发者假设 AI 懂得上下文，实际上 AI 在填坑时猜错了方向。解决方案是用 Opus/Sonnet/Haiku 分层处理，产出可 review 的 PRD，把错误拦截在写代码之前。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>失败模式：AI coding 的常见问题是 code that compiles but doesn&#x27;t solve the problem——late validation 在 AI workflow 里成本极高</li><li>Orchestration 架构：Opus 负责 strategic direction，Sonnet 负责 structured planning steps，Haiku 处理 narrowly scoped operations，按 eval harness 结果而非猜测分配任务</li><li>Planning layer 定位：不是替代 Claude Code 的 Plan Mode，而是在它之前的高层 orchestration，把 implicit assumptions 变成 explicit specifications</li><li>Eval harness 是关键基础设施：CodeRabbit 专门为 plan quality 构建了 evaluation system，用 LLM judges 评分 + 代码执行结果反推 plan 质量</li><li>最佳实践：定义 MPP (maximum possible product)、让 Claude 反问 missing assumptions、保存 planning artifacts 作为 shared record</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇文章触及了 AI coding 的核心痛点：代码生成越来越便宜，但走错方向的成本越来越高。CodeRabbit 的方案是一个务实的 engineering 解法——不是让 model 更聪明，而是在 workflow 上加 guardrail。对于做 agent system 的人来说，model routing 策略和 eval harness 的思路值得借鉴。文章本身有实质内容，不是 thin marketing piece。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这个方向是对的，但实现门槛不低。大多数团队没有 CodeRabbit 这种规模（每周 review 2M PRs）来积累数据和构建 eval harness。文章没提的是：这套 orchestration layer 本身的维护成本、planning phase 增加的 latency 是否影响用户体验、以及当 codebase 变化时 plan 多快会过时。核心价值在于 &#x27;plan as quality gate&#x27; 的理念——把 code review 的一部分工作前移到 plan review。对于 serious engineering org 有参考价值，但小团队可能 overkill。另外注意到文章日期是 May 2026，可能是 future-dated marketing content，需谨慎对待。</p>
-      </section>
-      <div class="tags"><span>agent-orchestration</span><span>claude-code</span><span>planning-system</span><span>eval-harness</span><span>model-routing</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Jun 02, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>A harness for every task: dynamic workflows in Claude Code</h2>
-      <a class="original-link" href="https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Claude Code 推出 dynamic workflows，允许 Claude 动态生成 JavaScript harness 来编排 subagents。核心价值是解决单 context window 下的 agentic laziness、self-preferential bias 和 goal drift 问题，通过独立 context 的 subagents 并行处理复杂任务。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Dynamic workflows 通过 JavaScript 执行，提供 spawnAgent、waitForAgent 等函数来协调 subagents，每个 subagent 拥有独立 context window</li><li>六大核心 pattern：classify-and-act、fan-out-and-synthesize、adversarial verification、generate-and-filter、tournament、loop until done</li><li>实用场景包括：大规模 migration/refactor（Bun 从 Zig 到 Rust）、deep research、deep verification、root-cause investigation、triage at scale</li><li>可与 /loop 和 /goal 配合实现持续执行；支持设置 token budget；workflows 可保存到 ~/.claude/workflows 或通过 skill 分发</li><li>代价是更高 token 消耗，不适合常规 coding 任务；最佳实践是用于高价值复杂任务</li><li>提到 Claude Opus 4.8 具备足够智能来动态生成 custom harness</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Claude Code 从 single-agent tool 向 multi-agent orchestration platform 的关键演进。动态生成 harness 意味着 Claude 可以根据任务特性自主设计执行架构，而非依赖预设模板。对于需要大规模并行、adversarial verification、或长期运行的复杂任务，这是质的提升。同时也暗示 Claude Opus 4.8 的 reasoning 能力已达到可信赖的 meta-level 规划水平。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章实操价值很高，patterns 部分可以直接作为 prompt engineering 指南。但要注意：Anthropic 没有披露 workflow 执行的具体成本和 latency，实际生产使用需要评估。另外 Bun 的案例来自外部 thread，说明 ecosystem 正在形成。对于中国用户，值得关注的是这种 multi-agent orchestration 思路可以迁移到其他模型/框架。关键词 &#x27;ultracode&#x27; 作为 trigger word 值得记住。</p>
-      </section>
-      <div class="tags"><span>multi-agent</span><span>orchestration</span><span>Claude Code</span><span>workflows</span><span>subagents</span><span>Opus 4.8</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Jun 03, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Running an AI-native engineering org</h2>
-      <a class="original-link" href="https://claude.com/blog/running-an-ai-native-engineering-org" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Claude Code 工程 Director Fiona Fung 分享了团队在 agentic coding 成为默认工作方式后，如何重构 engineering org 的流程：从 six-month roadmap 转向 JIT planning，code review 中 Claude 处理 style/linting/bugs，human 只在 domain expertise 关键处介入，角色边界模糊化（PM 开始写 code，engineer 涉足 design），核心招聘 profile 转向 creative builders 和 deep systems expertise。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Planning 从 six-month roadmap 转向 just-in-time (JIT) planning：prototype 先行，快速获取 internal user feedback，减少 design docs 和 formal product reviews</li><li>Context gathering 不再找 code author，而是直接问 Claude，并思考能否自动化该流程</li><li>Code review: Claude 处理 style、linting、bugs、tests；human review 只在 legal、security、trust boundaries 等 domain expertise 关键处介入</li><li>Team makeup 角色模糊：PM 用 Claude 写 code，engineer 做 design/content；招聘重点从 raw throughput 转向 creative builders + deep systems expertise</li><li>三个核心 metrics：onboarding ramp time 下降、PR cycle time 下降、Claude-assisted commits 比例上升（团队近四个月 100% Claude-assisted）</li><li>团队原则：relentlessly dogfood 自己的产品、保持 flat structure、explicit permission to kill obsolete processes</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是一篇罕见的来自一线 AI 产品团队的真实实践分享，不是理论推演。Claude Code 团队自己就是 agentic coding 的 heavy user，他们的经验对正在或即将引入 AI coding tools 的团队有直接参考价值。文章揭示了 bottleneck 从 &#x27;写代码&#x27; 转移到 &#x27;verification、review、security&#x27; 的现实，以及 org structure 如何随之调整。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>内容扎实，有具体 before/after 对比和可操作的 metrics，比一般 thought leadership 文章实用得多。但要注意：这是 Anthropic 内部团队的 best case，他们深度使用自己的产品且有 strong engineering culture。对大多数公司来说，直接复制这些做法可能水土不服——尤其是 &#x27;human review 只在关键处介入&#x27; 这条，需要团队对 models 有足够 trust 且 review 能力成熟。另外文章未深入讨论 security review 和 compliance 的具体做法，这块是很多 enterprise 的痛点。建议读者重点关注 JIT planning 和 &#x27;ask Claude first&#x27; 的 context gathering 思路，这两点落地门槛相对较低。</p>
-      </section>
-      <div class="tags"><span>agentic-coding</span><span>engineering-org</span><span>claude-code</span><span>workflow-automation</span><span>dogfooding</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Jun 03, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Lessons from building Claude Code: How we use skills</h2>
-      <a class="original-link" href="https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 分享了内部使用 Claude Code skills 的实战经验，将数百个内部 skills 归纳为 9 大类，并给出了一套实用的 best practices。核心观点：skills 不是简单的 markdown 文件，而是包含 scripts、assets、data 的文件夹结构；最有效的 skills 往往专注于单一类别，避免 agent confusion。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>9 大 skills 分类：Library/API reference、Product verification、Data fetching/analysis、Business process automation、Code scaffolding、Code quality/review、CI/CD、Runbooks、Infrastructure operations — 其中 Product verification skills 对 output quality 影响最可量化</li><li>关键技巧：Gotchas section 信号最强；使用 progressive disclosure（SKILL.md 指向其他文件）；避免 railroading Claude；description 要写给 model 看而非人类，包含 trigger keywords</li><li>Skills 支持持久化 memory（如 append-only log）、on-demand hooks（如 /careful 阻止危险操作）、以及脚本组合能力 — 让 Claude 专注于 composition 而非重建 boilerplate</li><li>分发策略：小团队可直接 check in 到 .claude/skills；规模化后建议用 internal plugin marketplace，避免 context 膨胀；Anthropic 采用 organic 发现机制，有 traction 的 skills 才进 marketplace</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 首次系统性地披露 Claude Code skills 的内部实践，直接来自 dogfooding 经验。对于正在评估或已部署 Claude Code 的团队，这份分类框架和 best practices 可以直接复用，减少试错成本。Product verification skills 的强调尤其值得注意 — 这是可量化 ROI 的切入点。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>文章质量高，实操性强，不是 marketing fluff。9 类分类框架是一个有用的思维模型，但边界并非绝对 rigid。最实用的建议是 Gotchas section 和 progressive disclosure — 这些是真正从失败中提炼的经验。对于中国团队，建议优先从 Product verification 和 CI/CD 类 skills 入手，ROI 最清晰。注意：skills 的 context 成本问题在规模化时需要权衡。</p>
-      </section>
-      <div class="tags"><span>claude-code</span><span>skills</span><span>agents</span><span>best-practices</span><span>enterprise-adoption</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-claude_code">Claude Code</span>
-        <span>Claude Blog - Claude Code</span>
-        <span>Jun 05, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>How one Anthropic seller rebuilt his team&#x27;s workflows with Claude Code</h2>
-      <a class="original-link" href="https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 的 GTM 产品经理 Jared Sires 从零代码背景起步，用 Claude Code 构建了 CLAFTS 邮件自动回复系统和一系列 sales tools，最终打包成 Claude Cowork plugin，让 80% 的销售团队日常使用。这是一个非技术人员用 AI 工具完成「公民开发者」转型的典型案例。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>CLAFTS 约 4300 行代码，几乎全由 Claude Code 生成，集成 Gmail、Google Drive、web search，能自动拉取最新文档生成符合个人风格的邮件回复</li><li>通过 MCP servers 连接 Google Calendar 和 CRM 数据，构建了 daily brief 和 daily recap 两个核心 skills，形成 agent-like workflow</li><li>Sales plugin 包含 /customer-context（90秒拉取360度账户视图）和 /pipeline-management（识别 at-risk deals）等 20+ skills</li><li>Jared 从 AE 转型为 GTM Architect，角色本质是从「发现痛点」到「用 Claude Code 构建 solution」的闭环</li><li>新员工 onboarding 从数周缩短到 day one 即可安装使用，集成 Salesforce、Intercom、Gong、BigQuery 等工具</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇文章展示了 Claude Code + Claude Cowork + MCP 的实际落地路径：非技术人员可以构建生产级工具，并通过 plugin 机制规模化推广。对于关注 agents 和 enterprise AI 的读者，这是一个从 personal productivity tool 到 team-wide infrastructure 的完整案例。文章日期标注为 2026 年 6 月，可能是未来场景或笔误，但技术栈和 workflow 设计具有参考价值。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>内容本身是扎实的 customer story，但营销属性较强，缺少失败迭代细节和成本数据。核心价值在于展示了 MCP connectors + skills + Agent SDK 的组合拳如何在实际业务中串联。对于中国读者，值得关注的不是 CLAFTS 本身，而是「非程序员用 Claude Code 构建、通过 Cowork 打包分发」这套方法论——这可能是企业内部 AI tooling 的一种主流模式。不过文章对 system prompt 迭代过程一笔带过，实际落地难度可能被低估。</p>
-      </section>
-      <div class="tags"><span>Claude Code</span><span>Claude Cowork</span><span>MCP</span><span>GTM automation</span><span>citizen developer</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Jan 22, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Building Agents with Skills: Equipping Agents for Specialized Work</h2>
-      <a class="original-link" href="https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 正式发布 Agent Skills 作为 open standard，这是一个将 domain expertise 打包成文件格式的方案，让 general-purpose agents（如 Claude Code）能够快速获得专业能力。核心理念是：与其为每个领域构建 specialized agents，不如构建可复用的 skills 来装备通用 agent。Skills 使用 progressive disclosure 保护 context window，支持 scripts 作为 tools，并与 MCP servers 协同工作。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Skills 是组织化的文件集合，包含 SKILL.md、文档和可选的 Python scripts，可被 agent 按需访问和执行</li><li>Progressive disclosure 三层架构：metadata (~50 tokens) → SKILL.md (~500 tokens) → references (2000+ tokens)，只在需要时加载</li><li>Skills 与 MCP 互补：MCP 负责 external tools/data connections，Skills 负责 domain expertise 和 procedural knowledge</li><li>已发布为 open standard，目标是跨平台可移植——同一 skill 应能在不同 AI 平台使用</li><li>已在 Financial Services 和 Healthcare/Life Sciences 垂直领域部署，包括 DCF model builder、bioinformatics bundles、clinical trial protocol generation 等</li><li>Non-developer 可在 30 分钟内用 skill-creator tool 创建首个 skill，降低了 expertise codification 的门槛</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 在 agent 架构上的重要范式转变：从 &#x27;构建多个 specialized agents&#x27; 转向 &#x27;构建通用 agent + skills library&#x27;。对于追踪 Claude Code 的开发者来说，这意味着扩展 agent 能力的方式从写复杂 tools/scaffolding 变成了编写结构化文档和脚本。Skills 的开放标准化也意味着社区可以共享和复用 expertise，类似 MCP 的生态效应。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这个方向是对的——把 expertise 从 agent 核心逻辑中解耦，让更新和分享变得更简单。Progressive disclosure 的设计很务实，解决了 context window 的实际痛点。但关键问题是：skills 的质量和维护成本如何？企业是否会愿意分享 proprietary skills？另外，open standard 能否获得足够多的平台采用还有待观察。对于国内开发者，值得关注的是这种 &#x27;code as interface + skills as expertise&#x27; 的架构是否会成为行业共识。</p>
-      </section>
-      <div class="tags"><span>agent-skills</span><span>claude-code</span><span>MCP</span><span>agent-architecture</span><span>open-standard</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Jan 23, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>When to use multi-agent systems (and when not to)</h2>
-      <a class="original-link" href="https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 官方关于 multi-agent systems 的实战指南，核心观点是：大多数场景下单 agent 就够用，multi-agent 的 overhead（3-10x tokens）往往得不偿失。只有三种情况值得上：context pollution 严重影响性能、任务可并行化、需要 specialization（工具集/系统提示/领域知识）。文章强调 context-centric decomposition 而非 problem-centric decomposition，并推荐了 verification subagent 这一可靠模式。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Multi-agent systems 的 hidden cost：3-10x token 消耗、更多 failure points、更多 prompt 维护负担</li><li>三种适用场景：context protection（隔离无关信息）、parallelization（并行探索更大搜索空间）、specialization（工具集/系统提示/领域知识分离）</li><li>关键设计原则：按 context 边界拆分，而非按问题类型拆分——后者会导致 &#x27;telephone game&#x27; 问题</li><li>Verification subagent 模式：专门负责测试/验证的 agent，因只需 blackbox 验证而避免 context 传递问题</li><li>Early victory problem：验证 agent 容易跑几个测试就 declare success，需要显式指令要求完整测试</li><li>Tool Search Tool 可减少 85% token 使用，在考虑 multi-agent 前值得先尝试</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 官方对 multi-agent 架构的务实判断，直接来自生产环境经验。对正在评估 agent 架构的团队来说，这篇文章提供了清晰的决策框架和反模式警示，能避免数月的过度工程投入。文章也暗示了 Claude 内部 Research feature 的 multi-agent 实现思路。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章的价值在于&#x27;反炒作&#x27;——很多团队在 multi-agent 上过度投入，但单 agent + 更好的 prompting 往往就够了。context-centric decomposition 的洞察很实用，verification subagent 模式值得借鉴。不过文章对 orchestrator 的 routing 复杂度讨论偏轻，实际落地时这往往是瓶颈。另外提到 Opus 4.5 作为 orchestrator 能力更强，暗示了 model capability 对架构选择的影响——随着模型变强，multi-agent 的 threshold 会继续上移。</p>
-      </section>
-      <div class="tags"><span>multi-agent</span><span>architecture</span><span>context-management</span><span>best-practices</span><span>anthropic</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Jan 30, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Customize Cowork with plugins</h2>
-      <a class="original-link" href="https://claude.com/blog/cowork-plugins" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Claude Cowork 新增 plugins 支持，允许用户将 skills、connectors、slash commands 和 sub-agents 打包成插件，把 Claude 定制为特定岗位的专家助手。Anthropic 开源了 11 个官方插件，覆盖 sales、legal、finance、data 等场景，目前为 research preview 阶段。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Plugins 可组合 skills、connectors、slash commands、sub-agents，实现一次性配置、团队复用</li><li>官方开源 11 个插件：Productivity、Enterprise Search、Sales、Finance、Data、Legal、Marketing、Customer Support、Product Management、Biology Research、Plugin Create</li><li>插件完全 file-based，易于构建、编辑和分享，支持用 Claude 自行定制</li><li>目前仅支持本地存储，org-wide sharing 和 private marketplace 功能将在后续推出</li><li>所有付费用户可用，插件可在 Cowork 内直接安装或从 GitHub 获取</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Claude 从通用助手走向可定制 agent 平台的关键一步。Plugins 让企业能把 workflow 和 context「bake in」到每次交互中，降低重复 prompt engineering 的成本。与 OpenAI 的 GPTs 类似，但更强调 enterprise 场景和与 Claude Code 生态的整合。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>产品方向正确，但目前功能偏早期——本地存储限制使其难以真正用于团队协作，需等待 org-wide sharing 上线。开源 11 个插件是务实做法，既提供模板又降低用户上手门槛。值得关注后续 private marketplace 和权限管理功能，这才是 enterprise 买单的关键。与 Claude Code 的联动潜力大，可能成为 Anthropic 在企业市场的差异化抓手。</p>
-      </section>
-      <div class="tags"><span>plugins</span><span>cowork</span><span>agents</span><span>enterprise</span><span>customization</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Feb 24, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Cowork and plugins for teams across the enterprise</h2>
-      <a class="original-link" href="https://claude.com/blog/cowork-plugins-across-enterprise" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 发布 Claude Cowork 和 plugins 的企业级更新：admin 可创建私有 plugin marketplace、更细粒度的权限控制、新增大量 enterprise connectors（Google Workspace、Docusign、Harvey 等），以及跨 Excel/PowerPoint 的 end-to-end orchestration 能力（research preview）。这是 Anthropic 在 enterprise agents 赛道的重要布局。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Admin 现在可创建 org-specific 的私有 plugin marketplace，支持 private GitHub repo 作为 plugin source（private beta）、per-user provisioning、auto-install</li><li>新增 connectors：Google Workspace (Calendar/Drive/Gmail)、Docusign、Apollo、Clay、Outreach、Similarweb、MSCI、LegalZoom、FactSet、WordPress、Harvey 等</li><li>推出跨 app orchestration 能力：Claude 可在 Excel 和 PowerPoint 之间传递 context，完成 multi-step 任务（如分析数据后生成 presentation）</li><li>新增 pre-built plugin templates 覆盖 HR、Design、Engineering、Operations、Financial analysis、Investment banking、Private equity、Wealth management 等场景</li><li>统一管理界面 &#x27;Customize&#x27; 整合 plugins、skills、connectors；新增 OpenTelemetry support 用于追踪 usage、costs、tool activity</li><li>Plugins 是 portable file system，可跨 Cowork 和 Claude Agent SDK 使用，便于构建私有 marketplace</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这波更新直接对标 Microsoft Copilot 的 enterprise 叙事。关键信号：1) Anthropic 正在构建 enterprise-grade agent ecosystem，而非单点产品；2) 跨 app orchestration（Excel↔PowerPoint）是迈向 multi-agent workflow 的关键一步；3) 私有 marketplace + 细粒度权限控制解决了 enterprise 采购的核心顾虑。对关注 agents 和 Claude Code 的人来说，plugin architecture 值得研究——它可能是 Anthropic 构建 agent platform 的核心基础设施。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>务实地说，这篇 blog 信息量中等偏上。最大的 signal 是跨 app orchestration 和 plugin marketplace 架构——这暗示 Anthropic 的 agent strategy 正从 &#x27;single powerful model&#x27; 转向 &#x27;composable agent ecosystem&#x27;。但要注意：Excel/PowerPoint orchestration 还在 research preview，实际能力待验证；新增的 connectors 虽多，但深度集成程度不明。对开发者而言，plugin 作为 portable file system + 兼容 Claude Agent SDK 这点值得关注，可能是未来构建 custom agents 的关键接口。整体来看，Anthropic 在 enterprise 市场的执行力不错，但与 Microsoft 的生态优势相比仍有差距。</p>
-      </section>
-      <div class="tags"><span>enterprise-agents</span><span>plugins</span><span>cowork</span><span>connectors</span><span>cross-app-orchestration</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Feb 24, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Cowork and plugins for finance</h2>
-      <a class="original-link" href="https://claude.com/blog/cowork-plugins-finance" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 发布 Claude Cowork 跨应用功能，支持在 Excel 和 PowerPoint 之间保持 context 完成 end-to-end 金融工作流。同时推出 5 个自研 finance plugins（覆盖 financial analysis、investment banking、equity research、private equity、wealth management）以及 FactSet、MSCI 的 MCP connectors 和 LSEG、S&amp;P Global 的 partner plugins。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Claude 现可跨 Excel 和 PowerPoint 工作，保持 context 不丢失，支持 multi-step finance tasks——research preview 阶段，Mac/Windows 全付费计划可用</li><li>5 个 Anthropic 自研 plugins 已上线 public repository，可直接使用或作为定制化起点</li><li>新增 MCP connectors：FactSet（real-time market data、fundamental analysis）和 MSCI（index data）</li><li>Partner plugins：LSEG（需 active entitlements）和 S&amp;P Global / Capital IQ Pro</li><li>Admin 可在 settings 的 connector directory 授权连接并 bundle 成团队 plugins</li><li>日期标注为 2026 年 2 月 24 日——可能是未来日期或 placeholder</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 在 enterprise agents 领域的重要布局：从单点 chat 走向跨应用、保持 context 的真实工作流。金融行业是高价值垂直场景，通过 plugins + MCP connectors 组合，Claude 能接入 institutional-grade data sources，解决「数据孤岛」痛点。对追踪 agents 进展的人来说，这展示了 domain-specific plugins 如何与 cross-app orchestration 结合。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>产品方向正确——finance workflows 确实需要跨工具、保持 context。但实际落地效果要看：1) Excel/PowerPoint integration 的稳定性；2) plugins 对 firm-specific terminology 和 workflow 的适配能力；3) 与 Bloomberg Terminal 等 entrenched tools 的竞争。MCP connectors 的扩展速度将是关键 moat。日期写 2026 年有点奇怪，可能是 CMS 模板错误或 scheduled post。整体属于 product update 级别，不是 breakthrough announcement。</p>
-      </section>
-      <div class="tags"><span>cowork</span><span>plugins</span><span>MCP connectors</span><span>finance vertical</span><span>cross-app workflow</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Mar 05, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Common workflow patterns for AI agents</h2>
-      <a class="original-link" href="https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 系统总结了 production 环境下 AI agents 的三种核心 workflow patterns：sequential（顺序执行）、parallel（并行处理）、evaluator-optimizer（迭代优化）。文章核心观点是：先用 single agent 尝试，不够再上 workflow，选错 pattern 会浪费 latency、tokens 或牺牲可靠性。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Sequential workflow：适合有依赖关系的多阶段任务（如 draft-review-polish），用 latency 换 accuracy，每个 agent 专注单一 subtask</li><li>Parallel workflow：适合独立可并行的任务（如多维度评估、代码审查），fan-out/fan-in 模式，需提前设计好 aggregation strategy</li><li>Evaluator-optimizer workflow：生成+评估分离的迭代循环，适合有明确质量标准的场景（代码生成、技术文档），需设定清晰的 stopping criteria 防止无限循环</li><li>核心决策原则：先用 single agent 试，达标就停；不达标再分析短板选 pattern；patterns 可嵌套组合</li><li>Tradeoffs 清晰：Sequential 加 latency，Parallel 加 cost 和 aggregation 复杂度，Evaluator-optimizer 乘 token 消耗</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 官方对 agent architecture 的实战总结，来自与数十个团队的合作经验。对于正在搭建 multi-agent 系统的团队，提供了清晰的决策框架和避坑指南——过度工程化是常见错误，简单 pattern 往往够用。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>文章实用性强，没有 hype，直接讲 tradeoffs 和 when to avoid。核心洞察是 &#x27;start simple&#x27;——很多团队一上来就搞复杂 orchestration，其实 single agent 加好 prompt 就能解决大部分问题。Evaluator-optimizer 的 stopping criteria 建议很关键，否则容易陷入 token 无底洞。建议配合他们的 white paper 一起看，这篇是精简版。</p>
-      </section>
-      <div class="tags"><span>agents</span><span>workflow patterns</span><span>architecture</span><span>production</span><span>Anthropic</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 02, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Harnessing Claude&#x27;s Intelligence | 3 Key Patterns for Building Apps</h2>
-      <a class="original-link" href="https://claude.com/blog/harnessing-claudes-intelligence" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 官方分享构建 AI agents 的三大核心 pattern：(1) 用 Claude 已经熟悉的工具（bash + text editor）；(2) 持续问「什么可以不再做」——让 Claude 自己 orchestrate、管理 context、persist memory；(3) 谨慎设置 boundaries，包括 caching 策略和 declarative tools。核心洞见：agent harness 里编码的假设会随模型能力提升而过时，需要不断 prune。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Claude Code 的基础是 bash tool + text editor tool，Claude 3.5 Sonnet 仅用这两个工具就达到 SWE-bench Verified 49% SOTA——用 Claude 熟悉的通用工具比设计专用工具更可持续</li><li>让 Claude 自己 orchestrate：给 code execution tool 后，Claude 可以写代码串联 tool calls、过滤输出，避免不必要的内容进入 context window。BrowseComp 上 Opus 4.6 从 45.3% 提升到 61.6%</li><li>让 Claude 自己管理 context：skills 做 progressive disclosure，context editing 移除过期内容，subagents 隔离任务。Opus 4.6 的 subagent 能力在 BrowseComp 上额外提升 2.8%</li><li>让 Claude 自己 persist context：compaction 和 memory folder。Opus 4.6 在 BrowseComp 达到 84%，而 Sonnet 4.5 只有 43%。Pokémon 游戏案例展示了从「记流水账」到「写战术笔记」的质变</li><li>Caching 策略：static first/dynamic last，用 system-reminder 而非编辑 prompt，避免中途换模型，用 tool search 做 dynamic discovery 而不破坏 cache</li><li>Declarative tools 用于 security/UX/observability boundaries，但 Claude Code 的 auto-mode 用第二个 Claude judge bash 命令安全性——这可能是减少专用工具的新方向</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇文章是 Anthropic 官方对 agent architecture 的最新思考，直接揭示了 Claude Code 的设计哲学。关键信号：Opus 4.5/4.6 在 self-orchestration、memory management、subagent 能力上有质的飞跃，这意味着 agent harness 应该做减法而非加法。对跟踪 Claude Code 和 agent 系统的人来说，这是理解 Anthropic 产品方向的重要窗口。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章的核心价值在于「做减法」的哲学——随着模型变强，harness 里的补偿性代码会变成 bottleneck。BrowseComp 和 Pokémon 的数据很有说服力：Opus 4.6 vs Sonnet 4.5 的差距不是一点半点。但要注意：这些能力（compaction、memory folder、subagents）目前只在 Claude 官方产品里，API 用户能用到什么程度还不清楚。另外文章日期写的是 2026 年 4 月，可能是未来视角的设定，或者笔误，值得留意。</p>
-      </section>
-      <div class="tags"><span>agent-architecture</span><span>claude-code</span><span>context-management</span><span>prompt-caching</span><span>opus-4.6</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 10, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Multi-agent coordination patterns: Five approaches and when to use them</h2>
-      <a class="original-link" href="https://claude.com/blog/multi-agent-coordination-patterns" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 系统性梳理了五种 multi-agent coordination patterns：Generator-Verifier（质量把关）、Orchestrator-Subagent（层级分工）、Agent Teams（并行独立任务）、Message Bus（事件驱动）、Shared State（协作共享）。核心建议是从最简单的 pattern 开始，观察瓶颈再演进，而非一上来就追求复杂架构。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Generator-Verifier：最简单也最常用，适合 code generation、fact-checking 等有明确 evaluation criteria 的场景，但 verifier 质量决定整个系统的上限</li><li>Orchestrator-Subagent：Claude Code 使用的模式，适合 task decomposition 清晰的场景，但 orchestrator 会成为 information bottleneck</li><li>Agent Teams：worker 持久化运行、积累 context，适合 codebase migration 这类独立长任务，但要求任务间 truly independent</li><li>Message Bus：适合 event-driven pipeline 和不断扩展的 agent 生态，但 debugging 和 tracing 难度高</li><li>Shared State：去中心化，agents 通过 shared store 协作，适合 research synthesis 这类需要实时共享 findings 的场景，但容易陷入 reactive loop</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是目前最实用的 multi-agent architecture 指南之一。很多团队在构建 agent 系统时要么 over-engineer，要么选错 pattern 导致扩展困难。Anthropic 直接点出每个 pattern 的 structural assumptions 和 failure modes，比如 Generator-Verifier 的 &#x27;rubber-stamp verifier&#x27; 问题、Orchestrator-Subagent 的信息瓶颈、Shared State 的 reactive loop——这些都是 production 环境中真正会遇到的坑。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇是 practical engineering guidance，不是 research breakthrough。价值在于：Anthropic 把他们自己在 Claude Code 和内部系统中验证过的架构选择公开了，包括 trade-offs 和演进路径。建议直接看文中的 decision table 和 pattern comparison 部分，然后对照自己的 use case。对于正在构建 multi-agent 系统的团队，从 Orchestrator-Subagent 开始这个建议是务实的——它覆盖面最广、coordination overhead 最低。</p>
-      </section>
-      <div class="tags"><span>multi-agent</span><span>coordination-patterns</span><span>Claude-Code</span><span>architecture</span><span>production-systems</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 10, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Preparing your security program for AI-accelerated offense</h2>
-      <a class="original-link" href="https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 发布 Project Glasswing 背景下的安全指南，核心论点是：AI 正在大幅降低漏洞发现和利用的门槛，未来 24 个月内大量历史遗留 bug 将被 AI 找到并串联成 exploit。文章给出 7 条务实建议：关闭 patch gap、准备应对漏洞报告量级增长、上线前找 bug、扫描已有代码中的漏洞、设计 breach 场景、减少攻击面、缩短 incident response 时间。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Patch gap 正在消失：AI 能快速 reverse patch 成 exploit，建议优先打 CISA KEV catalog，用 EPSS 做优先级排序</li><li>漏洞报告量级将增加一个数量级，现有 triage/remediation 流程需要自动化，AI 可辅助 dedup、draft tickets、patch generation</li><li>AI vulnerability scanning 是最重要的一条：用和攻击者同级别的模型先扫描自己的代码和系统</li><li>Zero trust + hardware-bound credentials + short-lived tokens：对抗 AI 加速攻击的核心是消除「靠摩擦增加难度」的防御</li><li>Incident response 需要从「天级」压缩到「小时级」：把 model 放在 alert queue 前端做 first-pass triage</li><li>向开源项目提交 AI 发现的漏洞时，必须人工验证、提供 PoC、声明 AI 参与，否则会被 maintainer 忽略</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 第一次系统性地阐述「AI 加速攻防」对 enterprise security 的实际影响。文章不是 marketing，而是基于他们内部安全团队的实战经验。对于正在部署 AI agents 的团队，这篇文章直接回答了「攻击者会用 AI 做什么，我们该怎么准备」这个问题。文中提到的 Claude Mythos Preview 和 Project Glasswing 是 Anthropic 在 cybersecurity 方向的重要布局。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章质量很高，建议全文细读。核心洞察是：很多传统安全控制（靠增加攻击者工作量的）在 AI 时代会失效，需要转向「即使攻击者有无限耐心也有效」的控制。文中对 AI 辅助安全工作的建议非常具体，比如「先在一个 noisy rule 上 wire model，测两周 agreement rate」这种 incremental rollout 思路很务实。但要注意：文章假设你有 dedicated security team，小团队只需要做最基础的 4 件事（自动更新、managed services、passkeys、免费工具）。</p>
-      </section>
-      <div class="tags"><span>security</span><span>AI-offense</span><span>vulnerability-management</span><span>zero-trust</span><span>incident-response</span><span>Project-Glasswing</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 22, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Building agents that reach production systems with MCP</h2>
-      <a class="original-link" href="https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>这是一篇关于如何让 AI agents 连接生产系统的实战指南。Anthropic 对比了三种路径——direct API calls、CLI 和 MCP——论证了为什么 production agents 应该选择 MCP，并给出了构建高质量 MCP server 的具体 patterns，包括 remote servers、intent-grouped tools、code orchestration、MCP Apps 和 Elicitation 等新特性。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>MCP SDK downloads 从年初 1 亿/月涨到 3 亿/月，已成为 Claude Cowork、Claude Managed Agents、Claude Code channels 的底层协议——这是 MCP 生态成熟的关键信号</li><li>MCP server 设计核心建议：build remote servers（跨平台分发）、group tools around intent not endpoints（避免 API mirror）、大规模 surface 用 code orchestration（Cloudflare 用 2 个 tools 覆盖 2500 endpoints）</li><li>新特性 MCP Apps 让 tool 返回 interactive UI（chart/form/dashboard），Elicitation 支持 Form mode 和 URL mode 处理用户交互——这些是 agent UX 的重要演进</li><li>Client 端 context 优化：tool search 可减少 85%+ tool-definition tokens，programmatic tool calling 减少 37% token usage——对长链路 agent 很实用</li><li>Skills 与 MCP 互补：MCP 提供 tools/data access，Skills 提供 procedural knowledge。可通过 Plugins 打包分发，或 MCP server 直接分发 skills（社区正在标准化）</li><li>Vaults 解决 cloud-hosted agent 的 OAuth token 持久化问题——register 一次，platform 自动注入和 refresh</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>MCP 正在成为 agent 连接外部系统的事实标准。如果你在做 agent infra 或企业级 agent 集成，这篇文章提供了 Anthropic 官方的 best practices，比社区方案更权威。对 Claude Code 用户来说，MCP 是扩展能力的主要路径；对产品团队来说，MCP server 的设计质量直接影响 agent 可用性。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这篇文章干货密度高，是 Anthropic 少有的 engineering-focused 实战内容。关键洞察：MCP 不只是协议，而是一整套 agent integration 的设计哲学——intent grouping、progressive disclosure、skills pairing 都是值得借鉴的思路。Cloudflare 的 code orchestration 模式很聪明，适合 API surface 大的场景。建议关注 MCP Apps 和 Elicitation，这两个特性会改变 agent 与用户的交互范式。缺点是文章对 error handling、rate limiting、multi-tenant isolation 等生产问题着墨较少。</p>
-      </section>
-      <div class="tags"><span>MCP</span><span>agents</span><span>Claude Code</span><span>tool-use</span><span>production</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 29, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Product development in the agentic era</h2>
-      <a class="original-link" href="https://claude.com/blog/product-development-in-the-agentic-era" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 产品经理分享如何用 Claude Managed Agents（beta）和 Claude Code 改变 PM 工作流：从文档驱动的 API 设计转向快速 prototyping，用 agents 自动化运营长尾任务，释放时间专注于 craft。文章提供了三个具体 use cases：adoption analytics、developer sentiment monitoring、demo building。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Managed Agents 是一套 composable APIs，用于在云端大规模构建和部署 agents，支持 memory、parallel execution、persistent access</li><li>Claude Code 让 PM 能在一下午内从 spec 跑通 end-to-end prototype，加速 API design 迭代</li><li>工作流分层：Claude + Claude Cowork 用于 open-ended research，Claude Code 用于构建和部署具体 agents</li><li>三个实用案例：adoption analytics（查内部数据库找 outliers）、developer sentiment monitoring（并行 fan-out 扫描反馈）、demo building（自动生成定制化 demo）</li><li>Agents 在云端运行，可以 walk away 回来收结果，适合自动化那些因 quirks 多而难以 scale 的流程</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这篇文章展示了 Anthropic 内部 dogfooding Managed Agents 的真实场景，对关注 agents 落地的开发者有参考价值。它揭示了 product development 在 agentic era 的范式转变：从 doc-driven 变成 build-with-what-you-ship，prototyping 门槛大幅降低。对 PM 而言，这意味着可以从 ticket backlog 的执行者变成真正的 builder。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>文章本身是 case study 性质，没有技术深度或新功能发布，更多是 positioning 和 use case 展示。Managed Agents 的核心卖点——云端托管、memory、parallel execution——听起来不错，但实际能力边界需要看 docs 才能判断。对中文读者来说，最有价值的是三个 use cases 的设计思路，可以借鉴到自己的 workflow automation 中。整体偏营销向，但作为 workflow inspiration 值得一读。</p>
-      </section>
-      <div class="tags"><span>managed-agents</span><span>claude-code</span><span>workflow-automation</span><span>dogfooding</span><span>PM-productivity</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 29, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp</h2>
-      <a class="original-link" href="https://claude.com/blog/claude-api-skill" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 将 claude-api skill 扩展到 CodeRabbit、JetBrains、Resolve AI 和 Warp，让开发者在更多工具中获得 production-ready 的 Claude API 代码指导。这个 skill 封装了 agent patterns、prompt caching、model migration 等最佳实践，并随 SDK 自动更新。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>claude-api skill 最初在 Claude Code 中推出（3月），现已集成到 CodeRabbit、JetBrains/Junie、Resolve AI、Warp 等开发工具</li><li>Skill 核心能力：优化 cache hit rate、添加 context compaction、模型升级迁移（如迁移到 Opus 4.7）、配置 Claude Managed Agents</li><li>开源可集成：任何 coding agent 都可以通过 anthropics/skills 仓库 bundling 这个 skill，约 20 行 CI 配置即可</li><li>自动同步：当 API 有新 feature 或新 model 发布时，skill 自动保持最新</li><li>Claude Code 内可直接用 /claude-api migrate 和 /claude-api managed-agents-onboard 命令</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这体现了 Anthropic 的生态策略——通过开源 skill 让 Claude API expertise 嵌入开发者已有的工具链，降低 API 使用门槛和迁移成本。对追踪 agents 的读者来说，这是 Anthropic 在 developer experience 层面的差异化布局，让 Claude Code 的能力外溢到第三方 IDE 和 code review 工具。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>实用但不算重磅。Skill 本质是把 docs + best practices 封装成可分发单元，解决开发者&#x27;不知道自己不知道什么&#x27;的问题。亮点是自动同步机制和开源策略，但实际价值取决于 skill 内容的质量和更新频率。对国内开发者而言，如果你用 JetBrains 或 Warp，这是个便利功能；如果主要用 Claude Code，这个 skill 你已经有了。值得关注的是 Claude Managed Agents 这个新概念——暗示 Anthropic 可能在构建托管的 long-running agent 服务。</p>
-      </section>
-      <div class="tags"><span>claude-api-skill</span><span>developer-tools</span><span>ecosystem</span><span>Claude-Code</span><span>agents</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>Apr 30, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Building AI agents for the enterprise</h2>
-      <a class="original-link" href="https://claude.com/blog/building-ai-agents-for-the-enterprise" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>这是一篇推广 Claude Cowork enterprise guide 的软文，核心内容是一个 downloadable guide 而非本文本身。文章引用 Anthropic Economic Index 数据（美国 40% 员工在工作中使用 AI），提出企业 AI 部署的关键在于 embedding agentic AI 而非 incremental gains，并提及 L&#x27;Oreal、Lyft、Rakuten 三个客户案例。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>核心概念：&#x27;agentic thinking divide&#x27;——部分 AI 部署能 compound 增长，其他则 stall</li><li>三支柱框架：employee upskilling、process compression、new product capabilities</li><li>Claude Cowork 定位：无需 custom build 即可给每个 team 带 agentic 能力</li><li>提供 six-month deployment framework（在 guide 中，非本文正文）</li><li>客户案例：L&#x27;Oreal、Lyft、Rakuten（细节需下载 guide）</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>Claude Cowork 是 Anthropic enterprise strategy 的关键产品，直接对标 OpenAI ChatGPT Enterprise 和 Microsoft Copilot。&#x27;agentic thinking divide&#x27; 这个框架值得关注——它试图解释为什么有些企业 AI 投入能持续产生复利效应。但本文本身只是 teaser，实际干货在 downloadable guide 里。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>文章本身偏 marketing teaser，技术细节和具体 best practices 都在 external guide 里，正文信息密度低。对 tracking model releases 的读者来说，没有新 model 信息，也没有 Claude Code 更新。唯一值得注意的是 Claude Cowork 作为 Anthropic enterprise 产品线的定位在强化，以及 &#x27;agentic thinking divide&#x27; 这个概念框架——但需要看 full guide 才能判断是否有实质内容。建议直接跳过本文，去下载 guide。</p>
-      </section>
-      <div class="tags"><span>enterprise-agents</span><span>claude-cowork</span><span>agentic-ai</span><span>deployment-framework</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>May 13, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Best practices for computer and browser use with Claude</h2>
-      <a class="original-link" href="https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 发布了 Claude computer use 和 browser use 的最佳实践指南，涵盖 screenshot resolution 处理、click accuracy 优化、thinking effort 调参、以及 prompt injection 防护。文章提供了大量实用代码示例和 troubleshooting 建议，是构建 production-grade agents 的必备参考。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>Resolution 是 click accuracy 的决定性因素：4.6 family 限制 1568px long edge / 1.15MP，Opus 4.7 提升到 2576px / 3.75MP。务必 pre-downscale 到限制内，否则 API 会 silent downscale 导致坐标偏移。推荐默认 1280x720，Opus 4.7 可用 1080p。</li><li>Messages array 中 text instruction 必须放在 image 之前，让 model 先知道要找什么。MacOS 需注意 device pixel ratio=2 的问题。</li><li>Model selection：Sonnet 4.6 在 clicking precision 上更稳，Opus 4.7 在高分辨率场景下表现更好且 reasoning 更强。Haiku 4.5 适合 latency-sensitive 场景。</li><li>Thinking effort 调参：4.6 family 推荐 medium（最佳 accuracy-cost ratio），Opus 4.7 推荐 high。Max effort 对 UI automation 无明显收益。</li><li>Small targets 处理：启用 enable_zoom、放大 UI 元素、或改用 keyboard navigation。4K+ 显示器需要特别注意 compression ratio 问题。</li><li>Prompt injection 防护：使用官方 computer_20251124 tool type 会自动启用 classifier（零延迟零成本）。高 stakes 操作必须 human-in-the-loop。</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>Computer use 是 agents 走向 production 的关键能力，但 click accuracy 和安全性一直是主要瓶颈。这篇文章系统性地解决了这两个问题，提供了从 resolution 处理到 thinking effort 调参的完整 playbook。对于正在构建或评估 computer use agents 的开发者，这是目前最权威的实践指南。Opus 4.7 的 higher resolution budget 和 improved thinking 也暗示了 Anthropic 在这个方向的持续投入。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>这是一篇非常务实的工程指南，解决了开发者在 computer use 集成中最常踩的坑。几个关键洞察值得注意：(1) resolution 处理不当是 click 失败的首要原因，这个 fix 极其简单但影响巨大；(2) Sonnet 4.6 在 mechanical clicking 上比 Opus 4.6 更稳，这反直觉但符合 cost-accuracy tradeoff；(3) thinking effort 不是越高越好，UI 任务本质是 perceptual 而非 logical。文章也透露了 Opus 4.7 在 OSWorld benchmark 上的显著提升，low effort 就能达到 Sonnet 4.6 max 的水平，这对成本敏感场景是重大利好。唯一遗憾的是 prompt injection classifier 目前只支持官方 tool type，custom implementation 需要单独申请。</p>
-      </section>
-      <div class="tags"><span>computer-use</span><span>browser-use</span><span>agents</span><span>best-practices</span><span>opus-4.7</span><span>prompt-injection</span></div>
-    </article>
-    
-
-    <article class="article-card">
-      <div class="article-meta">
-        <span class="badge badge-agents">Agents</span>
-        <span>Claude Blog - Agents</span>
-        <span>May 27, 2026</span>
-        <span>Added 2026-06-09</span>
-      </div>
-      <h2>Zero Trust for AI agents</h2>
-      <a class="original-link" href="https://claude.com/blog/zero-trust-for-ai-agents" target="_blank" rel="noreferrer">Original Link</a>
-      <section>
-        <h3>TL;DR</h3>
-        <p>Anthropic 发布企业级 AI agents 安全部署框架，将传统 Zero Trust 原则适配到 agentic systems。核心论点：AI 模型已将漏洞到攻击的时间从 months 压缩到 hours，agents 的自主性带来新的攻击面，需要 cryptographically rooted identities、per-task permissions、memory protection 等新架构。</p>
-      </section>
-      <section>
-        <h3>Key Points</h3>
-        <ul><li>AI-accelerated attacks 已成现实：模型能发现传统工具和人类审查多年遗漏的漏洞，攻击者可利用 AI 加速漏洞利用开发</li><li>Agents 特有威胁包括：prompt injection、tool poisoning、identity/privilege abuse、memory poisoning、supply chain attacks</li><li>提出三 tier Zero Trust 框架：Foundation → Advanced → Optimized，按组织成熟度和风险容忍度分层</li><li>八阶段实施流程覆盖：identity、access scoping、sandboxing、input/output controls、memory safeguards</li><li>引入 Agentic SOAR 概念：defensive operations 需要与 autonomous attackers 速度匹配</li><li>合规对齐覆盖 healthcare、finance、government 等受监管行业</li></ul>
-      </section>
-      <section>
-        <h3>Why It Matters</h3>
-        <p>这是 Anthropic 在 agents 安全领域的系统性框架输出，对 enterprise 部署有实际参考价值。文章点出一个关键洞察：传统 access controls 无法阻止 agents 滥用合法权限，monitoring 也需要应对通过 persistence 而非 exploitation 成功的攻击。对于正在规划 agents 架构的团队，这份框架提供了从架构设计到运营的完整思路。</p>
-      </section>
-      <section>
-        <h3>My Take</h3>
-        <p>内容偏框架性而非技术细节，实际是 eBook/白皮书的导览页。价值在于明确了 agents 安全的核心问题域——memory poisoning、tool poisoning 这些威胁在传统安全框架中确实缺位。但如果你期待具体技术实现或代码级 guidance，这篇文章不会满足。建议直接下载完整框架文档。对 enterprise security 团队有参考意义，对 model releases 或 Claude Code 用户关联度较低。</p>
-      </section>
-      <div class="tags"><span>agents</span><span>enterprise-security</span><span>zero-trust</span><span>prompt-injection</span><span>memory-poisoning</span></div>
-    </article>
-    
-
+            <section class="date-section" id="date-2026-06-09">
+              <div class="date-heading">
+                <h3>2026-06-09</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
     <article class="article-card">
       <div class="article-meta">
         <span class="badge badge-agents">Agents</span>
@@ -1469,6 +664,1033 @@
       <div class="tags"><span>model-release</span><span>agents</span><span>alignment</span><span>claude-code</span><span>enterprise</span></div>
     </article>
     
+            </section>
+            
+
+            <section class="date-section" id="date-2026-06-05">
+              <div class="date-heading">
+                <h3>2026-06-05</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Jun 05, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>How one Anthropic seller rebuilt his team&#x27;s workflows with Claude Code</h2>
+      <a class="original-link" href="https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 的 GTM 产品经理 Jared Sires 从零代码背景起步，用 Claude Code 构建了 CLAFTS 邮件自动回复系统和一系列 sales tools，最终打包成 Claude Cowork plugin，让 80% 的销售团队日常使用。这是一个非技术人员用 AI 工具完成「公民开发者」转型的典型案例。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>CLAFTS 约 4300 行代码，几乎全由 Claude Code 生成，集成 Gmail、Google Drive、web search，能自动拉取最新文档生成符合个人风格的邮件回复</li><li>通过 MCP servers 连接 Google Calendar 和 CRM 数据，构建了 daily brief 和 daily recap 两个核心 skills，形成 agent-like workflow</li><li>Sales plugin 包含 /customer-context（90秒拉取360度账户视图）和 /pipeline-management（识别 at-risk deals）等 20+ skills</li><li>Jared 从 AE 转型为 GTM Architect，角色本质是从「发现痛点」到「用 Claude Code 构建 solution」的闭环</li><li>新员工 onboarding 从数周缩短到 day one 即可安装使用，集成 Salesforce、Intercom、Gong、BigQuery 等工具</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章展示了 Claude Code + Claude Cowork + MCP 的实际落地路径：非技术人员可以构建生产级工具，并通过 plugin 机制规模化推广。对于关注 agents 和 enterprise AI 的读者，这是一个从 personal productivity tool 到 team-wide infrastructure 的完整案例。文章日期标注为 2026 年 6 月，可能是未来场景或笔误，但技术栈和 workflow 设计具有参考价值。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>内容本身是扎实的 customer story，但营销属性较强，缺少失败迭代细节和成本数据。核心价值在于展示了 MCP connectors + skills + Agent SDK 的组合拳如何在实际业务中串联。对于中国读者，值得关注的不是 CLAFTS 本身，而是「非程序员用 Claude Code 构建、通过 Cowork 打包分发」这套方法论——这可能是企业内部 AI tooling 的一种主流模式。不过文章对 system prompt 迭代过程一笔带过，实际落地难度可能被低估。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>Claude Cowork</span><span>MCP</span><span>GTM automation</span><span>citizen developer</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-06-03">
+              <div class="date-heading">
+                <h3>2026-06-03</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Jun 03, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Running an AI-native engineering org</h2>
+      <a class="original-link" href="https://claude.com/blog/running-an-ai-native-engineering-org" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Claude Code 工程 Director Fiona Fung 分享了团队在 agentic coding 成为默认工作方式后，如何重构 engineering org 的流程：从 six-month roadmap 转向 JIT planning，code review 中 Claude 处理 style/linting/bugs，human 只在 domain expertise 关键处介入，角色边界模糊化（PM 开始写 code，engineer 涉足 design），核心招聘 profile 转向 creative builders 和 deep systems expertise。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Planning 从 six-month roadmap 转向 just-in-time (JIT) planning：prototype 先行，快速获取 internal user feedback，减少 design docs 和 formal product reviews</li><li>Context gathering 不再找 code author，而是直接问 Claude，并思考能否自动化该流程</li><li>Code review: Claude 处理 style、linting、bugs、tests；human review 只在 legal、security、trust boundaries 等 domain expertise 关键处介入</li><li>Team makeup 角色模糊：PM 用 Claude 写 code，engineer 做 design/content；招聘重点从 raw throughput 转向 creative builders + deep systems expertise</li><li>三个核心 metrics：onboarding ramp time 下降、PR cycle time 下降、Claude-assisted commits 比例上升（团队近四个月 100% Claude-assisted）</li><li>团队原则：relentlessly dogfood 自己的产品、保持 flat structure、explicit permission to kill obsolete processes</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是一篇罕见的来自一线 AI 产品团队的真实实践分享，不是理论推演。Claude Code 团队自己就是 agentic coding 的 heavy user，他们的经验对正在或即将引入 AI coding tools 的团队有直接参考价值。文章揭示了 bottleneck 从 &#x27;写代码&#x27; 转移到 &#x27;verification、review、security&#x27; 的现实，以及 org structure 如何随之调整。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>内容扎实，有具体 before/after 对比和可操作的 metrics，比一般 thought leadership 文章实用得多。但要注意：这是 Anthropic 内部团队的 best case，他们深度使用自己的产品且有 strong engineering culture。对大多数公司来说，直接复制这些做法可能水土不服——尤其是 &#x27;human review 只在关键处介入&#x27; 这条，需要团队对 models 有足够 trust 且 review 能力成熟。另外文章未深入讨论 security review 和 compliance 的具体做法，这块是很多 enterprise 的痛点。建议读者重点关注 JIT planning 和 &#x27;ask Claude first&#x27; 的 context gathering 思路，这两点落地门槛相对较低。</p>
+      </section>
+      <div class="tags"><span>agentic-coding</span><span>engineering-org</span><span>claude-code</span><span>workflow-automation</span><span>dogfooding</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Jun 03, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Lessons from building Claude Code: How we use skills</h2>
+      <a class="original-link" href="https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 分享了内部使用 Claude Code skills 的实战经验，将数百个内部 skills 归纳为 9 大类，并给出了一套实用的 best practices。核心观点：skills 不是简单的 markdown 文件，而是包含 scripts、assets、data 的文件夹结构；最有效的 skills 往往专注于单一类别，避免 agent confusion。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>9 大 skills 分类：Library/API reference、Product verification、Data fetching/analysis、Business process automation、Code scaffolding、Code quality/review、CI/CD、Runbooks、Infrastructure operations — 其中 Product verification skills 对 output quality 影响最可量化</li><li>关键技巧：Gotchas section 信号最强；使用 progressive disclosure（SKILL.md 指向其他文件）；避免 railroading Claude；description 要写给 model 看而非人类，包含 trigger keywords</li><li>Skills 支持持久化 memory（如 append-only log）、on-demand hooks（如 /careful 阻止危险操作）、以及脚本组合能力 — 让 Claude 专注于 composition 而非重建 boilerplate</li><li>分发策略：小团队可直接 check in 到 .claude/skills；规模化后建议用 internal plugin marketplace，避免 context 膨胀；Anthropic 采用 organic 发现机制，有 traction 的 skills 才进 marketplace</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 首次系统性地披露 Claude Code skills 的内部实践，直接来自 dogfooding 经验。对于正在评估或已部署 Claude Code 的团队，这份分类框架和 best practices 可以直接复用，减少试错成本。Product verification skills 的强调尤其值得注意 — 这是可量化 ROI 的切入点。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章质量高，实操性强，不是 marketing fluff。9 类分类框架是一个有用的思维模型，但边界并非绝对 rigid。最实用的建议是 Gotchas section 和 progressive disclosure — 这些是真正从失败中提炼的经验。对于中国团队，建议优先从 Product verification 和 CI/CD 类 skills 入手，ROI 最清晰。注意：skills 的 context 成本问题在规模化时需要权衡。</p>
+      </section>
+      <div class="tags"><span>claude-code</span><span>skills</span><span>agents</span><span>best-practices</span><span>enterprise-adoption</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-06-02">
+              <div class="date-heading">
+                <h3>2026-06-02</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Jun 02, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>A harness for every task: dynamic workflows in Claude Code</h2>
+      <a class="original-link" href="https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Claude Code 推出 dynamic workflows，允许 Claude 动态生成 JavaScript harness 来编排 subagents。核心价值是解决单 context window 下的 agentic laziness、self-preferential bias 和 goal drift 问题，通过独立 context 的 subagents 并行处理复杂任务。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Dynamic workflows 通过 JavaScript 执行，提供 spawnAgent、waitForAgent 等函数来协调 subagents，每个 subagent 拥有独立 context window</li><li>六大核心 pattern：classify-and-act、fan-out-and-synthesize、adversarial verification、generate-and-filter、tournament、loop until done</li><li>实用场景包括：大规模 migration/refactor（Bun 从 Zig 到 Rust）、deep research、deep verification、root-cause investigation、triage at scale</li><li>可与 /loop 和 /goal 配合实现持续执行；支持设置 token budget；workflows 可保存到 ~/.claude/workflows 或通过 skill 分发</li><li>代价是更高 token 消耗，不适合常规 coding 任务；最佳实践是用于高价值复杂任务</li><li>提到 Claude Opus 4.8 具备足够智能来动态生成 custom harness</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Claude Code 从 single-agent tool 向 multi-agent orchestration platform 的关键演进。动态生成 harness 意味着 Claude 可以根据任务特性自主设计执行架构，而非依赖预设模板。对于需要大规模并行、adversarial verification、或长期运行的复杂任务，这是质的提升。同时也暗示 Claude Opus 4.8 的 reasoning 能力已达到可信赖的 meta-level 规划水平。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章实操价值很高，patterns 部分可以直接作为 prompt engineering 指南。但要注意：Anthropic 没有披露 workflow 执行的具体成本和 latency，实际生产使用需要评估。另外 Bun 的案例来自外部 thread，说明 ecosystem 正在形成。对于中国用户，值得关注的是这种 multi-agent orchestration 思路可以迁移到其他模型/框架。关键词 &#x27;ultracode&#x27; 作为 trigger word 值得记住。</p>
+      </section>
+      <div class="tags"><span>multi-agent</span><span>orchestration</span><span>Claude Code</span><span>workflows</span><span>subagents</span><span>Opus 4.8</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-05-27">
+              <div class="date-heading">
+                <h3>2026-05-27</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>May 27, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>How CodeRabbit used Claude to build an agent orchestration system</h2>
+      <a class="original-link" href="https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>CodeRabbit 构建了一个 agent orchestration system，在 Claude Code 生成代码之前插入一个结构化 planning phase。核心洞察：AI 生成的代码经常 compile 通过、tests 通过，但没解决真正的问题——因为开发者假设 AI 懂得上下文，实际上 AI 在填坑时猜错了方向。解决方案是用 Opus/Sonnet/Haiku 分层处理，产出可 review 的 PRD，把错误拦截在写代码之前。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>失败模式：AI coding 的常见问题是 code that compiles but doesn&#x27;t solve the problem——late validation 在 AI workflow 里成本极高</li><li>Orchestration 架构：Opus 负责 strategic direction，Sonnet 负责 structured planning steps，Haiku 处理 narrowly scoped operations，按 eval harness 结果而非猜测分配任务</li><li>Planning layer 定位：不是替代 Claude Code 的 Plan Mode，而是在它之前的高层 orchestration，把 implicit assumptions 变成 explicit specifications</li><li>Eval harness 是关键基础设施：CodeRabbit 专门为 plan quality 构建了 evaluation system，用 LLM judges 评分 + 代码执行结果反推 plan 质量</li><li>最佳实践：定义 MPP (maximum possible product)、让 Claude 反问 missing assumptions、保存 planning artifacts 作为 shared record</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章触及了 AI coding 的核心痛点：代码生成越来越便宜，但走错方向的成本越来越高。CodeRabbit 的方案是一个务实的 engineering 解法——不是让 model 更聪明，而是在 workflow 上加 guardrail。对于做 agent system 的人来说，model routing 策略和 eval harness 的思路值得借鉴。文章本身有实质内容，不是 thin marketing piece。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这个方向是对的，但实现门槛不低。大多数团队没有 CodeRabbit 这种规模（每周 review 2M PRs）来积累数据和构建 eval harness。文章没提的是：这套 orchestration layer 本身的维护成本、planning phase 增加的 latency 是否影响用户体验、以及当 codebase 变化时 plan 多快会过时。核心价值在于 &#x27;plan as quality gate&#x27; 的理念——把 code review 的一部分工作前移到 plan review。对于 serious engineering org 有参考价值，但小团队可能 overkill。另外注意到文章日期是 May 2026，可能是 future-dated marketing content，需谨慎对待。</p>
+      </section>
+      <div class="tags"><span>agent-orchestration</span><span>claude-code</span><span>planning-system</span><span>eval-harness</span><span>model-routing</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>May 27, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Zero Trust for AI agents</h2>
+      <a class="original-link" href="https://claude.com/blog/zero-trust-for-ai-agents" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布企业级 AI agents 安全部署框架，将传统 Zero Trust 原则适配到 agentic systems。核心论点：AI 模型已将漏洞到攻击的时间从 months 压缩到 hours，agents 的自主性带来新的攻击面，需要 cryptographically rooted identities、per-task permissions、memory protection 等新架构。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>AI-accelerated attacks 已成现实：模型能发现传统工具和人类审查多年遗漏的漏洞，攻击者可利用 AI 加速漏洞利用开发</li><li>Agents 特有威胁包括：prompt injection、tool poisoning、identity/privilege abuse、memory poisoning、supply chain attacks</li><li>提出三 tier Zero Trust 框架：Foundation → Advanced → Optimized，按组织成熟度和风险容忍度分层</li><li>八阶段实施流程覆盖：identity、access scoping、sandboxing、input/output controls、memory safeguards</li><li>引入 Agentic SOAR 概念：defensive operations 需要与 autonomous attackers 速度匹配</li><li>合规对齐覆盖 healthcare、finance、government 等受监管行业</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 在 agents 安全领域的系统性框架输出，对 enterprise 部署有实际参考价值。文章点出一个关键洞察：传统 access controls 无法阻止 agents 滥用合法权限，monitoring 也需要应对通过 persistence 而非 exploitation 成功的攻击。对于正在规划 agents 架构的团队，这份框架提供了从架构设计到运营的完整思路。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>内容偏框架性而非技术细节，实际是 eBook/白皮书的导览页。价值在于明确了 agents 安全的核心问题域——memory poisoning、tool poisoning 这些威胁在传统安全框架中确实缺位。但如果你期待具体技术实现或代码级 guidance，这篇文章不会满足。建议直接下载完整框架文档。对 enterprise security 团队有参考意义，对 model releases 或 Claude Code 用户关联度较低。</p>
+      </section>
+      <div class="tags"><span>agents</span><span>enterprise-security</span><span>zero-trust</span><span>prompt-injection</span><span>memory-poisoning</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-05-20">
+              <div class="date-heading">
+                <h3>2026-05-20</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>May 20, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Using Claude Code: The unreasonable effectiveness of HTML</h2>
+      <a class="original-link" href="https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Claude Code 团队成员分享了一个实用模式：用 HTML 替代 Markdown 作为 agent 输出格式。核心论点是 HTML 提供更高的信息密度、视觉清晰度、易分享性和双向交互能力——当 agent 生成的文档越来越长、你越来越依赖 agent 编辑而非手改时，Markdown 的优势在减弱。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>HTML 信息密度远超 Markdown：支持 tables、CSS、SVG、交互元素、canvas 等，几乎能表达 Claude 能读取的任何信息类型</li><li>可读性和分享性：&gt;100 行的 Markdown 文件没人愿意读；HTML 可做 tabs、导航、mobile responsive，直接丢链接就能分享</li><li>双向交互：可以让 Claude 生成带 sliders、knobs 的编辑界面，配合 &#x27;copy as prompt&#x27; 按钮把调整结果贴回 Claude Code</li><li>Claude Code 的 context 优势：可 ingest 文件系统、MCP (Slack/Linear)、浏览器、git history，比 Claude.ai 更适合生成复杂 HTML 报告</li><li>主要 use cases：specs/planning、code review、设计原型、报告生成、custom editing interfaces（如拖拽排序 tickets、编辑 feature flags）</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这揭示了一个 agent 时代的工作流演变：当人类从「编辑文档」变成「审阅 agent 输出 + prompt 调整」时，输出格式的选择逻辑完全不同。HTML 作为 agent-human communication layer 的价值被低估了。对重度 Claude Code 用户，这是可以直接抄的实战模式。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>观点本身有道理，但作者承认自己是 &#x27;HTML maximalist&#x27;，有过度推广倾向。实际中 Markdown 在快速笔记、git commit messages、简单 specs 场景仍有价值。真正值得采纳的是「复杂输出用 HTML」这个原则，而非一刀切。文中提到的 custom editing interfaces + export pattern（生成一次性编辑器，最后 copy back to prompt）是个很聪明的 tight loop 设计，值得尝试。GitHub gallery 如果有实际模板会更有参考价值。</p>
+      </section>
+      <div class="tags"><span>claude_code</span><span>html_vs_markdown</span><span>agent_workflow</span><span>output_format</span><span>ux_pattern</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-05-14">
+              <div class="date-heading">
+                <h3>2026-05-14</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>May 14, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>The founder&#x27;s playbook: Building an AI-native startup</h2>
+      <a class="original-link" href="https://claude.com/blog/the-founders-playbook" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇索引/导流文章，介绍了一个关于 AI-native startup 的 playbook eBook。文章本身很薄，只概述了四个核心阶段（Idea、MVP、Launch、Scale）的内容框架，实际干货需要点击外链获取。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>将 startup lifecycle 重新映射为四个阶段：Idea → MVP → Launch → Scale，每个阶段有 goals、exit criteria、failure modes 和 AI-powered exercises</li><li>提到如何用 AI 做 problem hypothesis validation、competitive landscape mapping 和 customer discovery</li><li>涉及 AI-generated MVP codebase 的 architecture、scope 和 security practices，避免 technical debt</li><li>提供了一个 product matrix，指导何时使用 Chat、Claude Cowork、Claude Code</li><li>包含 Ambral、Anything、Carta Healthcare、HumanLayer 等公司的 founder stories</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对关注 Claude Code 和 agents 的读者来说，这篇文章的价值在于它指向的 playbook 可能包含实用的 prompts 和 workflows。但文章本身只是 teaser，没有具体技术细节或可操作内容。日期标注为 2026 年，可能是未来日期或错误。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章是典型的营销导流页，内容稀薄，核心价值在外链的 eBook。如果你在追踪 Claude Code 的实际能力边界或 agentic workflows 的具体实现，这篇文章本身没什么可看的。建议直接跳转到 playbook 链接看是否有实质内容。作为 model releases/alignment 追踪者，可以忽略。</p>
+      </section>
+      <div class="tags"><span>startup-playbook</span><span>claude-code</span><span>agentic-workflows</span><span>thin-content</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-05-13">
+              <div class="date-heading">
+                <h3>2026-05-13</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>May 13, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Best practices for computer and browser use with Claude</h2>
+      <a class="original-link" href="https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布了 Claude computer use 和 browser use 的最佳实践指南，涵盖 screenshot resolution 处理、click accuracy 优化、thinking effort 调参、以及 prompt injection 防护。文章提供了大量实用代码示例和 troubleshooting 建议，是构建 production-grade agents 的必备参考。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Resolution 是 click accuracy 的决定性因素：4.6 family 限制 1568px long edge / 1.15MP，Opus 4.7 提升到 2576px / 3.75MP。务必 pre-downscale 到限制内，否则 API 会 silent downscale 导致坐标偏移。推荐默认 1280x720，Opus 4.7 可用 1080p。</li><li>Messages array 中 text instruction 必须放在 image 之前，让 model 先知道要找什么。MacOS 需注意 device pixel ratio=2 的问题。</li><li>Model selection：Sonnet 4.6 在 clicking precision 上更稳，Opus 4.7 在高分辨率场景下表现更好且 reasoning 更强。Haiku 4.5 适合 latency-sensitive 场景。</li><li>Thinking effort 调参：4.6 family 推荐 medium（最佳 accuracy-cost ratio），Opus 4.7 推荐 high。Max effort 对 UI automation 无明显收益。</li><li>Small targets 处理：启用 enable_zoom、放大 UI 元素、或改用 keyboard navigation。4K+ 显示器需要特别注意 compression ratio 问题。</li><li>Prompt injection 防护：使用官方 computer_20251124 tool type 会自动启用 classifier（零延迟零成本）。高 stakes 操作必须 human-in-the-loop。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>Computer use 是 agents 走向 production 的关键能力，但 click accuracy 和安全性一直是主要瓶颈。这篇文章系统性地解决了这两个问题，提供了从 resolution 处理到 thinking effort 调参的完整 playbook。对于正在构建或评估 computer use agents 的开发者，这是目前最权威的实践指南。Opus 4.7 的 higher resolution budget 和 improved thinking 也暗示了 Anthropic 在这个方向的持续投入。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一篇非常务实的工程指南，解决了开发者在 computer use 集成中最常踩的坑。几个关键洞察值得注意：(1) resolution 处理不当是 click 失败的首要原因，这个 fix 极其简单但影响巨大；(2) Sonnet 4.6 在 mechanical clicking 上比 Opus 4.6 更稳，这反直觉但符合 cost-accuracy tradeoff；(3) thinking effort 不是越高越好，UI 任务本质是 perceptual 而非 logical。文章也透露了 Opus 4.7 在 OSWorld benchmark 上的显著提升，low effort 就能达到 Sonnet 4.6 max 的水平，这对成本敏感场景是重大利好。唯一遗憾的是 prompt injection classifier 目前只支持官方 tool type，custom implementation 需要单独申请。</p>
+      </section>
+      <div class="tags"><span>computer-use</span><span>browser-use</span><span>agents</span><span>best-practices</span><span>opus-4.7</span><span>prompt-injection</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-05-12">
+              <div class="date-heading">
+                <h3>2026-05-12</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>May 12, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>How Anthropic&#x27;s cybersecurity team built a threat detection platform with Claude Code</h2>
+      <a class="original-link" href="https://claude.com/blog/how-anthropic-uses-claude-cybersecurity" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 内部安全团队用 Claude Code 搭建了 CLUE（Claude Looks Up Evidence），一个 threat detection 和 response platform。核心价值：用 natural language interface + tool use 连接内部系统（Slack、code repos、data warehouses），实现 alert triage 自动化和 investigation 加速。数据亮眼：false positive rate 从 33% 降到 7%，30 天内自动化了约 12,000 queries，节省估计 1,870 小时人工。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>CLUE 架构：CLUE Triage 做 first-pass alert enrichment 和 disposition（false/true positive, malicious, expected behavior）；CLUE Investigate 用 natural language 转 SQL，跑 agentic loop（orchestrator → sub-agents → synthesis）</li><li>开发效率：PoC 一天跑通，design doc + implementation 一周完成。Jackie Bow 原话：Claude Code 是 design partner + collaborator，突破了她自己的 technical limitations</li><li>核心差异化：internal context——能查 Slack conversations、internal docs、code repos，这是外部 security platform 做不到的</li><li>量化指标：每 session 平均 25 tool calls、11 queries；调查时间从 hours 降到 3-4 分钟；false positive rate 从 ~33% 降到 7%</li><li>哲学转变：引用 &#x27;the bitter lesson&#x27;——与其给 Claude 写死 investigation playbooks（SOAR 思路），不如给 tools + goal，让它自己找路径。非确定性是 feature 不是 bug</li><li>未来方向：从 reactive（等 alert）转向 proactive hunting；investigation transcripts 变成 organizational memory；parallel investigation strategies</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic &#x27;dogfooding&#x27; Claude Code 的真实案例，展示了 agents 在 enterprise security 场景的落地路径。对关注 agents 和 Claude Code 的开发者来说，这篇文章提供了具体的架构思路（tool use + agentic loop + internal context integration）和量化的 ROI 数据。同时暗示了 Responsible Scaling Policy 的执行依赖——安全能力直接绑定 product release 节奏。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章质量不错，有具体架构、有量化数据、有哲学思考。但要注意：这是 Anthropic 自家的 use case，数据未经第三方验证；而且他们的 internal context 集成（Slack、docs）对大多数公司来说需要大量基础设施工作。真正可借鉴的是设计思路——让 agent 有 tools 和 goal 而非 rigid playbooks，以及 investigation transcripts 作为可审计、可学习的 knowledge base。CLUE 本质是一个 internal-facing security agent，思路可迁移到其他需要 cross-system correlation 的场景。</p>
+      </section>
+      <div class="tags"><span>claude-code</span><span>security-agents</span><span>threat-detection</span><span>dogfooding</span><span>agentic-loop</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-05-01">
+              <div class="date-heading">
+                <h3>2026-05-01</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>May 01, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>How a non-technical project manager built and shipped a stress management app with Claude Code in six weeks</h2>
+      <a class="original-link" href="https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>一个零编程经验的 project manager 用 Claude Code 在 6 周内从零构建并上架了一个 iOS stress management app (Respiro)，包含 15+ specialized subagents 的 multi-agent architecture，已获数百用户。核心洞察：PM 技能直接迁移到 agent orchestration。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>完全无 coding background，用 Claude Code 完成 ideation → App Store 上架全流程</li><li>自建 multi-agent architecture：TCA architect、Swift developer、Metal specialist、code reviewer 等 15+ agents 并行工作</li><li>React Native MVP → Swift 完整重写，Claude Code 几小时内搞定</li><li>Vision capabilities 被低估：截图问 Claude 帮他 navigate Apple Developer Program、Meta API token 等复杂 UX</li><li>已影响主业：Mythical Games 工程团队开始采用他的 Claude workflow</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Claude Code &#x27;democratizing shipping&#x27; 的强案例——非技术背景者能独立完成 full-stack app development。对关注 agents 的读者，multi-agent orchestration by a non-engineer 是关键信号：agent management 正在变成一种通用技能，不依赖传统编程能力。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>故事 impressive 但需注意：founder 有十年 PM 经验，这让他擅长 decompose tasks 和 manage &#x27;agent team&#x27;。纯小白能否复刻存疑。multi-agent architecture 部分细节较薄，不清楚具体 orchestration 机制。不过 vision capabilities 用于 navigate 复杂第三方平台这个用法很实用，值得借鉴。整体是 Claude Code 营销 narrative，但确实展示了 tool 的上限。</p>
+      </section>
+      <div class="tags"><span>claude_code</span><span>multi_agent</span><span>ios_dev</span><span>non_technical_founder</span><span>vision_capabilities</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-30">
+              <div class="date-heading">
+                <h3>2026-04-30</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Apr 30, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Lessons from building Claude Code: Prompt caching is everything</h2>
+      <a class="original-link" href="https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Claude Code 团队分享了在生产环境中优化 prompt caching 的实战经验。核心观点：prompt caching 是 long-running agents 可行的经济基础，Claude Code 整个架构都围绕它设计，甚至会对 cache hit rate 设告警。文章详细解释了 prefix matching 机制、如何组织 prompt 结构、避免 mid-session 改动 tools/models、以及 cache-safe forking 做 compaction 的技巧。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Prompt caching 是 prefix matching，任何 prefix 变动都会 invalidate 整个 cache，所以要把 static content 放前面、dynamic content 放后面</li><li>不要 mid-session 更换 model 或增删 tools——这会 break cache。用 tools 本身来建模状态转换（如 EnterPlanMode/ExitPlanMode），而非改变 tool set</li><li>用 messages 传递更新信息而非修改 system prompt，例如用 &lt;system-reminder&gt; tag 在 user message 里传递时间戳或文件变更</li><li>Tool search + defer_loading 模式：用 lightweight stubs 占位，model 需要时再 load full schema，保持 prefix 稳定</li><li>Compaction 要用 cache-safe forking：复用 parent conversation 的 system prompt、tools、context，只在末尾 append compaction request，这样才能复用 cache</li><li>Cache hit rate 要像 uptime 一样监控，几个百分点的 miss 就会显著影响成本和延迟</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对于构建 agents 的开发者，这是 Anthropic 官方给出的 prompt caching 最佳实践，直接来自 Claude Code 生产环境。这些技巧决定了你的 agent 产品在经济上是否可行——long-running agents 没有 caching 会非常昂贵。文章揭示了很多反直觉的坑，比如 mid-session 换 model 到 Haiku 反而更贵、compaction 调用可能产生巨额 uncached cost。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一篇非常实用的 engineering post，干货密度高。最关键的设计原则是：把整个系统架构围绕 caching constraint 来设计，而不是事后优化。几个技巧值得直接抄作业：1) prompt 结构分层（static → project-level → session-level → conversation）；2) 用 tools 做状态机而非改 tool set；3) fork 操作复用 parent prefix。Compaction 部分 Anthropic 说已经内置到 API 里了，但理解原理对调试和自定义场景仍有价值。如果你在构建 multi-turn agents，这篇文章是必读。</p>
+      </section>
+      <div class="tags"><span>prompt-caching</span><span>agents</span><span>Claude-Code</span><span>engineering-practices</span><span>cost-optimization</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 30, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Building AI agents for the enterprise</h2>
+      <a class="original-link" href="https://claude.com/blog/building-ai-agents-for-the-enterprise" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇推广 Claude Cowork enterprise guide 的软文，核心内容是一个 downloadable guide 而非本文本身。文章引用 Anthropic Economic Index 数据（美国 40% 员工在工作中使用 AI），提出企业 AI 部署的关键在于 embedding agentic AI 而非 incremental gains，并提及 L&#x27;Oreal、Lyft、Rakuten 三个客户案例。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>核心概念：&#x27;agentic thinking divide&#x27;——部分 AI 部署能 compound 增长，其他则 stall</li><li>三支柱框架：employee upskilling、process compression、new product capabilities</li><li>Claude Cowork 定位：无需 custom build 即可给每个 team 带 agentic 能力</li><li>提供 six-month deployment framework（在 guide 中，非本文正文）</li><li>客户案例：L&#x27;Oreal、Lyft、Rakuten（细节需下载 guide）</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>Claude Cowork 是 Anthropic enterprise strategy 的关键产品，直接对标 OpenAI ChatGPT Enterprise 和 Microsoft Copilot。&#x27;agentic thinking divide&#x27; 这个框架值得关注——它试图解释为什么有些企业 AI 投入能持续产生复利效应。但本文本身只是 teaser，实际干货在 downloadable guide 里。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身偏 marketing teaser，技术细节和具体 best practices 都在 external guide 里，正文信息密度低。对 tracking model releases 的读者来说，没有新 model 信息，也没有 Claude Code 更新。唯一值得注意的是 Claude Cowork 作为 Anthropic enterprise 产品线的定位在强化，以及 &#x27;agentic thinking divide&#x27; 这个概念框架——但需要看 full guide 才能判断是否有实质内容。建议直接跳过本文，去下载 guide。</p>
+      </section>
+      <div class="tags"><span>enterprise-agents</span><span>claude-cowork</span><span>agentic-ai</span><span>deployment-framework</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-29">
+              <div class="date-heading">
+                <h3>2026-04-29</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 29, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Product development in the agentic era</h2>
+      <a class="original-link" href="https://claude.com/blog/product-development-in-the-agentic-era" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 产品经理分享如何用 Claude Managed Agents（beta）和 Claude Code 改变 PM 工作流：从文档驱动的 API 设计转向快速 prototyping，用 agents 自动化运营长尾任务，释放时间专注于 craft。文章提供了三个具体 use cases：adoption analytics、developer sentiment monitoring、demo building。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Managed Agents 是一套 composable APIs，用于在云端大规模构建和部署 agents，支持 memory、parallel execution、persistent access</li><li>Claude Code 让 PM 能在一下午内从 spec 跑通 end-to-end prototype，加速 API design 迭代</li><li>工作流分层：Claude + Claude Cowork 用于 open-ended research，Claude Code 用于构建和部署具体 agents</li><li>三个实用案例：adoption analytics（查内部数据库找 outliers）、developer sentiment monitoring（并行 fan-out 扫描反馈）、demo building（自动生成定制化 demo）</li><li>Agents 在云端运行，可以 walk away 回来收结果，适合自动化那些因 quirks 多而难以 scale 的流程</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章展示了 Anthropic 内部 dogfooding Managed Agents 的真实场景，对关注 agents 落地的开发者有参考价值。它揭示了 product development 在 agentic era 的范式转变：从 doc-driven 变成 build-with-what-you-ship，prototyping 门槛大幅降低。对 PM 而言，这意味着可以从 ticket backlog 的执行者变成真正的 builder。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身是 case study 性质，没有技术深度或新功能发布，更多是 positioning 和 use case 展示。Managed Agents 的核心卖点——云端托管、memory、parallel execution——听起来不错，但实际能力边界需要看 docs 才能判断。对中文读者来说，最有价值的是三个 use cases 的设计思路，可以借鉴到自己的 workflow automation 中。整体偏营销向，但作为 workflow inspiration 值得一读。</p>
+      </section>
+      <div class="tags"><span>managed-agents</span><span>claude-code</span><span>workflow-automation</span><span>dogfooding</span><span>PM-productivity</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 29, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp</h2>
+      <a class="original-link" href="https://claude.com/blog/claude-api-skill" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 将 claude-api skill 扩展到 CodeRabbit、JetBrains、Resolve AI 和 Warp，让开发者在更多工具中获得 production-ready 的 Claude API 代码指导。这个 skill 封装了 agent patterns、prompt caching、model migration 等最佳实践，并随 SDK 自动更新。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>claude-api skill 最初在 Claude Code 中推出（3月），现已集成到 CodeRabbit、JetBrains/Junie、Resolve AI、Warp 等开发工具</li><li>Skill 核心能力：优化 cache hit rate、添加 context compaction、模型升级迁移（如迁移到 Opus 4.7）、配置 Claude Managed Agents</li><li>开源可集成：任何 coding agent 都可以通过 anthropics/skills 仓库 bundling 这个 skill，约 20 行 CI 配置即可</li><li>自动同步：当 API 有新 feature 或新 model 发布时，skill 自动保持最新</li><li>Claude Code 内可直接用 /claude-api migrate 和 /claude-api managed-agents-onboard 命令</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这体现了 Anthropic 的生态策略——通过开源 skill 让 Claude API expertise 嵌入开发者已有的工具链，降低 API 使用门槛和迁移成本。对追踪 agents 的读者来说，这是 Anthropic 在 developer experience 层面的差异化布局，让 Claude Code 的能力外溢到第三方 IDE 和 code review 工具。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>实用但不算重磅。Skill 本质是把 docs + best practices 封装成可分发单元，解决开发者&#x27;不知道自己不知道什么&#x27;的问题。亮点是自动同步机制和开源策略，但实际价值取决于 skill 内容的质量和更新频率。对国内开发者而言，如果你用 JetBrains 或 Warp，这是个便利功能；如果主要用 Claude Code，这个 skill 你已经有了。值得关注的是 Claude Managed Agents 这个新概念——暗示 Anthropic 可能在构建托管的 long-running agent 服务。</p>
+      </section>
+      <div class="tags"><span>claude-api-skill</span><span>developer-tools</span><span>ecosystem</span><span>Claude-Code</span><span>agents</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-28">
+              <div class="date-heading">
+                <h3>2026-04-28</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Apr 28, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Onboarding Claude Code like a new developer: Lessons from 17 years of development</h2>
+      <a class="original-link" href="https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇关于如何将 Claude Code 像 onboarding 新开发者一样引入大型 legacy codebase 的实战案例。Brendan MacLean 用 17 年的 developer onboarding 经验，成功让 Claude Code 理解并维护 70 万行 C# 的 Skyline 项目，核心方法是建立独立的 context repository (pwiz-ai)、构建 skills library、以及用 MCP 让 Claude 访问真实数据。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Context 是可维护的 artifact：把 AI context 放在独立 repo (pwiz-ai)，与代码库分离，跨 branch 和 time point 适用，需要像项目产物一样 version 和 maintain</li><li>Skills library 编码领域知识：如 debugging skill 强制 Claude 先做 root cause analysis 而非 &#x27;guess and test&#x27;，遵循 &#x27;reference do not embed&#x27; 原则保持轻量</li><li>MCP integrations 让 Claude 访问真实数据：自动生成 daily summary email，整合 nightly test failures、exceptions、support threads</li><li>实际产出：两周完成搁置一年的 Files View panel；一天内完成三年想加的功能；自动化 2000+ tutorial screenshots 的 reproduction</li><li>团队成员从写代码转向 instructing Claude Code，连 skeptics 也用 Claude Code 建了新的 mobilogram pane visualization</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇 blog 直接回答了一个核心问题：Claude Code 如何处理大型、长期维护的 legacy codebase？答案不是靠 model 能力，而是靠系统化地构建 context layer。对于维护大型项目的团队，这套方法论可复制——特别是 skills 和 MCP 的组合使用，展示了 agentic coding 从 &#x27;chat-based helper&#x27; 到 &#x27;embedded team member&#x27; 的路径。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一篇高质量的实战案例，核心洞察是 &#x27;context is just another artifact to maintain&#x27;。Brendan 的做法很务实：不指望 Claude 自动理解项目，而是像 onboarding 新人一样系统化地提供 context。pwiz-ai repo 的设计很聪明——独立于 codebase，避免污染版本历史。值得注意的细节：debugging skill 强制 root cause analysis 而非 guess-and-test，这其实是在做 prompt engineering/alignment 工作。对于中国开发者，这套方法对大型企业 legacy 系统尤其有价值，但需要投入 upfront effort 构建 context layer，不是 plug-and-play。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>legacy codebase</span><span>skills</span><span>MCP</span><span>context engineering</span><span>agentic coding</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-22">
+              <div class="date-heading">
+                <h3>2026-04-22</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 22, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Building agents that reach production systems with MCP</h2>
+      <a class="original-link" href="https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇关于如何让 AI agents 连接生产系统的实战指南。Anthropic 对比了三种路径——direct API calls、CLI 和 MCP——论证了为什么 production agents 应该选择 MCP，并给出了构建高质量 MCP server 的具体 patterns，包括 remote servers、intent-grouped tools、code orchestration、MCP Apps 和 Elicitation 等新特性。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>MCP SDK downloads 从年初 1 亿/月涨到 3 亿/月，已成为 Claude Cowork、Claude Managed Agents、Claude Code channels 的底层协议——这是 MCP 生态成熟的关键信号</li><li>MCP server 设计核心建议：build remote servers（跨平台分发）、group tools around intent not endpoints（避免 API mirror）、大规模 surface 用 code orchestration（Cloudflare 用 2 个 tools 覆盖 2500 endpoints）</li><li>新特性 MCP Apps 让 tool 返回 interactive UI（chart/form/dashboard），Elicitation 支持 Form mode 和 URL mode 处理用户交互——这些是 agent UX 的重要演进</li><li>Client 端 context 优化：tool search 可减少 85%+ tool-definition tokens，programmatic tool calling 减少 37% token usage——对长链路 agent 很实用</li><li>Skills 与 MCP 互补：MCP 提供 tools/data access，Skills 提供 procedural knowledge。可通过 Plugins 打包分发，或 MCP server 直接分发 skills（社区正在标准化）</li><li>Vaults 解决 cloud-hosted agent 的 OAuth token 持久化问题——register 一次，platform 自动注入和 refresh</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>MCP 正在成为 agent 连接外部系统的事实标准。如果你在做 agent infra 或企业级 agent 集成，这篇文章提供了 Anthropic 官方的 best practices，比社区方案更权威。对 Claude Code 用户来说，MCP 是扩展能力的主要路径；对产品团队来说，MCP server 的设计质量直接影响 agent 可用性。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章干货密度高，是 Anthropic 少有的 engineering-focused 实战内容。关键洞察：MCP 不只是协议，而是一整套 agent integration 的设计哲学——intent grouping、progressive disclosure、skills pairing 都是值得借鉴的思路。Cloudflare 的 code orchestration 模式很聪明，适合 API surface 大的场景。建议关注 MCP Apps 和 Elicitation，这两个特性会改变 agent 与用户的交互范式。缺点是文章对 error handling、rate limiting、multi-tenant isolation 等生产问题着墨较少。</p>
+      </section>
+      <div class="tags"><span>MCP</span><span>agents</span><span>Claude Code</span><span>tool-use</span><span>production</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-20">
+              <div class="date-heading">
+                <h3>2026-04-20</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Apr 20, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Meet the winners of our Built with Opus 4.6 Claude Code hackathon</h2>
+      <a class="original-link" href="https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 公布了 Opus 4.6 Claude Code hackathon 的五位获奖者，展示了非专业开发者用 Claude Code 构建实用 agent 应用的案例：加州建筑许可自动化、儿童可视化 IDE、医疗随访助手、乌干达道路评估工具、以及实时 AI 音乐伴奏。值得注意的是，5 位获奖者中有 4 位不是职业程序员。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>CrossBeam (一等奖): 个人伤害律师构建，用 parallel sub-agents 自动化加州建筑许可审批流程，将数周工作压缩到 20 分钟，Buena Park 市政府有意采用</li><li>Elisa (二等奖): 专为儿童设计的可视化 IDE，用户通过拖拽 primitives 构建 spec，AI 在后台生成代码，30 小时完成 39k+ LOC 和 1500+ tests</li><li>PostVisit.ai (三等奖): 心脏科医生构建的诊疗后随访助手，整合病历、临床证据和就诊记录，用 plain language 解释诊断</li><li>TARA (Keep Thinking 奖): 用 Opus 4.6 vision 能力分析 dashcam 画面，自动生成道路投资评估报告，将 9-14 个月的可行性研究压缩到 5 小时</li><li>Conductr (创意探索奖): 实时 AI 乐队伴奏，WebAssembly 引擎每 15ms 生成音符，latency 达到 &#x27;musically invisible&#x27;</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章的核心价值是验证了一个趋势：domain experts 借助 Claude Code 可以在不写代码的情况下构建生产级 agent 应用。CrossBeam 已有真实政府客户意向，PostVisit 是医生多年想做的产品，TARA 解决的是真实的基础设施痛点。这些不是 demo，而是有实际落地场景的工具。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身是 hackathon 获奖者展示，技术深度有限，但案例选择有代表性——覆盖了 document processing、visual IDE、healthcare、vision analysis、real-time audio 五个方向。最值得关注的信号是：非程序员用 Claude Code 构建复杂 multi-agent workflow 已成为现实。CrossBeam 的 parallel sub-agents 设计和 Elisa 的 meta-planner + task graph 架构值得研究。文章末尾提到 Opus 4.7 hackathon 已启动，说明 Anthropic 在持续投入社区生态建设。</p>
+      </section>
+      <div class="tags"><span>claude-code</span><span>hackathon</span><span>agents</span><span>opus-4.6</span><span>domain-experts</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-16">
+              <div class="date-heading">
+                <h3>2026-04-16</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Apr 16, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Best practices for using Claude Opus 4.7 with Claude Code</h2>
+      <a class="original-link" href="https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Opus 4.7 是 Anthropic 目前最强的 coding 和 agentic tasks 模型，但 token 用量和行为与 4.6 有明显差异。本文核心是指导用户如何调优：新增 xhigh effort level 作为默认值、adaptive thinking 替代 fixed thinking budget、以及交互策略从 pair programming 转向 delegation 模式。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>新增 xhigh effort level（介于 high 和 max 之间）作为默认推荐，平衡 reasoning 能力和 token 成本，避免 max 的 overthinking 问题</li><li>Adaptive thinking 取代 fixed thinking budget——模型自主决定何时思考、何时跳过，简单查询响应更快，复杂任务才投入 thinking tokens</li><li>交互策略转变：把 Claude 当作 capable engineer delegation 而非 pair programmer，第一轮就给足 context（intent、constraints、acceptance criteria），减少 turn 数量</li><li>Auto mode（Shift+Tab）适合长任务，可让模型自主执行减少 check-in 开销</li><li>行为变化：response length 按 task complexity 动态调整（不再默认 verbose）、tool call 频率降低、subagent spawn 更谨慎——如需更多 tool use 或并行 subagent 需显式 prompt</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇是 Opus 4.7 的实战调优指南，直接关系到 token 成本控制和 coding 效率。如果你在用 Claude Code 做生产级开发，不调整 effort level 和交互策略可能导致成本超预期或效果不达预期。Adaptive thinking 的引入也意味着 prompt engineering 需要相应调整。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>Anthropic 在 effort level 上做了更细粒度的控制，xhigh 这个档位很务实——max 容易 overthinking 且成本失控，xhigh 是大多数场景的甜点。Adaptive thinking 是正确方向，但用户需要重新学习如何 prompt（想要更多思考要显式说 &#x27;think carefully&#x27;，想省 token 要说 &#x27;prioritize responding quickly&#x27;）。整体来看，Opus 4.7 更适合 autonomous agents 而非 interactive coding，这对 agent workflow 设计有指导意义。</p>
+      </section>
+      <div class="tags"><span>Opus 4.7</span><span>Claude Code</span><span>effort levels</span><span>adaptive thinking</span><span>agentic coding</span><span>token optimization</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-15">
+              <div class="date-heading">
+                <h3>2026-04-15</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>Apr 15, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Using Claude Code: session management and 1M context</h2>
+      <a class="original-link" href="https://claude.com/blog/using-claude-code-session-management-and-1m-context" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇关于 Claude Code session 管理的实用指南，重点讲解如何在 1M context window 下高效使用 Continue、/rewind、/clear、/compact 和 Subagents 五种策略，以及如何避免 context rot 导致的性能下降。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Context rot 是真实问题：即使有 1M context，随着 context 增长，model performance 会因 attention 分散而下降，老内容会干扰当前任务</li><li>/rewind (双击 Esc) 比「纠正式 prompting」更高效：回退到失败尝试前，保留有用的 file reads，用学到的经验重新 prompt</li><li>/compact vs /clear 的关键区别：compact 让 model 自动总结（有损但省力），clear 由你手动提炼关键信息后重新开始（更精准但费时）</li><li>Bad autocompact 的根因：model 在 compact 时处于「最不聪明」的状态（context rot 最严重），无法预测你接下来的工作方向，可能丢掉重要信息</li><li>Subagents 的判断标准：如果只需要结论而不需要中间 tool outputs，就 spawn subagent 让它在独立 context 中工作</li><li>核心原则：新任务开新 session，相关任务可延续，主动管理 context 比被动等 autocompact 更可控</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>1M context 让长任务成为可能，但也让 context 管理变得 critical。理解这些机制能显著提升 Claude Code 的实际 productivity，避免在关键时刻因 bad compact 或 context rot 翻车。这是目前最系统的 Claude Code workflow 优化指南。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章填补了 Claude Code 使用经验的重要空白——官方终于承认 context rot 是真实存在的问题，并给出了具体的 mitigation 策略。实用的启发式规则：主动 compact 带指令 &gt; 被动等 autocompact；rewind &gt; 纠正式对话；subagent 适合「只要结论」的场景。建议重度用户把文中的 decision table 存下来当 cheatsheet 用。</p>
+      </section>
+      <div class="tags"><span>claude-code</span><span>context-management</span><span>workflow</span><span>best-practices</span><span>agents</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-10">
+              <div class="date-heading">
+                <h3>2026-04-10</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 10, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Multi-agent coordination patterns: Five approaches and when to use them</h2>
+      <a class="original-link" href="https://claude.com/blog/multi-agent-coordination-patterns" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 系统性梳理了五种 multi-agent coordination patterns：Generator-Verifier（质量把关）、Orchestrator-Subagent（层级分工）、Agent Teams（并行独立任务）、Message Bus（事件驱动）、Shared State（协作共享）。核心建议是从最简单的 pattern 开始，观察瓶颈再演进，而非一上来就追求复杂架构。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Generator-Verifier：最简单也最常用，适合 code generation、fact-checking 等有明确 evaluation criteria 的场景，但 verifier 质量决定整个系统的上限</li><li>Orchestrator-Subagent：Claude Code 使用的模式，适合 task decomposition 清晰的场景，但 orchestrator 会成为 information bottleneck</li><li>Agent Teams：worker 持久化运行、积累 context，适合 codebase migration 这类独立长任务，但要求任务间 truly independent</li><li>Message Bus：适合 event-driven pipeline 和不断扩展的 agent 生态，但 debugging 和 tracing 难度高</li><li>Shared State：去中心化，agents 通过 shared store 协作，适合 research synthesis 这类需要实时共享 findings 的场景，但容易陷入 reactive loop</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是目前最实用的 multi-agent architecture 指南之一。很多团队在构建 agent 系统时要么 over-engineer，要么选错 pattern 导致扩展困难。Anthropic 直接点出每个 pattern 的 structural assumptions 和 failure modes，比如 Generator-Verifier 的 &#x27;rubber-stamp verifier&#x27; 问题、Orchestrator-Subagent 的信息瓶颈、Shared State 的 reactive loop——这些都是 production 环境中真正会遇到的坑。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇是 practical engineering guidance，不是 research breakthrough。价值在于：Anthropic 把他们自己在 Claude Code 和内部系统中验证过的架构选择公开了，包括 trade-offs 和演进路径。建议直接看文中的 decision table 和 pattern comparison 部分，然后对照自己的 use case。对于正在构建 multi-agent 系统的团队，从 Orchestrator-Subagent 开始这个建议是务实的——它覆盖面最广、coordination overhead 最低。</p>
+      </section>
+      <div class="tags"><span>multi-agent</span><span>coordination-patterns</span><span>Claude-Code</span><span>architecture</span><span>production-systems</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 10, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Preparing your security program for AI-accelerated offense</h2>
+      <a class="original-link" href="https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Project Glasswing 背景下的安全指南，核心论点是：AI 正在大幅降低漏洞发现和利用的门槛，未来 24 个月内大量历史遗留 bug 将被 AI 找到并串联成 exploit。文章给出 7 条务实建议：关闭 patch gap、准备应对漏洞报告量级增长、上线前找 bug、扫描已有代码中的漏洞、设计 breach 场景、减少攻击面、缩短 incident response 时间。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Patch gap 正在消失：AI 能快速 reverse patch 成 exploit，建议优先打 CISA KEV catalog，用 EPSS 做优先级排序</li><li>漏洞报告量级将增加一个数量级，现有 triage/remediation 流程需要自动化，AI 可辅助 dedup、draft tickets、patch generation</li><li>AI vulnerability scanning 是最重要的一条：用和攻击者同级别的模型先扫描自己的代码和系统</li><li>Zero trust + hardware-bound credentials + short-lived tokens：对抗 AI 加速攻击的核心是消除「靠摩擦增加难度」的防御</li><li>Incident response 需要从「天级」压缩到「小时级」：把 model 放在 alert queue 前端做 first-pass triage</li><li>向开源项目提交 AI 发现的漏洞时，必须人工验证、提供 PoC、声明 AI 参与，否则会被 maintainer 忽略</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 第一次系统性地阐述「AI 加速攻防」对 enterprise security 的实际影响。文章不是 marketing，而是基于他们内部安全团队的实战经验。对于正在部署 AI agents 的团队，这篇文章直接回答了「攻击者会用 AI 做什么，我们该怎么准备」这个问题。文中提到的 Claude Mythos Preview 和 Project Glasswing 是 Anthropic 在 cybersecurity 方向的重要布局。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章质量很高，建议全文细读。核心洞察是：很多传统安全控制（靠增加攻击者工作量的）在 AI 时代会失效，需要转向「即使攻击者有无限耐心也有效」的控制。文中对 AI 辅助安全工作的建议非常具体，比如「先在一个 noisy rule 上 wire model，测两周 agreement rate」这种 incremental rollout 思路很务实。但要注意：文章假设你有 dedicated security team，小团队只需要做最基础的 4 件事（自动更新、managed services、passkeys、免费工具）。</p>
+      </section>
+      <div class="tags"><span>security</span><span>AI-offense</span><span>vulnerability-management</span><span>zero-trust</span><span>incident-response</span><span>Project-Glasswing</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-04-02">
+              <div class="date-heading">
+                <h3>2026-04-02</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Apr 02, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Harnessing Claude&#x27;s Intelligence | 3 Key Patterns for Building Apps</h2>
+      <a class="original-link" href="https://claude.com/blog/harnessing-claudes-intelligence" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 官方分享构建 AI agents 的三大核心 pattern：(1) 用 Claude 已经熟悉的工具（bash + text editor）；(2) 持续问「什么可以不再做」——让 Claude 自己 orchestrate、管理 context、persist memory；(3) 谨慎设置 boundaries，包括 caching 策略和 declarative tools。核心洞见：agent harness 里编码的假设会随模型能力提升而过时，需要不断 prune。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Claude Code 的基础是 bash tool + text editor tool，Claude 3.5 Sonnet 仅用这两个工具就达到 SWE-bench Verified 49% SOTA——用 Claude 熟悉的通用工具比设计专用工具更可持续</li><li>让 Claude 自己 orchestrate：给 code execution tool 后，Claude 可以写代码串联 tool calls、过滤输出，避免不必要的内容进入 context window。BrowseComp 上 Opus 4.6 从 45.3% 提升到 61.6%</li><li>让 Claude 自己管理 context：skills 做 progressive disclosure，context editing 移除过期内容，subagents 隔离任务。Opus 4.6 的 subagent 能力在 BrowseComp 上额外提升 2.8%</li><li>让 Claude 自己 persist context：compaction 和 memory folder。Opus 4.6 在 BrowseComp 达到 84%，而 Sonnet 4.5 只有 43%。Pokémon 游戏案例展示了从「记流水账」到「写战术笔记」的质变</li><li>Caching 策略：static first/dynamic last，用 system-reminder 而非编辑 prompt，避免中途换模型，用 tool search 做 dynamic discovery 而不破坏 cache</li><li>Declarative tools 用于 security/UX/observability boundaries，但 Claude Code 的 auto-mode 用第二个 Claude judge bash 命令安全性——这可能是减少专用工具的新方向</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章是 Anthropic 官方对 agent architecture 的最新思考，直接揭示了 Claude Code 的设计哲学。关键信号：Opus 4.5/4.6 在 self-orchestration、memory management、subagent 能力上有质的飞跃，这意味着 agent harness 应该做减法而非加法。对跟踪 Claude Code 和 agent 系统的人来说，这是理解 Anthropic 产品方向的重要窗口。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章的核心价值在于「做减法」的哲学——随着模型变强，harness 里的补偿性代码会变成 bottleneck。BrowseComp 和 Pokémon 的数据很有说服力：Opus 4.6 vs Sonnet 4.5 的差距不是一点半点。但要注意：这些能力（compaction、memory folder、subagents）目前只在 Claude 官方产品里，API 用户能用到什么程度还不清楚。另外文章日期写的是 2026 年 4 月，可能是未来视角的设定，或者笔误，值得留意。</p>
+      </section>
+      <div class="tags"><span>agent-architecture</span><span>claude-code</span><span>context-management</span><span>prompt-caching</span><span>opus-4.6</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-03-05">
+              <div class="date-heading">
+                <h3>2026-03-05</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Mar 05, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Common workflow patterns for AI agents</h2>
+      <a class="original-link" href="https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 系统总结了 production 环境下 AI agents 的三种核心 workflow patterns：sequential（顺序执行）、parallel（并行处理）、evaluator-optimizer（迭代优化）。文章核心观点是：先用 single agent 尝试，不够再上 workflow，选错 pattern 会浪费 latency、tokens 或牺牲可靠性。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Sequential workflow：适合有依赖关系的多阶段任务（如 draft-review-polish），用 latency 换 accuracy，每个 agent 专注单一 subtask</li><li>Parallel workflow：适合独立可并行的任务（如多维度评估、代码审查），fan-out/fan-in 模式，需提前设计好 aggregation strategy</li><li>Evaluator-optimizer workflow：生成+评估分离的迭代循环，适合有明确质量标准的场景（代码生成、技术文档），需设定清晰的 stopping criteria 防止无限循环</li><li>核心决策原则：先用 single agent 试，达标就停；不达标再分析短板选 pattern；patterns 可嵌套组合</li><li>Tradeoffs 清晰：Sequential 加 latency，Parallel 加 cost 和 aggregation 复杂度，Evaluator-optimizer 乘 token 消耗</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 官方对 agent architecture 的实战总结，来自与数十个团队的合作经验。对于正在搭建 multi-agent 系统的团队，提供了清晰的决策框架和避坑指南——过度工程化是常见错误，简单 pattern 往往够用。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章实用性强，没有 hype，直接讲 tradeoffs 和 when to avoid。核心洞察是 &#x27;start simple&#x27;——很多团队一上来就搞复杂 orchestration，其实 single agent 加好 prompt 就能解决大部分问题。Evaluator-optimizer 的 stopping criteria 建议很关键，否则容易陷入 token 无底洞。建议配合他们的 white paper 一起看，这篇是精简版。</p>
+      </section>
+      <div class="tags"><span>agents</span><span>workflow patterns</span><span>architecture</span><span>production</span><span>Anthropic</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-02-24">
+              <div class="date-heading">
+                <h3>2026-02-24</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Feb 24, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Cowork and plugins for teams across the enterprise</h2>
+      <a class="original-link" href="https://claude.com/blog/cowork-plugins-across-enterprise" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Claude Cowork 和 plugins 的企业级更新：admin 可创建私有 plugin marketplace、更细粒度的权限控制、新增大量 enterprise connectors（Google Workspace、Docusign、Harvey 等），以及跨 Excel/PowerPoint 的 end-to-end orchestration 能力（research preview）。这是 Anthropic 在 enterprise agents 赛道的重要布局。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Admin 现在可创建 org-specific 的私有 plugin marketplace，支持 private GitHub repo 作为 plugin source（private beta）、per-user provisioning、auto-install</li><li>新增 connectors：Google Workspace (Calendar/Drive/Gmail)、Docusign、Apollo、Clay、Outreach、Similarweb、MSCI、LegalZoom、FactSet、WordPress、Harvey 等</li><li>推出跨 app orchestration 能力：Claude 可在 Excel 和 PowerPoint 之间传递 context，完成 multi-step 任务（如分析数据后生成 presentation）</li><li>新增 pre-built plugin templates 覆盖 HR、Design、Engineering、Operations、Financial analysis、Investment banking、Private equity、Wealth management 等场景</li><li>统一管理界面 &#x27;Customize&#x27; 整合 plugins、skills、connectors；新增 OpenTelemetry support 用于追踪 usage、costs、tool activity</li><li>Plugins 是 portable file system，可跨 Cowork 和 Claude Agent SDK 使用，便于构建私有 marketplace</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这波更新直接对标 Microsoft Copilot 的 enterprise 叙事。关键信号：1) Anthropic 正在构建 enterprise-grade agent ecosystem，而非单点产品；2) 跨 app orchestration（Excel↔PowerPoint）是迈向 multi-agent workflow 的关键一步；3) 私有 marketplace + 细粒度权限控制解决了 enterprise 采购的核心顾虑。对关注 agents 和 Claude Code 的人来说，plugin architecture 值得研究——它可能是 Anthropic 构建 agent platform 的核心基础设施。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>务实地说，这篇 blog 信息量中等偏上。最大的 signal 是跨 app orchestration 和 plugin marketplace 架构——这暗示 Anthropic 的 agent strategy 正从 &#x27;single powerful model&#x27; 转向 &#x27;composable agent ecosystem&#x27;。但要注意：Excel/PowerPoint orchestration 还在 research preview，实际能力待验证；新增的 connectors 虽多，但深度集成程度不明。对开发者而言，plugin 作为 portable file system + 兼容 Claude Agent SDK 这点值得关注，可能是未来构建 custom agents 的关键接口。整体来看，Anthropic 在 enterprise 市场的执行力不错，但与 Microsoft 的生态优势相比仍有差距。</p>
+      </section>
+      <div class="tags"><span>enterprise-agents</span><span>plugins</span><span>cowork</span><span>connectors</span><span>cross-app-orchestration</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Feb 24, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Cowork and plugins for finance</h2>
+      <a class="original-link" href="https://claude.com/blog/cowork-plugins-finance" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Claude Cowork 跨应用功能，支持在 Excel 和 PowerPoint 之间保持 context 完成 end-to-end 金融工作流。同时推出 5 个自研 finance plugins（覆盖 financial analysis、investment banking、equity research、private equity、wealth management）以及 FactSet、MSCI 的 MCP connectors 和 LSEG、S&amp;P Global 的 partner plugins。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Claude 现可跨 Excel 和 PowerPoint 工作，保持 context 不丢失，支持 multi-step finance tasks——research preview 阶段，Mac/Windows 全付费计划可用</li><li>5 个 Anthropic 自研 plugins 已上线 public repository，可直接使用或作为定制化起点</li><li>新增 MCP connectors：FactSet（real-time market data、fundamental analysis）和 MSCI（index data）</li><li>Partner plugins：LSEG（需 active entitlements）和 S&amp;P Global / Capital IQ Pro</li><li>Admin 可在 settings 的 connector directory 授权连接并 bundle 成团队 plugins</li><li>日期标注为 2026 年 2 月 24 日——可能是未来日期或 placeholder</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 在 enterprise agents 领域的重要布局：从单点 chat 走向跨应用、保持 context 的真实工作流。金融行业是高价值垂直场景，通过 plugins + MCP connectors 组合，Claude 能接入 institutional-grade data sources，解决「数据孤岛」痛点。对追踪 agents 进展的人来说，这展示了 domain-specific plugins 如何与 cross-app orchestration 结合。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>产品方向正确——finance workflows 确实需要跨工具、保持 context。但实际落地效果要看：1) Excel/PowerPoint integration 的稳定性；2) plugins 对 firm-specific terminology 和 workflow 的适配能力；3) 与 Bloomberg Terminal 等 entrenched tools 的竞争。MCP connectors 的扩展速度将是关键 moat。日期写 2026 年有点奇怪，可能是 CMS 模板错误或 scheduled post。整体属于 product update 级别，不是 breakthrough announcement。</p>
+      </section>
+      <div class="tags"><span>cowork</span><span>plugins</span><span>MCP connectors</span><span>finance vertical</span><span>cross-app workflow</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-01-30">
+              <div class="date-heading">
+                <h3>2026-01-30</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Jan 30, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Customize Cowork with plugins</h2>
+      <a class="original-link" href="https://claude.com/blog/cowork-plugins" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Claude Cowork 新增 plugins 支持，允许用户将 skills、connectors、slash commands 和 sub-agents 打包成插件，把 Claude 定制为特定岗位的专家助手。Anthropic 开源了 11 个官方插件，覆盖 sales、legal、finance、data 等场景，目前为 research preview 阶段。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Plugins 可组合 skills、connectors、slash commands、sub-agents，实现一次性配置、团队复用</li><li>官方开源 11 个插件：Productivity、Enterprise Search、Sales、Finance、Data、Legal、Marketing、Customer Support、Product Management、Biology Research、Plugin Create</li><li>插件完全 file-based，易于构建、编辑和分享，支持用 Claude 自行定制</li><li>目前仅支持本地存储，org-wide sharing 和 private marketplace 功能将在后续推出</li><li>所有付费用户可用，插件可在 Cowork 内直接安装或从 GitHub 获取</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Claude 从通用助手走向可定制 agent 平台的关键一步。Plugins 让企业能把 workflow 和 context「bake in」到每次交互中，降低重复 prompt engineering 的成本。与 OpenAI 的 GPTs 类似，但更强调 enterprise 场景和与 Claude Code 生态的整合。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>产品方向正确，但目前功能偏早期——本地存储限制使其难以真正用于团队协作，需等待 org-wide sharing 上线。开源 11 个插件是务实做法，既提供模板又降低用户上手门槛。值得关注后续 private marketplace 和权限管理功能，这才是 enterprise 买单的关键。与 Claude Code 的联动潜力大，可能成为 Anthropic 在企业市场的差异化抓手。</p>
+      </section>
+      <div class="tags"><span>plugins</span><span>cowork</span><span>agents</span><span>enterprise</span><span>customization</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-01-23">
+              <div class="date-heading">
+                <h3>2026-01-23</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Jan 23, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>When to use multi-agent systems (and when not to)</h2>
+      <a class="original-link" href="https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 官方关于 multi-agent systems 的实战指南，核心观点是：大多数场景下单 agent 就够用，multi-agent 的 overhead（3-10x tokens）往往得不偿失。只有三种情况值得上：context pollution 严重影响性能、任务可并行化、需要 specialization（工具集/系统提示/领域知识）。文章强调 context-centric decomposition 而非 problem-centric decomposition，并推荐了 verification subagent 这一可靠模式。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Multi-agent systems 的 hidden cost：3-10x token 消耗、更多 failure points、更多 prompt 维护负担</li><li>三种适用场景：context protection（隔离无关信息）、parallelization（并行探索更大搜索空间）、specialization（工具集/系统提示/领域知识分离）</li><li>关键设计原则：按 context 边界拆分，而非按问题类型拆分——后者会导致 &#x27;telephone game&#x27; 问题</li><li>Verification subagent 模式：专门负责测试/验证的 agent，因只需 blackbox 验证而避免 context 传递问题</li><li>Early victory problem：验证 agent 容易跑几个测试就 declare success，需要显式指令要求完整测试</li><li>Tool Search Tool 可减少 85% token 使用，在考虑 multi-agent 前值得先尝试</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 官方对 multi-agent 架构的务实判断，直接来自生产环境经验。对正在评估 agent 架构的团队来说，这篇文章提供了清晰的决策框架和反模式警示，能避免数月的过度工程投入。文章也暗示了 Claude 内部 Research feature 的 multi-agent 实现思路。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章的价值在于&#x27;反炒作&#x27;——很多团队在 multi-agent 上过度投入，但单 agent + 更好的 prompting 往往就够了。context-centric decomposition 的洞察很实用，verification subagent 模式值得借鉴。不过文章对 orchestrator 的 routing 复杂度讨论偏轻，实际落地时这往往是瓶颈。另外提到 Opus 4.5 作为 orchestrator 能力更强，暗示了 model capability 对架构选择的影响——随着模型变强，multi-agent 的 threshold 会继续上移。</p>
+      </section>
+      <div class="tags"><span>multi-agent</span><span>architecture</span><span>context-management</span><span>best-practices</span><span>anthropic</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-01-22">
+              <div class="date-heading">
+                <h3>2026-01-22</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>Jan 22, 2026</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Building Agents with Skills: Equipping Agents for Specialized Work</h2>
+      <a class="original-link" href="https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 正式发布 Agent Skills 作为 open standard，这是一个将 domain expertise 打包成文件格式的方案，让 general-purpose agents（如 Claude Code）能够快速获得专业能力。核心理念是：与其为每个领域构建 specialized agents，不如构建可复用的 skills 来装备通用 agent。Skills 使用 progressive disclosure 保护 context window，支持 scripts 作为 tools，并与 MCP servers 协同工作。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Skills 是组织化的文件集合，包含 SKILL.md、文档和可选的 Python scripts，可被 agent 按需访问和执行</li><li>Progressive disclosure 三层架构：metadata (~50 tokens) → SKILL.md (~500 tokens) → references (2000+ tokens)，只在需要时加载</li><li>Skills 与 MCP 互补：MCP 负责 external tools/data connections，Skills 负责 domain expertise 和 procedural knowledge</li><li>已发布为 open standard，目标是跨平台可移植——同一 skill 应能在不同 AI 平台使用</li><li>已在 Financial Services 和 Healthcare/Life Sciences 垂直领域部署，包括 DCF model builder、bioinformatics bundles、clinical trial protocol generation 等</li><li>Non-developer 可在 30 分钟内用 skill-creator tool 创建首个 skill，降低了 expertise codification 的门槛</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 在 agent 架构上的重要范式转变：从 &#x27;构建多个 specialized agents&#x27; 转向 &#x27;构建通用 agent + skills library&#x27;。对于追踪 Claude Code 的开发者来说，这意味着扩展 agent 能力的方式从写复杂 tools/scaffolding 变成了编写结构化文档和脚本。Skills 的开放标准化也意味着社区可以共享和复用 expertise，类似 MCP 的生态效应。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这个方向是对的——把 expertise 从 agent 核心逻辑中解耦，让更新和分享变得更简单。Progressive disclosure 的设计很务实，解决了 context window 的实际痛点。但关键问题是：skills 的质量和维护成本如何？企业是否会愿意分享 proprietary skills？另外，open standard 能否获得足够多的平台采用还有待观察。对于国内开发者，值得关注的是这种 &#x27;code as interface + skills as expertise&#x27; 的架构是否会成为行业共识。</p>
+      </section>
+      <div class="tags"><span>agent-skills</span><span>claude-code</span><span>MCP</span><span>agent-architecture</span><span>open-standard</span></div>
+    </article>
+    
+            </section>
+            
     </section>
   </main>
 </body>

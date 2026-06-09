@@ -15,6 +15,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -133,6 +138,37 @@ footer {
   gap: 10px;
 }
 
+.archive-list {
+  display: grid;
+  gap: 8px;
+}
+
+.archive-list a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.archive-list a:hover {
+  border-color: #b8c3cc;
+  background: #f1f4f7;
+}
+
+.archive-list strong {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .category-stat {
   min-height: 74px;
   padding: 12px;
@@ -190,6 +226,32 @@ footer {
 .feed-header h2 {
   margin-bottom: 0;
   font-size: 24px;
+}
+
+.date-section {
+  margin-bottom: 22px;
+}
+
+.date-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 42px;
+  margin-bottom: 10px;
+  padding: 0 2px;
+}
+
+.date-heading h3 {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.date-heading a {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .repo-link,

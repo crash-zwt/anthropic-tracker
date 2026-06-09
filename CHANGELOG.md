@@ -14,3 +14,4 @@
 - Added manual workflow inputs for historical backfill of `bootstrap_only` links.
 - Scoped Anthropic News to model release posts with source-level keyword filters.
 - Added `scripts/prune_filtered_sources.py` to clean existing data after source filters change.
+- Added publish-date archive navigation on the dashboard so readers can jump to articles from other dates.

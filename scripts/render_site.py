@@ -40,6 +40,28 @@ def render_badge(category: str) -> str:
     return f'<span class="badge badge-{esc(category)}">{esc(label)}</span>'
 
 
+def article_date(article: dict[str, Any]) -> str:
+    raw = article.get("published_at") or article.get("added_at") or ""
+    if len(raw) >= 10 and raw[:4].isdigit():
+        return raw[:10]
+    for fmt in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            return dt.datetime.strptime(raw, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    return "undated"
+
+
+def archive_label(date_key: str) -> str:
+    if date_key == "undated":
+        return "Undated"
+    return date_key
+
+
+def date_anchor(date_key: str) -> str:
+    return f"date-{date_key}"
+
+
 def main() -> int:
     articles = load_json(DATA_DIR / "articles.json", [])
     runs = load_json(DATA_DIR / "daily_runs.json", [])
@@ -63,7 +85,17 @@ def main() -> int:
             """
         )
 
-    cards = "\n".join(render_article(article) for article in articles[:80])
+    archive_counts: dict[str, int] = {}
+    for article in articles:
+        date_key = article_date(article)
+        archive_counts[date_key] = archive_counts.get(date_key, 0) + 1
+
+    archive_buttons = "\n".join(
+        f'<a href="#{esc(date_anchor(date_key))}"><span>{esc(archive_label(date_key))}</span><strong>{count}</strong></a>'
+        for date_key, count in sorted(archive_counts.items(), reverse=True)
+    )
+
+    cards = render_article_groups(articles[:120])
     if not cards:
         cards = """
         <article class="empty-state">
@@ -84,7 +116,7 @@ def main() -> int:
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="layout">
+  <main class="layout" id="top">
     <aside class="sidebar">
       <header>
         <p class="eyebrow">AI Lab Watch</p>
@@ -130,6 +162,13 @@ def main() -> int:
         </div>
       </section>
 
+      <section class="panel">
+        <h2>Archive</h2>
+        <nav class="archive-list" aria-label="Article archive by publish date">
+          {archive_buttons}
+        </nav>
+      </section>
+
       <footer>
         Generated: {esc(generated_at)}
       </footer>
@@ -161,6 +200,28 @@ def render_category_stat(category: str, count: int) -> str:
       <strong>{count}</strong>
     </div>
     """
+
+
+def render_article_groups(articles: list[dict[str, Any]]) -> str:
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for article in articles:
+        groups.setdefault(article_date(article), []).append(article)
+
+    sections = []
+    for date_key in sorted(groups, reverse=True):
+        articles_html = "\n".join(render_article(article) for article in groups[date_key])
+        sections.append(
+            f"""
+            <section class="date-section" id="{esc(date_anchor(date_key))}">
+              <div class="date-heading">
+                <h3>{esc(archive_label(date_key))}</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              {articles_html}
+            </section>
+            """
+        )
+    return "\n".join(sections)
 
 
 def render_article(article: dict[str, Any]) -> str:
