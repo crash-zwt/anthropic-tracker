@@ -55,58 +55,49 @@
     "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/AI-assistance-coding-skills": {
-    "title": "Jan 29, 2026 Alignment How AI assistance impacts the formation of coding skills",
+    "title": "How AI assistance impacts the formation of coding skills",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://www.anthropic.com/research/disempowerment-patterns": {
-    "title": "Jan 28, 2026 Alignment Disempowerment patterns in real-world AI usage",
+    "title": "Disempowerment patterns in real-world AI usage",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://www.anthropic.com/research/bloom": {
-    "title": "Dec 19, 2025 Alignment Introducing Bloom: an open source tool for automated behavioral evaluations",
+    "title": "Introducing Bloom: an open source tool for automated behavioral evaluations",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/category/enterprise-ai": {
-    "title": "Enterprise AI",
+    "title": "Enterprise AI Category | Blog",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/category/announcements": {
-    "title": "Announcements Product announcements",
+    "title": "Product announcements Category | Blog",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/category/claude-code": {
-    "title": "Claude Code",
+    "title": "Claude Code Category | Blog",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/zero-trust-for-ai-agents": {
     "title": "Zero Trust for AI agents",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude": {
     "title": "Best practices for computer and browser use with Claude",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/building-ai-agents-for-the-enterprise": {
     "title": "Building AI agents for the enterprise",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/claude-api-skill": {
     "title": "Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp",
@@ -263,5 +254,10 @@
     "source_id": "claude_code",
     "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
     "bootstrap_only": true
+  },
+  "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": {
+    "title": "Announcing our updated Responsible Scaling Policy",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   }
 }
