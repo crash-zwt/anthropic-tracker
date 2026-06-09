@@ -1,1 +1,32 @@
-{}
+{
+  "https://www.anthropic.com/news/claude-opus-4-8": {
+    "title": "Introducing Claude Opus 4.8",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  },
+  "https://www.anthropic.com/news/expanding-project-glasswing": {
+    "title": "Expanding Project Glasswing",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  },
+  "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical": {
+    "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  },
+  "https://www.anthropic.com/news/widening-conversation-ai": {
+    "title": "Widening the conversation on frontier AI",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  },
+  "https://www.anthropic.com/news/election-safeguards-update": {
+    "title": "An update on our election safeguards",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  },
+  "https://www.anthropic.com/news/services-track-partner-hub": {
+    "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  }
+}

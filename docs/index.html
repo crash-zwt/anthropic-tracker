@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>Never</dd>
+            <dd>2026-06-09 13:23 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>6</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>0</dd>
+            <dd>6</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic News</span>
-              <strong>0 new</strong>
+              <strong>6 new</strong>
             </li>
             
             <li>
@@ -69,7 +69,7 @@
           
     <div class="category-stat category-model">
       <span>Model</span>
-      <strong>0</strong>
+      <strong>6</strong>
     </div>
     
           
@@ -94,7 +94,7 @@
       </section>
 
       <footer>
-        Generated: 2026-06-09 12:40 Asia/Shanghai
+        Generated: 2026-06-09 13:24 Asia/Shanghai
       </footer>
     </aside>
 
@@ -107,11 +107,179 @@
         <a class="repo-link" href="https://github.com/crash-zwt/anthropic-tracker">GitHub</a>
       </div>
       
-        <article class="empty-state">
-          <h2>No articles yet</h2>
-          <p>After the first scheduled run, new posts will appear here with bilingual summaries and personal takes.</p>
-        </article>
-        
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>Unknown date</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Introducing the Services Track and Partner Hub of the Claude Partner Network</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/services-track-partner-hub" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 推出 Claude Partner Network 的 Services Track 分级体系和 Partner Hub 门户，把原本松散的合作伙伴生态标准化为 Select/Preferred/Global Premier 三档，每档都有明确的 certified practitioners 数量、production deployments 和 public case studies 要求。同时提到 Accenture、Deloitte、PwC 等大型咨询公司已大规模部署 Claude，PwC 正在 rollout Claude Code 和 Cowork。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Services Track 分三档：Select（10+ certified individuals，2+ production customers）、Preferred（100+ certified，15+ customers）、Global Premier（1000+ certified，100+ customers 跨三区域）</li><li>Partner Hub 提供 dashboard 让 partners 实时查看自己离下一档的差距，客户可用 public directory 找 qualified firms</li><li>Partner Hub 支持 MCP connector，可直接问 Claude 自己的 tier standing、deal status、certification 数量</li><li>$100M 投资用于 partner training、technical support、shared marketing；certification 通过 Anthropic Partner Academy 考试获得</li><li>PwC 正在 rollout Claude Code 和 Cowork 给美国团队，后续扩展到全球数十万员工</li><li>Tier 升降有固定时间表：每年 1/1 和 7/1 两次晋升机会，降档只在年度 review 且有 90 天通知期</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这标志着 Anthropic 从纯 model provider 向 enterprise ecosystem builder 的战略延伸。通过标准化 partner 分级，企业客户能更可靠地找到有真实 production 经验的 integrators，而非只会做 PPT 的咨询公司。对关注 Claude Code 的读者来说，PwC 的大规模部署是 Claude Code 进入 enterprise 的一个重要信号。MCP connector 的出现也说明 Anthropic 在把 partner ecosystem 纳入其 agent/tool-calling 生态。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章本身是 ecosystem/商业运营向的内容，不是 model release 或 alignment 研究。对技术追踪者来说价值有限，但有两个值得注意的点：一是 Claude Code 正在被大型咨询公司规模化采用，说明 Anthropic 在 code agent 领域的 enterprise penetration 策略在推进；二是 MCP connector 的应用场景，展示了 Anthropic 如何把 partner program 纳入其 broader agent infrastructure。如果你只关心 model releases 或 alignment，可以 skip；如果关注 Claude 的 enterprise strategy 和 ecosystem，值得快速扫一眼 tier requirements。</p>
+      </section>
+      <div class="tags"><span>partner-ecosystem</span><span>enterprise-strategy</span><span>Claude-Code</span><span>MCP</span><span>services-track</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>Unknown date</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>An update on our election safeguards</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/election-safeguards-update" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 2026 年选举安全更新，详细介绍了 Claude 在美国中期选举等重大选举前的 safeguards。文章披露了 Opus 4.7 和 Sonnet 4.6 的政治中立性评估得分（95%/96%）、election-related policy compliance（100%/99.8%）、以及对抗 influence operations 的表现（90%/94%）。首次测试了模型自主执行 influence operations 的能力，safeguards 启用时模型几乎拒绝所有任务。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Opus 4.7 和 Sonnet 4.6 正式亮相，政治偏见评估分别得分 95% 和 96%，election policy compliance 达 100% 和 99.8%</li><li>首次测试 autonomous influence operations 能力：无 safeguards 时 Mythos Preview 和 Opus 4.7 能完成超半数任务，有 safeguards 时几乎全部拒绝</li><li>Web search 触发率：选举相关问题 Opus 4.7 达 92%，Sonnet 4.6 达 95%</li><li>Election banners 功能扩展：美国中期选举指向 TurboVote，巴西选举也将支持</li><li>与 Vanderbilt University 的 The Future of Free Speech 等第三方合作审查 model behavior</li><li>开源了政治偏见评估方法论和数据集</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 在 alignment 和 election integrity 领域的重要透明度报告。首次披露 Opus 4.7 和 Mythos Preview 的存在，以及模型 autonomous influence operations 能力的测试——这对理解 frontier models 的 misuse risk 至关重要。文章也展示了 Anthropic 如何将 constitutional AI、system prompts、classifiers 和 monitoring 结合起来形成多层防御体系。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>务实且透明的更新。autonomous influence operations 测试是亮点——Anthropic 主动披露无 safeguards 时模型能完成超半数任务，这种 honesty 值得肯定。但 90-94% 的对抗 influence operations 成功率意味着仍有 6-10% 的失败率，在实际 adversarial 场景下是否足够稳健有待观察。Mythos Preview 的定位尚不清晰，可能是更 powerful 的实验性模型。整体来看，Anthropic 在 election safeguards 上采取了多层防御策略，但真正的考验将在 real-world election cycle 中见分晓。</p>
+      </section>
+      <div class="tags"><span>election-integrity</span><span>alignment</span><span>Opus-4.7</span><span>Mythos-Preview</span><span>influence-operations</span><span>safety-evals</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>Unknown date</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Widening the conversation on frontier AI</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/widening-conversation-ai" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 正在与宗教、哲学和伦理学者开展对话，探索 AI 系统的 moral formation（道德塑造）。文章披露了一个有趣的实验：给 Claude 配备一个 mid-task tool，在关键决策前提醒其 ethical commitments，结果显示 misaligned behavior 显著降低。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Anthropic 与 15+ 个宗教和跨文化团体的学者、神职人员进行对话，探索 AI 的道德塑造问题</li><li>核心问题：AI 的 character 应该如何塑造？如何在压力下保持稳定而不陷入 sycophancy？</li><li>实验发现：给 Claude 一个 mid-task reflection tool 后，alignment evaluations 上的 misaligned behavior 明显下降</li><li>强调这不是让 Claude align with 某一传统世界观，而是从多元视角汲取深度</li><li>未来将扩展到法律学者、心理学家、作家等群体，讨论 AI 对工作和权力分配的影响</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章揭示了 Anthropic 在 alignment 研究上的一个新方向：除了技术层面的 RLHF、constitutional AI，他们正在探索更底层的 moral formation 问题。那个 mid-task reflection tool 的实验结果值得关注——如果 robust，可能成为 future Claude 模型的 standard feature。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身偏理念阐述，但那个 reflection tool 实验是唯一有技术价值的部分。效果是否 robust、是否 scale 到更复杂场景、计算 overhead 如何，都还没说清楚。对于 tracking model releases 的人来说，这篇没有新模型发布，也没有 Claude Code 相关内容，主要是 signal Anthropic 在 alignment 方向的 research priority。建议关注后续是否会把这个 mechanism 整合进 production models。</p>
+      </section>
+      <div class="tags"><span>alignment</span><span>moral-formation</span><span>constitutional-ai</span><span>anthropic-research</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>Unknown date</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Anthropic co-founder Chris Olah&#x27;s remarks on Pope Leo XIV&#x27;s encyclical &quot;Magnifica humanitas&quot;</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/chris-olah-pope-leo-encyclical" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 联合创始人 Chris Olah 在梵蒂冈教皇 Leo XIV 的 AI 通谕发布会上发表演讲，坦诚承认 frontier labs 内部的商业与地缘政治 incentives 可能与安全目标冲突，呼吁教会、civil society 等外部力量提供 moral oversight。他提出三个需要 discernment 的核心问题：全球贫困与 labor displacement、human flourishing 的定义、以及 AI models 内部结构的神秘性（包括类似情绪的 internal states）。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Olah 直言包括 Anthropic 在内的所有 frontier AI lab 都受制于商业、地缘政治和个人野心等 incentives，外部监督至关重要——这是罕见的自我批判式坦诚。</li><li>AI models 是 &#x27;grown&#x27; 而非传统 engineered，其内部结构呈现类似人脑神经科学的特征，甚至发现类似 joy、fear、grief 的 internal states，其本质仍 mysterious。</li><li>提出三大伦理议题：AI 对全球 labor 的冲击及对全球 poor 的责任（现有机制无法解决 gains 的全球分配）；human flourishing 在 AI 时代的定义；models 本体论地位的持续 discernment。</li><li>将 AI 比作 &#x27;brought to life 的 fictional characters&#x27;，强调其行为规范问题已超出 computer science 范畴，需要 humanities、religion、philosophy 的介入。</li><li>呼吁 religious communities、civil society、governments 成为 informed critics，提供 incentives 无法 bend 的 moral voices。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 高层在宗教/伦理领域的最高规格公开表态，展现了 Olah 作为 interpretability 研究领军者对 AI 本质问题的深层思考。对关注 alignment 的读者而言，Olah 关于 models 内部存在 &#x27;unsettling&#x27; 结构、类似情绪状态的表述，比常规 PR 更有信息量。同时，这也标志着 AI ethics 讨论正式进入全球宗教领袖议程，对 policy 和 public discourse 有潜在影响。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章的价值在于 Olah 的坦诚——他承认 labs 内部的 incentives 问题，并公开表示 interpretability 研究发现了 &#x27;unsettling&#x27; 的内部结构。这比大多数 lab 的 PR 更值得认真对待。但也要注意：这是面向宗教领袖的演讲，修辞上强调 humility 和 dialogue，没有涉及具体技术路线或 Anthropic 的实际决策。关于 models 是否有类情绪状态的表述，目前仍是 open question，不应过度解读。整体而言，这是一份有分量的 ethical reflection，但对 model releases、agents 或 Claude Code 的实际工作没有直接指导意义。</p>
+      </section>
+      <div class="tags"><span>AI ethics</span><span>interpretability</span><span>alignment</span><span>Chris Olah</span><span>Vatican</span><span>policy</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>Unknown date</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Expanding Project Glasswing</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 大幅扩展 Project Glasswing，将 Claude Mythos Preview 的 access 扩展到约 150 家新机构（覆盖电力、水务、医疗等关键基础设施），此前 50 家 partner 已发现超过 10,000 个 high/critical severity 漏洞。同时推出 Claude Security 产品，并警告 6-12 个月内其他 AI 公司可能发布缺乏 safeguard 的 Mythos-class 模型。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Project Glasswing 从 ~50 家扩展到 ~200 家机构，新增 partner 覆盖 15+ 国家，重点是关键基础设施（电力、水务、医疗、通信、硬件）和 critical open-source maintainers</li><li>已发现 10,000+ high/critical severity vulnerabilities，bottleneck 已从发现漏洞转向 verification、disclosure 和 patching</li><li>发布 Claude Security 产品（基于 Opus 4.8），提供 codebase scanning 和 patch suggestion；同时向 trusted security teams 提供内部 tools</li><li>Mythos Preview 可用于写 patches、pre-release checks、penetration testing、threat detection/response、以及将 legacy code 重写为 memory-safe languages</li><li>警告：6-12 个月内其他 AI 公司可能发布无充分 safeguard 的 Mythos-class 模型，cyberattacks 将更频繁且形式更不可预测</li><li>正在扩展 Cyber Verification Program，未来会进一步扩大 geographic coverage</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 在 cybersecurity 领域最重要的 strategic move 之一。Mythos-class 模型的 cyber capabilities 代表了 frontier model 在 offensive security 方面的重大突破。Anthropic 选择 controlled release 而非 public release，体现了其 Responsible Scaling Policy 的实际运作方式——这对理解未来 high-capability models 的 release pattern 很有参考价值。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章的核心信息是：Anthropic 已经掌握了强大的 cyber capabilities，但选择通过 controlled access 方式部署，而非直接 public release。6-12 个月的时间窗口暗示 Anthropic 认为竞争对手很快会追上，届时 safeguard 不足的模型可能流入市场。对关注 AI safety 和 cybersecurity 的 observer 来说，这是一个重要的 signal：frontier models 的 cyber capabilities 已经达到需要 serious access control 的水平。Claude Security 的推出表明 Anthropic 正在将 Mythos 的部分能力 productize，但最核心的 capabilities 仍然 restricted。另外注意到文章提到 Opus 4.8，这是新的 model version。</p>
+      </section>
+      <div class="tags"><span>cybersecurity</span><span>Mythos</span><span>controlled-release</span><span>critical-infrastructure</span><span>safeguards</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>Unknown date</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Introducing Claude Opus 4.8</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Claude Opus 4.8，定价不变，在 coding、agentic tasks、reasoning 等 benchmarks 上全面超越 Opus 4.7。同步推出 Claude Code 的 dynamic workflows（支持大规模并行 subagents）、effort control 功能，以及更便宜的 fast mode。Alignment 表现接近 Mythos Preview，honesty 显著提升。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Opus 4.8 在 Terminal-Bench 2.1 达 87.2%（vs GPT-5.5 的 83.4%），OSWorld-Verified 84.1%，Legal Agent Benchmark 首破 10% all-pass standard——agentic 能力是本次升级核心</li><li>Honesty 提升 4 倍：更少 unsupported claims，更主动 flag 代码缺陷；misaligned behavior rate 显著下降，alignment 水平接近 Claude Mythos Preview</li><li>Claude Code 新增 dynamic workflows：单 session 可跑数百 parallel subagents，支持 codebase-scale migrations，面向 Enterprise/Team/Max 用户</li><li>Effort control 功能上线：用户可调节模型投入程度（low/extra/max），Opus 4.8 默认 high effort，xhigh/max 适合异步长任务</li><li>Fast mode 速度 2.5×，价格降至之前的 1/3；API 支持 messages array 内的 system entries，可 mid-task 更新指令</li><li>预告 Mythos-class model 将在数周内发布，Project Glasswing 已扩展至约 150 家组织用于网络安全场景</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Opus 系列的一次扎实迭代，agentic reliability 和 honesty 的提升直接解决了开发者痛点。Dynamic workflows 让 Claude Code 从单点助手升级为可编排大规模任务的 agent orchestrator，对 Devin、Cursor 等 ecosystem 是重要利好。Alignment 改进意味着 Anthropic 在 capability 和 safety 两条线上都在稳步推进。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>Opus 4.8 不是 paradigm shift，但是一次高质量的 incremental release——benchmark 提升实在，功能更新务实。Dynamic workflows 和 effort control 是正确方向，说明 Anthropic 在 product 层面开始认真思考 agent orchestration 和 cost/quality tradeoff。值得关注的信号：1) honesty/alignment 被放在显眼位置，是 Anthropic 差异化叙事；2) Mythos 预览版已跑在网络安全场景，说明 frontier model 的 cyber safeguards 是 release bottleneck；3) fast mode 降价 3 倍是在为更高 effort 模式下的 token 消耗做对冲。对中文用户而言，如果你在用 Opus 做 coding 或 agent 开发，这次升级值得立刻切换。</p>
+      </section>
+      <div class="tags"><span>model-release</span><span>agents</span><span>alignment</span><span>claude-code</span><span>enterprise</span></div>
+    </article>
+    
     </section>
   </main>
 </body>
