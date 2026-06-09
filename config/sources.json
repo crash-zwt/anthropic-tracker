@@ -6,7 +6,28 @@
       "url": "https://www.anthropic.com/news",
       "category": "model",
       "vendor": "Anthropic",
-      "description": "Model releases, company announcements, policy updates, and safety updates."
+      "description": "Model release posts only, such as new Claude Opus, Sonnet, or Haiku versions.",
+      "include_keywords": [
+        "claude",
+        "opus",
+        "sonnet",
+        "haiku",
+        "model"
+      ],
+      "exclude_keywords": [
+        "partner network",
+        "election",
+        "safeguards",
+        "project glasswing",
+        "s-1",
+        "funding",
+        "office",
+        "representative director",
+        "pope",
+        "frontier ai",
+        "cyber threats",
+        "responsible scaling policy"
+      ]
     },
     {
       "id": "anthropic_alignment",

@@ -31,6 +31,7 @@ RUNS_PATH = DATA_DIR / "daily_runs.json"
 USER_AGENT = "anthropic-tracker/1.0 (+https://github.com/crash-zwt/anthropic-tracker)"
 MAX_ARTICLE_CHARS = 30000
 MAX_NEW_ARTICLES_PER_RUN = int(os.getenv("MAX_NEW_ARTICLES_PER_RUN", "6"))
+BACKFILL_BOOTSTRAP = os.getenv("BACKFILL_BOOTSTRAP", "").lower() in {"1", "true", "yes"}
 
 
 class LinkParser(HTMLParser):
@@ -153,6 +154,8 @@ def discover_articles(source: dict[str, Any]) -> list[dict[str, str]]:
             continue
         if url == source["url"].rstrip("/"):
             continue
+        if not passes_source_filters(source, title, url):
+            continue
         articles[url] = {
             "url": url,
             "title": title,
@@ -162,6 +165,17 @@ def discover_articles(source: dict[str, Any]) -> list[dict[str, str]]:
             "vendor": source["vendor"],
         }
     return list(articles.values())
+
+
+def passes_source_filters(source: dict[str, Any], title: str, url: str) -> bool:
+    haystack = f"{title} {url}".lower()
+    include_keywords = [item.lower() for item in source.get("include_keywords", [])]
+    exclude_keywords = [item.lower() for item in source.get("exclude_keywords", [])]
+    if include_keywords and not any(keyword in haystack for keyword in include_keywords):
+        return False
+    if exclude_keywords and any(keyword in haystack for keyword in exclude_keywords):
+        return False
+    return True
 
 
 def extract_article(url: str) -> dict[str, str]:
@@ -305,6 +319,7 @@ def main() -> int:
         "checked_at": now.isoformat(),
         "checked_at_display": now.astimezone(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M Asia/Shanghai"),
         "new_count": 0,
+        "backfill_bootstrap": BACKFILL_BOOTSTRAP,
         "source_counts": {},
         "errors": [],
     }
@@ -323,7 +338,9 @@ def main() -> int:
                 if len(new_articles) >= MAX_NEW_ARTICLES_PER_RUN:
                     break
                 url = candidate["url"]
-                if seen.get(url) or url in existing_urls:
+                seen_entry = seen.get(url)
+                can_backfill = BACKFILL_BOOTSTRAP and seen_entry and seen_entry.get("bootstrap_only")
+                if (seen_entry and not can_backfill) or url in existing_urls:
                     continue
                 try:
                     extracted = extract_article(url)

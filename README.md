@@ -64,6 +64,13 @@ The workflow runs at `01:00 UTC`, which is `09:00 Asia/Shanghai`.
 
 Manual runs are available from `Actions -> Daily Anthropic Tracker -> Run workflow`.
 
+For historical backfill, run the workflow manually with:
+
+```text
+backfill_bootstrap=true
+max_new_articles=60
+```
+
 ## Safety Limit
 
 By default, each run summarizes at most 6 new articles:

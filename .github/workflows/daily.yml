@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "0 1 * * *"
   workflow_dispatch:
+    inputs:
+      backfill_bootstrap:
+        description: "Summarize links previously marked as bootstrap_only"
+        required: false
+        default: "false"
+      max_new_articles:
+        description: "Maximum articles to summarize in this run"
+        required: false
+        default: "6"
 
 permissions:
   contents: write
@@ -13,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       XF_MAAS_API_KEY: ${{ secrets.XF_MAAS_API_KEY }}
+      BACKFILL_BOOTSTRAP: ${{ github.event.inputs.backfill_bootstrap || 'false' }}
+      MAX_NEW_ARTICLES_PER_RUN: ${{ github.event.inputs.max_new_articles || '6' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

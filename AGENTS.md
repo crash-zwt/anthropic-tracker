@@ -33,6 +33,10 @@ Use stable, lowercase `id` values. Supported current categories:
 
 If adding a category, also update `CATEGORY_LABELS` and styles in `scripts/render_site.py` and `docs/styles.css`.
 
+Sources can define `include_keywords` and `exclude_keywords`. Use these for broad landing pages such as Anthropic News where only a subset of posts should be tracked.
+
+If filters change after data has already been collected, run `python scripts/prune_filtered_sources.py` to remove records that no longer match.
+
 ## Changing Model Provider
 
 Edit `config/model.json`. Prefer OpenAI-compatible providers that expose:
@@ -59,6 +63,8 @@ Do not manually delete entries unless intentionally reprocessing articles.
 ## Bootstrap Existing Posts
 
 Use `python scripts/bootstrap_seen.py` after the initial run if the user wants to follow only future posts. It marks currently discoverable source links as seen without creating article summaries.
+
+If the user later wants those historical posts summarized, run `scripts/check_and_summarize.py` with `BACKFILL_BOOTSTRAP=1`. In GitHub Actions, use workflow dispatch inputs `backfill_bootstrap=true` and a larger `max_new_articles`.
 
 ## Design Rules
 
