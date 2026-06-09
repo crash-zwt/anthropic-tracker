@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "id": "anthropic_news",
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "category": "model",
+      "vendor": "Anthropic",
+      "description": "Model releases, company announcements, policy updates, and safety updates."
+    },
+    {
+      "id": "anthropic_alignment",
+      "name": "Anthropic Alignment",
+      "url": "https://www.anthropic.com/research/team/alignment",
+      "category": "alignment",
+      "vendor": "Anthropic",
+      "description": "Anthropic alignment research posts."
+    },
+    {
+      "id": "claude_agents",
+      "name": "Claude Blog - Agents",
+      "url": "https://claude.com/blog/category/agents",
+      "category": "agents",
+      "vendor": "Anthropic",
+      "description": "Claude agent product updates, guides, and best practices."
+    },
+    {
+      "id": "claude_code",
+      "name": "Claude Blog - Claude Code",
+      "url": "https://claude.com/blog/category/claude-code",
+      "category": "claude_code",
+      "vendor": "Anthropic",
+      "description": "Claude Code product updates and workflow posts."
+    }
+  ]
+}

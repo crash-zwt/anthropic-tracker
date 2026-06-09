@@ -1,0 +1,8 @@
+{
+  "provider": "openai_compatible",
+  "base_url": "https://maas-coding-api.cn-huabei-1.xf-yun.com/v2",
+  "model": "astron-code-latest",
+  "api_key_env": "XF_MAAS_API_KEY",
+  "temperature": 0.2,
+  "max_tokens": 1800
+}

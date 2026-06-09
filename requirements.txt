@@ -1,0 +1,2 @@
+# The tracker intentionally uses only Python standard library modules.
+# This file exists so future maintainers can add dependencies explicitly.
