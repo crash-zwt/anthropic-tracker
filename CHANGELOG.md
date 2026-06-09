@@ -18,3 +18,4 @@
 - Improved publish-date extraction to support Chinese dates such as `2026年4月24日`, common meta tags, and ISO dates.
 - Added `scripts/refresh_published_dates.py` and refreshed existing articles so the archive uses real article dates instead of run dates.
 - Excluded category/team landing pages from article discovery and pruned existing landing-page records.
+- Added static category pages under `docs/categories/` and made category cards link to their dedicated article columns.

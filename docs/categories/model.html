@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model - Anthropic Tracker</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="layout" id="top">
+    <aside class="sidebar">
+      <header>
+        <p class="eyebrow">AI Lab Watch</p>
+        <h1><a class="site-title" href="../index.html">Anthropic Tracker</a></h1>
+      </header>
+
+      <section class="panel">
+        <h2>Status</h2>
+        <dl class="stats">
+          <div>
+            <dt>Last checked</dt>
+            <dd>2026-06-09 13:48 Asia/Shanghai</dd>
+          </div>
+          <div>
+            <dt>Today new</dt>
+            <dd>16</dd>
+          </div>
+          <div>
+            <dt>Tracked posts</dt>
+            <dd>41</dd>
+          </div>
+          <div>
+            <dt>Errors</dt>
+            <dd>0</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Sources</h2>
+        <ul class="source-list">
+          
+            <li>
+              <span>Anthropic News</span>
+              <strong>0 new</strong>
+            </li>
+            
+            <li>
+              <span>Anthropic Alignment</span>
+              <strong>0 new</strong>
+            </li>
+            
+            <li>
+              <span>Claude Blog - Agents</span>
+              <strong>2 new</strong>
+            </li>
+            
+            <li>
+              <span>Claude Blog - Claude Code</span>
+              <strong>14 new</strong>
+            </li>
+            
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Categories</h2>
+        <div class="category-grid">
+          
+    <a class="category-stat category-model is-active" href="#top">
+      <span>Model</span>
+      <strong>1</strong>
+    </a>
+    
+          
+    <a class="category-stat category-alignment" href="alignment.html">
+      <span>Alignment</span>
+      <strong>11</strong>
+    </a>
+    
+          
+    <a class="category-stat category-agents" href="agents.html">
+      <span>Agents</span>
+      <strong>15</strong>
+    </a>
+    
+          
+    <a class="category-stat category-claude_code" href="claude-code.html">
+      <span>Claude Code</span>
+      <strong>14</strong>
+    </a>
+    
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Archive</h2>
+        <nav class="archive-list" aria-label="Article archive by publish date">
+          <a href="#date-2026-05-28"><span>2026-05-28</span><strong>1</strong></a>
+        </nav>
+      </section>
+
+      <footer>
+        Generated: 2026-06-09 14:14 Asia/Shanghai
+      </footer>
+    </aside>
+
+    <section class="feed">
+      <div class="feed-header">
+        <div>
+          <p class="eyebrow">Category Briefs</p>
+          <h2>Model Posts</h2>
+        </div>
+        <div class="header-actions">
+          <a class="repo-link" href="../index.html">All Posts</a>
+          <a class="repo-link" href="https://github.com/crash-zwt/anthropic-tracker">GitHub</a>
+        </div>
+      </div>
+      
+            <section class="date-section" id="date-2026-05-28">
+              <div class="date-heading">
+                <h3>2026-05-28</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>2026-05-28</span>
+        <span>Added 2026-06-09</span>
+      </div>
+      <h2>Introducing Claude Opus 4.8</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Claude Opus 4.8，定价不变，在 coding、agentic tasks、reasoning 等 benchmarks 上全面超越 Opus 4.7。同步推出 Claude Code 的 dynamic workflows（支持大规模并行 subagents）、effort control 功能，以及更便宜的 fast mode。Alignment 表现接近 Mythos Preview，honesty 显著提升。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Opus 4.8 在 Terminal-Bench 2.1 达 87.2%（vs GPT-5.5 的 83.4%），OSWorld-Verified 84.1%，Legal Agent Benchmark 首破 10% all-pass standard——agentic 能力是本次升级核心</li><li>Honesty 提升 4 倍：更少 unsupported claims，更主动 flag 代码缺陷；misaligned behavior rate 显著下降，alignment 水平接近 Claude Mythos Preview</li><li>Claude Code 新增 dynamic workflows：单 session 可跑数百 parallel subagents，支持 codebase-scale migrations，面向 Enterprise/Team/Max 用户</li><li>Effort control 功能上线：用户可调节模型投入程度（low/extra/max），Opus 4.8 默认 high effort，xhigh/max 适合异步长任务</li><li>Fast mode 速度 2.5×，价格降至之前的 1/3；API 支持 messages array 内的 system entries，可 mid-task 更新指令</li><li>预告 Mythos-class model 将在数周内发布，Project Glasswing 已扩展至约 150 家组织用于网络安全场景</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Opus 系列的一次扎实迭代，agentic reliability 和 honesty 的提升直接解决了开发者痛点。Dynamic workflows 让 Claude Code 从单点助手升级为可编排大规模任务的 agent orchestrator，对 Devin、Cursor 等 ecosystem 是重要利好。Alignment 改进意味着 Anthropic 在 capability 和 safety 两条线上都在稳步推进。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>Opus 4.8 不是 paradigm shift，但是一次高质量的 incremental release——benchmark 提升实在，功能更新务实。Dynamic workflows 和 effort control 是正确方向，说明 Anthropic 在 product 层面开始认真思考 agent orchestration 和 cost/quality tradeoff。值得关注的信号：1) honesty/alignment 被放在显眼位置，是 Anthropic 差异化叙事；2) Mythos 预览版已跑在网络安全场景，说明 frontier model 的 cyber safeguards 是 release bottleneck；3) fast mode 降价 3 倍是在为更高 effort 模式下的 token 消耗做对冲。对中文用户而言，如果你在用 Opus 做 coding 或 agent 开发，这次升级值得立刻切换。</p>
+      </section>
+      <div class="tags"><span>model-release</span><span>agents</span><span>alignment</span><span>claude-code</span><span>enterprise</span></div>
+    </article>
+    
+            </section>
+            
+    </section>
+  </main>
+</body>
+</html>

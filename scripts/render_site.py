@@ -21,6 +21,13 @@ CATEGORY_LABELS = {
     "claude_code": "Claude Code",
 }
 
+CATEGORY_SLUGS = {
+    "model": "model",
+    "alignment": "alignment",
+    "agents": "agents",
+    "claude_code": "claude-code",
+}
+
 
 def load_json(path: Path, default: Any) -> Any:
     if not path.exists():
@@ -62,17 +69,74 @@ def date_anchor(date_key: str) -> str:
     return f"date-{date_key}"
 
 
+def category_href(category: str, current_category: str | None = None) -> str:
+    slug = CATEGORY_SLUGS.get(category, category)
+    if current_category == category:
+        return "#top"
+    if current_category:
+        return f"{slug}.html"
+    return f"categories/{slug}.html"
+
+
+def home_href(current_category: str | None = None) -> str:
+    return "../index.html" if current_category else "index.html"
+
+
 def main() -> int:
     articles = load_json(DATA_DIR / "articles.json", [])
     runs = load_json(DATA_DIR / "daily_runs.json", [])
     sources = load_json(ROOT / "config" / "sources.json", {"sources": []})["sources"]
     latest_run = runs[0] if runs else {}
     last_checked = latest_run.get("checked_at_display", "Never")
+    generated_at = dt.datetime.now(dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M Asia/Shanghai")
 
     total_by_category = {key: 0 for key in CATEGORY_LABELS}
     for article in articles:
         total_by_category[article.get("category")] = total_by_category.get(article.get("category"), 0) + 1
 
+    DOCS_DIR.mkdir(exist_ok=True)
+    category_dir = DOCS_DIR / "categories"
+    category_dir.mkdir(exist_ok=True)
+
+    index_html = render_page(
+        articles=articles,
+        all_articles=articles,
+        sources=sources,
+        latest_run=latest_run,
+        last_checked=last_checked,
+        total_by_category=total_by_category,
+        generated_at=generated_at,
+        current_category=None,
+    )
+    (DOCS_DIR / "index.html").write_text(index_html, encoding="utf-8")
+
+    for category in CATEGORY_LABELS:
+        category_articles = [article for article in articles if article.get("category") == category]
+        category_html = render_page(
+            articles=category_articles,
+            all_articles=articles,
+            sources=sources,
+            latest_run=latest_run,
+            last_checked=last_checked,
+            total_by_category=total_by_category,
+            generated_at=generated_at,
+            current_category=category,
+        )
+        (category_dir / f"{CATEGORY_SLUGS[category]}.html").write_text(category_html, encoding="utf-8")
+    return 0
+
+
+def render_page(
+    *,
+    articles: list[dict[str, Any]],
+    all_articles: list[dict[str, Any]],
+    sources: list[dict[str, Any]],
+    latest_run: dict[str, Any],
+    last_checked: str,
+    total_by_category: dict[str, int],
+    generated_at: str,
+    current_category: str | None,
+) -> str:
     source_rows = []
     for source in sources:
         count = latest_run.get("source_counts", {}).get(source["id"], 0)
@@ -105,22 +169,30 @@ def main() -> int:
         """
 
     error_count = len(latest_run.get("errors", []))
-    generated_at = dt.datetime.now(dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M Asia/Shanghai")
+    title = "Anthropic Tracker"
+    feed_title = "New Anthropic and Claude posts"
+    eyebrow = "Latest Briefs"
+    if current_category:
+        title = f"{CATEGORY_LABELS[current_category]} - Anthropic Tracker"
+        feed_title = f"{CATEGORY_LABELS[current_category]} Posts"
+        eyebrow = "Category Briefs"
+    stylesheet = "../styles.css" if current_category else "styles.css"
+    repo_href = "https://github.com/crash-zwt/anthropic-tracker"
 
-    html_text = f"""<!doctype html>
+    return f"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anthropic Tracker</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>{esc(title)}</title>
+  <link rel="stylesheet" href="{stylesheet}">
 </head>
 <body>
   <main class="layout" id="top">
     <aside class="sidebar">
       <header>
         <p class="eyebrow">AI Lab Watch</p>
-        <h1>Anthropic Tracker</h1>
+        <h1><a class="site-title" href="{home_href(current_category)}">Anthropic Tracker</a></h1>
       </header>
 
       <section class="panel">
@@ -136,7 +208,7 @@ def main() -> int:
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>{len(articles)}</dd>
+            <dd>{len(all_articles)}</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -155,10 +227,10 @@ def main() -> int:
       <section class="panel">
         <h2>Categories</h2>
         <div class="category-grid">
-          {render_category_stat("model", total_by_category.get("model", 0))}
-          {render_category_stat("alignment", total_by_category.get("alignment", 0))}
-          {render_category_stat("agents", total_by_category.get("agents", 0))}
-          {render_category_stat("claude_code", total_by_category.get("claude_code", 0))}
+          {render_category_stat("model", total_by_category.get("model", 0), current_category)}
+          {render_category_stat("alignment", total_by_category.get("alignment", 0), current_category)}
+          {render_category_stat("agents", total_by_category.get("agents", 0), current_category)}
+          {render_category_stat("claude_code", total_by_category.get("claude_code", 0), current_category)}
         </div>
       </section>
 
@@ -177,10 +249,13 @@ def main() -> int:
     <section class="feed">
       <div class="feed-header">
         <div>
-          <p class="eyebrow">Latest Briefs</p>
-          <h2>New Anthropic and Claude posts</h2>
+          <p class="eyebrow">{esc(eyebrow)}</p>
+          <h2>{esc(feed_title)}</h2>
         </div>
-        <a class="repo-link" href="https://github.com/crash-zwt/anthropic-tracker">GitHub</a>
+        <div class="header-actions">
+          {render_all_posts_link(current_category)}
+          <a class="repo-link" href="{repo_href}">GitHub</a>
+        </div>
       </div>
       {cards}
     </section>
@@ -188,17 +263,21 @@ def main() -> int:
 </body>
 </html>
 """
-    DOCS_DIR.mkdir(exist_ok=True)
-    (DOCS_DIR / "index.html").write_text(html_text, encoding="utf-8")
-    return 0
 
 
-def render_category_stat(category: str, count: int) -> str:
+def render_all_posts_link(current_category: str | None) -> str:
+    if not current_category:
+        return ""
+    return f'<a class="repo-link" href="{home_href(current_category)}">All Posts</a>'
+
+
+def render_category_stat(category: str, count: int, current_category: str | None = None) -> str:
+    active = " is-active" if current_category == category else ""
     return f"""
-    <div class="category-stat category-{esc(category)}">
+    <a class="category-stat category-{esc(category)}{active}" href="{esc(category_href(category, current_category))}">
       <span>{esc(CATEGORY_LABELS.get(category, category))}</span>
       <strong>{count}</strong>
-    </div>
+    </a>
     """
 
 

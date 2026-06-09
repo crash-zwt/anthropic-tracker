@@ -76,6 +76,7 @@ Keep the site a quiet dashboard:
 - Article feed on the right.
 - Category colors for quick scanning.
 - Keep every article card tied to an `Original Link`.
+- Category pages live under `docs/categories/`; update `CATEGORY_SLUGS` in `scripts/render_site.py` if adding categories.
 
 ## Change Log
 
