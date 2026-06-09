@@ -7,62 +7,52 @@
   "https://www.anthropic.com/research/team/economic-research": {
     "title": "Economic Research",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/team/interpretability": {
-    "title": "Interpretability",
+    "title": "Interpretability Research",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/team/societal-impacts": {
-    "title": "Societal Impacts",
+    "title": "Societal Impacts Research",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/teaching-claude-why": {
-    "title": "May 8, 2026 Alignment Teaching Claude why",
+    "title": "Teaching Claude why",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/automated-alignment-researchers": {
-    "title": "Apr 14, 2026 Alignment Automated Alignment Researchers: Using large language models to scale scalable oversight",
+    "title": "Automated Alignment Researchers: Using large language models to scale scalable oversight",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/persona-selection-model": {
-    "title": "Feb 23, 2026 Alignment The persona selection model",
+    "title": "The persona selection model",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/next-generation-constitutional-classifiers": {
-    "title": "Jan 9, 2026 Alignment Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks",
+    "title": "Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/emergent-misalignment-reward-hacking": {
-    "title": "Nov 21, 2025 Alignment From shortcuts to sabotage: natural emergent misalignment from reward hacking",
+    "title": "From shortcuts to sabotage: natural emergent misalignment from reward hacking",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/donating-open-source-petri": {
-    "title": "May 7, 2026 Alignment Donating our open-source alignment tool",
+    "title": "Donating our open-source alignment tool",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/deprecation-updates-opus-3": {
-    "title": "Feb 25, 2026 Alignment An update on our model deprecation commitments for Claude Opus 3",
+    "title": "An update on our model deprecation commitments for Claude Opus 3",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
   },
   "https://www.anthropic.com/research/AI-assistance-coding-skills": {
     "title": "Jan 29, 2026 Alignment How AI assistance impacts the formation of coding skills",
