@@ -4,21 +4,6 @@
     "source_id": "anthropic_news",
     "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
   },
-  "https://www.anthropic.com/research/team/economic-research": {
-    "title": "Economic Research",
-    "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
-  },
-  "https://www.anthropic.com/research/team/interpretability": {
-    "title": "Interpretability Research",
-    "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
-  },
-  "https://www.anthropic.com/research/team/societal-impacts": {
-    "title": "Societal Impacts Research",
-    "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:35:06.051149+00:00"
-  },
   "https://www.anthropic.com/research/teaching-claude-why": {
     "title": "Teaching Claude why",
     "source_id": "anthropic_alignment",
@@ -67,21 +52,6 @@
   "https://www.anthropic.com/research/bloom": {
     "title": "Introducing Bloom: an open source tool for automated behavioral evaluations",
     "source_id": "anthropic_alignment",
-    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
-  },
-  "https://claude.com/blog/category/enterprise-ai": {
-    "title": "Enterprise AI Category | Blog",
-    "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
-  },
-  "https://claude.com/blog/category/announcements": {
-    "title": "Product announcements Category | Blog",
-    "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
-  },
-  "https://claude.com/blog/category/claude-code": {
-    "title": "Claude Code Category | Blog",
-    "source_id": "claude_agents",
     "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
   "https://claude.com/blog/zero-trust-for-ai-agents": {

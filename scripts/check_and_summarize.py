@@ -132,6 +132,8 @@ def allowed_article_url(url: str) -> bool:
     path = parsed.path.rstrip("/")
     if path in {"", "/news", "/research", "/blog"}:
         return False
+    if path.startswith("/blog/category/") or path.startswith("/research/team/"):
+        return False
     return (
         path.startswith("/news/")
         or path.startswith("/research/")
@@ -183,15 +185,10 @@ def extract_article(url: str) -> dict[str, str]:
     title = first_match(page, r"<title[^>]*>(.*?)</title>") or ""
     title = re.sub(r"\s*[\\|]\s*(Anthropic|Claude).*$", "", normalize_space(title))
 
-    published = (
-        first_match(page, r'"datePublished"\s*:\s*"([^"]+)"')
-        or first_match(page, r"<time[^>]+datetime=[\"']([^\"']+)")
-        or ""
-    )
-
     parser = TextParser()
     parser.feed(page)
     text = parser.text()
+    published = extract_published_date(page, text)
     return {
         "title": title,
         "published_at": published,
@@ -204,6 +201,45 @@ def first_match(text: str, pattern: str) -> str | None:
     if not match:
         return None
     return normalize_space(match.group(1))
+
+
+def extract_published_date(page: str, visible_text: str = "") -> str:
+    candidates = [
+        first_match(page, r'"datePublished"\s*:\s*"([^"]+)"'),
+        first_match(page, r'"publishedAt"\s*:\s*"([^"]+)"'),
+        first_match(page, r'"date"\s*:\s*"([^"]+)"'),
+        first_match(page, r"<time[^>]+datetime=[\"']([^\"']+)"),
+        first_match(page, r"<meta[^>]+property=[\"']article:published_time[\"'][^>]+content=[\"']([^\"']+)"),
+        first_match(page, r"<meta[^>]+name=[\"']date[\"'][^>]+content=[\"']([^\"']+)"),
+        first_match(page, r"<meta[^>]+name=[\"']publish_date[\"'][^>]+content=[\"']([^\"']+)"),
+        first_match(page, r"(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日"),
+        first_match(visible_text, r"(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日"),
+        first_match(visible_text, r"\b([A-Z][a-z]{2,8}\s+\d{1,2},\s+\d{4})\b"),
+    ]
+    for candidate in candidates:
+        parsed = normalize_date(candidate)
+        if parsed:
+            return parsed
+    return ""
+
+
+def normalize_date(value: str | None) -> str:
+    if not value:
+        return ""
+    value = normalize_space(value)
+    chinese = re.match(r"^(\d{4})年\s*(\d{1,2})月\s*(\d{1,2})日$", value)
+    if chinese:
+        year, month, day = chinese.groups()
+        return f"{int(year):04d}-{int(month):02d}-{int(day):02d}"
+    iso = re.match(r"^(\d{4}-\d{2}-\d{2})", value)
+    if iso:
+        return iso.group(1)
+    for fmt in ("%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%B %d %Y"):
+        try:
+            return dt.datetime.strptime(value, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    return value
 
 
 def summarize_with_model(article: dict[str, Any], model_config: dict[str, Any]) -> dict[str, Any]:

@@ -37,6 +37,8 @@ Sources can define `include_keywords` and `exclude_keywords`. Use these for broa
 
 If filters change after data has already been collected, run `python scripts/prune_filtered_sources.py` to remove records that no longer match.
 
+If date extraction changes, run `python scripts/refresh_published_dates.py` to re-fetch `published_at` for existing articles without re-summarizing them.
+
 ## Changing Model Provider
 
 Edit `config/model.json`. Prefer OpenAI-compatible providers that expose:

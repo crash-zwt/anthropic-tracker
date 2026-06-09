@@ -25,7 +25,7 @@ def main() -> int:
         source = source_by_id.get(article.get("source_id"))
         title = article.get("title", "")
         url = article.get("url", "")
-        if source and not tracker.passes_source_filters(source, title, url):
+        if not tracker.allowed_article_url(url) or (source and not tracker.passes_source_filters(source, title, url)):
             removed_articles.append({"title": title, "url": url})
             continue
         kept_articles.append(article)
@@ -35,7 +35,7 @@ def main() -> int:
     for url, entry in seen.items():
         source = source_by_id.get(entry.get("source_id"))
         title = entry.get("title", "")
-        if source and not tracker.passes_source_filters(source, title, url):
+        if not tracker.allowed_article_url(url) or (source and not tracker.passes_source_filters(source, title, url)):
             removed_seen.append({"title": title, "url": url})
             continue
         kept_seen[url] = entry
