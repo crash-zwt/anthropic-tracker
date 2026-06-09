@@ -102,62 +102,52 @@
   "https://claude.com/blog/claude-api-skill": {
     "title": "Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/product-development-in-the-agentic-era": {
     "title": "Product development in the agentic era",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp": {
     "title": "Building agents that reach production systems with MCP",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": {
     "title": "Preparing your security program for AI-accelerated offense",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/multi-agent-coordination-patterns": {
     "title": "Multi-agent coordination patterns: Five approaches and when to use them",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/harnessing-claudes-intelligence": {
-    "title": "Harnessing Claude’s intelligence",
+    "title": "Harnessing Claude's Intelligence | 3 Key Patterns for Building Apps",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them": {
-    "title": "Common workflow patterns for AI agents—and when to use them",
+    "title": "Common workflow patterns for AI agents",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/cowork-plugins-finance": {
     "title": "Cowork and plugins for finance",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/cowork-plugins-across-enterprise": {
     "title": "Cowork and plugins for teams across the enterprise",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/cowork-plugins": {
     "title": "Customize Cowork with plugins",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them": {
     "title": "Building multi-agent systems: When and how to use them",
