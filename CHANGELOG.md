@@ -19,3 +19,6 @@
 - Added `scripts/refresh_published_dates.py` and refreshed existing articles so the archive uses real article dates instead of run dates.
 - Excluded category/team landing pages from article discovery and pruned existing landing-page records.
 - Added static category pages under `docs/categories/` and made category cards link to their dedicated article columns.
+- Made the sticky sidebar independently scrollable so Archive remains reachable on shorter screens.
+- Added `scripts/verify_site.py` for local navigation checks across archive links and category pages.
+- Added the site navigation verifier to the daily GitHub Actions workflow.
