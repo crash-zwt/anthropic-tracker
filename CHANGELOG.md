@@ -10,3 +10,4 @@
 - Added static dashboard rendering into `docs/index.html` for GitHub Pages.
 - Added `AGENTS.md` with maintenance instructions for future AI-assisted changes.
 - Added a default `MAX_NEW_ARTICLES_PER_RUN=6` guard so first runs do not summarize an entire historical archive.
+- Added `scripts/bootstrap_seen.py` so existing historical source links can be marked as seen after setup.

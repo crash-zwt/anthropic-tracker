@@ -28,5 +28,317 @@
     "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
     "source_id": "anthropic_news",
     "first_seen_at": "2026-06-09T05:23:04.551802+00:00"
+  },
+  "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": {
+    "title": "Jun 3, 2026 Policy What we learned mapping a year’s worth of AI-enabled cyber threats",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/news/confidential-draft-s1-sec": {
+    "title": "Jun 1, 2026 Announcements Anthropic confidentially submits draft S-1 to the SEC",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/news/series-h": {
+    "title": "May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/news/milan-office-opening": {
+    "title": "May 27, 2026 Announcements Anthropic opens Milan office to support Italian enterprise, research, and developers",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea": {
+    "title": "May 26, 2026 Announcements Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/glasswing-initial-update": {
+    "title": "May 22, 2026 Announcements Project Glasswing: An initial update",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": {
+    "title": "Responsible Scaling Policy",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/team/economic-research": {
+    "title": "Economic Research",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/team/interpretability": {
+    "title": "Interpretability",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/team/societal-impacts": {
+    "title": "Societal Impacts",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/teaching-claude-why": {
+    "title": "May 8, 2026 Alignment Teaching Claude why",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/automated-alignment-researchers": {
+    "title": "Apr 14, 2026 Alignment Automated Alignment Researchers: Using large language models to scale scalable oversight",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/persona-selection-model": {
+    "title": "Feb 23, 2026 Alignment The persona selection model",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/next-generation-constitutional-classifiers": {
+    "title": "Jan 9, 2026 Alignment Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/emergent-misalignment-reward-hacking": {
+    "title": "Nov 21, 2025 Alignment From shortcuts to sabotage: natural emergent misalignment from reward hacking",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/donating-open-source-petri": {
+    "title": "May 7, 2026 Alignment Donating our open-source alignment tool",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/deprecation-updates-opus-3": {
+    "title": "Feb 25, 2026 Alignment An update on our model deprecation commitments for Claude Opus 3",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/AI-assistance-coding-skills": {
+    "title": "Jan 29, 2026 Alignment How AI assistance impacts the formation of coding skills",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/disempowerment-patterns": {
+    "title": "Jan 28, 2026 Alignment Disempowerment patterns in real-world AI usage",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://www.anthropic.com/research/bloom": {
+    "title": "Dec 19, 2025 Alignment Introducing Bloom: an open source tool for automated behavioral evaluations",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/category/enterprise-ai": {
+    "title": "Enterprise AI",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/category/announcements": {
+    "title": "Announcements Product announcements",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/category/claude-code": {
+    "title": "Claude Code",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/zero-trust-for-ai-agents": {
+    "title": "Zero Trust for AI agents",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude": {
+    "title": "Best practices for computer and browser use with Claude",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/building-ai-agents-for-the-enterprise": {
+    "title": "Building AI agents for the enterprise",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/claude-api-skill": {
+    "title": "Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/product-development-in-the-agentic-era": {
+    "title": "Product development in the agentic era",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp": {
+    "title": "Building agents that reach production systems with MCP",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense": {
+    "title": "Preparing your security program for AI-accelerated offense",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/multi-agent-coordination-patterns": {
+    "title": "Multi-agent coordination patterns: Five approaches and when to use them",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/harnessing-claudes-intelligence": {
+    "title": "Harnessing Claude’s intelligence",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them": {
+    "title": "Common workflow patterns for AI agents—and when to use them",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/cowork-plugins-finance": {
+    "title": "Cowork and plugins for finance",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/cowork-plugins-across-enterprise": {
+    "title": "Cowork and plugins for teams across the enterprise",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/cowork-plugins": {
+    "title": "Customize Cowork with plugins",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them": {
+    "title": "Building multi-agent systems: When and how to use them",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work": {
+    "title": "Building agents with Skills: Equipping agents for specialized work",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": {
+    "title": "How one Anthropic seller rebuilt his team's workflows with Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills": {
+    "title": "Lessons from building Claude Code: How we use skills",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/running-an-ai-native-engineering-org": {
+    "title": "Running an AI-native engineering org",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": {
+    "title": "A harness for every task: dynamic workflows in Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": {
+    "title": "How CodeRabbit used Claude to build an agent orchestration system",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html": {
+    "title": "Using Claude Code: The unreasonable effectiveness of HTML",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/the-founders-playbook": {
+    "title": "The founder's playbook: Building an AI-native startup",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity": {
+    "title": "How Anthropic's cybersecurity team built a threat detection platform with Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks": {
+    "title": "How a non-technical project manager built and shipped a stress management app with Claude Code in six weeks",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything": {
+    "title": "Lessons from building Claude Code: Prompt caching is everything",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development": {
+    "title": "Onboarding Claude Code like a new developer: Lessons from 17 years of development",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon": {
+    "title": "Meet the winners of our Built with Opus 4.6 Claude Code hackathon",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code": {
+    "title": "Best practices for using Claude Opus 4.7 with Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
+  },
+  "https://claude.com/blog/using-claude-code-session-management-and-1m-context": {
+    "title": "Using Claude Code: session management and 1M context",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
+    "bootstrap_only": true
   }
 }

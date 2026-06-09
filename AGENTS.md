@@ -56,6 +56,10 @@ Do not manually delete entries unless intentionally reprocessing articles.
 
 `scripts/check_and_summarize.py` caps processing with `MAX_NEW_ARTICLES_PER_RUN`, defaulting to 6. Keep this guard unless the user explicitly wants a historical backfill.
 
+## Bootstrap Existing Posts
+
+Use `python scripts/bootstrap_seen.py` after the initial run if the user wants to follow only future posts. It marks currently discoverable source links as seen without creating article summaries.
+
 ## Design Rules
 
 Keep the site a quiet dashboard:
