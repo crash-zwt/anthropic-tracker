@@ -1,5 +1,18 @@
 [
   {
+    "checked_at": "2026-06-09T05:48:40.222289+00:00",
+    "checked_at_display": "2026-06-09 13:48 Asia/Shanghai",
+    "new_count": 16,
+    "backfill_bootstrap": true,
+    "source_counts": {
+      "anthropic_news": 0,
+      "anthropic_alignment": 0,
+      "claude_agents": 2,
+      "claude_code": 14
+    },
+    "errors": []
+  },
+  {
     "checked_at": "2026-06-09T05:44:33.568779+00:00",
     "checked_at_display": "2026-06-09 13:44 Asia/Shanghai",
     "new_count": 10,

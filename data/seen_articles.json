@@ -150,100 +150,84 @@
     "first_seen_at": "2026-06-09T05:44:33.568779+00:00"
   },
   "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them": {
-    "title": "Building multi-agent systems: When and how to use them",
+    "title": "When to use multi-agent systems (and when not to)",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work": {
-    "title": "Building agents with Skills: Equipping agents for specialized work",
+    "title": "Building Agents with Skills: Equipping Agents for Specialized Work",
     "source_id": "claude_agents",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering": {
     "title": "How one Anthropic seller rebuilt his team's workflows with Claude Code",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills": {
     "title": "Lessons from building Claude Code: How we use skills",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/running-an-ai-native-engineering-org": {
     "title": "Running an AI-native engineering org",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code": {
     "title": "A harness for every task: dynamic workflows in Claude Code",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system": {
     "title": "How CodeRabbit used Claude to build an agent orchestration system",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html": {
     "title": "Using Claude Code: The unreasonable effectiveness of HTML",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/the-founders-playbook": {
     "title": "The founder's playbook: Building an AI-native startup",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity": {
     "title": "How Anthropic's cybersecurity team built a threat detection platform with Claude Code",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks": {
     "title": "How a non-technical project manager built and shipped a stress management app with Claude Code in six weeks",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything": {
     "title": "Lessons from building Claude Code: Prompt caching is everything",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development": {
     "title": "Onboarding Claude Code like a new developer: Lessons from 17 years of development",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon": {
     "title": "Meet the winners of our Built with Opus 4.6 Claude Code hackathon",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code": {
     "title": "Best practices for using Claude Opus 4.7 with Claude Code",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://claude.com/blog/using-claude-code-session-management-and-1m-context": {
     "title": "Using Claude Code: session management and 1M context",
     "source_id": "claude_code",
-    "first_seen_at": "2026-06-09T05:26:41.155969+00:00",
-    "bootstrap_only": true
+    "first_seen_at": "2026-06-09T05:48:40.222289+00:00"
   },
   "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": {
     "title": "Announcing our updated Responsible Scaling Policy",
