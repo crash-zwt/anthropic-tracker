@@ -60,7 +60,8 @@ Open `docs/index.html` in a browser.
 
 ## Daily Schedule
 
-The workflow runs at `01:00 UTC`, which is `09:00 Asia/Shanghai`.
+The workflow runs at `01:07 UTC` and `01:37 UTC`, which are `09:07` and `09:37 Asia/Shanghai`.
+The second run is a reliability fallback because GitHub scheduled workflows can be delayed or skipped around the top of the hour.
 
 Manual runs are available from `Actions -> Daily Anthropic Tracker -> Run workflow`.
 

@@ -2,7 +2,8 @@ name: Daily Anthropic Tracker
 
 on:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "7 1 * * *"
+    - cron: "37 1 * * *"
   workflow_dispatch:
     inputs:
       backfill_bootstrap:

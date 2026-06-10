@@ -22,3 +22,4 @@
 - Made the sticky sidebar independently scrollable so Archive remains reachable on shorter screens.
 - Added `scripts/verify_site.py` for local navigation checks across archive links and category pages.
 - Added the site navigation verifier to the daily GitHub Actions workflow.
+- Moved scheduled runs away from the top of the hour and added a second daily fallback run at 09:37 Asia/Shanghai.
