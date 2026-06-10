@@ -2,9 +2,14 @@ name: Daily Anthropic Tracker
 
 on:
   schedule:
-    - cron: "27 2 * * *"
-    - cron: "7 1 * * *"
-    - cron: "37 1 * * *"
+    - cron: "7 9 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "37 9 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "7 10 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "37 10 * * *"
+      timezone: "Asia/Shanghai"
   workflow_dispatch:
     inputs:
       backfill_bootstrap:

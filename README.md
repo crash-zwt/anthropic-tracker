@@ -60,8 +60,8 @@ Open `docs/index.html` in a browser.
 
 ## Daily Schedule
 
-The workflow runs at `01:07 UTC` and `01:37 UTC`, which are `09:07` and `09:37 Asia/Shanghai`.
-The second run is a reliability fallback because GitHub scheduled workflows can be delayed or skipped around the top of the hour.
+The workflow runs at `09:07`, `09:37`, `10:07`, and `10:37 Asia/Shanghai`.
+The later runs are reliability fallbacks because GitHub scheduled workflows are best-effort and can be delayed or skipped.
 
 Manual runs are available from `Actions -> Daily Anthropic Tracker -> Run workflow`.
 

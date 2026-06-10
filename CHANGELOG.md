@@ -23,3 +23,4 @@
 - Added `scripts/verify_site.py` for local navigation checks across archive links and category pages.
 - Added the site navigation verifier to the daily GitHub Actions workflow.
 - Moved scheduled runs away from the top of the hour and added a second daily fallback run at 09:37 Asia/Shanghai.
+- Expanded daily schedule fallback windows to 09:07, 09:37, 10:07, and 10:37 Asia/Shanghai after a same-day schedule smoke test did not trigger within the observation window.
