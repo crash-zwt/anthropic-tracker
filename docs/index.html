@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-06-09 13:48 Asia/Shanghai</dd>
+            <dd>2026-06-10 10:16 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>16</dd>
+            <dd>1</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>41</dd>
+            <dd>42</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic News</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -52,12 +52,12 @@
             
             <li>
               <span>Claude Blog - Agents</span>
-              <strong>2 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
               <span>Claude Blog - Claude Code</span>
-              <strong>14 new</strong>
+              <strong>0 new</strong>
             </li>
             
         </ul>
@@ -69,7 +69,7 @@
           
     <a class="category-stat category-model" href="categories/model.html">
       <span>Model</span>
-      <strong>1</strong>
+      <strong>2</strong>
     </a>
     
           
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-06-05"><span>2026-06-05</span><strong>1</strong></a>
+          <a href="#date-2026-06-09"><span>2026-06-09</span><strong>1</strong></a>
+<a href="#date-2026-06-05"><span>2026-06-05</span><strong>1</strong></a>
 <a href="#date-2026-06-03"><span>2026-06-03</span><strong>2</strong></a>
 <a href="#date-2026-06-02"><span>2026-06-02</span><strong>1</strong></a>
 <a href="#date-2026-05-28"><span>2026-05-28</span><strong>1</strong></a>
@@ -135,7 +136,7 @@
       </section>
 
       <footer>
-        Generated: 2026-06-10 10:14 Asia/Shanghai
+        Generated: 2026-06-10 10:17 Asia/Shanghai
       </footer>
     </aside>
 
@@ -151,6 +152,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-06-09">
+              <div class="date-heading">
+                <h3>2026-06-09</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>2026-06-09</span>
+        <span>Added 2026-06-10</span>
+      </div>
+      <h2>Claude Fable 5 and Claude Mythos 5</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Claude Fable 5 和 Claude Mythos 5，这是首个 Mythos-class 模型。Fable 5 面向大众，但通过 classifier 在 cybersecurity、biology/chemistry、distillation 三个领域 fallback 到 Opus 4.8；Mythos 5 则通过 trusted access program 提供给政府和企业合作伙伴，safeguards 更少。定价 $10/$50 per million tokens，比 Mythos Preview 便宜一半以上。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Fable 5 在 coding、vision、long-horizon tasks 上达到 SOTA，能 autonomous 完成 Pokémon FireRed、Factorio 等复杂任务，Stripe 报告其将 50M 行 Ruby codebase migration 从两个月压缩到一天</li><li>Mythos 5 在 protein design 和 genomics research 上表现突出，能 autonomous 执行 drug design 全流程，在 14 个 protein targets 中有 9 个产生 strong candidates</li><li>Safety 机制：classifier 检测到敏感 query 会自动 fallback 到 Opus 4.8，平均触发率 &lt;5% sessions，external red-teaming 1000+ hours 未发现 universal jailbreak</li><li>新 data retention policy：Mythos-class models 强制 30 天留存，仅用于 safety 目的，不用于训练</li><li>Subscription 用户 6/9-6/22 免费使用 Fable 5，之后需 usage credits，API 和 consumption-based plans 全量开放</li><li>Trusted access program 将扩展到 biology researchers，提供 biology safeguards 移除版本</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 首次将 Mythos-class capabilities 开放给大众，标志着 frontier model 安全部署的新范式：通过 classifier + fallback 机制而非简单拒绝来平衡 capability 和 safety。对 agents 和 Claude Code 用户而言，Fable 5 的 long-horizon reasoning 和 autonomous capability 是质的提升。对中国读者而言，distillation safeguard 和 30-day retention policy 值得关注——这直接影响了数据合规和模型能力获取策略。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>Fable 5 的 classifier + fallback 方案是务实的 compromise，但 5% 的 fallback 率和 false positives 仍是实际使用中的 friction。从 benchmark 和 early feedback 看，Fable 5 在 coding 和 research tasks 上确实领先 Opus 4.8 一个档次，尤其是 long-horizon autonomous work。但 subscription 的 rolling availability 说明 capacity 仍是瓶颈。Mythos 5 的 trusted access program 是典型的 controlled release 策略，biology 领域的开放值得关注——这可能成为 life sciences research 的 game changer。整体来看，Anthropic 在 safety 和 capability 的平衡上比 OpenAI 更谨慎，但 release 节奏明显加快。</p>
+      </section>
+      <div class="tags"><span>mythos-class</span><span>safety-classifiers</span><span>long-horizon-agents</span><span>trusted-access</span><span>protein-design</span><span>cybersecurity</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-06-05">
               <div class="date-heading">
                 <h3>2026-06-05</h3>

@@ -203,5 +203,10 @@
     "title": "Announcing our updated Responsible Scaling Policy",
     "source_id": "anthropic_alignment",
     "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
+  },
+  "https://www.anthropic.com/news/claude-fable-5-mythos-5": {
+    "title": "Claude Fable 5 and Claude Mythos 5",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-10T02:16:25.639094+00:00"
   }
 }
