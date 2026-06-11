@@ -24,3 +24,4 @@
 - Added the site navigation verifier to the daily GitHub Actions workflow.
 - Moved scheduled runs away from the top of the hour and added a second daily fallback run at 09:37 Asia/Shanghai.
 - Expanded daily schedule fallback windows to 09:07, 09:37, 10:07, and 10:37 Asia/Shanghai after a same-day schedule smoke test did not trigger within the observation window.
+- Reverted the schedule to explicit UTC cron times (`01:07`, `01:37`, `02:07`, `02:37`) after the timezone-aware schedule did not produce any remote scheduled runs by 2026-06-11 11:41 Asia/Shanghai.
