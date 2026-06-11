@@ -1,5 +1,37 @@
 [
   {
+    "id": "fdd065ac4cc9",
+    "url": "https://claude.com/blog/building-with-claude-managed-agents",
+    "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+    "source_id": "claude_agents",
+    "source_name": "Claude Blog - Agents",
+    "category": "agents",
+    "vendor": "Anthropic",
+    "published_at": "2026-06-10",
+    "added_at": "2026-06-11T03:44:34.141236+00:00",
+    "summary": {
+      "tldr": "Anthropic 推出 Claude Managed Agents，一套 production-grade 的 agent 托管基础设施。核心卖点是 'decouple brain from hands'——harness 和 sandbox 分离运行，解决 credentials 安全隔离、session 持久化、latency 和 scaling 问题。适合想快速从 prototype 到 production 的团队，不用自己搭 agent infra。",
+      "key_points": [
+        "Architecture: 'brain' (harness) 和 'hands' (sandbox) 分离，session 作为 append-only log 连接两者，credentials 通过 Vault 管理，永远不进入 sandbox",
+        "Latency 优化: Claude 立即开始 reasoning，sandbox 并行启动，time-to-first-token 降低 60% (p50) 到 90%+ (p95)",
+        "Session persistence: 完整 event history，支持 pause/resume，自带 observability console 和 Memory/Dreaming 功能",
+        "部署选项: Anthropic-managed cloud 或 self-hosted sandbox (VPC 内)，MCP tunnels 连接私有网络内的 MCP servers",
+        "Harness 自动演进: 提到 Sonnet 4.5 的 'context anxiety' 问题在 Opus 4.5 消失，Managed Agents 的 harness 会随 model 更新自动调优",
+        "Customer cases: Notion (12小时→20分钟)、Rakuten (一周内上线多个 specialist agents)、Sentry、Asana、Atlassian"
+      ],
+      "why_it_matters": "这是 Anthropic 从 'tokens in/out' API 向 fully managed agent platform 的关键演进。对开发者来说，agent infra (sandbox、session、credentials、observability) 是重复劳动，Managed Agents 让你专注 context 和 domain expertise。对竞争对手，这是 Anthropic 在 agent infra 层的护城河——harness tuning 需要模型团队深度配合，不是随便能复制的。",
+      "my_take": "文章质量高，技术细节实在。'decouple brain from hands' 是正确的架构选择，解决了 container-based agent 的核心痛点。但要注意：这是 vendor lock-in 加深的产品——你越依赖 Managed Agents 的 harness、Vault、session format，迁移成本越高。对于有强合规需求或想保持 infra 控制权的团队，self-hosted sandbox + MCP tunnels 是关键卖点。另外文章暗示了 Sonnet 4.5 和 Opus 4.5 的存在，值得注意模型命名变化。",
+      "tags": [
+        "managed-agents",
+        "agent-infrastructure",
+        "production-deployment",
+        "claude-code",
+        "session-persistence"
+      ],
+      "importance": "high"
+    }
+  },
+  {
     "id": "147a989f3e59",
     "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
     "title": "Claude Fable 5 and Claude Mythos 5",

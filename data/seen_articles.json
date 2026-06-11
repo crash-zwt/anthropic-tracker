@@ -208,5 +208,10 @@
     "title": "Claude Fable 5 and Claude Mythos 5",
     "source_id": "anthropic_news",
     "first_seen_at": "2026-06-10T02:16:25.639094+00:00"
+  },
+  "https://claude.com/blog/building-with-claude-managed-agents": {
+    "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-06-11T03:44:34.141236+00:00"
   }
 }
