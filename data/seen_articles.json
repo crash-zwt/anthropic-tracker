@@ -218,5 +218,10 @@
     "title": "Introducing new capabilities to GPT-Rosalind",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-12T08:40:36.132408+00:00"
+  },
+  "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense": {
+    "title": "Strengthening societal resilience with Rosalind Biodefense",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:15:55.649469+00:00"
   }
 }
