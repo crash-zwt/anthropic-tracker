@@ -1,5 +1,22 @@
 [
   {
+    "checked_at": "2026-06-12T08:40:36.132408+00:00",
+    "checked_at_display": "2026-06-12 16:40 Asia/Shanghai",
+    "new_count": 1,
+    "backfill_bootstrap": false,
+    "source_counts": {
+      "anthropic_news": 0,
+      "anthropic_alignment": 0,
+      "claude_agents": 0,
+      "claude_code": 0,
+      "openai_model_product": 1,
+      "openai_agents_engineering": 0,
+      "openai_codex_product": 0,
+      "openai_codex_engineering": 0
+    },
+    "errors": []
+  },
+  {
     "checked_at": "2026-06-12T07:06:27.386179+00:00",
     "checked_at_display": "2026-06-12 15:06 Asia/Shanghai",
     "new_count": 0,

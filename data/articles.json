@@ -1,5 +1,35 @@
 [
   {
+    "id": "bfb45dcad644",
+    "url": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+    "title": "Introducing new capabilities to GPT-Rosalind",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-06-03",
+    "added_at": "2026-06-12T08:40:36.132408+00:00",
+    "summary": {
+      "tldr": "OpenAI 发布 GPT-Rosalind 新能力更新，专注于生命科学领域，涵盖 biological reasoning、medicinal chemistry、genomics analysis 和 experimental workflow。文章正文极短，仅一段概述性文字，缺乏技术细节。",
+      "key_points": [
+        "增强 biological reasoning 能力，面向生命科学研究场景",
+        "新增 medicinal chemistry expertise，支持药物研发相关工作流",
+        "强化 genomics analysis 功能",
+        "提供 experimental workflow 支持",
+        "文章为典型 product announcement teaser，无 benchmark、无 API 信息、无 availability 细节"
+      ],
+      "why_it_matters": "显示 OpenAI 正在探索垂直领域 specialized models，生命科学是高价值赛道。但对模型 release 追踪者而言，当前信息量几乎为零，无法判断这是 fine-tuned GPT-4o 变体、独立模型还是 API 产品。",
+      "my_take": "这篇文章 thin 到近乎 index page 级别，marketing 味重、实质内容稀缺。没有 technical report、没有 access 方式、没有 pricing 或 timeline。对开发者暂时没有可操作价值，建议等待后续详细披露再关注。可能是 OpenAI 健康医疗战略的一部分，但目前更像是 PR 试水。",
+      "tags": [
+        "life-sciences",
+        "vertical-model",
+        "biological-reasoning",
+        "thin-content"
+      ],
+      "importance": "low"
+    }
+  },
+  {
     "id": "147a989f3e59",
     "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
     "title": "Claude Fable 5 and Claude Mythos 5",
