@@ -223,5 +223,205 @@
     "title": "Strengthening societal resilience with Rosalind Biodefense",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-12T09:15:55.649469+00:00"
+  },
+  "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/": {
+    "title": "How we used Gemini to build Google I/O 2026",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/": {
+    "title": "Take our I/O 2026 quiz, vibe coded in Google AI Studio.",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/": {
+    "title": "9 demos of Gemini Omni and Gemini 3.5 in action",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/": {
+    "title": "100 things we announced at I/O 2026",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/": {
+    "title": "I/O 2026: Welcome to the agentic Gemini era",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/": {
+    "title": "Gemini 3.5: frontier intelligence with action",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/": {
+    "title": "I/O 2026",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/interactivity-research-grants/": {
+    "title": "Announcing Interactivity Research Grants - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/blog/interaction-models/": {
+    "title": "Interaction Models: A Scalable Approach to Human-AI Collaboration - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/training-llms-to-predict-world-events/": {
+    "title": "Training LLMs to Predict World Events (Guest Post with Mantic) - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/nvidia-partnership/": {
+    "title": "Thinking Machines Lab and NVIDIA Announce Long-Term Gigawatt-Scale Strategic Partnership - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/tinker-general-availability/": {
+    "title": "Tinker: General Availability and Vision Input - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/call-for-community-projects/": {
+    "title": "Tinker: Call for Community Projects - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/tinker-research-and-teaching-grants/": {
+    "title": "Tinker: Announcing Research and Teaching Grants - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/blog/on-policy-distillation/": {
+    "title": "On-Policy Distillation - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/news/announcing-tinker/": {
+    "title": "Announcing Tinker - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/blog/lora/": {
+    "title": "LoRA Without Regret - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/blog/modular-manifolds/": {
+    "title": "Modular Manifolds - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/": {
+    "title": "Defeating Nondeterminism in LLM Inference - Thinking Machines Lab",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/trustworthy-third-party-evaluations-foundations": {
+    "title": "A shared playbook for trustworthy third party evaluations",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/warp": {
+    "title": "Warp’s big bet on building open source with GPT-5.5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/model-disproves-discrete-geometry-conjecture": {
+    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/databricks": {
+    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/what-parameter-golf-taught-us": {
+    "title": "What Parameter Golf taught us about AI-assisted research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber": {
+    "title": "Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/parloa": {
+    "title": "Parloa builds service agents customers want to talk to",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api": {
+    "title": "Advancing voice intelligence with new models in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/uber": {
+    "title": "Uber uses OpenAI to help people earn smarter and book faster",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/delivering-low-latency-voice-ai-at-scale": {
+    "title": "How OpenAI delivers low-latency voice AI at scale",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/where-the-goblins-came-from": {
+    "title": "Where the goblins came from",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-5-5": {
+    "title": "Introducing GPT-5.5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/gpt-5-5-bio-bug-bounty": {
+    "title": "GPT-5.5 Bio Bug Bounty",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/introducing-openai-privacy-filter": {
+    "title": "Introducing OpenAI Privacy Filter",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-rosalind": {
+    "title": "Introducing GPT-Rosalind for life sciences research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/accelerating-cyber-defense-ecosystem": {
+    "title": "Accelerating the cyber defense ecosystem that protects us all",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/the-next-evolution-of-the-agents-sdk": {
+    "title": "The next evolution of the Agents SDK",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/scaling-trusted-access-for-cyber-defense": {
+    "title": "Trusted access for the next era of cyber defense",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/gradient-labs": {
+    "title": "Gradient Labs gives every bank customer an AI account manager",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/our-approach-to-the-model-spec": {
+    "title": "Inside our approach to the Model Spec",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard": {
+    "title": "Helping developers build safer AI experiences for teens",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
   }
 }
