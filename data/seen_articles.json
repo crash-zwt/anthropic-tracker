@@ -204,24 +204,14 @@
     "source_id": "anthropic_alignment",
     "first_seen_at": "2026-06-09T05:40:00.879593+00:00"
   },
-  "https://www.anthropic.com/news/claude-fable-5-mythos-5": {
-    "title": "Claude Fable 5 and Claude Mythos 5",
-    "source_id": "anthropic_news",
-    "first_seen_at": "2026-06-10T02:16:25.639094+00:00"
-  },
   "https://claude.com/blog/building-with-claude-managed-agents": {
     "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
     "source_id": "claude_agents",
     "first_seen_at": "2026-06-11T03:44:34.141236+00:00"
   },
-  "https://www.anthropic.com/news/claude-corps": {
-    "title": "Introducing Claude Corps",
+  "https://www.anthropic.com/news/claude-fable-5-mythos-5": {
+    "title": "Claude Fable 5 and Claude Mythos 5",
     "source_id": "anthropic_news",
-    "first_seen_at": "2026-06-12T05:55:48.999021+00:00"
-  },
-  "https://www.anthropic.com/news/dxc-anthropic-alliance": {
-    "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
-    "source_id": "anthropic_news",
-    "first_seen_at": "2026-06-12T05:55:48.999021+00:00"
+    "first_seen_at": "2026-06-10T02:16:25.639094+00:00"
   }
 }

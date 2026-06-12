@@ -8,13 +8,19 @@
       "vendor": "Anthropic",
       "description": "Model release posts only, such as new Claude Opus, Sonnet, or Haiku versions.",
       "include_keywords": [
-        "claude",
         "opus",
         "sonnet",
         "haiku",
-        "model"
+        "fable",
+        "mythos",
+        "model",
+        "models"
       ],
       "exclude_keywords": [
+        "alliance",
+        "corps",
+        "integrate",
+        "partner",
         "partner network",
         "election",
         "safeguards",

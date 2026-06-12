@@ -1,65 +1,35 @@
 [
   {
-    "id": "27ec170172da",
-    "url": "https://www.anthropic.com/news/dxc-anthropic-alliance",
-    "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+    "id": "147a989f3e59",
+    "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "title": "Claude Fable 5 and Claude Mythos 5",
     "source_id": "anthropic_news",
     "source_name": "Anthropic News",
     "category": "model",
     "vendor": "Anthropic",
-    "published_at": "2026-06-11",
-    "added_at": "2026-06-12T05:55:48.999021+00:00",
+    "published_at": "2026-06-09",
+    "added_at": "2026-06-10T02:16:25.639094+00:00",
     "summary": {
-      "tldr": "Anthropic 与全球最大 IT 服务公司之一 DXC Technology 达成多年全球战略合作。DXC 将培训数万名 Claude 认证的 forward-deployed engineers (FDEs)，将 Claude 带入银行、航空、保险等高度监管行业的 mission-critical 系统。DXC 已在内部验证过 Claude 的能力——其新平台 OASIS 超过 95% 的代码由 Claude 生成，开发速度提升 10 倍。",
+      "tldr": "Anthropic 发布 Claude Fable 5 和 Claude Mythos 5，这是首个 Mythos-class 模型。Fable 5 面向大众，但通过 classifier 在 cybersecurity、biology/chemistry、distillation 三个领域 fallback 到 Opus 4.8；Mythos 5 则通过 trusted access program 提供给政府和企业合作伙伴，safeguards 更少。定价 $10/$50 per million tokens，比 Mythos Preview 便宜一半以上。",
       "key_points": [
-        "DXC 将通过 Anthropic Academy 培训数万名 Claude-certified FDEs，深入客户组织内部部署 Claude",
-        "DXC OASIS 平台（AI-native orchestration platform）已服务 50+ 客户，Claude 是默认 foundation model，agentic workflows 处理日常运维",
-        "四个重点落地领域：Insurance、Modernization as a Service (legacy codebase 重构)、Cybersecurity (always-on security engineer subagent)、Application services",
-        "DXC 内部先验证：OASIS 平台 95%+ 代码由 Claude 生成，开发提速 10 倍，符合 strict security and compliance 要求",
-        "DXC 加入 Claude Partner Network，合作面向 banks, airlines, insurers, government agencies 等高度监管行业"
+        "Fable 5 在 coding、vision、long-horizon tasks 上达到 SOTA，能 autonomous 完成 Pokémon FireRed、Factorio 等复杂任务，Stripe 报告其将 50M 行 Ruby codebase migration 从两个月压缩到一天",
+        "Mythos 5 在 protein design 和 genomics research 上表现突出，能 autonomous 执行 drug design 全流程，在 14 个 protein targets 中有 9 个产生 strong candidates",
+        "Safety 机制：classifier 检测到敏感 query 会自动 fallback 到 Opus 4.8，平均触发率 <5% sessions，external red-teaming 1000+ hours 未发现 universal jailbreak",
+        "新 data retention policy：Mythos-class models 强制 30 天留存，仅用于 safety 目的，不用于训练",
+        "Subscription 用户 6/9-6/22 免费使用 Fable 5，之后需 usage credits，API 和 consumption-based plans 全量开放",
+        "Trusted access program 将扩展到 biology researchers，提供 biology safeguards 移除版本"
       ],
-      "why_it_matters": "这是 Claude 进入 enterprise market 的重大渠道布局。DXC 在银行、航空、政府等高度监管行业深耕数十年，掌握大量 legacy systems 和客户关系。通过 FDE 模式嵌入客户组织，Claude 可以绕过企业采购的漫长周期，直接进入 mission-critical 场景。对关注 Claude Code 的读者来说，95% 代码由 Claude 生成且通过工程师 review 的案例，是 coding agent 在大型企业落地的重要信号。",
-      "my_take": "这篇新闻的核心价值在于验证了 Claude 在高度合规环境中的可行性——DXC 先在内部 115,000 员工、70 国运营中跑通了流程，才推向客户。这种 'dogfooding' 叙述对 enterprise buyer 有说服力。但文章缺乏具体的技术细节：FDE 认证标准是什么？OASIS 的 agentic workflows 具体如何工作？legacy modernization 的准确率如何？从竞争视角看，这是 Anthropic 对抗 OpenAI-Microsoft 企业渠道优势的关键一步，但 DXC 本身并非顶级技术咨询品牌，实际影响力有待观察。日期标注为 2026 年 6 月，可能是未来规划或笔误，需注意。",
+      "why_it_matters": "这是 Anthropic 首次将 Mythos-class capabilities 开放给大众，标志着 frontier model 安全部署的新范式：通过 classifier + fallback 机制而非简单拒绝来平衡 capability 和 safety。对 agents 和 Claude Code 用户而言，Fable 5 的 long-horizon reasoning 和 autonomous capability 是质的提升。对中国读者而言，distillation safeguard 和 30-day retention policy 值得关注——这直接影响了数据合规和模型能力获取策略。",
+      "my_take": "Fable 5 的 classifier + fallback 方案是务实的 compromise，但 5% 的 fallback 率和 false positives 仍是实际使用中的 friction。从 benchmark 和 early feedback 看，Fable 5 在 coding 和 research tasks 上确实领先 Opus 4.8 一个档次，尤其是 long-horizon autonomous work。但 subscription 的 rolling availability 说明 capacity 仍是瓶颈。Mythos 5 的 trusted access program 是典型的 controlled release 策略，biology 领域的开放值得关注——这可能成为 life sciences research 的 game changer。整体来看，Anthropic 在 safety 和 capability 的平衡上比 OpenAI 更谨慎，但 release 节奏明显加快。",
       "tags": [
-        "enterprise-partnership",
-        "claude-partner-network",
-        "regulated-industries",
-        "coding-agents",
-        "legacy-modernization"
+        "mythos-class",
+        "safety-classifiers",
+        "long-horizon-agents",
+        "trusted-access",
+        "protein-design",
+        "cybersecurity"
       ],
-      "importance": "medium"
-    }
-  },
-  {
-    "id": "e1ca2354b2dc",
-    "url": "https://www.anthropic.com/news/claude-corps",
-    "title": "Introducing Claude Corps",
-    "source_id": "anthropic_news",
-    "source_name": "Anthropic News",
-    "category": "model",
-    "vendor": "Anthropic",
-    "published_at": "2026-06-11",
-    "added_at": "2026-06-12T05:55:48.999021+00:00",
-    "summary": {
-      "tldr": "Anthropic 推出 Claude Corps，一个为期一年的 national fellowship program，投入 $150m 资金，计划培训 1,000 名 fellows，将他们匹配到美国 400+ 家 nonprofits，全职使用 Claude 推进组织使命。这不是 model release 或 agent 产品，而是 Anthropic 的社会影响力和劳动力政策布局。",
-      "key_points": [
-        "首批 cohort 100 人，2026年10月启动，申请截止 7月17日，fellow 年薪 $85k + benefits",
-        "申请门槛低：18岁以上、<2年全职工作经验即可，不要求学历，需 US work authorization",
-        "合作模式：Anthropic 出资+策略，CodePath 做 employer of record，Social Finance 负责 measurement",
-        "Host organizations 包括 YMCA、Goodwill、RAINN、International Rescue Committee 等 400+ nonprofits",
-        "Anthropic 承诺 open-source 部分 infrastructure，希望模式可复制到其他国家",
-        "同步发布了 AI's impact on work 的 policy framework"
-      ],
-      "why_it_matters": "对追踪 Anthropic 的读者来说，这展示了公司除 model development 外的另一条腿——economic futures policy。它不直接影响 Claude Code 或 agents 的技术路线，但暗示 Anthropic 在 workforce displacement 议题上的 proactive stance，可能影响其 public perception 和 policy positioning。对用户而言，这是 Anthropic 在 'AI benefits distribution' 上的 brand building，而非产品更新。",
-      "my_take": "这不是技术发布，是 PR + policy play。$150m 对 Anthropic 规模来说不算大，但信号意义强：他们在做 'responsible AI company' 的叙事建设，与 OpenAI/Google 的类似项目形成差异化。对技术用户无直接价值，但值得了解 Anthropic 的整体战略方向。如果你只关心 model releases 或 Claude Code 更新，可以 skip。",
-      "tags": [
-        "policy",
-        "fellowship",
-        "nonprofit",
-        "economic-futures",
-        "brand-building"
-      ],
-      "importance": "low"
+      "importance": "high"
     }
   },
   {
@@ -90,39 +60,6 @@
         "production-deployment",
         "claude-code",
         "session-persistence"
-      ],
-      "importance": "high"
-    }
-  },
-  {
-    "id": "147a989f3e59",
-    "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-    "title": "Claude Fable 5 and Claude Mythos 5",
-    "source_id": "anthropic_news",
-    "source_name": "Anthropic News",
-    "category": "model",
-    "vendor": "Anthropic",
-    "published_at": "2026-06-09",
-    "added_at": "2026-06-10T02:16:25.639094+00:00",
-    "summary": {
-      "tldr": "Anthropic 发布 Claude Fable 5 和 Claude Mythos 5，这是首个 Mythos-class 模型。Fable 5 面向大众，但通过 classifier 在 cybersecurity、biology/chemistry、distillation 三个领域 fallback 到 Opus 4.8；Mythos 5 则通过 trusted access program 提供给政府和企业合作伙伴，safeguards 更少。定价 $10/$50 per million tokens，比 Mythos Preview 便宜一半以上。",
-      "key_points": [
-        "Fable 5 在 coding、vision、long-horizon tasks 上达到 SOTA，能 autonomous 完成 Pokémon FireRed、Factorio 等复杂任务，Stripe 报告其将 50M 行 Ruby codebase migration 从两个月压缩到一天",
-        "Mythos 5 在 protein design 和 genomics research 上表现突出，能 autonomous 执行 drug design 全流程，在 14 个 protein targets 中有 9 个产生 strong candidates",
-        "Safety 机制：classifier 检测到敏感 query 会自动 fallback 到 Opus 4.8，平均触发率 <5% sessions，external red-teaming 1000+ hours 未发现 universal jailbreak",
-        "新 data retention policy：Mythos-class models 强制 30 天留存，仅用于 safety 目的，不用于训练",
-        "Subscription 用户 6/9-6/22 免费使用 Fable 5，之后需 usage credits，API 和 consumption-based plans 全量开放",
-        "Trusted access program 将扩展到 biology researchers，提供 biology safeguards 移除版本"
-      ],
-      "why_it_matters": "这是 Anthropic 首次将 Mythos-class capabilities 开放给大众，标志着 frontier model 安全部署的新范式：通过 classifier + fallback 机制而非简单拒绝来平衡 capability 和 safety。对 agents 和 Claude Code 用户而言，Fable 5 的 long-horizon reasoning 和 autonomous capability 是质的提升。对中国读者而言，distillation safeguard 和 30-day retention policy 值得关注——这直接影响了数据合规和模型能力获取策略。",
-      "my_take": "Fable 5 的 classifier + fallback 方案是务实的 compromise，但 5% 的 fallback 率和 false positives 仍是实际使用中的 friction。从 benchmark 和 early feedback 看，Fable 5 在 coding 和 research tasks 上确实领先 Opus 4.8 一个档次，尤其是 long-horizon autonomous work。但 subscription 的 rolling availability 说明 capacity 仍是瓶颈。Mythos 5 的 trusted access program 是典型的 controlled release 策略，biology 领域的开放值得关注——这可能成为 life sciences research 的 game changer。整体来看，Anthropic 在 safety 和 capability 的平衡上比 OpenAI 更谨慎，但 release 节奏明显加快。",
-      "tags": [
-        "mythos-class",
-        "safety-classifiers",
-        "long-horizon-agents",
-        "trusted-access",
-        "protein-design",
-        "cybersecurity"
       ],
       "importance": "high"
     }
