@@ -1,6 +1,6 @@
 # AI Lab Tracker
 
-A lightweight GitHub Pages dashboard that tracks official Anthropic, Claude, and OpenAI posts, summarizes new articles with an OpenAI-compatible model API, and publishes the results daily.
+A lightweight GitHub Pages dashboard that tracks official Anthropic, Claude, OpenAI, Google Gemini, and Thinking Machines posts, summarizes new articles with an OpenAI-compatible model API, and publishes the results daily.
 
 Live site after GitHub Pages is enabled:
 
@@ -17,6 +17,8 @@ https://crash-zwt.github.io/anthropic-tracker/
 - OpenAI Model: GPT/model/capability release posts from the official OpenAI RSS feed.
 - OpenAI Agents: agent architecture, Responses API, orchestration, and workflow posts from the official OpenAI RSS feed.
 - OpenAI Code: Codex product and engineering posts from the official OpenAI RSS feed.
+- Google Gemini: Gemini-related posts from Google's official AI blog RSS feed.
+- Thinking Machines: official Thinking Machines blog and news posts discovered through its sitemap.
 
 Sources are configured in `config/sources.json`.
 

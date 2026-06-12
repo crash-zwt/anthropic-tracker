@@ -18,6 +18,8 @@ EXPECTED_CATEGORY_PAGES = {
     "categories/openai-model.html",
     "categories/openai-agents.html",
     "categories/openai-code.html",
+    "categories/google-gemini.html",
+    "categories/thinking-machines.html",
 }
 
 

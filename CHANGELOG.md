@@ -28,3 +28,5 @@
 - Added OpenAI RSS-based sources for OpenAI Model, OpenAI Agents, and OpenAI Code columns.
 - Renamed the rendered dashboard to AI Lab Tracker while keeping the existing repository and Pages URL.
 - Changed the production schedule back to one daily run at `01:07 UTC` / `09:07 Asia/Shanghai`; manual workflow runs remain available for testing.
+- Added Google Gemini tracking from Google's official AI blog RSS feed.
+- Added Thinking Machines tracking from the official `thinkingmachines.ai` sitemap.

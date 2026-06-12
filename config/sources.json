@@ -128,6 +128,46 @@
         "sandbox",
         "harness"
       ]
+    },
+    {
+      "id": "google_gemini_ai_blog",
+      "name": "Google AI Blog - Gemini",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+      "category": "google_gemini",
+      "vendor": "Google",
+      "description": "Official Google AI blog posts about Gemini models, products, and developer updates.",
+      "format": "rss",
+      "include_keywords": [
+        "gemini",
+        "gemma",
+        "ai studio",
+        "deepmind",
+        "veo",
+        "imagen"
+      ],
+      "exclude_keywords": [
+        "pixel",
+        "android",
+        "chromebook",
+        "youtube",
+        "ads"
+      ]
+    },
+    {
+      "id": "thinking_machines_site",
+      "name": "Thinking Machines",
+      "url": "https://thinkingmachines.ai/sitemap.xml",
+      "category": "thinking_machines",
+      "vendor": "Thinking Machines",
+      "description": "Thinking Machines official blog and news posts.",
+      "format": "sitemap",
+      "path_prefixes": [
+        "/blog/",
+        "/news/"
+      ],
+      "exclude_path_prefixes": [
+        "/news/interactivity-research-grants/apply/"
+      ]
     }
   ]
 }

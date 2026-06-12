@@ -139,7 +139,15 @@ def canonical_url(base_url: str, href: str) -> str:
 
 def allowed_article_url(url: str) -> bool:
     parsed = urllib.parse.urlparse(url)
-    if parsed.netloc not in {"www.anthropic.com", "anthropic.com", "claude.com", "openai.com", "www.openai.com"}:
+    if parsed.netloc not in {
+        "www.anthropic.com",
+        "anthropic.com",
+        "claude.com",
+        "openai.com",
+        "www.openai.com",
+        "blog.google",
+        "thinkingmachines.ai",
+    }:
         return False
     path = parsed.path.rstrip("/")
     if path in {"", "/news", "/research", "/blog"}:
@@ -148,16 +156,21 @@ def allowed_article_url(url: str) -> bool:
         return False
     if parsed.netloc in {"openai.com", "www.openai.com"} and path.startswith("/news/"):
         return False
+    if parsed.netloc == "blog.google":
+        return bool(path) and not path.endswith("/rss")
     return (
         path.startswith("/news/")
         or path.startswith("/research/")
         or path.startswith("/blog/")
         or path.startswith("/index/")
+        or path.startswith("/innovation-and-ai/")
     )
 
 
 def discover_articles(source: dict[str, Any]) -> list[dict[str, str]]:
-    if source["url"].endswith(".xml"):
+    if source.get("format") == "sitemap":
+        return discover_sitemap_articles(source)
+    if source.get("format") == "rss" or source["url"].endswith(".xml"):
         return discover_rss_articles(source)
 
     source_html = fetch_url(source["url"])
@@ -187,6 +200,38 @@ def discover_articles(source: dict[str, Any]) -> list[dict[str, str]]:
     return list(articles.values())
 
 
+def discover_sitemap_articles(source: dict[str, Any]) -> list[dict[str, str]]:
+    source_xml = fetch_url(source["url"])
+    root = ET.fromstring(source_xml)
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    articles: dict[str, dict[str, str]] = {}
+    for url_node in root.findall("sm:url", namespace):
+        loc = normalize_space(url_node.findtext("sm:loc", default="", namespaces=namespace))
+        url = canonical_url(source["url"], loc)
+        parsed = urllib.parse.urlparse(url)
+        path = parsed.path.rstrip("/")
+        if not allowed_article_url(url):
+            continue
+        if not any(path.startswith(prefix.rstrip("/")) for prefix in source.get("path_prefixes", [])):
+            continue
+        if any(path.startswith(prefix.rstrip("/")) for prefix in source.get("exclude_path_prefixes", [])):
+            continue
+        slug = path.rstrip("/").split("/")[-1].replace("-", " ")
+        title = normalize_space(slug.title())
+        if not passes_source_filters(source, title, url):
+            continue
+        articles[url] = {
+            "url": url,
+            "title": title,
+            "source_id": source["id"],
+            "source_name": source["name"],
+            "category": source["category"],
+            "vendor": source["vendor"],
+            "published_at": normalize_date(url_node.findtext("sm:lastmod", default="", namespaces=namespace)),
+        }
+    return list(articles.values())
+
+
 def discover_rss_articles(source: dict[str, Any]) -> list[dict[str, str]]:
     source_xml = fetch_url(source["url"])
     root = ET.fromstring(source_xml)
@@ -195,10 +240,11 @@ def discover_rss_articles(source: dict[str, Any]) -> list[dict[str, str]]:
         title = normalize_space(item.findtext("title") or "")
         url = canonical_url(source["url"], item.findtext("link") or "")
         description = normalize_space(item.findtext("description") or "")
+        categories = " ".join(normalize_space(category.text or "") for category in item.findall("category"))
         published = normalize_date(item.findtext("pubDate") or "")
         if not title or not allowed_article_url(url):
             continue
-        if not passes_source_filters(source, title, url, description):
+        if not passes_source_filters(source, title, url, f"{description} {categories}"):
             continue
         articles[url] = {
             "url": url,

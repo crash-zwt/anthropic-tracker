@@ -22,6 +22,8 @@ CATEGORY_LABELS = {
     "openai_model": "OpenAI Model",
     "openai_agents": "OpenAI Agents",
     "openai_code": "OpenAI Code",
+    "google_gemini": "Google Gemini",
+    "thinking_machines": "Thinking Machines",
 }
 
 CATEGORY_SLUGS = {
@@ -32,6 +34,8 @@ CATEGORY_SLUGS = {
     "openai_model": "openai-model",
     "openai_agents": "openai-agents",
     "openai_code": "openai-code",
+    "google_gemini": "google-gemini",
+    "thinking_machines": "thinking-machines",
 }
 
 CATEGORY_ORDER = list(CATEGORY_LABELS)

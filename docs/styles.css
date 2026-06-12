@@ -11,6 +11,8 @@
   --openai-model: #0b7a75;
   --openai-agents: #b13f63;
   --openai-code: #52616f;
+  --google-gemini: #1a73e8;
+  --thinking-machines: #111827;
   --shadow: 0 1px 2px rgba(23, 32, 38, 0.08), 0 8px 24px rgba(23, 32, 38, 0.06);
 }
 
@@ -243,6 +245,14 @@ footer {
   border-left-color: var(--openai-code);
 }
 
+.category-google_gemini {
+  border-left-color: var(--google-gemini);
+}
+
+.category-thinking_machines {
+  border-left-color: var(--thinking-machines);
+}
+
 footer {
   padding: 4px 2px 0;
   font-size: 12px;
@@ -370,6 +380,14 @@ footer {
 
 .badge-openai_code {
   background: var(--openai-code);
+}
+
+.badge-google_gemini {
+  background: var(--google-gemini);
+}
+
+.badge-thinking_machines {
+  background: var(--thinking-machines);
 }
 
 .article-card h2 {
