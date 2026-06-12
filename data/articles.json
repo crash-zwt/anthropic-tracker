@@ -1,5 +1,68 @@
 [
   {
+    "id": "27ec170172da",
+    "url": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+    "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+    "source_id": "anthropic_news",
+    "source_name": "Anthropic News",
+    "category": "model",
+    "vendor": "Anthropic",
+    "published_at": "2026-06-11",
+    "added_at": "2026-06-12T05:55:48.999021+00:00",
+    "summary": {
+      "tldr": "Anthropic 与全球最大 IT 服务公司之一 DXC Technology 达成多年全球战略合作。DXC 将培训数万名 Claude 认证的 forward-deployed engineers (FDEs)，将 Claude 带入银行、航空、保险等高度监管行业的 mission-critical 系统。DXC 已在内部验证过 Claude 的能力——其新平台 OASIS 超过 95% 的代码由 Claude 生成，开发速度提升 10 倍。",
+      "key_points": [
+        "DXC 将通过 Anthropic Academy 培训数万名 Claude-certified FDEs，深入客户组织内部部署 Claude",
+        "DXC OASIS 平台（AI-native orchestration platform）已服务 50+ 客户，Claude 是默认 foundation model，agentic workflows 处理日常运维",
+        "四个重点落地领域：Insurance、Modernization as a Service (legacy codebase 重构)、Cybersecurity (always-on security engineer subagent)、Application services",
+        "DXC 内部先验证：OASIS 平台 95%+ 代码由 Claude 生成，开发提速 10 倍，符合 strict security and compliance 要求",
+        "DXC 加入 Claude Partner Network，合作面向 banks, airlines, insurers, government agencies 等高度监管行业"
+      ],
+      "why_it_matters": "这是 Claude 进入 enterprise market 的重大渠道布局。DXC 在银行、航空、政府等高度监管行业深耕数十年，掌握大量 legacy systems 和客户关系。通过 FDE 模式嵌入客户组织，Claude 可以绕过企业采购的漫长周期，直接进入 mission-critical 场景。对关注 Claude Code 的读者来说，95% 代码由 Claude 生成且通过工程师 review 的案例，是 coding agent 在大型企业落地的重要信号。",
+      "my_take": "这篇新闻的核心价值在于验证了 Claude 在高度合规环境中的可行性——DXC 先在内部 115,000 员工、70 国运营中跑通了流程，才推向客户。这种 'dogfooding' 叙述对 enterprise buyer 有说服力。但文章缺乏具体的技术细节：FDE 认证标准是什么？OASIS 的 agentic workflows 具体如何工作？legacy modernization 的准确率如何？从竞争视角看，这是 Anthropic 对抗 OpenAI-Microsoft 企业渠道优势的关键一步，但 DXC 本身并非顶级技术咨询品牌，实际影响力有待观察。日期标注为 2026 年 6 月，可能是未来规划或笔误，需注意。",
+      "tags": [
+        "enterprise-partnership",
+        "claude-partner-network",
+        "regulated-industries",
+        "coding-agents",
+        "legacy-modernization"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "e1ca2354b2dc",
+    "url": "https://www.anthropic.com/news/claude-corps",
+    "title": "Introducing Claude Corps",
+    "source_id": "anthropic_news",
+    "source_name": "Anthropic News",
+    "category": "model",
+    "vendor": "Anthropic",
+    "published_at": "2026-06-11",
+    "added_at": "2026-06-12T05:55:48.999021+00:00",
+    "summary": {
+      "tldr": "Anthropic 推出 Claude Corps，一个为期一年的 national fellowship program，投入 $150m 资金，计划培训 1,000 名 fellows，将他们匹配到美国 400+ 家 nonprofits，全职使用 Claude 推进组织使命。这不是 model release 或 agent 产品，而是 Anthropic 的社会影响力和劳动力政策布局。",
+      "key_points": [
+        "首批 cohort 100 人，2026年10月启动，申请截止 7月17日，fellow 年薪 $85k + benefits",
+        "申请门槛低：18岁以上、<2年全职工作经验即可，不要求学历，需 US work authorization",
+        "合作模式：Anthropic 出资+策略，CodePath 做 employer of record，Social Finance 负责 measurement",
+        "Host organizations 包括 YMCA、Goodwill、RAINN、International Rescue Committee 等 400+ nonprofits",
+        "Anthropic 承诺 open-source 部分 infrastructure，希望模式可复制到其他国家",
+        "同步发布了 AI's impact on work 的 policy framework"
+      ],
+      "why_it_matters": "对追踪 Anthropic 的读者来说，这展示了公司除 model development 外的另一条腿——economic futures policy。它不直接影响 Claude Code 或 agents 的技术路线，但暗示 Anthropic 在 workforce displacement 议题上的 proactive stance，可能影响其 public perception 和 policy positioning。对用户而言，这是 Anthropic 在 'AI benefits distribution' 上的 brand building，而非产品更新。",
+      "my_take": "这不是技术发布，是 PR + policy play。$150m 对 Anthropic 规模来说不算大，但信号意义强：他们在做 'responsible AI company' 的叙事建设，与 OpenAI/Google 的类似项目形成差异化。对技术用户无直接价值，但值得了解 Anthropic 的整体战略方向。如果你只关心 model releases 或 Claude Code 更新，可以 skip。",
+      "tags": [
+        "policy",
+        "fellowship",
+        "nonprofit",
+        "economic-futures",
+        "brand-building"
+      ],
+      "importance": "low"
+    }
+  },
+  {
     "id": "fdd065ac4cc9",
     "url": "https://claude.com/blog/building-with-claude-managed-agents",
     "title": "The evolution of agentic surfaces: building with Claude Managed Agents",

@@ -213,5 +213,15 @@
     "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
     "source_id": "claude_agents",
     "first_seen_at": "2026-06-11T03:44:34.141236+00:00"
+  },
+  "https://www.anthropic.com/news/claude-corps": {
+    "title": "Introducing Claude Corps",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-12T05:55:48.999021+00:00"
+  },
+  "https://www.anthropic.com/news/dxc-anthropic-alliance": {
+    "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-12T05:55:48.999021+00:00"
   }
 }
