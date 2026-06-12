@@ -1,6 +1,6 @@
-# Anthropic Tracker
+# AI Lab Tracker
 
-A lightweight GitHub Pages dashboard that tracks official Anthropic and Claude posts, summarizes new articles with an OpenAI-compatible model API, and publishes the results daily.
+A lightweight GitHub Pages dashboard that tracks official Anthropic, Claude, and OpenAI posts, summarizes new articles with an OpenAI-compatible model API, and publishes the results daily.
 
 Live site after GitHub Pages is enabled:
 
@@ -14,6 +14,9 @@ https://crash-zwt.github.io/anthropic-tracker/
 - Anthropic Alignment: alignment research posts.
 - Claude Blog Agents: agent product updates and guides.
 - Claude Blog Claude Code: Claude Code updates and workflows.
+- OpenAI Model: GPT/model/capability release posts from the official OpenAI RSS feed.
+- OpenAI Agents: agent architecture, Responses API, orchestration, and workflow posts from the official OpenAI RSS feed.
+- OpenAI Code: Codex product and engineering posts from the official OpenAI RSS feed.
 
 Sources are configured in `config/sources.json`.
 
@@ -60,10 +63,10 @@ Open `docs/index.html` in a browser.
 
 ## Daily Schedule
 
-The workflow runs at `01:07`, `01:37`, `02:07`, and `02:37 UTC`, which are `09:07`, `09:37`, `10:07`, and `10:37 Asia/Shanghai`.
-The later runs are reliability fallbacks because GitHub scheduled workflows are best-effort and can be delayed or skipped.
+The workflow runs once per day at `01:07 UTC`, which is `09:07 Asia/Shanghai`.
+GitHub scheduled workflows are best-effort and can be delayed, so the exact wall-clock time may drift.
 
-Manual runs are available from `Actions -> Daily Anthropic Tracker -> Run workflow`.
+Manual runs are available from `Actions -> Daily AI Lab Tracker -> Run workflow`.
 
 For historical backfill, run the workflow manually with:
 

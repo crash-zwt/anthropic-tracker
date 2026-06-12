@@ -1,11 +1,8 @@
-name: Daily Anthropic Tracker
+name: Daily AI Lab Tracker
 
 on:
   schedule:
     - cron: "7 1 * * *"
-    - cron: "37 1 * * *"
-    - cron: "7 2 * * *"
-    - cron: "37 2 * * *"
   workflow_dispatch:
     inputs:
       backfill_bootstrap:

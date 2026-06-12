@@ -19,6 +19,9 @@ CATEGORY_LABELS = {
     "alignment": "Alignment",
     "agents": "Agents",
     "claude_code": "Claude Code",
+    "openai_model": "OpenAI Model",
+    "openai_agents": "OpenAI Agents",
+    "openai_code": "OpenAI Code",
 }
 
 CATEGORY_SLUGS = {
@@ -26,7 +29,12 @@ CATEGORY_SLUGS = {
     "alignment": "alignment",
     "agents": "agents",
     "claude_code": "claude-code",
+    "openai_model": "openai-model",
+    "openai_agents": "openai-agents",
+    "openai_code": "openai-code",
 }
+
+CATEGORY_ORDER = list(CATEGORY_LABELS)
 
 
 def load_json(path: Path, default: Any) -> Any:
@@ -110,7 +118,7 @@ def main() -> int:
     )
     (DOCS_DIR / "index.html").write_text(index_html, encoding="utf-8")
 
-    for category in CATEGORY_LABELS:
+    for category in CATEGORY_ORDER:
         category_articles = [article for article in articles if article.get("category") == category]
         category_html = render_page(
             articles=category_articles,
@@ -169,11 +177,11 @@ def render_page(
         """
 
     error_count = len(latest_run.get("errors", []))
-    title = "Anthropic Tracker"
-    feed_title = "New Anthropic and Claude posts"
+    title = "AI Lab Tracker"
+    feed_title = "New AI lab posts"
     eyebrow = "Latest Briefs"
     if current_category:
-        title = f"{CATEGORY_LABELS[current_category]} - Anthropic Tracker"
+        title = f"{CATEGORY_LABELS[current_category]} - AI Lab Tracker"
         feed_title = f"{CATEGORY_LABELS[current_category]} Posts"
         eyebrow = "Category Briefs"
     stylesheet = "../styles.css" if current_category else "styles.css"
@@ -192,7 +200,7 @@ def render_page(
     <aside class="sidebar">
       <header>
         <p class="eyebrow">AI Lab Watch</p>
-        <h1><a class="site-title" href="{home_href(current_category)}">Anthropic Tracker</a></h1>
+        <h1><a class="site-title" href="{home_href(current_category)}">AI Lab Tracker</a></h1>
       </header>
 
       <section class="panel">
@@ -227,10 +235,7 @@ def render_page(
       <section class="panel">
         <h2>Categories</h2>
         <div class="category-grid">
-          {render_category_stat("model", total_by_category.get("model", 0), current_category)}
-          {render_category_stat("alignment", total_by_category.get("alignment", 0), current_category)}
-          {render_category_stat("agents", total_by_category.get("agents", 0), current_category)}
-          {render_category_stat("claude_code", total_by_category.get("claude_code", 0), current_category)}
+          {render_category_stats(total_by_category, current_category)}
         </div>
       </section>
 
@@ -279,6 +284,13 @@ def render_category_stat(category: str, count: int, current_category: str | None
       <strong>{count}</strong>
     </a>
     """
+
+
+def render_category_stats(total_by_category: dict[str, int], current_category: str | None = None) -> str:
+    return "\n".join(
+        render_category_stat(category, total_by_category.get(category, 0), current_category)
+        for category in CATEGORY_ORDER
+    )
 
 
 def render_article_groups(articles: list[dict[str, Any]]) -> str:

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import email.utils
 import html
 import json
 import os
@@ -13,6 +14,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -28,7 +30,10 @@ ARTICLES_PATH = DATA_DIR / "articles.json"
 SEEN_PATH = DATA_DIR / "seen_articles.json"
 RUNS_PATH = DATA_DIR / "daily_runs.json"
 
-USER_AGENT = "anthropic-tracker/1.0 (+https://github.com/crash-zwt/anthropic-tracker)"
+USER_AGENT = (
+    "Mozilla/5.0 (compatible; anthropic-tracker/1.0; "
+    "+https://github.com/crash-zwt/anthropic-tracker)"
+)
 MAX_ARTICLE_CHARS = 30000
 MAX_NEW_ARTICLES_PER_RUN = int(os.getenv("MAX_NEW_ARTICLES_PER_RUN", "6"))
 BACKFILL_BOOTSTRAP = os.getenv("BACKFILL_BOOTSTRAP", "").lower() in {"1", "true", "yes"}
@@ -111,7 +116,14 @@ def save_json(path: Path, data: Any) -> None:
 
 
 def fetch_url(url: str) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        },
+    )
     with urllib.request.urlopen(req, timeout=30) as response:
         raw = response.read()
         charset = response.headers.get_content_charset() or "utf-8"
@@ -127,21 +139,27 @@ def canonical_url(base_url: str, href: str) -> str:
 
 def allowed_article_url(url: str) -> bool:
     parsed = urllib.parse.urlparse(url)
-    if parsed.netloc not in {"www.anthropic.com", "anthropic.com", "claude.com"}:
+    if parsed.netloc not in {"www.anthropic.com", "anthropic.com", "claude.com", "openai.com", "www.openai.com"}:
         return False
     path = parsed.path.rstrip("/")
     if path in {"", "/news", "/research", "/blog"}:
         return False
     if path.startswith("/blog/category/") or path.startswith("/research/team/"):
         return False
+    if parsed.netloc in {"openai.com", "www.openai.com"} and path.startswith("/news/"):
+        return False
     return (
         path.startswith("/news/")
         or path.startswith("/research/")
         or path.startswith("/blog/")
+        or path.startswith("/index/")
     )
 
 
 def discover_articles(source: dict[str, Any]) -> list[dict[str, str]]:
+    if source["url"].endswith(".xml"):
+        return discover_rss_articles(source)
+
     source_html = fetch_url(source["url"])
     parser = LinkParser()
     parser.feed(source_html)
@@ -169,8 +187,34 @@ def discover_articles(source: dict[str, Any]) -> list[dict[str, str]]:
     return list(articles.values())
 
 
-def passes_source_filters(source: dict[str, Any], title: str, url: str) -> bool:
-    haystack = f"{title} {url}".lower()
+def discover_rss_articles(source: dict[str, Any]) -> list[dict[str, str]]:
+    source_xml = fetch_url(source["url"])
+    root = ET.fromstring(source_xml)
+    articles: dict[str, dict[str, str]] = {}
+    for item in root.findall("./channel/item"):
+        title = normalize_space(item.findtext("title") or "")
+        url = canonical_url(source["url"], item.findtext("link") or "")
+        description = normalize_space(item.findtext("description") or "")
+        published = normalize_date(item.findtext("pubDate") or "")
+        if not title or not allowed_article_url(url):
+            continue
+        if not passes_source_filters(source, title, url, description):
+            continue
+        articles[url] = {
+            "url": url,
+            "title": title,
+            "source_id": source["id"],
+            "source_name": source["name"],
+            "category": source["category"],
+            "vendor": source["vendor"],
+            "published_at": published,
+            "text": description,
+        }
+    return list(articles.values())
+
+
+def passes_source_filters(source: dict[str, Any], title: str, url: str, extra_text: str = "") -> bool:
+    haystack = f"{title} {url} {extra_text}".lower()
     include_keywords = [item.lower() for item in source.get("include_keywords", [])]
     exclude_keywords = [item.lower() for item in source.get("exclude_keywords", [])]
     if include_keywords and not any(keyword in haystack for keyword in include_keywords):
@@ -239,6 +283,10 @@ def normalize_date(value: str | None) -> str:
             return dt.datetime.strptime(value, fmt).strftime("%Y-%m-%d")
         except ValueError:
             pass
+    try:
+        return email.utils.parsedate_to_datetime(value).date().isoformat()
+    except (TypeError, ValueError):
+        pass
     return value
 
 
@@ -286,7 +334,7 @@ def summarize_with_model(article: dict[str, Any], model_config: dict[str, Any]) 
 def build_prompt(article: dict[str, Any]) -> str:
     return f"""
 Summarize this AI lab blog post for a Chinese reader who tracks model releases,
-alignment, agents, and Claude Code.
+alignment, agents, Claude Code, OpenAI Codex, and OpenAI platform updates.
 
 Style:
 - Use Chinese-English mixed language.
@@ -379,10 +427,11 @@ def main() -> int:
                 if (seen_entry and not can_backfill) or url in existing_urls:
                     continue
                 try:
-                    extracted = extract_article(url)
-                    candidate["title"] = extracted["title"] or candidate["title"]
-                    candidate["published_at"] = extracted["published_at"]
-                    candidate["text"] = extracted["text"]
+                    if not candidate.get("text"):
+                        extracted = extract_article(url)
+                        candidate["title"] = extracted["title"] or candidate["title"]
+                        candidate["published_at"] = extracted["published_at"]
+                        candidate["text"] = extracted["text"]
                     try:
                         summary = summarize_with_model(candidate, model_config)
                     except Exception as exc:

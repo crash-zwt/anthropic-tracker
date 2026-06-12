@@ -58,6 +58,76 @@
       "category": "claude_code",
       "vendor": "Anthropic",
       "description": "Claude Code product updates and workflow posts."
+    },
+    {
+      "id": "openai_model_product",
+      "name": "OpenAI Product - Models",
+      "url": "https://openai.com/news/rss.xml",
+      "category": "openai_model",
+      "vendor": "OpenAI",
+      "description": "OpenAI model and capability release posts.",
+      "include_keywords": [
+        "gpt",
+        "model",
+        "models",
+        "reasoning",
+        "realtime",
+        "voice"
+      ],
+      "exclude_keywords": [
+        "codex",
+        "aws",
+        "oracle",
+        "cloud commitment",
+        "chatgpt",
+        "ads",
+        "finance"
+      ]
+    },
+    {
+      "id": "openai_agents_engineering",
+      "name": "OpenAI Engineering - Agents",
+      "url": "https://openai.com/news/rss.xml",
+      "category": "openai_agents",
+      "vendor": "OpenAI",
+      "description": "OpenAI agent architecture, Responses API, orchestration, and workflow posts.",
+      "include_keywords": [
+        "agent",
+        "agentic",
+        "responses api",
+        "computer environment",
+        "orchestration",
+        "websockets"
+      ],
+      "exclude_keywords": [
+        "codex"
+      ]
+    },
+    {
+      "id": "openai_codex_product",
+      "name": "OpenAI Product - Codex",
+      "url": "https://openai.com/news/rss.xml",
+      "category": "openai_code",
+      "vendor": "OpenAI",
+      "description": "OpenAI Codex product updates.",
+      "include_keywords": [
+        "codex",
+        "coding"
+      ]
+    },
+    {
+      "id": "openai_codex_engineering",
+      "name": "OpenAI Engineering - Codex",
+      "url": "https://openai.com/news/rss.xml",
+      "category": "openai_code",
+      "vendor": "OpenAI",
+      "description": "OpenAI Codex engineering and implementation posts.",
+      "include_keywords": [
+        "codex",
+        "coding",
+        "sandbox",
+        "harness"
+      ]
     }
   ]
 }

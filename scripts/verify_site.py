@@ -15,6 +15,9 @@ EXPECTED_CATEGORY_PAGES = {
     "categories/alignment.html",
     "categories/agents.html",
     "categories/claude-code.html",
+    "categories/openai-model.html",
+    "categories/openai-agents.html",
+    "categories/openai-code.html",
 }
 
 
@@ -74,11 +77,13 @@ def main() -> int:
         failures.append("Category pages are missing or unexpected.")
 
     for page in pages:
-        parser = parse(page)
+        page_html = page.read_text(encoding="utf-8")
+        parser = PageParser()
+        parser.feed(page_html)
         label = str(page.relative_to(DOCS))
         if "top" not in parser.ids:
             failures.append(f"{label}: missing #top")
-        if not parser.archive_hrefs:
+        if not parser.archive_hrefs and "empty-state" not in page_html:
             failures.append(f"{label}: missing archive links")
 
         for href in parser.archive_hrefs:

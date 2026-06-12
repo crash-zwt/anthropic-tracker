@@ -8,6 +8,9 @@
   --alignment: #7c4dff;
   --agents: #1c8c63;
   --claude-code: #c75f18;
+  --openai-model: #0b7a75;
+  --openai-agents: #b13f63;
+  --openai-code: #52616f;
   --shadow: 0 1px 2px rgba(23, 32, 38, 0.08), 0 8px 24px rgba(23, 32, 38, 0.06);
 }
 
@@ -228,6 +231,18 @@ footer {
   border-left-color: var(--claude-code);
 }
 
+.category-openai_model {
+  border-left-color: var(--openai-model);
+}
+
+.category-openai_agents {
+  border-left-color: var(--openai-agents);
+}
+
+.category-openai_code {
+  border-left-color: var(--openai-code);
+}
+
 footer {
   padding: 4px 2px 0;
   font-size: 12px;
@@ -343,6 +358,18 @@ footer {
 
 .badge-claude_code {
   background: var(--claude-code);
+}
+
+.badge-openai_model {
+  background: var(--openai-model);
+}
+
+.badge-openai_agents {
+  background: var(--openai-agents);
+}
+
+.badge-openai_code {
+  background: var(--openai-code);
 }
 
 .article-card h2 {
