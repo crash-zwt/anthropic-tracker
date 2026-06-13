@@ -423,5 +423,35 @@
     "title": "Helping developers build safer AI experiences for teens",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-12T09:51:51.752317+00:00"
+  },
+  "https://www.anthropic.com/news/fable-mythos-access": {
+    "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
+  },
+  "https://openai.com/index/creating-with-sora-safely": {
+    "title": "Creating with Sora Safely",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
+  },
+  "https://openai.com/index/equip-responses-api-computer-environment": {
+    "title": "From model to agent: Equipping the Responses API with a computer environment",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
+  },
+  "https://openai.com/index/wayfair": {
+    "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
+  },
+  "https://openai.com/index/instruction-hierarchy-challenge": {
+    "title": "Improving instruction hierarchy in frontier LLMs",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
+  },
+  "https://openai.com/index/descript": {
+    "title": "How Descript engineers multilingual video dubbing at scale",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
   }
 }

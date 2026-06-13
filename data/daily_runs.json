@@ -1,5 +1,33 @@
 [
   {
+    "checked_at": "2026-06-13T05:25:44.959446+00:00",
+    "checked_at_display": "2026-06-13 13:25 Asia/Shanghai",
+    "new_count": 6,
+    "backfill_bootstrap": false,
+    "source_counts": {
+      "anthropic_news": 1,
+      "anthropic_alignment": 0,
+      "claude_agents": 0,
+      "claude_code": 0,
+      "google_gemini_ai_blog": 0,
+      "thinking_machines_site": 0,
+      "openai_model_product": 5,
+      "openai_agents_engineering": 0,
+      "openai_codex_product": 0,
+      "openai_codex_engineering": 0
+    },
+    "errors": [
+      {
+        "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-5-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  {
     "checked_at": "2026-06-12T09:51:51.752317+00:00",
     "checked_at_display": "2026-06-12 17:51 Asia/Shanghai",
     "new_count": 40,
