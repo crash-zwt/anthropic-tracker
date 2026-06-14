@@ -453,5 +453,35 @@
     "title": "How Descript engineers multilingual video dubbing at scale",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-13T05:25:44.959446+00:00"
+  },
+  "https://openai.com/index/balyasny-asset-management": {
+    "title": "How Balyasny Asset Management built an AI research engine",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
+  },
+  "https://openai.com/index/reasoning-models-chain-of-thought-controllability": {
+    "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-5-4": {
+    "title": "Introducing GPT-5.4",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
+  },
+  "https://openai.com/index/the-five-ai-value-models-driving-business-reinvention": {
+    "title": "The five AI value models driving business reinvention",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
+  },
+  "https://openai.com/index/extending-single-minus-amplitudes-to-gravitons": {
+    "title": "Extending single-minus amplitudes to gravitons",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
+  },
+  "https://openai.com/index/disrupting-malicious-ai-uses": {
+    "title": "Disrupting malicious uses of AI | February 2026",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
   }
 }
