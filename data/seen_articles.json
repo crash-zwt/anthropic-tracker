@@ -483,5 +483,35 @@
     "title": "Disrupting malicious uses of AI | February 2026",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-14T05:59:25.655642+00:00"
+  },
+  "https://openai.com/index/first-proof-submissions": {
+    "title": "Our First Proof submissions",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
+  },
+  "https://openai.com/index/new-result-theoretical-physics": {
+    "title": "GPT-5.2 derives a new result in theoretical physics",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
+  },
+  "https://openai.com/index/scaling-social-science-research": {
+    "title": "Scaling social science research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
+  },
+  "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost": {
+    "title": "GPT-5 lowers the cost of cell-free protein synthesis",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
+  },
+  "https://openai.com/index/trustbank": {
+    "title": "TRUSTBANK uses AI agents to personalize Furusato Nozei gifts",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
+  },
+  "https://openai.com/index/introducing-prism": {
+    "title": "Introducing Prism",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
   }
 }
