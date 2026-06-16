@@ -513,5 +513,35 @@
     "title": "Introducing Prism",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-15T06:32:49.569087+00:00"
+  },
+  "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon": {
+    "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
+  },
+  "https://openai.com/index/praktika": {
+    "title": "Inside Praktika's conversational approach to language learning",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
+  },
+  "https://openai.com/index/higgsfield": {
+    "title": "How Higgsfield turns simple ideas into cinematic social videos",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
+  },
+  "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai": {
+    "title": "ServiceNow powers actionable enterprise AI with OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
+  },
+  "https://openai.com/index/netomi": {
+    "title": "Netomi’s lessons for scaling agentic systems into the enterprise",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
+  },
+  "https://openai.com/index/tolan": {
+    "title": "How Tolan builds voice-first AI with GPT-5.1",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
   }
 }
