@@ -543,5 +543,35 @@
     "title": "How Tolan builds voice-first AI with GPT-5.1",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-16T06:39:05.563443+00:00"
+  },
+  "https://openai.com/index/deployment-simulation": {
+    "title": "Predicting model behavior before release by simulating deployment",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-17T06:22:30.850447+00:00"
+  },
+  "https://openai.com/index/evaluating-chain-of-thought-monitorability": {
+    "title": "Evaluating chain-of-thought monitorability",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-17T06:22:30.850447+00:00"
+  },
+  "https://openai.com/index/frontierscience": {
+    "title": "Evaluating AI’s ability to perform scientific research tasks",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-17T06:22:30.850447+00:00"
+  },
+  "https://openai.com/index/accelerating-biological-research-in-the-wet-lab": {
+    "title": "Measuring AI’s capability to accelerate biological research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-17T06:22:30.850447+00:00"
+  },
+  "https://openai.com/index/gpt-5-2-for-science-and-math": {
+    "title": "Advancing science and math with GPT-5.2",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-17T06:22:30.850447+00:00"
+  },
+  "https://openai.com/index/podium": {
+    "title": "How Podium is arming 10,000+ SMBs with AI agents",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-17T06:22:30.850447+00:00"
   }
 }

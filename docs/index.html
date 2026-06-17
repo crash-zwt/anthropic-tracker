@@ -19,7 +19,7 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-06-16 14:39 Asia/Shanghai</dd>
+            <dd>2026-06-17 14:22 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
@@ -27,7 +27,7 @@
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>109</dd>
+            <dd>115</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Claude Blog - Claude Code</span>
-              <strong>1 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
@@ -72,7 +72,7 @@
             
             <li>
               <span>OpenAI Product - Models</span>
-              <strong>5 new</strong>
+              <strong>6 new</strong>
             </li>
             
             <li>
@@ -123,7 +123,7 @@
 
     <a class="category-stat category-openai_model" href="categories/openai-model.html">
       <span>OpenAI Model</span>
-      <strong>45</strong>
+      <strong>51</strong>
     </a>
     
 
@@ -156,7 +156,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-06-15"><span>2026-06-15</span><strong>1</strong></a>
+          <a href="#date-2026-06-16"><span>2026-06-16</span><strong>1</strong></a>
+<a href="#date-2026-06-15"><span>2026-06-15</span><strong>1</strong></a>
 <a href="#date-2026-06-12"><span>2026-06-12</span><strong>1</strong></a>
 <a href="#date-2026-06-10"><span>2026-06-10</span><strong>1</strong></a>
 <a href="#date-2026-06-09"><span>2026-06-09</span><strong>1</strong></a>
@@ -218,7 +219,10 @@
 <a href="#date-2026-01-08"><span>2026-01-08</span><strong>1</strong></a>
 <a href="#date-2026-01-07"><span>2026-01-07</span><strong>1</strong></a>
 <a href="#date-2025-12-19"><span>2025-12-19</span><strong>1</strong></a>
+<a href="#date-2025-12-18"><span>2025-12-18</span><strong>1</strong></a>
+<a href="#date-2025-12-16"><span>2025-12-16</span><strong>2</strong></a>
 <a href="#date-2025-12-12"><span>2025-12-12</span><strong>1</strong></a>
+<a href="#date-2025-12-11"><span>2025-12-11</span><strong>2</strong></a>
 <a href="#date-2025-11-21"><span>2025-11-21</span><strong>1</strong></a>
 <a href="#date-2025-11-07"><span>2025-11-07</span><strong>1</strong></a>
 <a href="#date-2025-10-29"><span>2025-10-29</span><strong>1</strong></a>
@@ -232,7 +236,7 @@
       </section>
 
       <footer>
-        Generated: 2026-06-16 14:40 Asia/Shanghai
+        Generated: 2026-06-17 14:23 Asia/Shanghai
       </footer>
     </aside>
 
@@ -248,6 +252,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-06-16">
+              <div class="date-heading">
+                <h3>2026-06-16</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-06-16</span>
+        <span>Added 2026-06-17</span>
+      </div>
+      <h2>Predicting model behavior before release by simulating deployment</h2>
+      <a class="original-link" href="https://openai.com/index/deployment-simulation" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 提出 Deployment Simulation 方法，核心思路是在 model release 前用真实对话数据模拟部署场景，以预测模型行为、提升 safety evaluation 的准确性。文章本身非常简短，实质信息有限，更像是一个概念介绍或索引页。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>核心方法：用真实 conversation data 构建 simulation environment，在部署前预测 model behavior</li><li>目标：解决传统 evaluation 与实际 deployment 场景脱节的问题，提高 safety 预测的准确度</li><li>应用场景：主要针对 alignment 和 safety 相关的风险识别，属于 pre-deployment 阶段的 testing 手段</li><li>文章深度：内容极简，缺乏技术细节、方法论具体实现或实验数据，实质信息量较低</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对于关注 alignment 和 model safety 的从业者，这代表 OpenAI 在 evaluation methodology 上的一个方向性信号——从 static benchmark 转向更贴近真实场景的 dynamic simulation。但当前披露信息太少，难以判断其与 Red Teaming、Constitutional AI 等方法的具体差异和增量价值。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章信息密度过低，更像是 concept note 或 landing page，不建议花时间深挖。方法论本身的方向是对的——用真实数据做 simulation 确实能弥补 benchmark 的局限，但具体实现细节、数据来源、simulation fidelity 等关键问题完全没有触及。建议等待后续技术报告或 paper 再做判断。对 model release 追踪者而言，这暂时只是&#x27;知道有这个方向&#x27;即可，无需调整现有 workflow。</p>
+      </section>
+      <div class="tags"><span>deployment-simulation</span><span>alignment</span><span>safety-evaluation</span><span>openai-methodology</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-06-15">
               <div class="date-heading">
                 <h3>2026-06-15</h3>
@@ -3615,6 +3656,109 @@
             </section>
             
 
+            <section class="date-section" id="date-2025-12-18">
+              <div class="date-heading">
+                <h3>2025-12-18</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-12-18</span>
+        <span>Added 2026-06-17</span>
+      </div>
+      <h2>Evaluating chain-of-thought monitorability</h2>
+      <a class="original-link" href="https://openai.com/index/evaluating-chain-of-thought-monitorability" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布了一个用于评估 chain-of-thought (CoT) 可监控性的新框架和 evaluation suite，包含 13 个评估任务和 24 个环境。核心发现是：监控模型内部推理过程比仅监控最终输出有效得多，为 AI 系统日益强大后的 scalable control 提供了一条可行路径。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>发布 CoT monitorability 评估框架，覆盖 13 evaluations / 24 environments</li><li>核心结论：监控 reasoning traces 远比仅监控 outputs 更能发现异常行为</li><li>这是解决 scalable oversight 问题、防止 model scheming 的关键技术方向</li><li>为未来更强大模型的 safety monitoring 提供了实证基准</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对于关注 alignment 和 safety 的人来说，这篇直接关系到如何 &#x27;控制&#x27; 超级智能。随着 model capabilities 提升，仅靠结果审查已不足够，必须深入 reasoning 过程。这是 OpenAI 在 &#x27;control agenda&#x27; 上的实质性进展，比空谈原则更有价值。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章内容偏薄，基本就是 index page 级别的介绍，缺乏具体方法论和实验数据细节。但信号明确：OpenAI 正在认真对待 reasoning transparency，这可能是未来 model release 的标配功能。建议关注后续是否放出完整 paper 或技术细节，目前信息量有限，重要性中等。</p>
+      </section>
+      <div class="tags"><span>chain-of-thought</span><span>alignment</span><span>monitoring</span><span>safety</span><span>scalable-control</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2025-12-16">
+              <div class="date-heading">
+                <h3>2025-12-16</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-12-16</span>
+        <span>Added 2026-06-17</span>
+      </div>
+      <h2>Measuring AI’s capability to accelerate biological research</h2>
+      <a class="original-link" href="https://openai.com/index/accelerating-biological-research-in-the-wet-lab" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布了一个新的 real-world evaluation framework，用于衡量 AI 加速 wet lab 生物研究的能力。文章以 GPT-5 优化 molecular cloning protocol 为案例，探讨了 AI 辅助实验的潜力与风险。注意：原文摘要非常简短，具体技术细节和 benchmark 数据尚不明确。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>推出针对 wet lab 生物研究的 real-world evaluation framework</li><li>使用 GPT-5 进行 molecular cloning protocol 优化作为测试案例</li><li>关注 AI 加速科学实验的实际能力与 dual-use risks</li><li>这是 OpenAI 在 scientific discovery 和 frontier model evaluation 方向的新尝试</li><li>文章本身较薄，更像是 research preview 或 index page</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这标志着 OpenAI 开始系统性地评估 frontier models 在真实科研场景中的 practical utility，而不仅仅是 reasoning benchmarks。对于关注 AI for Science 和 biosecurity 的研究者来说，这是一个重要的 signal——wet lab automation 可能是下一个 agent 应用的重要方向。同时，提及 GPT-5 也暗示了下一代模型在复杂科研任务上的能力提升。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章内容偏薄，更像是 research announcement 而非完整的技术报告。核心价值在于 OpenAI 开始认真对待 real-world scientific evaluation，这是从 chatbot 向 research agent 转型的关键一步。但需要警惕的是，bio-related capabilities 的 dual-use nature 使得这类工作必然伴随 safety concerns。建议等待完整 paper 或 technical report 再做深入评估。GPT-5 的提及值得关注——这可能是官方首次在公开场合将 GPT-5 与具体能力测试关联。</p>
+      </section>
+      <div class="tags"><span>evaluation</span><span>GPT-5</span><span>bio-research</span><span>wet-lab</span><span>AI-for-Science</span><span>safety</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-12-16</span>
+        <span>Added 2026-06-17</span>
+      </div>
+      <h2>Evaluating AI’s ability to perform scientific research tasks</h2>
+      <a class="original-link" href="https://openai.com/index/frontierscience" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布 FrontierScience，这是一个针对 physics、chemistry 和 biology 领域的 benchmark，旨在测试 AI 在真实科学研究任务中的 reasoning 能力，以此衡量模型向 AGI 迈进的进度。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>新 benchmark 覆盖物理、化学、生物三大基础科学领域。</li><li>核心测试目标是 AI 的 reasoning 能力而非简单的知识检索。</li><li>旨在量化模型在 &#x27;real scientific research&#x27; 场景下的表现。</li><li>属于 OpenAI 测评体系的一部分，用于追踪 frontier model 的能力边界。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对于关注 model releases 的观察者来说，这表明 OpenAI 正在将评估重心从通用任务向高价值的专业领域转移。Science benchmark 的得分将成为衡量下一代模型（如 GPT-5 级别）是否具备 &#x27;research agent&#x27; 潜力的关键指标。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章内容极简，仅比索引页稍多，缺乏具体的 dataset 规模、sota 得分或方法论细节，信息量有限。不过，这释放了一个明确信号：OpenAI 正在为具备科研能力的 Agent 产品化做测评铺垫，值得持续关注后续是否有 paper 或 technical report 发布。</p>
+      </section>
+      <div class="tags"><span>benchmark</span><span>reasoning</span><span>science</span><span>evaluation</span><span>OpenAI</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2025-12-12">
               <div class="date-heading">
                 <h3>2025-12-12</h3>
@@ -3647,6 +3791,72 @@
         <p>这是一个扎实的产品更新，但不算突破性。Kimi K2 Thinking 的加入是亮点——万亿参数的 reasoning 模型可 fine-tune，这在市场上不多见。OpenAI API 兼容是聪明的生态策略，降低迁移成本。VLM vs DINOv2 的对比实验有参考价值，但数据集偏学术，真实场景表现待验证。整体来看，Tinker 正在填补 &#x27;可 fine-tune 超大模型&#x27; 这一市场空白，但竞争格局下能否突围取决于模型质量、价格和稳定性。</p>
       </section>
       <div class="tags"><span>fine-tuning platform</span><span>Kimi K2</span><span>Qwen3-VL</span><span>OpenAI API compatible</span><span>VLM classification</span><span>reasoning model</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2025-12-11">
+              <div class="date-heading">
+                <h3>2025-12-11</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-12-11</span>
+        <span>Added 2026-06-17</span>
+      </div>
+      <h2>How Podium is arming 10,000+ SMBs with AI agents</h2>
+      <a class="original-link" href="https://openai.com/index/podium" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇关于 Podium 使用 OpenAI GPT-5 构建 AI agent &quot;Jerry&quot; 的 customer story，声称帮助 10,000+ SMB 实现了 300% 增长。但正文内容极其稀薄，仅有一句宣传性简介，无技术细节。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Podium 基于 GPT-5 构建了名为 &quot;Jerry&quot; 的 AI teammate</li><li>目标用户是 SMB（中小企业），声称覆盖 10,000+ 家</li><li>宣称带来 300% growth，但未说明具体 metric 或 baseline</li><li>文章实质是 index/landing page，无实现细节或架构披露</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>如果 GPT-5 的说法属实，这是首批公开声称使用 GPT-5 的 production case 之一，值得留意。但目前 OpenAI 官方尚未正式发布 GPT-5，此处提及可能是 marketing 提前曝光或笔误，需谨慎对待。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>内容严重不足，无法从中获得任何 pragmatic insight。所谓的 GPT-5 引用非常可疑——OpenAI 尚未发布该模型，这要么是 marketing 拟稿失误，要么是故意制造 buzz。建议等待完整 case study 或官方 model release 说明，不要据此做任何判断。</p>
+      </section>
+      <div class="tags"><span>customer-story</span><span>GPT-5</span><span>AI-agents</span><span>SMB</span><span>thin-content</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-12-11</span>
+        <span>Added 2026-06-17</span>
+      </div>
+      <h2>Advancing science and math with GPT-5.2</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-5-2-for-science-and-math" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布 GPT-5.2，主打 science 和 math 能力提升，在 GPQA Diamond 和 FrontierMath 等 benchmark 上达到 SOTA。文章声称这些 gains 能转化为实际 research progress，包括解决 open theoretical problem 和生成可靠的 mathematical proofs。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>GPT-5.2 是目前 OpenAI 在 math 和 science 领域的最强 model</li><li>在 GPQA Diamond 和 FrontierMath benchmark 上取得新的 SOTA 结果</li><li>展示了实际 research 应用：解决了一个 open theoretical problem</li><li>具备生成 reliable mathematical proofs 的能力</li><li>定位清晰：面向 scientific research 场景的 specialized capability upgrade</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 OpenAI 在 reasoning 和 scientific capability 上的重要进展。如果 claims 属实，意味着 LLM 开始从辅助工具转向能产生 novel research contribution 的系统。对于关注 AI for Science 和 automated theorem proving 的研究者来说，这是一个值得关注的 milestone。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章篇幅很短，缺乏具体的技术细节和 benchmark 对比数据，更像是一个 announcement teaser。关键问题在于：所谓的 &#x27;solving an open theoretical problem&#x27; 是否经过 peer review？Mathematical proofs 的 reliability 如何验证？建议等待 full technical report 或 independent verification 再做判断。目前 importance 标记为 medium，需要更多 evidence 来评估实际 impact。</p>
+      </section>
+      <div class="tags"><span>GPT-5.2</span><span>AI for Science</span><span>mathematical-reasoning</span><span>SOTA</span><span>OpenAI</span></div>
     </article>
     
             </section>
