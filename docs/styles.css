@@ -146,10 +146,18 @@ footer {
   gap: 12px;
 }
 
-.category-grid {
+.category-grid,
+.lab-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+}
+
+.category-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lab-grid {
+  grid-template-columns: 1fr;
 }
 
 .archive-list {
@@ -183,7 +191,8 @@ footer {
   font-size: 12px;
 }
 
-.category-stat {
+.category-stat,
+.lab-stat {
   display: block;
   min-height: 74px;
   padding: 12px;
@@ -195,26 +204,34 @@ footer {
   text-decoration: none;
 }
 
-.category-stat:hover {
+.category-stat:hover,
+.lab-stat:hover {
   border-color: #b8c3cc;
   background: #f1f4f7;
 }
 
-.category-stat.is-active {
+.category-stat.is-active,
+.lab-stat.is-active {
   background: #fff;
   box-shadow: inset 0 0 0 1px #9fb0bd;
 }
 
-.category-stat span {
+.category-stat span,
+.lab-stat span {
   display: block;
   color: var(--muted);
   font-size: 13px;
 }
 
-.category-stat strong {
+.category-stat strong,
+.lab-stat strong {
   display: block;
   margin-top: 8px;
   font-size: 24px;
+}
+
+.lab-stat {
+  min-height: 66px;
 }
 
 .category-model {
@@ -253,6 +270,22 @@ footer {
   border-left-color: var(--thinking-machines);
 }
 
+.lab-anthropic {
+  border-left-color: var(--claude-code);
+}
+
+.lab-openai {
+  border-left-color: var(--openai-model);
+}
+
+.lab-google {
+  border-left-color: var(--google-gemini);
+}
+
+.lab-thinking_machines {
+  border-left-color: var(--thinking-machines);
+}
+
 footer {
   padding: 4px 2px 0;
   font-size: 12px;
@@ -284,6 +317,32 @@ footer {
 
 .date-section {
   margin-bottom: 22px;
+}
+
+.topic-section {
+  margin-bottom: 26px;
+}
+
+.topic-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 42px;
+  margin-bottom: 10px;
+  padding: 0 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.topic-heading h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.topic-heading span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .date-heading {

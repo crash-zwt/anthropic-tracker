@@ -30,3 +30,4 @@
 - Changed the production schedule back to one daily run at `01:07 UTC` / `09:07 Asia/Shanghai`; manual workflow runs remain available for testing.
 - Added Google Gemini tracking from Google's official AI blog RSS feed.
 - Added Thinking Machines tracking from the official `thinkingmachines.ai` sitemap.
+- Reworked the static dashboard into a lab-first layout with institution pages and per-lab topic sections.

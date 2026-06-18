@@ -22,6 +22,8 @@ https://crash-zwt.github.io/anthropic-tracker/
 
 Sources are configured in `config/sources.json`.
 
+The main dashboard is lab-first: left navigation links to institution pages such as OpenAI, Google, and Thinking Machines. Each lab page then groups posts into internal topics such as Model, Alignment, Agents, Code, Gemini, or Methods & Research.
+
 ## Required Secret
 
 Add this repository secret in GitHub:

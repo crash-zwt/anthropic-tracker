@@ -40,6 +40,33 @@ CATEGORY_SLUGS = {
 
 CATEGORY_ORDER = list(CATEGORY_LABELS)
 
+LAB_LABELS = {
+    "anthropic": "Anthropic / Claude",
+    "openai": "OpenAI",
+    "google": "Google",
+    "thinking_machines": "Thinking Machines",
+}
+
+LAB_SLUGS = {
+    "anthropic": "anthropic",
+    "openai": "openai",
+    "google": "google",
+    "thinking_machines": "thinking-machines",
+}
+
+LAB_ORDER = list(LAB_LABELS)
+
+TOPIC_LABELS = {
+    "model": "Model",
+    "alignment": "Alignment",
+    "agents": "Agents",
+    "code": "Code",
+    "gemini": "Gemini",
+    "methods": "Methods & Research",
+}
+
+TOPIC_ORDER = ["model", "alignment", "agents", "code", "gemini", "methods"]
+
 
 def load_json(path: Path, default: Any) -> Any:
     if not path.exists():
@@ -90,8 +117,76 @@ def category_href(category: str, current_category: str | None = None) -> str:
     return f"categories/{slug}.html"
 
 
-def home_href(current_category: str | None = None) -> str:
-    return "../index.html" if current_category else "index.html"
+def lab_href(lab: str, current_lab: str | None = None, nested: bool = False) -> str:
+    slug = LAB_SLUGS.get(lab, lab)
+    if current_lab == lab:
+        return "#top"
+    prefix = "../" if nested else ""
+    return f"{prefix}labs/{slug}.html"
+
+
+def home_href(nested: bool = False) -> str:
+    return "../index.html" if nested else "index.html"
+
+
+def article_lab(article: dict[str, Any]) -> str:
+    vendor = article.get("vendor", "")
+    if vendor == "OpenAI":
+        return "openai"
+    if vendor == "Google":
+        return "google"
+    if vendor == "Thinking Machines":
+        return "thinking_machines"
+    return "anthropic"
+
+
+def source_lab(source: dict[str, Any]) -> str:
+    vendor = source.get("vendor", "")
+    if vendor == "OpenAI":
+        return "openai"
+    if vendor == "Google":
+        return "google"
+    if vendor == "Thinking Machines":
+        return "thinking_machines"
+    return "anthropic"
+
+
+def article_topic(article: dict[str, Any]) -> str:
+    category = article.get("category", "")
+    text = " ".join(
+        [
+            str(article.get("title", "")),
+            str(article.get("summary", {}).get("tldr", "")),
+            " ".join(str(tag) for tag in article.get("summary", {}).get("tags", [])),
+        ]
+    ).lower()
+    if article_lab(article) == "openai":
+        if any(keyword in text for keyword in ("codex", "coding", "code generation")):
+            return "code"
+        if any(keyword in text for keyword in ("agent", "agents", "responses api", "agents sdk", "computer use", "tool use")):
+            return "agents"
+        if any(keyword in text for keyword in ("alignment", "safety", "model spec", "privacy", "teen", "policy", "bio defense", "cyber defense", "trusted access")):
+            return "alignment"
+        if any(keyword in text for keyword in ("method", "research", "latency", "inference", "architecture", "evaluation", "benchmark")):
+            return "methods"
+        return "model"
+    if category in {"model", "openai_model"}:
+        return "model"
+    if category == "alignment":
+        return "alignment"
+    if category in {"agents", "openai_agents"}:
+        return "agents"
+    if category in {"claude_code", "openai_code"}:
+        return "code"
+    if category == "google_gemini":
+        return "gemini"
+    if category == "thinking_machines":
+        return "methods"
+    return category or "methods"
+
+
+def topic_anchor(topic: str) -> str:
+    return f"topic-{topic}"
 
 
 def main() -> int:
@@ -103,12 +198,17 @@ def main() -> int:
     generated_at = dt.datetime.now(dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M Asia/Shanghai")
 
     total_by_category = {key: 0 for key in CATEGORY_LABELS}
+    total_by_lab = {key: 0 for key in LAB_LABELS}
     for article in articles:
         total_by_category[article.get("category")] = total_by_category.get(article.get("category"), 0) + 1
+        lab = article_lab(article)
+        total_by_lab[lab] = total_by_lab.get(lab, 0) + 1
 
     DOCS_DIR.mkdir(exist_ok=True)
     category_dir = DOCS_DIR / "categories"
     category_dir.mkdir(exist_ok=True)
+    lab_dir = DOCS_DIR / "labs"
+    lab_dir.mkdir(exist_ok=True)
 
     index_html = render_page(
         articles=articles,
@@ -117,8 +217,10 @@ def main() -> int:
         latest_run=latest_run,
         last_checked=last_checked,
         total_by_category=total_by_category,
+        total_by_lab=total_by_lab,
         generated_at=generated_at,
         current_category=None,
+        current_lab=None,
     )
     (DOCS_DIR / "index.html").write_text(index_html, encoding="utf-8")
 
@@ -131,10 +233,27 @@ def main() -> int:
             latest_run=latest_run,
             last_checked=last_checked,
             total_by_category=total_by_category,
+            total_by_lab=total_by_lab,
             generated_at=generated_at,
             current_category=category,
+            current_lab=None,
         )
         (category_dir / f"{CATEGORY_SLUGS[category]}.html").write_text(category_html, encoding="utf-8")
+    for lab in LAB_ORDER:
+        lab_articles = [article for article in articles if article_lab(article) == lab]
+        lab_html = render_page(
+            articles=lab_articles,
+            all_articles=articles,
+            sources=sources,
+            latest_run=latest_run,
+            last_checked=last_checked,
+            total_by_category=total_by_category,
+            total_by_lab=total_by_lab,
+            generated_at=generated_at,
+            current_category=None,
+            current_lab=lab,
+        )
+        (lab_dir / f"{LAB_SLUGS[lab]}.html").write_text(lab_html, encoding="utf-8")
     return 0
 
 
@@ -146,32 +265,48 @@ def render_page(
     latest_run: dict[str, Any],
     last_checked: str,
     total_by_category: dict[str, int],
+    total_by_lab: dict[str, int],
     generated_at: str,
     current_category: str | None,
+    current_lab: str | None,
 ) -> str:
-    source_rows = []
+    lab_run_counts = {lab: 0 for lab in LAB_ORDER}
     for source in sources:
         count = latest_run.get("source_counts", {}).get(source["id"], 0)
+        lab = source_lab(source)
+        lab_run_counts[lab] = lab_run_counts.get(lab, 0) + count
+    source_rows = []
+    for lab in LAB_ORDER:
+        count = lab_run_counts.get(lab, 0)
         source_rows.append(
             f"""
             <li>
-              <span>{esc(source["name"])}</span>
+              <span>{esc(LAB_LABELS[lab])}</span>
               <strong>{count} new</strong>
             </li>
             """
         )
 
-    archive_counts: dict[str, int] = {}
-    for article in articles:
-        date_key = article_date(article)
-        archive_counts[date_key] = archive_counts.get(date_key, 0) + 1
+    if current_lab:
+        nav_heading = "Topics"
+        topic_counts = count_topics(articles)
+        archive_buttons = "\n".join(
+            f'<a href="#{esc(topic_anchor(topic))}"><span>{esc(TOPIC_LABELS.get(topic, topic))}</span><strong>{count}</strong></a>'
+            for topic, count in topic_counts.items()
+        )
+        cards = render_lab_article_groups(articles[:160])
+    else:
+        nav_heading = "Archive"
+        archive_counts: dict[str, int] = {}
+        for article in articles:
+            date_key = article_date(article)
+            archive_counts[date_key] = archive_counts.get(date_key, 0) + 1
 
-    archive_buttons = "\n".join(
-        f'<a href="#{esc(date_anchor(date_key))}"><span>{esc(archive_label(date_key))}</span><strong>{count}</strong></a>'
-        for date_key, count in sorted(archive_counts.items(), reverse=True)
-    )
-
-    cards = render_article_groups(articles[:120])
+        archive_buttons = "\n".join(
+            f'<a href="#{esc(date_anchor(date_key))}"><span>{esc(archive_label(date_key))}</span><strong>{count}</strong></a>'
+            for date_key, count in sorted(archive_counts.items(), reverse=True)
+        )
+        cards = render_article_groups(articles[:120])
     if not cards:
         cards = """
         <article class="empty-state">
@@ -188,7 +323,12 @@ def render_page(
         title = f"{CATEGORY_LABELS[current_category]} - AI Lab Tracker"
         feed_title = f"{CATEGORY_LABELS[current_category]} Posts"
         eyebrow = "Category Briefs"
-    stylesheet = "../styles.css" if current_category else "styles.css"
+    if current_lab:
+        title = f"{LAB_LABELS[current_lab]} - AI Lab Tracker"
+        feed_title = f"{LAB_LABELS[current_lab]} Posts"
+        eyebrow = "Lab Briefs"
+    nested = bool(current_category or current_lab)
+    stylesheet = "../styles.css" if nested else "styles.css"
     repo_href = "https://github.com/crash-zwt/anthropic-tracker"
 
     return f"""<!doctype html>
@@ -204,7 +344,7 @@ def render_page(
     <aside class="sidebar">
       <header>
         <p class="eyebrow">AI Lab Watch</p>
-        <h1><a class="site-title" href="{home_href(current_category)}">AI Lab Tracker</a></h1>
+        <h1><a class="site-title" href="{home_href(nested)}">AI Lab Tracker</a></h1>
       </header>
 
       <section class="panel">
@@ -230,21 +370,21 @@ def render_page(
       </section>
 
       <section class="panel">
-        <h2>Sources</h2>
+        <h2>Run Activity</h2>
         <ul class="source-list">
           {"".join(source_rows)}
         </ul>
       </section>
 
       <section class="panel">
-        <h2>Categories</h2>
-        <div class="category-grid">
-          {render_category_stats(total_by_category, current_category)}
+        <h2>Labs</h2>
+        <div class="lab-grid">
+          {render_lab_stats(total_by_lab, current_lab, nested)}
         </div>
       </section>
 
       <section class="panel">
-        <h2>Archive</h2>
+        <h2>{esc(nav_heading)}</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
           {archive_buttons}
         </nav>
@@ -262,7 +402,7 @@ def render_page(
           <h2>{esc(feed_title)}</h2>
         </div>
         <div class="header-actions">
-          {render_all_posts_link(current_category)}
+          {render_all_posts_link(nested)}
           <a class="repo-link" href="{repo_href}">GitHub</a>
         </div>
       </div>
@@ -274,10 +414,10 @@ def render_page(
 """
 
 
-def render_all_posts_link(current_category: str | None) -> str:
-    if not current_category:
+def render_all_posts_link(nested: bool) -> str:
+    if not nested:
         return ""
-    return f'<a class="repo-link" href="{home_href(current_category)}">All Posts</a>'
+    return f'<a class="repo-link" href="{home_href(True)}">All Posts</a>'
 
 
 def render_category_stat(category: str, count: int, current_category: str | None = None) -> str:
@@ -297,6 +437,35 @@ def render_category_stats(total_by_category: dict[str, int], current_category: s
     )
 
 
+def render_lab_stat(lab: str, count: int, current_lab: str | None = None, nested: bool = False) -> str:
+    active = " is-active" if current_lab == lab else ""
+    return f"""
+    <a class="lab-stat lab-{esc(lab)}{active}" href="{esc(lab_href(lab, current_lab, nested))}">
+      <span>{esc(LAB_LABELS.get(lab, lab))}</span>
+      <strong>{count}</strong>
+    </a>
+    """
+
+
+def render_lab_stats(total_by_lab: dict[str, int], current_lab: str | None = None, nested: bool = False) -> str:
+    return "\n".join(
+        render_lab_stat(lab, total_by_lab.get(lab, 0), current_lab, nested)
+        for lab in LAB_ORDER
+    )
+
+
+def count_topics(articles: list[dict[str, Any]]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for article in articles:
+        topic = article_topic(article)
+        counts[topic] = counts.get(topic, 0) + 1
+    return {
+        topic: counts[topic]
+        for topic in TOPIC_ORDER
+        if counts.get(topic, 0)
+    }
+
+
 def render_article_groups(articles: list[dict[str, Any]]) -> str:
     groups: dict[str, list[dict[str, Any]]] = {}
     for article in articles:
@@ -313,6 +482,30 @@ def render_article_groups(articles: list[dict[str, Any]]) -> str:
                 <a href="#top">Back to top</a>
               </div>
               {articles_html}
+            </section>
+            """
+        )
+    return "\n".join(sections)
+
+
+def render_lab_article_groups(articles: list[dict[str, Any]]) -> str:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for article in articles:
+        grouped.setdefault(article_topic(article), []).append(article)
+
+    sections = []
+    for topic in TOPIC_ORDER:
+        topic_articles = grouped.get(topic, [])
+        if not topic_articles:
+            continue
+        sections.append(
+            f"""
+            <section class="topic-section" id="{esc(topic_anchor(topic))}">
+              <div class="topic-heading">
+                <h3>{esc(TOPIC_LABELS.get(topic, topic))}</h3>
+                <span>{len(topic_articles)} posts</span>
+              </div>
+              {render_article_groups(topic_articles)}
             </section>
             """
         )

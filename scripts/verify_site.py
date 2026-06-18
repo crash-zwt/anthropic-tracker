@@ -21,6 +21,12 @@ EXPECTED_CATEGORY_PAGES = {
     "categories/google-gemini.html",
     "categories/thinking-machines.html",
 }
+EXPECTED_LAB_PAGES = {
+    "labs/anthropic.html",
+    "labs/openai.html",
+    "labs/google.html",
+    "labs/thinking-machines.html",
+}
 
 
 class PageParser(HTMLParser):
@@ -72,11 +78,17 @@ def resolve(page: Path, href: str) -> Path:
 
 
 def main() -> int:
-    pages = [DOCS / "index.html", *sorted((DOCS / "categories").glob("*.html"))]
+    pages = [
+        DOCS / "index.html",
+        *sorted((DOCS / "categories").glob("*.html")),
+        *sorted((DOCS / "labs").glob("*.html")),
+    ]
     failures: list[str] = []
 
     if {str(path.relative_to(DOCS)) for path in pages if path.parent.name == "categories"} != EXPECTED_CATEGORY_PAGES:
         failures.append("Category pages are missing or unexpected.")
+    if {str(path.relative_to(DOCS)) for path in pages if path.parent.name == "labs"} != EXPECTED_LAB_PAGES:
+        failures.append("Lab pages are missing or unexpected.")
 
     for page in pages:
         page_html = page.read_text(encoding="utf-8")
