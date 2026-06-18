@@ -1,5 +1,183 @@
 [
   {
+    "id": "6f02985cfa1d",
+    "url": "https://openai.com/index/scout24",
+    "title": "How Scout24 is building the next generation of real-estate search with AI",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-12-09",
+    "added_at": "2026-06-18T07:56:47.983952+00:00",
+    "summary": {
+      "tldr": "Scout24 用 GPT-5 构建了一个 real-estate search 的 conversational assistant，通过 clarifying questions、summaries 和 tailored listing recommendations 来引导用户找房。",
+      "key_points": [
+        "GPT-5 驱动的 conversational assistant",
+        "场景：real-estate search，用对话式交互替代传统筛选",
+        "功能：clarifying questions、summaries、tailored recommendations"
+      ],
+      "why_it_matters": "这是 GPT-5 在 customer-facing product 中的早期应用案例，说明 GPT-5 已有真实业务落地。对关注 model releases 的人有参考价值。",
+      "my_take": "文章极短，基本就是一段话，没有技术细节或 implementation insights。GPT-5 的出现值得关注，但这个 case study 信息量很低，更像是 PR 素材而非技术分享。",
+      "tags": [
+        "GPT-5",
+        "conversational-assistant",
+        "real-estate",
+        "customer-case"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "b129d60f25bb",
+    "url": "https://openai.com/index/strengthening-cyber-resilience",
+    "title": "Strengthening cyber resilience as AI capabilities advance",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-12-10",
+    "added_at": "2026-06-18T07:56:47.983952+00:00",
+    "summary": {
+      "tldr": "这是一篇关于 OpenAI 网络安全 resilience 策略的概述性文章，主要阐述了公司在 AI 能力提升背景下如何评估风险、限制滥用并与安全社区合作，属于 policy/safety 范畴而非具体 model release。",
+      "key_points": [
+        "文章聚焦 cybersecurity 领域的 safeguards 和 defensive capabilities 投资",
+        "提及 risk assessment 框架和 misuse 限制机制，但未披露具体技术细节",
+        "强调与 security community 的合作以增强 cyber resilience",
+        "无新 model、agent 或 platform 功能发布信息"
+      ],
+      "why_it_matters": "对于关注 model releases 和 agents 的读者，这篇文章价值有限。它更多是 OpenAI 在 safety/policy 层面的立场宣示，展示了公司在网络安全风险治理上的投入方向，但缺乏可操作的技术或产品信息。",
+      "my_take": "文章内容偏薄，基本是一个 index/overview 页面，没有 deep dive。如果你主要追踪 Codex、Claude Code 或具体 model 更新，可以 skip 这篇。只有当你关注 AI safety policy 或 enterprise security strategy 时才值得快速浏览。",
+      "tags": [
+        "cybersecurity",
+        "safety-policy",
+        "risk-assessment",
+        "openai"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "02eec89574a8",
+    "url": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2",
+    "title": "Update to GPT-5 System Card: GPT-5.2",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-12-11",
+    "added_at": "2026-06-18T07:56:47.983952+00:00",
+    "summary": {
+      "tldr": "GPT-5.2 是 GPT-5 系列的最新 model family，其 safety mitigation 方法与前代 GPT-5 和 GPT-5.1 基本一致，训练数据来源也无新变化。",
+      "key_points": [
+        "GPT-5.2 是 GPT-5 series 的最新 model family",
+        "safety mitigation approach 与之前 System Card 描述基本相同",
+        "训练数据来源不变：公开互联网数据、第三方合作数据、用户/human trainers 提供的数据",
+        "文章极短，无性能指标、API 信息或具体 release 细节"
+      ],
+      "why_it_matters": "作为 GPT-5 系列的迭代版本，理论上值得关注，但文章本身信息量极低，仅确认 model 存在且安全策略延续前代。",
+      "my_take": "这篇文章本质上是 System Card 的形式化更新，几乎没有实用信息。没有 benchmark、没有 API availability、没有 pricing、没有 capability 提升的具体说明。对于追踪 model releases 的人来说，这篇内容可以跳过，等正式的 launch announcement 或 API changelog。",
+      "tags": [
+        "gpt-5",
+        "system-card",
+        "safety",
+        "thin-content"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "1a8cd099cf1e",
+    "url": "https://openai.com/index/ai-chemist-improves-reaction",
+    "title": "A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-06-17",
+    "added_at": "2026-06-18T07:56:47.983952+00:00",
+    "summary": {
+      "tldr": "OpenAI 与 Molecule.one 合作展示了一个近乎自主的 AI chemist，使用 GPT-5.4 改进了一个关键的药物合成反应，推进了 medicinal chemistry 研究。",
+      "key_points": [
+        "使用 GPT-5.4 驱动的 AI chemist 实现近自主操作",
+        "成功改进了一个具有挑战性的 drug-making reaction",
+        "合作方为 Molecule.one，聚焦 medicinal chemistry 应用"
+      ],
+      "why_it_matters": "这是 GPT-5.4 首次在公开报道中亮相，且应用于高价值的科学发现场景。如果属实，标志着 model capabilities 从通用对话向 autonomous scientific research 迈进的重要一步。",
+      "my_take": "文章内容极简，几乎只有一段摘要，缺乏技术细节和 methodology。GPT-5.4 的命名令人意外——此前公开版本仅到 GPT-4o，需谨慎对待，可能是笔误或内部版本号。建议等待更详细的 technical report 或官方确认后再做判断。目前信息量不足以评估实际 impact。",
+      "tags": [
+        "AI4Science",
+        "GPT-5.4",
+        "autonomous agent",
+        "medicinal chemistry",
+        "Molecule.one"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "625ae98145ab",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+    "title": "New research shows how AMIE, our medical AI, could help manage health conditions.",
+    "source_id": "google_gemini_ai_blog",
+    "source_name": "Google AI Blog - Gemini",
+    "category": "google_gemini",
+    "vendor": "Google",
+    "published_at": "2026-06-17",
+    "added_at": "2026-06-18T07:56:47.983952+00:00",
+    "summary": {
+      "tldr": "Google Research 在 Nature 发表新论文，展示其对话式医疗 AI 系统 AMIE 在复杂疾病管理场景中达到 primary care physicians 水平。这是 AMIE 从诊断对话向长期疾病管理的重要扩展。",
+      "key_points": [
+        "AMIE (Articulate Medical Intelligence Explorer) 是基于 LLM 的对话式医疗 AI，此前已在诊断对话任务上验证过",
+        "本次研究聚焦 disease management，即长期、多轮次的慢性病管理场景，比单次诊断更复杂",
+        "在模拟病例评估中，AMIE 在多个维度上匹配或接近初级保健医生表现",
+        "论文发表在 Nature，经过同行评审，方法论相对严谨",
+        "仍为研究阶段，未产品化，临床部署面临监管、安全、责任等挑战"
+      ],
+      "why_it_matters": "医疗是 AI 应用的高价值、高风险垂直领域。AMIE 展示了 LLM 在复杂、多轮次、需要长期规划的医疗场景中的潜力，超越了简单的诊断问答。对于关注 AI agents 和垂直领域应用的读者，这是一个重要的技术进展信号。但医疗 AI 的落地门槛极高，短期内不会改变现有医疗流程。",
+      "my_take": "论文结果有意义，但需保持审慎。模拟病例评估与真实临床环境差距较大，医生的沟通策略、患者依从性、责任边界等问题无法在实验中充分体现。Google 在医疗 AI 上布局多年（如 Med-PaLM 系列），AMIE 是延续性工作。对普通用户而言，短期内不会有可用的产品；对行业而言，这是 AI 在专业领域能力边界的又一次探索。不建议过度解读其商业化前景。",
+      "tags": [
+        "medical AI",
+        "AMIE",
+        "Nature",
+        "disease management",
+        "LLM evaluation"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "bc5b95ce0d83",
+    "url": "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+    "title": "Meet the winners of our Claude Opus 4.8 Build Day hackathon",
+    "source_id": "claude_code",
+    "source_name": "Claude Blog - Claude Code",
+    "category": "claude_code",
+    "vendor": "Anthropic",
+    "published_at": "2026-06-17",
+    "added_at": "2026-06-18T07:56:47.983952+00:00",
+    "summary": {
+      "tldr": "Anthropic 举办了 Claude Opus 4.8 Build Day hackathon，310 名开发者在 12 小时内用 $500 credits 搭建 demo。三个获奖项目展示了 Opus 4.8 在 complex workflows 方面的能力：Tekton（唐代建筑 3D 重建 + evidence chain 验证）、Sim Francisco（10,000 synthetic residents 的城市模拟预测）、Custom Universe（单张照片生成可编辑 3D scene）。",
+      "key_points": [
+        "Tekton 用 Opus 4.8 实现 3D 历史建筑重建，关键创新是 evidence chain——独立 verifier sub-agents 在 isolated context windows 中验证每个组件，self-correction loops 直到 20 项测试通过",
+        "Sim Francisco 用 Census data 生成 10,000 synthetic residents，预测 2024 大选误差仅 2.5 个百分点，关键优化是 Claude 自创 evolutionary clustering algorithm 将 inference cost 降低 10-100x",
+        "Custom Universe 面向 robotics labs 的 synthetic data 需求，Opus 4.8 端到端构建项目并远程操作 NVIDIA H100，集成 Apple RealityKit pipeline",
+        "三个团队都强调：先规划再执行（Tekton 做了 50-ticket PRD）、让 Claude 选工具不只是写代码、不满足于第一个可行方案",
+        "日期标注为 June 17, 2026，暗示 Opus 4.8 是未来版本，或为笔误"
+      ],
+      "why_it_matters": "这篇 blog 展示了 Opus 4.8 在 multi-agent orchestration、long-horizon tasks、self-verification 方面的实际能力边界。对于关注 agents 和 Claude Code 的开发者，三个项目的 architecture 都有参考价值——特别是 Tekton 的 verifier sub-agents 模式和 Sim Francisco 的 cost optimization 思路。",
+      "my_take": "内容质量中等偏上，有具体技术细节和可复用的架构思路，不是纯 marketing fluff。但日期（2026年）和 Opus 4.8 版本号存疑——可能是未来时间线的 PR 文章或笔误。Tekton 的 multi-agent verification 模式值得深入研究，Sim Francisco 的 clustering optimization 是实用的 cost reduction 技巧。整体来看，Anthropic 在展示 Opus 在 complex reasoning tasks 上的优势，对标 OpenAI 的 agent 叙事。",
+      "tags": [
+        "Claude Code",
+        "Opus 4.8",
+        "multi-agent",
+        "hackathon",
+        "synthetic data",
+        "3D reconstruction"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "d4a2d9acc1fe",
     "url": "https://openai.com/index/podium",
     "title": "How Podium is arming 10,000+ SMBs with AI agents",
