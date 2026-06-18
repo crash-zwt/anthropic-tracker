@@ -294,7 +294,7 @@ def render_page(
             f'<a href="#{esc(topic_anchor(topic))}"><span>{esc(TOPIC_LABELS.get(topic, topic))}</span><strong>{count}</strong></a>'
             for topic, count in topic_counts.items()
         )
-        cards = render_lab_article_groups(articles[:160])
+        cards = render_lab_article_groups(articles)
     else:
         nav_heading = "Archive"
         archive_counts: dict[str, int] = {}
@@ -306,7 +306,7 @@ def render_page(
             f'<a href="#{esc(date_anchor(date_key))}"><span>{esc(archive_label(date_key))}</span><strong>{count}</strong></a>'
             for date_key, count in sorted(archive_counts.items(), reverse=True)
         )
-        cards = render_article_groups(articles[:120])
+        cards = render_article_groups(articles)
     if not cards:
         cards = """
         <article class="empty-state">
