@@ -603,5 +603,35 @@
     "title": "How Scout24 is building the next generation of real-estate search with AI",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-18T07:56:47.983952+00:00"
+  },
+  "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more": {
+    "title": "Steering Claude Code: skills, hooks, subagents and more",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
+  },
+  "https://openai.com/index/diagnose-rare-childhood-diseases": {
+    "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
+  },
+  "https://openai.com/index/how-confessions-can-keep-language-models-honest": {
+    "title": "How confessions can keep language models honest",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
+  },
+  "https://openai.com/index/openai-to-acquire-neptune": {
+    "title": "OpenAI to acquire Neptune",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
+  },
+  "https://openai.com/index/thrive-holdings": {
+    "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
+  },
+  "https://openai.com/index/jetbrains-2025": {
+    "title": "Inside JetBrains—the company reshaping how the world writes code",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
   }
 }

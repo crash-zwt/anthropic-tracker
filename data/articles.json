@@ -1,5 +1,182 @@
 [
   {
+    "id": "b0c37808a985",
+    "url": "https://openai.com/index/jetbrains-2025",
+    "title": "Inside JetBrains—the company reshaping how the world writes code",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-11-25",
+    "added_at": "2026-06-19T06:26:25.957839+00:00",
+    "summary": {
+      "tldr": "这是一篇极短的 customer story，宣布 JetBrains 正在将其 coding tools 与 GPT-5 集成。文章实质内容非常稀薄，更像是 marketing index page 而非技术深度文章。",
+      "key_points": [
+        "JetBrains 正在 integrate GPT-5 到其 coding tools 产品线",
+        "目标用户是 millions of developers，主打 design、reason、build software faster",
+        "无具体技术细节、API 变更或 roadmap 信息"
+      ],
+      "why_it_matters": "JetBrains 是主流 IDE 供应商（IntelliJ、PyCharm 等），若 GPT-5 integration 落地，将直接影响大量开发者日常工作流。但本文仅是 announcement 性质，无 actionable 信息。",
+      "my_take": "文章内容过于 thin，无法判断 GPT-5 具体能力、availability 或 pricing。'GPT-5' 这个命名本身值得注意——如果属实，意味着 OpenAI 下一代 model 命名确认。但仅凭这句 marketing copy 无法验证。建议等待后续官方 model release announcement 或 JetBrains 官方 blog 获取实质细节。",
+      "tags": [
+        "GPT-5",
+        "JetBrains",
+        "IDE",
+        "customer-story",
+        "thin-content"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "d40028f6468c",
+    "url": "https://openai.com/index/thrive-holdings",
+    "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-12-01",
+    "added_at": "2026-06-19T06:26:25.957839+00:00",
+    "summary": {
+      "tldr": "OpenAI 对 Thrive Holdings 进行股权投资，将 frontier research 和 engineering 能力直接嵌入 accounting 和 IT services，目标是加速 enterprise AI adoption。文章内容极短，仅为一则投资公告，缺乏技术细节。",
+      "key_points": [
+        "这是一笔 equity stake 投资，而非单纯的产品合作或 API integration",
+        "Thrive Holdings 专注于 accounting 和 IT services，属于垂直行业服务提供商",
+        "声称将 embedding frontier research 直接注入业务流程，提升 speed、accuracy、efficiency",
+        "文章篇幅极短，实质上是一个 press release 或 index page，无技术深度"
+      ],
+      "why_it_matters": "这标志着 OpenAI 从单纯提供 API 转向更深的 enterprise 垂直整合。与其等待企业客户自行 build solutions，OpenAI 开始直接押注行业应用层。对关注 agents 和 enterprise adoption 的人来说，这是一个信号：foundation model 公司正在向下游延伸，寻找 product-market fit。",
+      "my_take": "文章太薄，无法判断这笔投资的具体形态或技术整合方式。从战略上看，这是 OpenAI 在 enterprise 市场的一次防御性布局——应对 Microsoft Copilot 已深入 enterprise workflow 的现实。但 accounting 和 IT services 是否是最佳切入点，以及 Thrive 是否具备足够的技术能力来 leverage frontier models，都存疑。务实地说，这更像是一个 business development 动作，而非技术突破。对 model releases 或 alignment 追踪者来说，几乎没有直接价值。",
+      "tags": [
+        "enterprise",
+        "investment",
+        "vertical-integration",
+        "business-strategy"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "b796c43e7637",
+    "url": "https://openai.com/index/openai-to-acquire-neptune",
+    "title": "OpenAI to acquire Neptune",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-12-03",
+    "added_at": "2026-06-19T06:26:25.957839+00:00",
+    "summary": {
+      "tldr": "OpenAI 宣布收购 Neptune，一家专注于 machine learning experiment tracking 和 model behavior visibility 的公司，目的是加强内部 researcher tools 和 training monitoring 能力。",
+      "key_points": [
+        "收购目标是 Neptune 的 experiment tracking 和 training monitoring 技术",
+        "核心价值在于提升 model behavior 的 visibility 和可解释性",
+        "这是典型的 acqui-hire，Neptune 团队将加入 OpenAI",
+        "不涉及具体 model release，主要是 infrastructure 和 tooling 层面"
+      ],
+      "why_it_matters": "这次收购 signal 了 OpenAI 对 alignment 和 model safety 的持续投入。更好的 experiment tracking 和 training monitoring 是做大模型研发的刚需，Neptune 的技术可以帮助 OpenAI 更好地理解 model behavior，这对 alignment 研究有直接价值。不过这是 infra 层面的提升，对普通开发者用户影响有限。",
+      "my_take": "文章非常 thin，本质上是一句话公告。Neptune 在 MLOps 圈子里有一定知名度，但这次收购更像是人才和技术收购，而非产品收购。对 tracking OpenAI model releases 的观察者来说，这件事 importance 不高——短期内不会带来新 model 或 API 变化。值得关注的是 OpenAI 是否会把 Neptune 的能力产品化，比如推出类似 Weights & Biases 的公开 experiment tracking 服务，但目前没有任何这方面的 signal。",
+      "tags": [
+        "acquisition",
+        "infrastructure",
+        "alignment",
+        "experiment-tracking"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "eef0a375a423",
+    "url": "https://openai.com/index/how-confessions-can-keep-language-models-honest",
+    "title": "How confessions can keep language models honest",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2025-12-03",
+    "added_at": "2026-06-19T06:26:25.957839+00:00",
+    "summary": {
+      "tldr": "OpenAI 研究人员提出 \"confessions\" 方法，训练模型主动承认错误或不当行为，旨在提升 AI honesty、transparency 和用户信任。",
+      "key_points": [
+        "\"Confessions\" 是一种新的 training method，让模型学会主动披露自身的 mistakes 或 undesirable actions",
+        "目标是改善 model outputs 的 honesty 和 transparency",
+        "研究仍处于 testing 阶段，尚未集成到产品",
+        "属于 alignment research 方向，关注模型自我监督能力"
+      ],
+      "why_it_matters": "如果方法有效，可减少模型 \"hallucinate with confidence\" 的问题，对 high-stakes 场景（如 code generation、决策辅助）有实际价值。但文章信息量很薄，缺乏技术细节和实验数据。",
+      "my_take": "这篇文章本质是 research teaser，内容过于简短，没有 methodology、benchmark 或 timeline。对追踪 model releases 的读者来说，目前没有可落地的信息，只能标记为 \"值得关注\" 的 alignment 方向。建议等完整 paper 或技术报告再评估。",
+      "tags": [
+        "alignment",
+        "honesty",
+        "research",
+        "transparency"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "2155d7cb8c43",
+    "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
+    "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-06-18",
+    "added_at": "2026-06-19T06:26:25.957839+00:00",
+    "summary": {
+      "tldr": "这篇文章报道研究人员使用 OpenAI reasoning model 协助诊断罕见儿童遗传疾病，在 previously unsolved cases 中成功识别出 18 个新诊断。文章内容非常简短，缺乏技术细节。",
+      "key_points": [
+        "应用场景：使用 reasoning model 辅助医生诊断罕见儿童遗传疾病",
+        "成果：在未解决病例中新增 18 个诊断",
+        "文章篇幅极短，未披露具体 model 名称（推测为 o1 系列）、methodology 或 benchmark 细节"
+      ],
+      "why_it_matters": "展示了 reasoning model 在 high-stakes 医疗场景的实际落地能力，对 AI for Science 领域有参考价值。但缺乏技术细节，对开发者而言可复现性低。",
+      "my_take": "这是一篇典型的 PR 导向案例展示，内容偏 thin。对于追踪 model releases 和 alignment 的读者来说，没有实质性的技术干货或 API 更新信息。价值在于提供了一个 vertical application 的成功案例，但不要指望从中学到具体实现方法。",
+      "tags": [
+        "reasoning model",
+        "healthcare AI",
+        "case study",
+        "PR content"
+      ],
+      "importance": "low"
+    }
+  },
+  {
+    "id": "5780f44af012",
+    "url": "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more",
+    "title": "Steering Claude Code: skills, hooks, subagents and more",
+    "source_id": "claude_code",
+    "source_name": "Claude Blog - Claude Code",
+    "category": "claude_code",
+    "vendor": "Anthropic",
+    "published_at": "2026-06-18",
+    "added_at": "2026-06-19T06:26:25.957839+00:00",
+    "summary": {
+      "tldr": "Anthropic 官方详解 Claude Code 的七种 customization 方法：CLAUDE.md files、rules、skills、subagents、hooks、output styles 和 append-system-prompt。核心是理解每种方法的加载时机、compaction 行为和 context cost，帮你决定指令该放哪里。",
+      "key_points": [
+        "CLAUDE.md 分 root（session start 加载，compaction 后 re-read）和 subdirectory（on-demand 加载）两种；建议 <200 行，避免成为 token 黑洞",
+        "Rules 支持 path-scoped，用 paths: frontmatter 控制，比 unscoped rules 省 context；适合 cross-cutting concerns",
+        "Skills 在 .claude/skills/，只有 name/description 在 session start 加载，body 被 invoke 时才加载；适合 procedural workflows",
+        "Subagents 隔离运行在独立 context window，只返回 final message 给主 session；适合 deep search、log analysis 等会产生大量中间结果的 side tasks",
+        "Hooks 是 deterministic 的，在 lifecycle events 触发，bypass compaction；'Never do X' 应该用 hooks 而非 instructions",
+        "Output styles 会 replace 默认的 coding instructions，慎用；append-system-prompt 是 additive 但有 diminishing returns"
+      ],
+      "why_it_matters": "这是 Claude Code 的 configuration 架构文档，直接关系到 agent 的 reliability 和 token efficiency。理解 compaction behavior 和 context cost 对于构建 production-grade coding agent 至关重要。Subagents 的 isolation pattern 和 hooks 的 deterministic enforcement 是两个关键设计点，对齐了 agent orchestration 和 guardrails 的核心挑战。",
+      "my_take": "这篇是 Claude Code 的必读文档，把之前零散的 customization 方法系统化了。几个实用 insight：1) CLAUDE.md 膨胀是真实问题，path-scoped rules 和 skills 是解法；2) Subagents 的 isolation + summary-only return 是 scaling 的关键，dynamic workflows 支持嵌套 5 层、tens to hundreds of background agents，这是 agent orchestration 的重要信号；3) Hooks + managed settings 是 enterprise guardrails 的正确姿势，比指望 model follow 'never' instructions 靠谱。对比 OpenAI Codex 的 customization 方案，Anthropic 的分层更细、context management 更 explicit。",
+      "tags": [
+        "claude-code",
+        "customization",
+        "subagents",
+        "hooks",
+        "context-management",
+        "agent-orchestration"
+      ],
+      "importance": "high"
+    }
+  },
+  {
     "id": "6f02985cfa1d",
     "url": "https://openai.com/index/scout24",
     "title": "How Scout24 is building the next generation of real-estate search with AI",
