@@ -633,5 +633,35 @@
     "title": "Inside JetBrains—the company reshaping how the world writes code",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-19T06:26:25.957839+00:00"
+  },
+  "https://openai.com/index/gpt-5-mathematical-discovery": {
+    "title": "GPT-5 and the future of mathematical discovery",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
+  },
+  "https://openai.com/index/accelerating-science-gpt-5": {
+    "title": "Early experiments in accelerating science with GPT-5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
+  },
+  "https://openai.com/index/strengthening-safety-with-external-testing": {
+    "title": "Strengthening our safety ecosystem with external testing",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
+  },
+  "https://openai.com/index/understanding-neural-networks-through-sparse-circuits": {
+    "title": "Understanding neural networks through sparse circuits",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
+  },
+  "https://openai.com/index/gpt-5-1-for-developers": {
+    "title": "Introducing GPT-5.1 for developers",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
+  },
+  "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1": {
+    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
   }
 }
