@@ -663,5 +663,35 @@
     "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-20T05:22:23.563227+00:00"
+  },
+  "https://openai.com/index/prompt-injections": {
+    "title": "Understanding prompt injections: a frontier security challenge",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-21T06:11:48.051702+00:00"
+  },
+  "https://openai.com/index/cred-swamy-seetharaman": {
+    "title": "How CRED is tapping AI to deliver premium customer experiences",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-21T06:11:48.051702+00:00"
+  },
+  "https://openai.com/index/chime-vineet-mehra": {
+    "title": "How Chime is redefining marketing through AI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-21T06:11:48.051702+00:00"
+  },
+  "https://openai.com/index/introducing-indqa": {
+    "title": "Introducing IndQA",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-21T06:11:48.051702+00:00"
+  },
+  "https://openai.com/index/gpt-oss-safeguard-technical-report": {
+    "title": "gpt-oss-safeguard technical report",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-21T06:11:48.051702+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-oss-safeguard": {
+    "title": "Introducing gpt-oss-safeguard",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-21T06:11:48.051702+00:00"
   }
 }
