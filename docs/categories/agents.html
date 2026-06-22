@@ -19,7 +19,7 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-06-21 14:11 Asia/Shanghai</dd>
+            <dd>2026-06-22 14:36 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
@@ -27,7 +27,7 @@
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>139</dd>
+            <dd>145</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>6 new</strong>
+              <strong>5 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>47</strong>
+      <strong>48</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>72</strong>
+      <strong>77</strong>
     </a>
     
 
@@ -104,7 +104,7 @@
 <a href="#date-2026-04-22"><span>2026-04-22</span><strong>1</strong></a>
 <a href="#date-2026-04-10"><span>2026-04-10</span><strong>2</strong></a>
 <a href="#date-2026-04-02"><span>2026-04-02</span><strong>1</strong></a>
-<a href="#date-2026-03-05"><span>2026-03-05</span><strong>1</strong></a>
+<a href="#date-2026-03-05"><span>2026-03-05</span><strong>2</strong></a>
 <a href="#date-2026-02-24"><span>2026-02-24</span><strong>2</strong></a>
 <a href="#date-2026-01-30"><span>2026-01-30</span><strong>1</strong></a>
 <a href="#date-2026-01-23"><span>2026-01-23</span><strong>1</strong></a>
@@ -113,7 +113,7 @@
       </section>
 
       <footer>
-        Generated: 2026-06-21 14:13 Asia/Shanghai
+        Generated: 2026-06-22 14:38 Asia/Shanghai
       </footer>
     </aside>
 
@@ -489,6 +489,35 @@
                 <a href="#top">Back to top</a>
               </div>
               
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-03-05</span>
+        <span>Added 2026-06-22</span>
+      </div>
+      <h2>Skills explained: How Skills compares to prompts, Projects, MCP, and subagents</h2>
+      <a class="original-link" href="https://claude.com/blog/skills-explained" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 官方详解 Skills 与 prompts、Projects、MCP、subagents 的定位差异和组合用法。Skills 是按需动态加载的「专业知识包」，采用 progressive disclosure 机制（metadata ~100 tokens → full instructions &lt;5k tokens → bundled files），可跨对话复用，是 Claude agentic ecosystem 的关键拼图。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Skills vs Prompts：Skills 持久化跨对话复用，prompts 是即时性的单次指令——重复使用的 prompt 应封装成 Skill</li><li>Skills vs Projects：Projects 提供「背景知识」（静态、始终加载），Skills 提供「程序性知识」（动态、按需加载）——Projects 说&#x27;你需要知道什么&#x27;，Skills 说&#x27;你怎么做事&#x27;</li><li>Skills vs Subagents：Subagents 是独立 context window + 工具权限的专职 agent；Skills 是可移植的专业知识，任何 agent 都能加载——两者可组合使用</li><li>Skills vs MCP：MCP 解决「连接数据源」，Skills 解决「如何处理数据」——MCP 给 access，Skills 给 know-how</li><li>Progressive disclosure 架构让 Claude 可以拥有大量 Skills 而不撑爆 context window，只在需要时加载对应内容</li><li>完整示例展示了如何组合五者构建 research agent：Project 存背景资料 → MCP 连接外部数据源 → Skills 提供分析框架 → Subagents 并行执行专项任务 → Prompts 实时调整方向</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 Anthropic 首次系统性地梳理其 agentic stack 各组件的边界和协作方式。对于在 Claude Code 或 API 上构建 agent 的开发者，理解这套分层架构至关重要——选错工具会导致 context 浪费、复用困难或架构混乱。Skills 作为新增层，填补了「可复用程序性知识」的空白，是构建企业级 agent workflow 的关键基础设施。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章价值在于澄清概念边界，但实操细节偏薄。核心洞察是 Anthropic 正在构建一个完整的 agent 开发范式：MCP（连接层）+ Skills（知识层）+ Projects（上下文层）+ Subagents（执行层）。对比 OpenAI 的 GPTs/custom actions 路线，Anthropic 的方案更模块化、更 enterprise-friendly。建议关注：1) Skills 的 API endpoint 和 plugin marketplace 成熟度；2) 与 Claude Code 的集成深度；3) 社区 Skills library 的实际质量。如果 Anthropic 能把 Skills 生态做起来，会形成显著的 platform lock-in。</p>
+      </section>
+      <div class="tags"><span>Skills</span><span>Claude Code</span><span>MCP</span><span>subagents</span><span>agent架构</span><span>enterprise AI</span></div>
+    </article>
+    
+
     <article class="article-card">
       <div class="article-meta">
         <span class="badge badge-agents">Agents</span>
