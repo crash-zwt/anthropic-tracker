@@ -723,5 +723,35 @@
     "title": "Sora 2 System Card",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-22T06:36:35.595094+00:00"
+  },
+  "https://openai.com/index/openai-support-model": {
+    "title": "Improving support with every interaction at OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
+  },
+  "https://openai.com/index/gdpval": {
+    "title": "Measuring the performance of our models on real-world tasks",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
+  },
+  "https://openai.com/index/schoolai": {
+    "title": "SchoolAI builds an AI platform that empowers teachers",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
+  },
+  "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models": {
+    "title": "Detecting and reducing scheming in AI models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
+  },
+  "https://openai.com/index/safetykit": {
+    "title": "SafetyKit scales risk agents with OpenAI’s most capable models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
+  },
+  "https://openai.com/index/why-language-models-hallucinate": {
+    "title": "Why language models hallucinate",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
   }
 }
