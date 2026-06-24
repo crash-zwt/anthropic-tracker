@@ -19,7 +19,7 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-06-23 13:10 Asia/Shanghai</dd>
+            <dd>2026-06-24 13:06 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
@@ -27,7 +27,7 @@
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>151</dd>
+            <dd>157</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>6 new</strong>
+              <strong>5 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>48</strong>
+      <strong>49</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="labs/openai.html">
       <span>OpenAI</span>
-      <strong>83</strong>
+      <strong>88</strong>
     </a>
     
 
@@ -96,7 +96,9 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-06-18"><span>2026-06-18</span><strong>2</strong></a>
+          <a href="#date-2026-06-24"><span>2026-06-24</span><strong>1</strong></a>
+<a href="#date-2026-06-23"><span>2026-06-23</span><strong>1</strong></a>
+<a href="#date-2026-06-18"><span>2026-06-18</span><strong>2</strong></a>
 <a href="#date-2026-06-17"><span>2026-06-17</span><strong>3</strong></a>
 <a href="#date-2026-06-16"><span>2026-06-16</span><strong>1</strong></a>
 <a href="#date-2026-06-15"><span>2026-06-15</span><strong>1</strong></a>
@@ -192,12 +194,15 @@
 <a href="#date-2025-09-10"><span>2025-09-10</span><strong>1</strong></a>
 <a href="#date-2025-09-09"><span>2025-09-09</span><strong>1</strong></a>
 <a href="#date-2025-09-05"><span>2025-09-05</span><strong>1</strong></a>
+<a href="#date-2025-08-28"><span>2025-08-28</span><strong>1</strong></a>
+<a href="#date-2025-08-27"><span>2025-08-27</span><strong>2</strong></a>
+<a href="#date-2025-08-22"><span>2025-08-22</span><strong>1</strong></a>
 <a href="#date-2024-10-15"><span>2024-10-15</span><strong>1</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-06-23 13:11 Asia/Shanghai
+        Generated: 2026-06-24 13:09 Asia/Shanghai
       </footer>
     </aside>
 
@@ -213,6 +218,80 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-06-24">
+              <div class="date-heading">
+                <h3>2026-06-24</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-06-24</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>Agent identity: a new access model for autonomous, team-wide AI</h2>
+      <a class="original-link" href="https://claude.com/blog/agent-identity-access-model" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布了 Claude Tag 的 &quot;agent identity&quot; access model，解决了 multi-player AI 场景下的权限管理难题。核心思路：Claude 不再 &quot;act as user&quot;，而是拥有独立的 service account 身份，admin 在 workspace/channel 级别统一配置权限边界，支持 RBAC 和完整 audit trail。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Agent identity model：Claude 用独立的 service account 接入各系统（GitHub App、Slack bot、warehouse service account），而非借用用户凭证，彻底解决了 multi-channel 场景下 &quot;whose permissions apply&quot; 的问题</li><li>权限继承与隔离：workspace 级别定义 baseline identity，channel 可 override；private channel 有独立 identity，memory 和 access 严格隔离，不会跨 channel 泄露</li><li>安全与审计：所有 routine、memory write、network call 都有 audit log；credential 在网络边界注入，未授权 host 直接阻断；撤销 identity 即可一键收回所有 access</li><li>DM vs shared channel：DM 仍用用户自己的 claude.ai credentials，适合处理私人工具和敏感任务；shared channel 用 agent identity，适合团队协作</li><li>Roadmap：计划支持 just-in-time credential grants（单次敏感操作审批）和 identity-aware overlay（叠加用户权限检查）</li><li>实践建议：从 broad baseline profile 开始，读 audit trail，再逐步扩展 access；工具连接越多，Claude 跨系统组合信息的能力越强</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 AI agent 从 &quot;个人助手&quot; 走向 &quot;团队协作者&quot; 的关键基础设施。随着 agent autonomy 提升（task completion horizon 每 4 个月翻倍），传统的 per-user ACL 模型已无法支撑 long-running、multiplayer agent 场景。Anthropic 这套方案为 enterprise-grade agent deployment 提供了可参考的权限范式，对竞品（OpenAI、Google）有示范意义。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一篇务实的产品设计文章，解决了真实痛点。Agent identity 的思路并不新颖（本质是 service account + RBAC），但 Anthropic 把它产品化得很好：channel-level isolation、audit trail、credential injection 都是企业客户刚需。值得关注的是 roadmap 里的 just-in-time grants 和 identity-aware overlay——这说明当前的 agent identity 模型在敏感场景下仍显粗糙，需要更细粒度的控制。对比 OpenAI 的 Codex 和 GPTs，Anthropic 在 enterprise permission model 上明显领先，这可能是 Claude Code 在企业市场差异化竞争的关键优势。</p>
+      </section>
+      <div class="tags"><span>agent-identity</span><span>access-control</span><span>claude-tag</span><span>enterprise-security</span><span>multiplayer-AI</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-06-23">
+              <div class="date-heading">
+                <h3>2026-06-23</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-06-23</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-5-immunology-mystery" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这篇文章声称 GPT-5 Pro 协助免疫学家 Derya Unutmaz 解决了一个困扰三年的 T cell 行为研究难题，可能对癌症和自身免疫疾病研究有帮助。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章极短，缺乏具体技术细节或方法论描述</li><li>提及 GPT-5 Pro 作为 problem-solving 工具的应用案例</li><li>领域是 immunology，具体涉及 T cell behavior 机制</li><li>声称 breakthrough 可能支持 cancer 和 autoimmune research</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>如果属实，这是 GPT-5 Pro 在 scientific discovery 领域的 early signal，展示了 model 在复杂科研推理中的潜在价值。但文章本身信息量极低，更像是 marketing teaser。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章内容过于单薄，本质上是一个 case study 的索引页或宣传片段。没有披露 prompt 策略、推理过程、验证方法等关键信息，对技术追踪者参考价值有限。建议等待更详细的 technical report 或独立验证后再做判断。</p>
+      </section>
+      <div class="tags"><span>GPT-5</span><span>scientific-discovery</span><span>case-study</span><span>thin-content</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-06-18">
               <div class="date-heading">
                 <h3>2026-06-18</h3>
@@ -5326,6 +5405,146 @@
         <p>文章内容过于单薄，基本只是一个 research teaser，没有具体方法论或实验数据。对于追踪模型进展的读者来说，价值有限——建议等待完整 paper 发布后再关注。标题很吸引人，但目前属于&#x27;标题党&#x27;级别。</p>
       </section>
       <div class="tags"><span>hallucination</span><span>alignment</span><span>evaluations</span><span>safety</span><span>research</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2025-08-28">
+              <div class="date-heading">
+                <h3>2025-08-28</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-28</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>Introducing gpt-realtime and Realtime API updates</h2>
+      <a class="original-link" href="https://openai.com/index/introducing-gpt-realtime" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布了更先进的 speech-to-speech model，并对 Realtime API 进行了重大更新，新增了 MCP server support、image input 和 SIP phone calling support 三项核心能力。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>新 model 在 speech-to-speech 能力上有显著提升，具体指标待后续 benchmark 验证</li><li>Realtime API 原生支持 MCP server，这对构建 agents 生态是关键利好，简化了 tool calling 和 context 接入</li><li>支持 image input，意味着 voice model 具备了多模态理解能力，不再局限于 audio</li><li>SIP phone calling support 让企业级 IVR 和 telephony 集成门槛大幅降低</li><li>文章极短，属于 announcement 性质，缺乏技术细节和 pricing 信息</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>MCP support 是最大亮点，直接降低了 agents 连接外部 data 和 tools 的复杂度，与 Claude Code 的 tool use 生态形成呼应。SIP 支持则让 Realtime API 在 enterprise contact center 场景更具实战价值。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身太薄，基本就是个 release note 的索引页。但 MCP + image + SIP 的组合拳方向是对的，说明 OpenAI 正在把 Realtime API 从 demo toy 打造成 production-ready 的 infrastructure。建议关注后续 pricing 和 latency 表现，这才是决定 adoption 的关键。</p>
+      </section>
+      <div class="tags"><span>realtime-api</span><span>speech-to-speech</span><span>MCP</span><span>multimodal</span><span>enterprise</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2025-08-27">
+              <div class="date-heading">
+                <h3>2025-08-27</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-27</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>OpenAI and Anthropic share findings from a joint safety evaluation</h2>
+      <a class="original-link" href="https://openai.com/index/openai-anthropic-safety-evaluation" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 和 Anthropic 发布了首次联合安全评估的 findings，双方互相测试对方的 models，覆盖 misalignment、instruction following、hallucinations、jailbreaking 等核心安全维度。文章本身非常简短，本质上是一个 announcement 而非详细的技术报告。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>这是两大 AI lab 首次公开的 cross-lab safety evaluation 合作</li><li>测试维度包括：misalignment、instruction following、hallucinations、jailbreaking</li><li>双方互相评估对方的 models，体现了一定的 transparency</li><li>文章强调 progress、challenges 和 collaboration 的价值，但没有披露具体数据</li><li>内容极短，更像是 index/announcement page，缺乏技术细节</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对于关注 alignment 的读者来说，这标志着 top labs 之间开始有实质性的 safety collaboration，而非各自为战。但实际影响有限——没有具体的 benchmark 数据或方法论披露，更多是姿态性的。对 model releases 和 agents 开发没有直接影响。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章内容很薄，基本就是一个 PR announcement。没有具体的 evaluation results、methodology 或 quantitative findings，对技术追踪者来说价值不高。真正的干货应该在后续的 technical report 或 paper 里。建议关注是否有完整报告发布，目前可以 skip。</p>
+      </section>
+      <div class="tags"><span>safety-evaluation</span><span>alignment</span><span>OpenAI-Anthropic</span><span>cross-lab-collab</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-27</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>Collective alignment: public input on our Model Spec</h2>
+      <a class="original-link" href="https://openai.com/index/collective-alignment-aug-2025-updates" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 公布了 collective alignment 研究进展：通过调研全球 1,000+ 人对 AI 行为的偏好，与 Model Spec 进行对比，探索如何让 AI defaults 更好地反映多元人类价值观。这是 alignment 研究的 public input 方向实践。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>调研样本量约 1,000 人，覆盖全球多个地区，旨在收集 public input 指导 Model Spec</li><li>核心目标是让 AI defaults 反映 diverse human values，而非仅由公司内部决定</li><li>方法论是将公众观点与现有 Model Spec 对比，识别 gap</li><li>属于 OpenAI broader alignment strategy 的一部分，与 RLHF、safety 研究并行</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对关注 alignment 的读者来说，这是 OpenAI 尝试将 &#x27;谁决定 AI 行为&#x27; 这个问题制度化的信号。Model Spec 是 model behavior 的顶层规范，public input 机制如果成熟，可能影响未来 model releases 的 default behavior。但目前仍是研究阶段，对实际产品影响有限。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身偏薄，本质是 research summary 而非 product announcement。1,000 人样本量偏小，方法论细节未披露，实际对 Model Spec 的影响程度不明确。相比 Claude 的 Constitution AI 或 Anthropic 的 public input 研究，这篇内容深度不足。建议关注后续是否有更详细的 technical report 或实际 model behavior 变化。</p>
+      </section>
+      <div class="tags"><span>alignment</span><span>Model Spec</span><span>public input</span><span>OpenAI</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2025-08-22">
+              <div class="date-heading">
+                <h3>2025-08-22</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-22</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>Accelerating life sciences research</h2>
+      <a class="original-link" href="https://openai.com/index/accelerating-life-sciences-research-with-retro-biosciences" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 与 Retro Biosciences 合作，训练了一个专门针对 life sciences 的模型 GPT-4b micro，用于重新设计蛋白质以提升 stem cell therapy 和 longevity research 的效率。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>GPT-4b micro 是针对 biological engineering 优化的 specialized model，非通用 LLM</li><li>主要任务是 protein engineering，重新设计 Yamanaka factors 以提高 cell reprogramming 效率</li><li>模型设计的蛋白质在实验中表现优于天然版本，成功率显著提升</li><li>这是 OpenAI 首次公开与外部 biotech 公司深度合作训练 domain-specific model 的案例</li><li>技术路线偏向 wet lab validation，而非纯 in silico 预测</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这标志着 OpenAI 从 general-purpose models 向 domain-specific models 延伸的战略尝试。对于关注 agents 和 alignment 的研究者，这是一个 AI 系统在 high-stakes scientific domain 落地的重要信号，也展示了 specialized model 在特定领域可能超越 general LLM 的潜力。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身偏 case study 和 PR 性质，技术细节披露有限，没有 model architecture、training data 规模或 benchmark 对比的深度信息。GPT-4b micro 的命名暗示这可能是一个 smaller、fine-tuned variant，而非全新架构。对中文读者而言，真正值得关注的是 OpenAI 在 vertical domain 的布局意图，以及 biotech 是否会成为继 coding 之后下一个 AI 重点突破领域。但就这篇文章本身，信息密度较低。</p>
+      </section>
+      <div class="tags"><span>GPT-4b micro</span><span>protein engineering</span><span>life sciences</span><span>domain-specific model</span><span>Retro Biosciences</span></div>
     </article>
     
             </section>

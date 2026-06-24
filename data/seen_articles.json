@@ -753,5 +753,35 @@
     "title": "Why language models hallucinate",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-23T05:10:11.635263+00:00"
+  },
+  "https://claude.com/blog/agent-identity-access-model": {
+    "title": "Agent identity: a new access model for autonomous, team-wide AI",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
+  },
+  "https://openai.com/index/gpt-5-immunology-mystery": {
+    "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-realtime": {
+    "title": "Introducing gpt-realtime and Realtime API updates",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
+  },
+  "https://openai.com/index/collective-alignment-aug-2025-updates": {
+    "title": "Collective alignment: public input on our Model Spec",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
+  },
+  "https://openai.com/index/openai-anthropic-safety-evaluation": {
+    "title": "OpenAI and Anthropic share findings from a joint safety evaluation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
+  },
+  "https://openai.com/index/accelerating-life-sciences-research-with-retro-biosciences": {
+    "title": "Accelerating life sciences research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
   }
 }

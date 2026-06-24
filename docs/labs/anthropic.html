@@ -19,7 +19,7 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-06-23 13:10 Asia/Shanghai</dd>
+            <dd>2026-06-24 13:06 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
@@ -27,7 +27,7 @@
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>151</dd>
+            <dd>157</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>6 new</strong>
+              <strong>5 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic is-active" href="#top">
       <span>Anthropic / Claude</span>
-      <strong>48</strong>
+      <strong>49</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>83</strong>
+      <strong>88</strong>
     </a>
     
 
@@ -99,12 +99,12 @@
           <a href="#topic-model"><span>Model</span><strong>3</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>11</strong></a>
 <a href="#topic-agents"><span>Agents</span><strong>17</strong></a>
-<a href="#topic-code"><span>Code</span><strong>17</strong></a>
+<a href="#topic-code"><span>Code</span><strong>18</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-06-23 13:11 Asia/Shanghai
+        Generated: 2026-06-24 13:09 Asia/Shanghai
       </footer>
     </aside>
 
@@ -1262,9 +1262,46 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>17 posts</span>
+                <span>18 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-06-24">
+              <div class="date-heading">
+                <h3>2026-06-24</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-06-24</span>
+        <span>Added 2026-06-24</span>
+      </div>
+      <h2>Agent identity: a new access model for autonomous, team-wide AI</h2>
+      <a class="original-link" href="https://claude.com/blog/agent-identity-access-model" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布了 Claude Tag 的 &quot;agent identity&quot; access model，解决了 multi-player AI 场景下的权限管理难题。核心思路：Claude 不再 &quot;act as user&quot;，而是拥有独立的 service account 身份，admin 在 workspace/channel 级别统一配置权限边界，支持 RBAC 和完整 audit trail。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Agent identity model：Claude 用独立的 service account 接入各系统（GitHub App、Slack bot、warehouse service account），而非借用用户凭证，彻底解决了 multi-channel 场景下 &quot;whose permissions apply&quot; 的问题</li><li>权限继承与隔离：workspace 级别定义 baseline identity，channel 可 override；private channel 有独立 identity，memory 和 access 严格隔离，不会跨 channel 泄露</li><li>安全与审计：所有 routine、memory write、network call 都有 audit log；credential 在网络边界注入，未授权 host 直接阻断；撤销 identity 即可一键收回所有 access</li><li>DM vs shared channel：DM 仍用用户自己的 claude.ai credentials，适合处理私人工具和敏感任务；shared channel 用 agent identity，适合团队协作</li><li>Roadmap：计划支持 just-in-time credential grants（单次敏感操作审批）和 identity-aware overlay（叠加用户权限检查）</li><li>实践建议：从 broad baseline profile 开始，读 audit trail，再逐步扩展 access；工具连接越多，Claude 跨系统组合信息的能力越强</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 AI agent 从 &quot;个人助手&quot; 走向 &quot;团队协作者&quot; 的关键基础设施。随着 agent autonomy 提升（task completion horizon 每 4 个月翻倍），传统的 per-user ACL 模型已无法支撑 long-running、multiplayer agent 场景。Anthropic 这套方案为 enterprise-grade agent deployment 提供了可参考的权限范式，对竞品（OpenAI、Google）有示范意义。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一篇务实的产品设计文章，解决了真实痛点。Agent identity 的思路并不新颖（本质是 service account + RBAC），但 Anthropic 把它产品化得很好：channel-level isolation、audit trail、credential injection 都是企业客户刚需。值得关注的是 roadmap 里的 just-in-time grants 和 identity-aware overlay——这说明当前的 agent identity 模型在敏感场景下仍显粗糙，需要更细粒度的控制。对比 OpenAI 的 Codex 和 GPTs，Anthropic 在 enterprise permission model 上明显领先，这可能是 Claude Code 在企业市场差异化竞争的关键优势。</p>
+      </section>
+      <div class="tags"><span>agent-identity</span><span>access-control</span><span>claude-tag</span><span>enterprise-security</span><span>multiplayer-AI</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-06-18">
               <div class="date-heading">
                 <h3>2026-06-18</h3>
