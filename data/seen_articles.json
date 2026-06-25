@@ -783,5 +783,35 @@
     "title": "Accelerating life sciences research",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-24T05:06:50.369106+00:00"
+  },
+  "https://openai.com/index/blue-j": {
+    "title": "Scaling domain expertise in complex, regulated domains",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
+  },
+  "https://openai.com/index/basis": {
+    "title": "Scaling accounting capacity with OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
+  },
+  "https://openai.com/index/gpt-5-new-era-of-work": {
+    "title": "GPT-5 and the new era of work",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-5-for-developers": {
+    "title": "Introducing GPT-5 for developers",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
+  },
+  "https://openai.com/index/gpt-5-coding-design": {
+    "title": "Coding and design with GPT-5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
+  },
+  "https://openai.com/index/gpt-5-amgen": {
+    "title": "How Amgen uses GPT-5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
   }
 }
