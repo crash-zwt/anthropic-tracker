@@ -19,7 +19,7 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-06-25 13:11 Asia/Shanghai</dd>
+            <dd>2026-06-26 13:16 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
@@ -27,7 +27,7 @@
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>163</dd>
+            <dd>169</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>94</strong>
+      <strong>100</strong>
     </a>
     
 
@@ -165,12 +165,13 @@
 <a href="#date-2025-08-22"><span>2025-08-22</span><strong>1</strong></a>
 <a href="#date-2025-08-21"><span>2025-08-21</span><strong>1</strong></a>
 <a href="#date-2025-08-12"><span>2025-08-12</span><strong>1</strong></a>
-<a href="#date-2025-08-07"><span>2025-08-07</span><strong>4</strong></a>
+<a href="#date-2025-08-07"><span>2025-08-07</span><strong>8</strong></a>
+<a href="#date-2025-08-05"><span>2025-08-05</span><strong>2</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-06-25 13:12 Asia/Shanghai
+        Generated: 2026-06-26 13:18 Asia/Shanghai
       </footer>
     </aside>
 
@@ -3359,6 +3360,122 @@
         <span class="badge badge-openai_model">OpenAI Model</span>
         <span>OpenAI Product - Models</span>
         <span>2025-08-07</span>
+        <span>Added 2026-06-26</span>
+      </div>
+      <h2>Introducing GPT-5</h2>
+      <a class="original-link" href="https://openai.com/index/introducing-gpt-5" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 官宣发布 GPT-5，宣称在 coding、math、writing、health、visual perception 等多个维度实现 state-of-the-art 性能，是相比前代模型的 significant leap in intelligence。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Article is extremely thin—essentially a teaser/announcement snippet, not a full technical blog post.</li><li>Claims SOTA performance across coding, math, writing, health, and visual perception.</li><li>Positioned as &#x27;best AI system yet&#x27; with significant intelligence leap over previous models.</li><li>No benchmarks, no API details, no pricing, no alignment discussion, no agent capabilities mentioned.</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>GPT-5 的发布标志着 OpenAI 下一代 flagship model 正式落地，对追踪 model releases 的观察者来说是重要里程碑。但目前文章信息量极低，无法判断实际能力提升幅度或 alignment/agents 方面的进展。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这篇文章本质上是一个 landing page teaser，信息密度接近零。宣称 &#x27;significant leap&#x27; 是营销语言，缺乏 benchmarks、API specs、safety details 等硬核内容。建议等待后续 technical report 或 API documentation 再做判断。对 Chinese readers 而言，目前没有可操作的 pragmatic insights。</p>
+      </section>
+      <div class="tags"><span>GPT-5</span><span>model-release</span><span>OpenAI</span><span>SOTA</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-07</span>
+        <span>Added 2026-06-26</span>
+      </div>
+      <h2>From hard refusals to safe-completions: toward output-centric safety training</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-5-safe-completions" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 预告 GPT-5 将采用新的 &#x27;safe-completions&#x27; approach，从传统的 hard refusals 转向更 nuanced 的 output-centric safety training，旨在同时提升 safety 和 helpfulness。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>从 hard refusals 转向 safe-completions：不再简单拒绝 dual-use prompts，而是尝试提供安全的完成方式。</li><li>Output-centric safety training：新的训练范式，关注模型输出而非仅仅过滤输入。</li><li>Dual-use prompts 处理：针对具有双重用途（有益/有害）的 prompt 提供更 nuanced 的响应。</li><li>Safety 与 Helpfulness 的 trade-off：声称新方法能同时改善两者，而非传统的不可能三角。</li><li>GPT-5 首次公开提及 safety architecture 变化：信号模型发布临近。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 OpenAI 首次明确公开 GPT-5 的 safety training 方向，标志着 alignment 策略的重大转变。对于关注 model releases 和 alignment 的研究者，这意味着 GPT-5 可能在处理敏感 prompt 时用户体验更流畅，减少过度拒绝带来的 friction。同时也暗示 OpenAI 正在为 GPT-5 的发布做舆论和技术铺垫。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身非常 thin，仅是一个 index/landing page，缺乏技术细节。但信号意义明确：OpenAI 正在解决 GPT-4 被诟病的 over-refusal 问题。Safe-completions 的概念听起来合理，但实际效果取决于 execution——如果处理不好，可能引入新的 jailbreak 向量。对于开发者而言，这意味着 GPT-5 的 API 行为会有显著变化，需要重新评估 content policy 和 error handling 逻辑。发布时间线仍不明确，但这类预热通常意味着数月内会有更多消息。</p>
+      </section>
+      <div class="tags"><span>GPT-5</span><span>alignment</span><span>safety-training</span><span>dual-use</span><span>OpenAI</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-07</span>
+        <span>Added 2026-06-26</span>
+      </div>
+      <h2>How Cursor uses GPT-5</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-5-cursor" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这篇文章内容极其单薄，仅有一句话 &quot;Learn how Cursor uses GPT-5&quot;，没有提供任何实质性技术细节或案例研究。本质上是一个 placeholder 或 teaser 页面，而非完整内容。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章标题提及 GPT-5 与 Cursor 的结合使用</li><li>正文仅有一句话，无任何技术细节、benchmark 或 use case</li><li>无法确认 GPT-5 的具体能力、API 可用性或 pricing 信息</li><li>Cursor 集成细节完全缺失，无 alignment 或 agent 相关讨论</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>标题本身透露了一个重要信号：OpenAI 可能已将 GPT-5 提供给 select partners（如 Cursor）进行 early testing。这对追踪 model releases 的人有参考价值，但文章本身不提供任何可操作信息。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这更像是一个 SEO landing page 或即将发布的 case study 预告，而非值得深入分析的内容。GPT-5 的命名出现值得注意，但当前页面 zero informational value。建议 bookmark 并等待完整文章发布后再评估。对 Cursor 用户而言，暂无可行动的 insight。</p>
+      </section>
+      <div class="tags"><span>GPT-5</span><span>Cursor</span><span>thin-content</span><span>placeholder</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-07</span>
+        <span>Added 2026-06-26</span>
+      </div>
+      <h2>GPT-5 System Card</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-5-system-card" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>GPT-5 System Card 披露了 OpenAI 的 unified model routing system，通过 gpt-5-main、gpt-5-thinking 以及 lightweight 版本如 gpt-5-thinking-nano 来针对不同任务和 developer use 进行优化。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>引入 unified model routing system，自动路由到最适合的 model variant</li><li>三个核心 variant：gpt-5-main（通用）、gpt-5-thinking（推理增强）、gpt-5-thinking-nano（轻量快速）</li><li>针对不同 tasks 和 developer use cases 进行了专门优化</li><li>System Card 形式发布，暗示 model 已接近或完成 alignment 阶段</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 GPT-5 首次官方披露架构细节，routing system 的设计思路与 Claude 的 model selection 逻辑类似，说明行业正在从单一 super-model 转向 multi-variant routing 范式。对开发者而言，这意味着 API 调用时可能不再需要手动选 model，系统会自动优化。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身非常薄，仅一段话，实质是 index/teaser 而非完整 System Card。关键信息是 model variant 命名和 routing 思路，但缺乏具体 benchmarks、safety evaluations 或 API 细节。建议关注后续完整版 System Card 发布，当前信息量不足以做技术决策。</p>
+      </section>
+      <div class="tags"><span>GPT-5</span><span>model-routing</span><span>system-card</span><span>model-variants</span><span>OpenAI</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-07</span>
         <span>Added 2026-06-25</span>
       </div>
       <h2>How Amgen uses GPT-5</h2>
@@ -3467,6 +3584,72 @@
         <p>这篇文章 thin 到几乎没有分析价值。可能是 OpenAI 提前抢注 SEO 或 building hype，也可能是正式发布前的 placeholder。建议读者等待实质性的 technical report 或 API announcement，不要过度解读这句营销口号。目前没有任何证据表明 GPT-5 已 release 或可供使用。</p>
       </section>
       <div class="tags"><span>GPT-5</span><span>enterprise-ai</span><span>teaser</span><span>thin-content</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2025-08-05">
+              <div class="date-heading">
+                <h3>2025-08-05</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-05</span>
+        <span>Added 2026-06-26</span>
+      </div>
+      <h2>Estimating worst case frontier risks of open weight LLMs</h2>
+      <a class="original-link" href="https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一篇 OpenAI 关于 open weight LLMs worst-case frontier risks 的研究论文摘要。作者提出了 malicious fine-tuning (MFT) 方法，通过在 biology 和 cybersecurity 两个领域对假设的 gpt-oss 模型进行 fine-tuning，试图 elicite 其最大能力，以评估开源模型释放后的潜在风险。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>聚焦于 open weight models 的 worst-case risk assessment，而非 average-case</li><li>提出 malicious fine-tuning (MFT) 作为评估方法论：adversary 可以通过 fine-tuning 释放模型被 suppressed 或 latent 的 capabilities</li><li>测试领域为 biology（可能涉及 biorisk）和 cybersecurity（可能涉及 cyberattacks）</li><li>研究对象是假设的 gpt-oss，并非已发布的具体模型</li><li>核心问题：一旦 weights 公开，safety guardrails 可被 fine-tuning 绕过或移除</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这直接关系到 OpenAI 对 open source vs. closed source 的立场，以及未来模型 release 的决策框架。对于关注 AI governance 和 alignment 的研究者来说，这是 OpenAI 少有的公开讨论 open weight risks 的方法论论文，可能预示着他们内部已有更成熟的评估体系。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章本身非常 thin，只是一个 abstract 级别的介绍，没有具体数据、方法论细节或结论。MFT 这个概念不新，学界已讨论很久——open weight 意味着 guardrails 可被移除是常识。OpenAI 发这篇更像是为未来的 closed-source 政策提供 justification，而非真正的技术贡献。建议等待完整论文再深入分析。</p>
+      </section>
+      <div class="tags"><span>open-weight-risks</span><span>malicious-fine-tuning</span><span>frontier-models</span><span>biorisk</span><span>cybersecurity</span><span>AI-governance</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2025-08-05</span>
+        <span>Added 2026-06-26</span>
+      </div>
+      <h2>gpt-oss-120b &amp; gpt-oss-20b Model Card</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-oss-model-card" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布了两个 open-weight reasoning models：gpt-oss-120b 和 gpt-oss-20b，采用 Apache 2.0 license。文章本身极短，仅有一句话声明，没有提供任何技术细节、benchmark 数据或使用限制说明。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>两个模型参数量：120B 和 20B，定位为 reasoning models</li><li>License 为 Apache 2.0，属于 permissive license，商用友好</li><li>受 gpt-oss usage policy 约束，具体限制未在文中说明</li><li>文章为 thin content，仅 index/announcement 性质，缺乏 Model Card 应有的技术细节</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是 OpenAI 罕见的 open-weight release，标志着其策略可能转向。Apache 2.0 license 对开发者社区有实际价值。但缺少 benchmark、training details、limitations 等关键信息，目前无法评估模型实际能力。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>文章太薄，本质上只是一个 placeholder。120B 规格值得关注，但 &#x27;reasoning models&#x27; 的定位是否对标 DeepSeek-R1 或 Llama 4 尚不清楚。建议等待完整 Model Card 和社区 benchmark 再做判断。usage policy 的具体条款也需要仔细审查，Apache 2.0 之外可能存在额外限制。</p>
+      </section>
+      <div class="tags"><span>open-weight</span><span>reasoning</span><span>Apache-2.0</span><span>OpenAI</span><span>model-release</span></div>
     </article>
     
             </section>

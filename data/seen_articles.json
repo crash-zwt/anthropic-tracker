@@ -813,5 +813,35 @@
     "title": "How Amgen uses GPT-5",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-25T05:11:29.968048+00:00"
+  },
+  "https://openai.com/index/gpt-5-system-card": {
+    "title": "GPT-5 System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
+  },
+  "https://openai.com/index/gpt-5-cursor": {
+    "title": "How Cursor uses GPT-5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
+  },
+  "https://openai.com/index/gpt-5-safe-completions": {
+    "title": "From hard refusals to safe-completions: toward output-centric safety training",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-5": {
+    "title": "Introducing GPT-5",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
+  },
+  "https://openai.com/index/gpt-oss-model-card": {
+    "title": "gpt-oss-120b & gpt-oss-20b Model Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
+  },
+  "https://openai.com/index/estimating-worst-case-frontier-risks-of-open-weight-llms": {
+    "title": "Estimating worst case frontier risks of open weight LLMs",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
   }
 }
