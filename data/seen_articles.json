@@ -843,5 +843,35 @@
     "title": "Estimating worst case frontier risks of open weight LLMs",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-26T05:16:51.565342+00:00"
+  },
+  "https://openai.com/index/previewing-gpt-5-6-sol": {
+    "title": "Previewing GPT-5.6 Sol: a next-generation model",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
+  },
+  "https://openai.com/index/introducing-gpt-oss": {
+    "title": "Introducing gpt-oss",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
+  },
+  "https://openai.com/index/outtake": {
+    "title": "Resolving digital threats 100x faster with OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
+  },
+  "https://openai.com/index/model-ml-chaz-englander": {
+    "title": "Model ML is helping financial firms rebuild with AI from the ground up",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
+  },
+  "https://openai.com/index/invideo-ai": {
+    "title": "Invideo AI uses OpenAI models to create videos 10x faster",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
+  },
+  "https://openai.com/index/genspark": {
+    "title": "No-code personal agents, powered by GPT-4.1 and Realtime API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
   }
 }
