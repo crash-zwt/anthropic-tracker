@@ -1,5 +1,1585 @@
 [
   {
+    "checked_at": "2026-07-07T05:00:33.332704+00:00",
+    "checked_at_display": "2026-07-07 13:00 Asia/Shanghai",
+    "new_count": 0,
+    "backfill_bootstrap": false,
+    "source_counts": {
+      "anthropic_news": 0,
+      "anthropic_alignment": 0,
+      "claude_agents": 0,
+      "claude_code": 0,
+      "google_gemini_ai_blog": 0,
+      "thinking_machines_site": 0,
+      "openai_model_product": 0,
+      "openai_agents_engineering": 0,
+      "openai_codex_product": 0,
+      "openai_codex_engineering": 0
+    },
+    "errors": [
+      {
+        "url": "https://www.anthropic.com/news/claude-sonnet-5",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.anthropic.com/news/redeploying-fable-5",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://claude.com/blog/getting-started-with-loops",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-5-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-4-thinking-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-3-instant",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-3-instant-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/retell-ai",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/unify",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/emergent-misalignment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/coderabbit",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/healthbench",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/image-generation-api",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o3-o4-mini-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-o3-and-o4-mini",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4-1",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/security-on-the-path-to-agi",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-4o-image-generation",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4o-image-generation-system-card-addendum",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-our-next-generation-audio-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/chain-of-thought-monitoring",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/mercari",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4-5-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/endex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/sharing-the-latest-model-spec",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-deep-research",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o3-mini-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/strengthening-americas-ai-leadership-with-the-us-national-laboratories",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/operator-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/deliberative-alignment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o1-and-new-tools-for-developers",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/sora-is-here",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/sora-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/grab",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/rox",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-simpleqa",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/simplifying-stabilizing-and-scaling-continuous-time-consistency-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-the-realtime-api",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-vision-to-the-fine-tuning-api",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/api-prompt-caching",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/api-model-distillation",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/altera",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/upgrading-the-moderation-api-with-our-new-multimodal-moderation-model",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/mercado-libre",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/arco-education",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o1-economics",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ada",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4o-fine-tuning",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-swe-bench-verified",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4o-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-structured-outputs-in-the-api",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/searchgpt-prototype",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/improving-model-safety-behavior-with-rule-based-rewards",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/prover-verifier-games-improve-legibility",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-and-los-alamos-national-laboratory-work-together",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/consistency-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/improved-techniques-for-training-consistency-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/color-health",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/expanding-on-how-voice-engine-works-and-our-safety-research",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/extracting-concepts-from-gpt-4",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/mavenagi",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/hello-gpt-4o",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-the-model-spec",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/api-partnership-with-stack-overflow",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4-api-general-availability",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/the-instruction-hierarchy",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-openai-japan",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-improvements-to-the-fine-tuning-api-and-expanding-our-custom-models-program",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/harvey",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/zelma",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/lifespan",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/video-generation-models-as-world-simulators",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/new-embedding-models-and-api-updates",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-the-gpt-store",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/whoop",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/weak-to-strong-generalization",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/new-models-and-developer-products-announced-at-devday",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/frontier-model-forum-updates",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/typeform",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/retool",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ironclad",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4v-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/red-teaming-network",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-partners-with-scale-to-provide-support-for-enterprises-fine-tuning-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-3-5-turbo-fine-tuning-and-api-updates",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/using-gpt-4-for-content-moderation",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/frontier-model-forum",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/viable",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/function-calling-and-other-api-updates",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/improving-mathematical-reasoning-with-process-supervision",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/language-models-can-explain-neurons-in-language-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpts-are-gpts",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/khan-academy",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/government-of-iceland",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/be-my-eyes",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/duolingo",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/stripe",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4-research",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/forecasting-misuse",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/yabble",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/waymark",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/inworld-ai-DO-NOT-PUBLISH",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/new-and-improved-embedding-model",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/efficient-training-of-language-models-to-fill-in-the-middle",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/a-hazard-analysis-framework-for-code-synthesis-large-language-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/dall-e-2-extending-creativity",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/dall-e-2-pre-training-mitigations",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/vpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/evolution-through-large-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/best-practices-for-deploying-language-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/teaching-models-to-express-their-uncertainty-in-words",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/economic-impacts-research",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/economic-impacts",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/language-model-safety-and-misuse",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/instruction-following",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-text-and-code-embeddings",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/webgpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/customizing-gpt-3",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/solving-math-word-problems",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/truthfulqa",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/evaluating-large-language-models-trained-on-code",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/improving-language-model-behavior",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-3-apps",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/multimodal-neurons",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/understanding-the-capabilities-limitations-and-societal-impact-of-large-language-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/clip",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-licenses-gpt-3-technology-to-microsoft",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/generative-language-modeling-for-automated-theorem-proving",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-to-summarize-with-human-feedback",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/image-gpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-api",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/language-models-are-few-shot-learners",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/jukebox",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/microscope",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/deep-double-descent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-2-1-5b-release",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/fine-tuning-gpt-2",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/testing-robustness",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-2-6-month-follow-up",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/musenet",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/sparse-transformer",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/energy-based-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/better-language-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-concepts-with-energy-functions",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/plan-online-learn-offline",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ffjord",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/glow",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ingredients-for-robotics-research",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/block-sparse-gpu-kernels",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/domain-randomization-and-generative-models-for-robotic-grasping",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-to-model-other-minds",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/prediction-and-control-with-temporal-segment-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/attacking-machine-learning-with-adversarial-examples",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/on-the-quantitative-analysis-of-decoder-based-generative-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/a-connection-between-generative-adversarial-networks-inverse-reinforcement-learning-and-energy-based-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/transfer-from-simulation-to-real-world-through-learning-deep-inverse-dynamics-model",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/generative-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/how-agents-are-transforming-work",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/academy-courses-applying-ai-at-work",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-pwc-finance-collaboration",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/choco",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/safety-bug-bounty",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/amazon-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/pacific-northwest-national-laboratory",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/frontier-alliance-partners",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-evmbench",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-openai-frontier",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/snowflake-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ai-agent-link-safety",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/hardening-atlas-against-prompt-injection",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/bny",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-2",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/agentic-ai-foundation",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/mirakl",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/accenture-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-aardvark",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/building-chatgpt-atlas",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/consensus",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-agentkit",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-contract-data-agent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/buy-it-in-chatgpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-chatgpt-agent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/chatgpt-agent-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/retell-ai",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/new-tools-and-features-in-the-responses-api",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/browsecomp",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/paperbench",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/zendesk",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/hebbia",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-our-next-generation-audio-models",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/new-tools-for-building-agents",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-deep-research",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/computer-using-agent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/mle-bench",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/altera",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/clay",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/mavenagi",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/klarna",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/practices-for-governing-agentic-ai-systems",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/vpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/procgen-benchmark",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/safety-gym",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/emergent-tool-use",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/neural-mmo",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/quantifying-generalization-in-reinforcement-learning",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/reinforcement-learning-with-prediction-based-rewards",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-montezumas-revenge-from-a-single-demonstration",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-policy-representations-in-multiagent-systems",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/debate",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/evolved-policy-gradients",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-a-hierarchy",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/meta-learning-for-wrestling",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-to-model-other-minds",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/more-on-dota-2",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-to-cooperate-compete-and-communicate",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/learning-to-communicate",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/emergence-of-grounded-compositional-language-in-multi-agent-populations",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/daybreak-securing-the-world",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-maxxing-long-running-work",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-to-acquire-ona",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-on-oracle-cloud",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/nextdoor",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/notion",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/endava-frontiers",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/wasmer",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-for-every-role-tool-workflow",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-for-knowledge-work",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/braintrust",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/endava",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/cisco",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/virgin-atlantic",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ramp",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/dell-codex-enterprise-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/sea-david-chen",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/work-with-codex-from-anywhere",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/building-codex-windows-sandbox",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/autoscout24",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/nvidia",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/running-codex-safely",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/simplex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-b2b-signals",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/singular-bank",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-on-aws",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/open-source-codex-orchestration-symphony",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/scaling-codex-to-enterprises-worldwide",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-for-almost-everything",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/cyberagent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/next-phase-of-enterprise-ai",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-flexible-pricing-for-teams",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/accelerating-the-next-phase-ai",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-to-acquire-astral",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/rakuten",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-security-now-in-research-preview",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/pacific-northwest-national-laboratory",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/figma-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/beyond-rate-limits",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/harness-engineering",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-3-codex-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/unlocking-the-codex-harness",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-the-codex-app",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/inside-our-in-house-data-agent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/datadog",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-2-codex-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-2-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/shipping-sora-for-android-with-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-2",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-1-codex-max-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-1-codex-max",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-now-generally-available",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-upgrades-to-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o3-o4-mini-codex-system-card-addendum",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4-1",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o1-genetics",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o1-coding",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/paf",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-apps",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-3-edit-insert",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/daybreak-securing-the-world",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-maxxing-long-running-work",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-to-acquire-ona",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-on-oracle-cloud",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/nextdoor",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/notion",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/endava-frontiers",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/wasmer",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-for-every-role-tool-workflow",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-for-knowledge-work",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/braintrust",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/endava",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/cisco",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/building-self-improving-tax-agents-with-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/virgin-atlantic",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/ramp",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/dell-codex-enterprise-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/sea-david-chen",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/work-with-codex-from-anywhere",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/building-codex-windows-sandbox",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/autoscout24",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/nvidia",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/running-codex-safely",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/simplex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-b2b-signals",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/singular-bank",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-on-aws",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/open-source-codex-orchestration-symphony",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/scaling-codex-to-enterprises-worldwide",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-for-almost-everything",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/cyberagent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/next-phase-of-enterprise-ai",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-flexible-pricing-for-teams",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/accelerating-the-next-phase-ai",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-to-acquire-astral",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/rakuten",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-security-now-in-research-preview",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/pacific-northwest-national-laboratory",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/figma-partnership",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/beyond-rate-limits",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/harness-engineering",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-3-codex-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/unlocking-the-codex-harness",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-the-codex-app",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/inside-our-in-house-data-agent",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/datadog",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-2-codex-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-2-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/shipping-sora-for-android-with-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-2",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-1-codex-max-system-card",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-1-codex-max",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/japan-economic-blueprint",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-now-generally-available",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-upgrades-to-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/introducing-codex",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o3-o4-mini-codex-system-card-addendum",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-4-1",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o1-genetics",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/o1-coding",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/paf",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/codex-apps",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/gpt-3-edit-insert",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://openai.com/index/openai-codex",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  {
     "checked_at": "2026-07-06T05:19:04.511375+00:00",
     "checked_at_display": "2026-07-06 13:19 Asia/Shanghai",
     "new_count": 0,
