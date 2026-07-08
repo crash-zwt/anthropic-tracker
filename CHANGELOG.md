@@ -31,3 +31,4 @@
 - Added Google Gemini tracking from Google's official AI blog RSS feed.
 - Added Thinking Machines tracking from the official `thinkingmachines.ai` sitemap.
 - Reworked the static dashboard into a lab-first layout with institution pages and per-lab topic sections.
+- Disabled the scheduled GitHub Actions run after the previous model API key became unreliable; future updates are manual Codex-assisted runs, with the workflow kept only as a legacy API fallback.

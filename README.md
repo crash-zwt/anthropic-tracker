@@ -1,6 +1,6 @@
 # AI Lab Tracker
 
-A lightweight GitHub Pages dashboard that tracks official Anthropic, Claude, OpenAI, Google Gemini, and Thinking Machines posts, summarizes new articles with an OpenAI-compatible model API, and publishes the results daily.
+A lightweight GitHub Pages dashboard that tracks official Anthropic, Claude, OpenAI, Google Gemini, and Thinking Machines posts. The site is now maintained in manual Codex mode because the previous OpenAI-compatible model key is no longer reliable.
 
 Live site after GitHub Pages is enabled:
 
@@ -24,9 +24,16 @@ Sources are configured in `config/sources.json`.
 
 The main dashboard is lab-first: left navigation links to institution pages such as OpenAI, Google, and Thinking Machines. Each lab page then groups posts into internal topics such as Model, Alignment, Agents, Code, Gemini, or Methods & Research.
 
-## Required Secret
+## Summary Mode
 
-Add this repository secret in GitHub:
+The default maintenance path is manual Codex mode:
+
+1. Ask Codex to update the tracker.
+2. Codex checks the configured sources, reads new articles, writes bilingual summaries with personal judgment, renders the site, verifies navigation, and pushes the update.
+
+The old GitHub Actions API summarizer is kept only as a legacy fallback for a future valid OpenAI-compatible key. It is no longer scheduled automatically.
+
+If you intentionally re-enable API summarization, add this repository secret in GitHub:
 
 ```text
 XF_MAAS_API_KEY
@@ -55,7 +62,7 @@ In the GitHub repo:
 4. Set folder to `/docs`.
 5. Save.
 
-## Running Locally
+## Running Locally With A Model API
 
 ```bash
 export XF_MAAS_API_KEY="your-key"
@@ -65,14 +72,13 @@ python scripts/render_site.py
 
 Open `docs/index.html` in a browser.
 
-## Daily Schedule
+## Manual Updates
 
-The workflow runs once per day at `01:07 UTC`, which is `09:07 Asia/Shanghai`.
-GitHub scheduled workflows are best-effort and can be delayed, so the exact wall-clock time may drift.
+There is no automatic daily schedule at the moment. This is intentional: the old third-party API key stopped being reliable, and GitHub Actions cannot use the local Codex subscription.
 
-Manual runs are available from `Actions -> Daily AI Lab Tracker -> Run workflow`.
+Manual legacy API runs are still available from `Actions -> Daily AI Lab Tracker -> Run workflow`, but use them only after configuring a working `XF_MAAS_API_KEY`.
 
-For historical backfill, run the workflow manually with:
+For historical backfill in legacy API mode, run the workflow manually with:
 
 ```text
 backfill_bootstrap=true

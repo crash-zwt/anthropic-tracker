@@ -1,16 +1,14 @@
 name: Daily AI Lab Tracker
 
 on:
-  schedule:
-    - cron: "7 1 * * *"
   workflow_dispatch:
     inputs:
       backfill_bootstrap:
-        description: "Summarize links previously marked as bootstrap_only"
+        description: "Legacy API mode only: summarize links previously marked as bootstrap_only"
         required: false
         default: "false"
       max_new_articles:
-        description: "Maximum articles to summarize in this run"
+        description: "Legacy API mode only: maximum articles to summarize in this run"
         required: false
         default: "6"
 
