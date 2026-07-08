@@ -873,5 +873,59 @@
     "title": "No-code personal agents, powered by GPT-4.1 and Realtime API",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-06-27T04:59:33.980403+00:00"
+  },
+  "https://www.anthropic.com/news/claude-sonnet-5": {
+    "title": "Introducing Claude Sonnet 5",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://www.anthropic.com/news/redeploying-fable-5": {
+    "title": "Redeploying Claude Fable 5",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government": {
+    "title": "Bringing Claude Code and Claude Cowork to government",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://claude.com/blog/claude-model-and-effort-level-in-claude-code": {
+    "title": "Choosing a Claude model and effort level in Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns": {
+    "title": "A field guide to Claude Fable 5: Finding your unknowns",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://claude.com/blog/getting-started-with-loops": {
+    "title": "Getting started with loops",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/": {
+    "title": "What’s new in Managed Agents in Gemini API",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/": {
+    "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
+  },
+  "https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/": {
+    "title": "Learning to Replicate Expert Judgment in Financial Tasks",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
+    "manual_codex_summary": true
   }
 }
