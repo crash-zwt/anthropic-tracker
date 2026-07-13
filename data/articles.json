@@ -1,5 +1,253 @@
 [
   {
+    "id": "7695175fa495",
+    "url": "https://www.anthropic.com/research/off-switch-dual-use",
+    "title": "An off switch for dual-use knowledge in AI models",
+    "source_id": "anthropic_alignment",
+    "source_name": "Anthropic Alignment",
+    "category": "alignment",
+    "vendor": "Anthropic",
+    "published_at": "2026-07-08",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "Anthropic 与 AE Studio 介绍 GRAM（Gradient-Routed Auxiliary Modules）：在 Transformer 每层加入可移除的 dual-use knowledge 模块，让 virology、cybersecurity、nuclear physics 等敏感能力进入专门 compartment。部署时可以按模块开关能力，目标是比 refusal/classifier 更接近“控制模型知道什么”。",
+      "key_points": [
+        "GRAM 给每类 dual-use domain 分配额外 neurons/modules；普通文本更新主模型，敏感类别文本只更新对应模块",
+        "模块删除后，对应能力接近“从未训练过该数据”的效果，同时尽量不损伤 general performance",
+        "实验覆盖 synthetic topic、真实 web/code/science mix、50M 到 5B 参数规模；尚未用于 Claude 生产模型",
+        "相比 post-training unlearning，GRAM 更难被少量恶意 fine-tuning 恢复敏感知识",
+        "一个训练 run 可以产生多种 capability configuration，例如四类 dual-use 模块可组合成 16 种开关状态"
+      ],
+      "why_it_matters": "这是 alignment/safety 里很关键的一类路线：从“输出层拒绝”转向“权重层能力分区”。如果可扩展到 frontier scale，它可能让实验室对高风险知识做更细粒度的 trusted access，而不是为不同权限训练多套模型。",
+      "my_take": "这篇值得细读，但要保持克制。GRAM 的想法很漂亮，尤其适合 dual-use access control；不过目前还是 early research，评价主要是 next-token/capability proxy，不是完整 downstream safety。真正难点会在 frontier training pipeline、模块边界泄漏、以及现实攻击者的 adaptive fine-tuning。",
+      "tags": [
+        "GRAM",
+        "dual-use knowledge",
+        "alignment",
+        "unlearning",
+        "access control"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "a5bdc7a3013f",
+    "url": "https://thinkingmachines.ai/blog/the-future-worth-building-is-human/",
+    "title": "The Future Worth Building Is Human",
+    "source_id": "thinking_machines_site",
+    "source_name": "Thinking Machines",
+    "category": "thinking_machines",
+    "vendor": "Thinking Machines",
+    "published_at": "2026-07-10",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "Thinking Machines 发布一篇 mission/strategy 文章，核心主张是 AI 应该扩展 human will and judgment，而不是把集中训练后冻结的 intelligence 直接替代人。公司路线包括强模型、可训练/可定制工具、更宽的人机交互界面、以及开放研究。",
+      "key_points": [
+        "文章强调真实工作中的知识是 local、tacit、不断变化的，无法完全被一次性集中收集进模型",
+        "Thinking Machines 认为 AI 必须分布式地被组织和个人塑形，而不是只由少数实验室训练后冻结",
+        "技术方向包括 strong models、fine-tuning/model weights customization、rich interfaces、research recipes",
+        "它把 human participation 描述为 technical challenge：模型要知道何时自主、何时请求 oversight 和 feedback",
+        "这延续了他们近期 Tinker、expert judgment、interaction models 的主线：让模型吸收具体组织的判断标准"
+      ],
+      "why_it_matters": "这不是单篇技术 paper，但很能解释 Thinking Machines 的战略位置：他们不是只做另一个 frontier chatbot，而是在押注“customizable intelligence + human-in-the-loop alignment + organization-specific judgment”。这和 OpenAI/Anthropic 的 centralized product platform 路线形成对比。",
+      "my_take": "这篇偏宣言，但信号很强。真正有价值的是它把 Tinker、interaction、domain judgment 串成一个统一路线：AI 的边界不是智力本身，而是如何持续吸收人的 tacit knowledge。缺点是概念较多、实证较少，需要看后续产品和研究能否兑现。",
+      "tags": [
+        "Thinking Machines",
+        "human judgment",
+        "customization",
+        "decentralized alignment",
+        "Tinker"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "54ee76ae9206",
+    "url": "https://openai.com/index/gpt-5-6",
+    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-09",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "OpenAI 发布 GPT-5.6 family：旗舰 Sol、平衡模型 Terra、低成本 Luna。主打更高 performance per dollar、coding/knowledge work/cyber/science 的 SOTA 表现，以及 max/ultra 等更高 compute 模式，其中 ultra 默认协调多个 agents 并行完成复杂任务。",
+      "key_points": [
+        "GPT-5.6 Sol 是新旗舰；Terra 面向 everyday work；Luna 面向 cost-efficient intelligence",
+        "OpenAI 声称 Sol 在 coding agent、BrowseComp、OSWorld、cyber/science 等多项 eval 上显著提升，且 token/time/cost 更低",
+        "新增 ultra 模式：默认协调 4 个 agents 并行，适合复杂任务；API 侧可用 Responses API multi-agent beta 构建类似体验",
+        "Programmatic Tool Calling 被重点强调，可减少中间数据回传和模型 round trips，提高 tool-heavy workflow 效率",
+        "安全部分强调更强 real-time checks、monitoring、trusted access，尤其针对 cyber/biology 等高风险能力"
+      ],
+      "why_it_matters": "这是本轮 OpenAI 最重要的 model release。它说明 OpenAI 的模型竞争重点已经从单轮 benchmark 转向 long-horizon agent work、工具编排、artifact generation 和 cost/performance。对 Codex、ChatGPT Work、Microsoft Copilot 都是底层能力升级。",
+      "my_take": "信息密度高，但也带很强 launch marketing。最值得关注的是 ultra/multi-agent、Programmatic Tool Calling、以及 coding/knowledge work 的效率叙事。如果数据属实，GPT-5.6 是一次平台级升级；但需要第三方 eval 和真实使用验证，尤其是复杂 agent 任务的稳定性与成本。",
+      "tags": [
+        "GPT-5.6",
+        "model release",
+        "agents",
+        "coding",
+        "Programmatic Tool Calling"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "e799563c0958",
+    "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+    "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-09",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "OpenAI 宣布 GPT-5.6 将成为 Microsoft 365 Copilot 在 Word、Excel、PowerPoint、Chat 和 Cowork 中的 preferred model，把 GPT-5.6 的知识工作和 artifact generation 能力直接带入微软办公套件。",
+      "key_points": [
+        "GPT-5.6 会进入 Microsoft 365 Copilot 的核心工作流，包括文档、表格、演示、聊天和 Cowork",
+        "OpenAI 强调更少 prompting rounds、更深 Excel analysis、更好的 PowerPoint polish 和跨团队协作输出",
+        "Microsoft 将通过 OpenAI API 直接访问 GPT-5.6 models 来服务 Microsoft 365 customers",
+        "这篇是产品落地公告，不是技术报告；核心价值是确认 GPT-5.6 的 enterprise distribution channel",
+        "它和 ChatGPT Work 一起显示 OpenAI 正在争夺“办公 artifacts 生成与协作执行”入口"
+      ],
+      "why_it_matters": "Microsoft 365 是 GPT-5.6 最重要的分发场景之一。模型能力如果能稳定落在 Word/Excel/PPT/Cowork，就会直接影响企业用户对 AI 的日常体验，而不是只停留在 API 或 ChatGPT。",
+      "my_take": "这篇技术细节不多，但商业意义大。OpenAI + Microsoft 的打法是把 frontier model 放进现有工作流，而不是让用户迁移到新工具。真正要观察的是 Copilot 里是否能体现 GPT-5.6 的 long-horizon 和 artifact polish，而不是只变成更会写文案的助手。",
+      "tags": [
+        "GPT-5.6",
+        "Microsoft 365 Copilot",
+        "enterprise AI",
+        "knowledge work",
+        "Cowork"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "5941cef110c0",
+    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+    "title": "ChatGPT is now a partner for your most ambitious work",
+    "source_id": "openai_agents_engineering",
+    "source_name": "OpenAI Engineering - Agents",
+    "category": "openai_agents",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-09",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "OpenAI 发布 ChatGPT Work：一个能跨 apps/files 行动、长时间保持项目上下文、把目标拆成步骤并产出 sheets/slides/docs/web apps 的 agent。它内置 Codex technology，由 GPT-5.6 驱动，定位从问答助手升级为工作执行伙伴。",
+      "key_points": [
+        "ChatGPT Work 可跨 web、mobile、desktop 和用户文件/应用收集信息并产出完成品",
+        "内置 Codex technology；OpenAI 称 Codex 每周已有 500 万用户，其中 100 万用于非软件开发工作",
+        "支持长达数小时的 complex projects，可跟踪进度、向用户提问、改变方向并请求关键操作审批",
+        "示例包括预算 variance analysis、campaign brief、sales meeting prep、Scheduled Tasks 自动更新 docs/slides",
+        "强调组织安全与治理，明显对标 Claude Cowork / enterprise agents"
+      ],
+      "why_it_matters": "这是 OpenAI agent 产品线的重要扩展：Codex 不再只是 coding agent，而是成为一般办公 agent 的底层执行技术。它把 ChatGPT 从 conversational interface 推向 cross-app workflow executor。",
+      "my_take": "这篇很重要。ChatGPT Work 的方向和 Claude Cowork/Claude Code converging：都在抢“能在真实工具里完成工作”的入口。关键挑战会是权限、安全、可追溯、失败恢复和用户信任。产品承诺很大，真实体验需要重点观察。",
+      "tags": [
+        "ChatGPT Work",
+        "agents",
+        "Codex",
+        "GPT-5.6",
+        "workflow automation"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "eaad4cbcfa7f",
+    "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+    "title": "Separating signal from noise in coding evaluations",
+    "source_id": "openai_codex_engineering",
+    "source_name": "OpenAI Engineering - Codex",
+    "category": "openai_code",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-08",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "OpenAI 审计 SWE-Bench Pro 后认为约 30% 任务有 broken/invalid 问题，包括过严测试、prompt 信息不足、低覆盖测试和误导性 prompt。这会让 coding agent eval 结果失真，影响模型发布与安全判断。",
+      "key_points": [
+        "OpenAI 对 731-task public split 做数据质量审计，自动 pipeline 标记 200 个 broken tasks，人工标注识别 249 个",
+        "主要问题包括 hidden tests 强制 prompt 未说明的实现细节、prompt underspecified、测试覆盖不足、prompt 与测试目标矛盾",
+        "前沿模型在 SWE-Bench Pro public split 8 个月内从 23.3% pass rate 到 80.3%，benchmark 质量变得更关键",
+        "审计流程结合 model attempts、task metadata、failure traces、investigator agents 和 5 位 experienced software engineers",
+        "文章建议 model developers 谨慎解读 SWE-Bench Pro 结果，并把 eval quality 当作能力测量的一部分"
+      ],
+      "why_it_matters": "对 Codex/Claude Code 这类 coding agent 来说，eval 本身会决定产品叙事和安全部署。如果 benchmark 30% broken，榜单提升可能混入大量噪音，甚至误导模型训练和 release 决策。",
+      "my_take": "这是本轮最有工程价值的 OpenAI research post。它提醒我们：agent eval 不只是跑分，而是数据集质量、任务 specification 和测试公平性的系统工程。也说明未来 coding benchmark 会越来越需要 agent-assisted auditing + human review。",
+      "tags": [
+        "coding evals",
+        "SWE-Bench Pro",
+        "Codex",
+        "benchmark quality",
+        "agent audit"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "8fd74bd3f519",
+    "url": "https://openai.com/index/bio-bug-bounty",
+    "title": "OpenAI Bio Bug Bounty",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-09",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "OpenAI 将 GPT-5.5 Bio Bug Bounty 扩展为 ongoing private program：OpenAI Bio Bounty Program，聚焦能绕过 biosafety challenge 的 universal jailbreaks。从 GPT-5.6 开始继续适用，最高奖励从 $25k 提高到 $50k。",
+      "key_points": [
+        "项目目标是测试 frontier models 在 biology/biorisk 方向的 universal jailbreak 风险",
+        "GPT-5.5 原 bounty 测试到 2026-07-27；之后主要范围转向 GPT-5.6，并会持续更新 scope",
+        "最高奖励提高到 $50,000，partial wins 可能有较小奖励",
+        "参与者需要申请、被选中、使用现有 ChatGPT account，并签署 NDA",
+        "这是 OpenAI 在高风险生物能力上把 red teaming 常态化、私有化的一步"
+      ],
+      "why_it_matters": "GPT-5.6 发布同时强化 bio safety bounty，说明 OpenAI 承认更强模型在 biology dual-use 方面需要持续外部测试。对 alignment/safety 观察者，这比泛泛 safety statement 更具体。",
+      "my_take": "这篇短，但信号明确。Bio risk 的安全测试正在从一次性 red team 变成长期 bounty program。不过私有 NDA 模式也意味着外部透明度有限；我们能看到的是制度设计，未必能看到具体漏洞类型和修复效果。",
+      "tags": [
+        "bio safety",
+        "bug bounty",
+        "GPT-5.6",
+        "jailbreaks",
+        "frontier risk"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "027b05f9d0fa",
+    "url": "https://openai.com/index/deutsche-telekom",
+    "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-10",
+    "added_at": "2026-07-13T02:21:43.698396+00:00",
+    "summary": {
+      "tldr": "OpenAI 发布 Deutsche Telekom customer story，展示其用 ChatGPT/API 推进 AI-native telco 转型：员工工作流、客服、网络运营和 voice experience。文章称已有 50,000+ monthly active users，2026 年以来 AI tool usage 增长 546%。",
+      "key_points": [
+        "Deutsche Telekom 把 AI 视为 operating model redesign，而不是普通软件 rollout",
+        "早期重点包括 ChatGPT Enterprise 员工采用、customer care workflow redesign、network operations optimization",
+        "公司探索把 AI 直接嵌入通话体验，如 real-time translation、in-call assistants、post-call summaries",
+        "文章提供 adoption 指标：50,000+ monthly active users，AI tool usage 自 2026 年初增长 546%",
+        "技术细节较少，更多是 enterprise transformation / customer story"
+      ],
+      "why_it_matters": "对模型追踪来说这不是核心技术发布，但它显示 OpenAI 正在把 API/ChatGPT 渗透到大型运营商的真实业务流程，尤其是 voice 和 customer service 场景。",
+      "my_take": "这篇偏商业案例，技术含量一般。值得保留是因为 telco voice + AI assistant 是大规模落地场景，和 realtime/voice agents 方向相关。真正需要看的是后续是否披露 latency、handoff、合规和 customer satisfaction 数据。",
+      "tags": [
+        "enterprise AI",
+        "telecom",
+        "voice agents",
+        "ChatGPT Enterprise",
+        "customer story"
+      ],
+      "importance": "low"
+    }
+  },
+  {
     "id": "0f764e9bc764",
     "url": "https://www.anthropic.com/news/claude-sonnet-5",
     "title": "Introducing Claude Sonnet 5",

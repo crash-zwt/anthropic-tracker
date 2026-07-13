@@ -927,5 +927,53 @@
     "source_id": "thinking_machines_site",
     "first_seen_at": "2026-07-08T03:39:25.614827+00:00",
     "manual_codex_summary": true
+  },
+  "https://www.anthropic.com/research/off-switch-dual-use": {
+    "title": "An off switch for dual-use knowledge in AI models",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://thinkingmachines.ai/blog/the-future-worth-building-is-human/": {
+    "title": "The Future Worth Building Is Human",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/gpt-5-6": {
+    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot": {
+    "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/chatgpt-for-your-most-ambitious-work": {
+    "title": "ChatGPT is now a partner for your most ambitious work",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/separating-signal-from-noise-coding-evaluations": {
+    "title": "Separating signal from noise in coding evaluations",
+    "source_id": "openai_codex_engineering",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/bio-bug-bounty": {
+    "title": "OpenAI Bio Bug Bounty",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/deutsche-telekom": {
+    "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
+    "manual_codex_summary": true
   }
 }

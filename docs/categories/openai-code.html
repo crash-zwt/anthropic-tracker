@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-08 11:39 Asia/Shanghai</dd>
+            <dd>2026-07-13 10:21 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>9</dd>
+            <dd>8</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>184</dd>
+            <dd>192</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,17 +42,17 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>6 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>6 new</strong>
             </li>
             
             <li>
               <span>Google</span>
-              <strong>2 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>55</strong>
+      <strong>56</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>106</strong>
+      <strong>112</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>13</strong>
+      <strong>14</strong>
     </a>
     
         </div>
@@ -96,12 +96,12 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          
+          <a href="#date-2026-07-08"><span>2026-07-08</span><strong>1</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-08 11:39 Asia/Shanghai
+        Generated: 2026-07-13 10:21 Asia/Shanghai
       </footer>
     </aside>
 
@@ -117,11 +117,42 @@
         </div>
       </div>
       
-        <article class="empty-state">
-          <h2>No articles yet</h2>
-          <p>After the first scheduled run, new posts will appear here with bilingual summaries and personal takes.</p>
-        </article>
-        
+            <section class="date-section" id="date-2026-07-08">
+              <div class="date-heading">
+                <h3>2026-07-08</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_code">OpenAI Code</span>
+        <span>OpenAI Engineering - Codex</span>
+        <span>2026-07-08</span>
+        <span>Added 2026-07-13</span>
+      </div>
+      <h2>Separating signal from noise in coding evaluations</h2>
+      <a class="original-link" href="https://openai.com/index/separating-signal-from-noise-coding-evaluations" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 审计 SWE-Bench Pro 后认为约 30% 任务有 broken/invalid 问题，包括过严测试、prompt 信息不足、低覆盖测试和误导性 prompt。这会让 coding agent eval 结果失真，影响模型发布与安全判断。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>OpenAI 对 731-task public split 做数据质量审计，自动 pipeline 标记 200 个 broken tasks，人工标注识别 249 个</li><li>主要问题包括 hidden tests 强制 prompt 未说明的实现细节、prompt underspecified、测试覆盖不足、prompt 与测试目标矛盾</li><li>前沿模型在 SWE-Bench Pro public split 8 个月内从 23.3% pass rate 到 80.3%，benchmark 质量变得更关键</li><li>审计流程结合 model attempts、task metadata、failure traces、investigator agents 和 5 位 experienced software engineers</li><li>文章建议 model developers 谨慎解读 SWE-Bench Pro 结果，并把 eval quality 当作能力测量的一部分</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 Codex/Claude Code 这类 coding agent 来说，eval 本身会决定产品叙事和安全部署。如果 benchmark 30% broken，榜单提升可能混入大量噪音，甚至误导模型训练和 release 决策。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是本轮最有工程价值的 OpenAI research post。它提醒我们：agent eval 不只是跑分，而是数据集质量、任务 specification 和测试公平性的系统工程。也说明未来 coding benchmark 会越来越需要 agent-assisted auditing + human review。</p>
+      </section>
+      <div class="tags"><span>coding evals</span><span>SWE-Bench Pro</span><span>Codex</span><span>benchmark quality</span><span>agent audit</span></div>
+    </article>
+    
+            </section>
+            
     </section>
   </main>
 </body>
