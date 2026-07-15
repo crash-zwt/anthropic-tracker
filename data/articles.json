@@ -1,5 +1,69 @@
 [
   {
+    "url": "https://openai.com/index/unlocking-self-improvement-gpt-red/",
+    "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-15",
+    "summary": {
+      "tldr": "OpenAI 发布 GPT-Red，一个 internal-only automated safety red-teamer，通过 self-play RL 持续生成 prompt injection 攻击，并把这些攻击直接用于 GPT-5.6 的 adversarial training。文章的核心信号不是新模型售卖，而是“用模型训练安全模型”的 flywheel 已经进入生产训练流程。",
+      "key_points": [
+        "GPT-Red 目标是把 red-teaming 从人力瓶颈变成可扩展流程，覆盖浏览器、文件、工具输出等 agent 场景里的 prompt injection 风险",
+        "OpenAI 称 GPT-Red 在 replicated indirect prompt injection arena 上显著强于人工 red-teamers，成功率 84% vs 13%",
+        "GPT-Red 已被用于 GPT-5.6 的 robustness training；文中给出的代表性结果是 hardest direct prompt injection benchmark failures 降低 6x",
+        "案例包括攻击 AI vending machine agent，以及在 held-out data exfiltration scenarios 上攻击 Codex CLI agent",
+        "OpenAI 强调 robustness 提升不是靠 over-refusal，而是在保持一般能力的同时降低 prompt injection 成功率"
+      ],
+      "why_it_matters": "对 agent 系统来说，这篇比普通 safety 宣传更实在，因为它把自动化攻击生成、训练数据扩展和 production model hardening 串成了一条闭环。只要工具调用、浏览器访问、文件读取还在，prompt injection 就是长期问题，自动 red-teaming 很可能会变成 frontier labs 的标准基础设施。",
+      "my_take": "这是高价值的 safety engineering 信号。最值得关注的是 OpenAI 已经把 adversarial red-team model 嵌进 release pipeline，而不是停留在评测 demo。保留意见也很明确：结果几乎都来自内部环境和私有 benchmark，真正的泛化能力、误报成本和外部可复现性，还得等后续 preprint 和第三方验证。",
+      "tags": [
+        "GPT-Red",
+        "prompt injection",
+        "red teaming",
+        "agent safety",
+        "GPT-5.6",
+        "robustness"
+      ],
+      "importance": "high"
+    },
+    "id": "eee8e8ed864a",
+    "added_at": "2026-07-15T21:36:46.836108+00:00"
+  },
+  {
+    "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "title": "Inkling: Our open-weights model",
+    "source_id": "thinking_machines_site",
+    "source_name": "Thinking Machines",
+    "category": "thinking_machines",
+    "vendor": "Thinking Machines",
+    "published_at": "2026-07-15",
+    "summary": {
+      "tldr": "Thinking Machines 发布首个 open-weights 模型 Inkling：975B total / 41B active 的 multimodal MoE，支持 1M context，并同步预告 12B active 的 Inkling-Small。文章把重点放在 customization 而不是绝对 SOTA：Inkling 可直接在 Tinker 上 fine-tune，并配套 Inkling Playground。",
+      "key_points": [
+        "Inkling 从 scratch 训练，预训练数据覆盖 45 trillion tokens 的 text, images, audio and video，支持 text-image-audio reasoning",
+        "模型主打 efficient and controllable thinking effort，定位是 broad, balanced foundation model，而不是当前最强的 open/closed overall model",
+        "Thinking Machines 同时开放 Inkling 的 full weights，并提供 Inkling-Small 预览，继续强化其 open model family 路线",
+        "产品侧最关键的是 Tinker integration：开发者可以直接 fine-tune Inkling，官方还加入了 Inkling Playground 方便快速试手感",
+        "文章用“让 Inkling fine-tune 自己成为 lipogram model”的例子展示 customization loop，明显是在卖平台工作流而不只是单次 benchmark"
+      ],
+      "why_it_matters": "这是 Thinking Machines 到目前为止最具体的一次战略落地。之前他们一直在讲 human judgment、customization、interaction model；这次终于把这些概念收束到一个可下载、可 fine-tune、可在自家平台继续改造的基座模型上。",
+      "my_take": "这篇的重要性高于单纯“又一个新模型发布”。真正的看点是 open weights + Tinker fine-tuning + controllable reasoning 这一整套产品化路线，明显在和 closed frontier labs 拉开方向差异。短板也同样清楚：官方自己承认 Inkling 不是 overall strongest，后续要看 model card、第三方评测、授权条款和 fine-tune economics 是否真的有吸引力。",
+      "tags": [
+        "Inkling",
+        "open weights",
+        "Thinking Machines",
+        "Tinker",
+        "multimodal",
+        "fine-tuning"
+      ],
+      "importance": "high"
+    },
+    "id": "4a75b17c5fee",
+    "added_at": "2026-07-15T21:36:46.836108+00:00"
+  },
+  {
     "id": "7695175fa495",
     "url": "https://www.anthropic.com/research/off-switch-dual-use",
     "title": "An off switch for dual-use knowledge in AI models",

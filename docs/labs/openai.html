@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-15 05:37 Asia/Shanghai</dd>
+            <dd>2026-07-16 05:36 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>192</dd>
+            <dd>194</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai is-active" href="#top">
       <span>OpenAI</span>
-      <strong>112</strong>
+      <strong>113</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>14</strong>
+      <strong>15</strong>
     </a>
     
         </div>
@@ -98,14 +98,14 @@
         <nav class="archive-list" aria-label="Article archive by publish date">
           <a href="#topic-model"><span>Model</span><strong>28</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>35</strong></a>
-<a href="#topic-agents"><span>Agents</span><strong>20</strong></a>
+<a href="#topic-agents"><span>Agents</span><strong>21</strong></a>
 <a href="#topic-code"><span>Code</span><strong>13</strong></a>
 <a href="#topic-methods"><span>Methods &amp; Research</span><strong>16</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-15 05:37 Asia/Shanghai
+        Generated: 2026-07-16 05:37 Asia/Shanghai
       </footer>
     </aside>
 
@@ -2407,9 +2407,46 @@
             <section class="topic-section" id="topic-agents">
               <div class="topic-heading">
                 <h3>Agents</h3>
-                <span>20 posts</span>
+                <span>21 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-15">
+              <div class="date-heading">
+                <h3>2026-07-15</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-07-15</span>
+        <span>Added 2026-07-15</span>
+      </div>
+      <h2>GPT-Red: Unlocking Self-Improvement for Robustness</h2>
+      <a class="original-link" href="https://openai.com/index/unlocking-self-improvement-gpt-red/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发布 GPT-Red，一个 internal-only automated safety red-teamer，通过 self-play RL 持续生成 prompt injection 攻击，并把这些攻击直接用于 GPT-5.6 的 adversarial training。文章的核心信号不是新模型售卖，而是“用模型训练安全模型”的 flywheel 已经进入生产训练流程。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>GPT-Red 目标是把 red-teaming 从人力瓶颈变成可扩展流程，覆盖浏览器、文件、工具输出等 agent 场景里的 prompt injection 风险</li><li>OpenAI 称 GPT-Red 在 replicated indirect prompt injection arena 上显著强于人工 red-teamers，成功率 84% vs 13%</li><li>GPT-Red 已被用于 GPT-5.6 的 robustness training；文中给出的代表性结果是 hardest direct prompt injection benchmark failures 降低 6x</li><li>案例包括攻击 AI vending machine agent，以及在 held-out data exfiltration scenarios 上攻击 Codex CLI agent</li><li>OpenAI 强调 robustness 提升不是靠 over-refusal，而是在保持一般能力的同时降低 prompt injection 成功率</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 agent 系统来说，这篇比普通 safety 宣传更实在，因为它把自动化攻击生成、训练数据扩展和 production model hardening 串成了一条闭环。只要工具调用、浏览器访问、文件读取还在，prompt injection 就是长期问题，自动 red-teaming 很可能会变成 frontier labs 的标准基础设施。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是高价值的 safety engineering 信号。最值得关注的是 OpenAI 已经把 adversarial red-team model 嵌进 release pipeline，而不是停留在评测 demo。保留意见也很明确：结果几乎都来自内部环境和私有 benchmark，真正的泛化能力、误报成本和外部可复现性，还得等后续 preprint 和第三方验证。</p>
+      </section>
+      <div class="tags"><span>GPT-Red</span><span>prompt injection</span><span>red teaming</span><span>agent safety</span><span>GPT-5.6</span><span>robustness</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-10">
               <div class="date-heading">
                 <h3>2026-07-10</h3>

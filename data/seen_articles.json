@@ -975,5 +975,15 @@
     "source_id": "openai_model_product",
     "first_seen_at": "2026-07-13T02:21:43.698396+00:00",
     "manual_codex_summary": true
+  },
+  "https://thinkingmachines.ai/news/introducing-inkling/": {
+    "title": "Inkling: Our open-weights model",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-07-15T21:36:46.836108+00:00"
+  },
+  "https://openai.com/index/unlocking-self-improvement-gpt-red/": {
+    "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-15T21:36:46.836108+00:00"
   }
 }
