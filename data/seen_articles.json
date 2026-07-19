@@ -985,5 +985,23 @@
     "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-07-15T21:36:46.836108+00:00"
+  },
+  "https://claude.com/blog/ai-code-migration": {
+    "title": "How Anthropic runs large-scale code migrations with Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-19T13:51:09.507958+00:00",
+    "manual_codex_summary": true
+  },
+  "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/": {
+    "title": "Create, edit and star in videos with two Google Vids updates",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-07-19T13:51:09.507958+00:00",
+    "manual_codex_summary": true
+  },
+  "https://openai.com/index/cars24": {
+    "title": "How Cars24 scales conversations and builds faster with OpenAI",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-19T13:51:09.507958+00:00",
+    "manual_codex_summary": true
   }
 }

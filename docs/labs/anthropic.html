@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-16 05:36 Asia/Shanghai</dd>
+            <dd>2026-07-19 21:51 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>194</dd>
+            <dd>197</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -52,12 +52,12 @@
             
             <li>
               <span>Google</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>Thinking Machines</span>
-              <strong>1 new</strong>
+              <strong>0 new</strong>
             </li>
             
         </ul>
@@ -69,19 +69,19 @@
           
     <a class="lab-stat lab-anthropic is-active" href="#top">
       <span>Anthropic / Claude</span>
-      <strong>56</strong>
+      <strong>57</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>113</strong>
+      <strong>114</strong>
     </a>
     
 
     <a class="lab-stat lab-google" href="../labs/google.html">
       <span>Google</span>
-      <strong>10</strong>
+      <strong>11</strong>
     </a>
     
 
@@ -99,12 +99,12 @@
           <a href="#topic-model"><span>Model</span><strong>5</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>12</strong></a>
 <a href="#topic-agents"><span>Agents</span><strong>17</strong></a>
-<a href="#topic-code"><span>Code</span><strong>22</strong></a>
+<a href="#topic-code"><span>Code</span><strong>23</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-16 05:37 Asia/Shanghai
+        Generated: 2026-07-19 21:51 Asia/Shanghai
       </footer>
     </aside>
 
@@ -1365,9 +1365,46 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>22 posts</span>
+                <span>23 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-16">
+              <div class="date-heading">
+                <h3>2026-07-16</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-07-16</span>
+        <span>Added 2026-07-19</span>
+      </div>
+      <h2>How Anthropic runs large-scale code migrations with Claude Code</h2>
+      <a class="original-link" href="https://claude.com/blog/ai-code-migration" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 公开了用 Claude Code 做大规模代码迁移的内部方法论：基于 Claude Fable 5、Claude Opus 4.8 和 dynamic workflows，把过去往往要多年的人力迁移，压缩成可并行执行的 agent loop。文中给出两个硬例子：Bun 的 Zig-&gt;Rust 百万行迁移在不到两周内产出，merge 前通过 100% 既有测试；另一个内部 Python-&gt;TypeScript 迁移在一个周末完成了 16.5 万行重写。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章核心不是“模型直接写完代码”，而是先搭 judge / parity harness，再用 rulebook、dependency map、gap inventory 组织并行迁移</li><li>Bun 迁移案例最醒目：&lt;2 周产出约 100 万行 Rust，CI 在 merge 前通过全部既有测试，落地后只出现 19 个 regressions 且已修完</li><li>Anthropic 内部另一个案例把 Python 系统迁到 165,000 lines of TypeScript，流程里包含 hundreds of agents、8 个 phase gates、3 轮 adversarial review</li><li>官方明确给出成本现实：Bun 迁移消耗 5.9B uncached input tokens + 690M output tokens，按 API pricing 约 16.5 万美元，不是“零成本重构”</li><li>最重要的方法论句子是“you do not fix the code, you fix the process (loop) that produced the code”，说明 Claude Code 的价值在可验证的迁移流水线</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对工程团队的启发很直接：agentic coding 的高价值场景不只是补全和修 bug，而是把长期搁置的系统性重构、语言迁移、代码库现代化，变成可分批验证、可回滚、可并行扩展的流程工程。它也让 Claude Code 的 dynamic workflows 从功能点，变成一个真实的 SDLC 级别用例。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是本轮最值得跟进的一篇实战文章。优点是信号很硬，讲了测试、阶段门、对抗评审和 token 成本，不是空泛宣传。保留意见也很清楚：这种迁移只有在 judge 足够强、代码边界清楚、团队能承受 token 账单时才成立。真正稀缺的不是“会写代码的模型”，而是可被持续验证的 harness design。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>code migration</span><span>dynamic workflows</span><span>Bun</span><span>agents</span><span>SDLC</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-07">
               <div class="date-heading">
                 <h3>2026-07-07</h3>
