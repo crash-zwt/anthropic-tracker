@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-20 13:20 Asia/Shanghai</dd>
+            <dd>2026-07-21 21:20 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>4</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>197</dd>
+            <dd>201</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic is-active" href="#top">
       <span>Anthropic / Claude</span>
-      <strong>57</strong>
+      <strong>59</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>114</strong>
+      <strong>116</strong>
     </a>
     
 
@@ -99,12 +99,12 @@
           <a href="#topic-model"><span>Model</span><strong>5</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>12</strong></a>
 <a href="#topic-agents"><span>Agents</span><strong>17</strong></a>
-<a href="#topic-code"><span>Code</span><strong>23</strong></a>
+<a href="#topic-code"><span>Code</span><strong>25</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-21 05:34 Asia/Shanghai
+        Generated: 2026-07-21 21:20 Asia/Shanghai
       </footer>
     </aside>
 
@@ -1365,9 +1365,75 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>23 posts</span>
+                <span>25 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-21">
+              <div class="date-heading">
+                <h3>2026-07-21</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-07-21</span>
+        <span>Added 2026-07-21</span>
+      </div>
+      <h2>How Anthropic secures its AI-native software development lifecycle</h2>
+      <a class="original-link" href="https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic Deputy CISO Jason Clinton 系统披露了一个 AI-native SDLC 的 security stack：在工程师季度出码量较 2021-2025 提升 8x、Claude 约写下 80% merged code、Claude Tag 合并超过一半代码的前提下，团队把安全前移到 CLAUDE.md / skills / `/security-review` / remote VMs / multi-agent CI review / SIEM logging / single-purpose agent identity，目标是在不明显拖慢 velocity 的情况下控制 prompt injection、dependency poisoning 和高频漏洞扩散。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Plan 阶段用接入组织知识索引的自动化 PSR 做项目安全评审，降低传统长周期架构评审的摩擦</li><li>Code 阶段把 secure coding guidance 编进 CLAUDE.md 和 org-wide skills，发现 bug class 后会反写到生成指令里形成 closed loop</li><li>Anthropic 把开发迁到 remote VMs，并对 agent traffic 做 egress allowlist，以限制 prompt injection 后的外联与数据外泄路径</li><li>CI 阶段叠加多个窄职责 review agents 和 deterministic scanners；官方称 substantive review comments 占比从 16% 提升到 54%</li><li>Monitor / governance 阶段强调 single-purpose identities、agent-to-agent 通信审计、以及把每次 agent action 送入 SIEM 做可追责与抽样复核</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇最有价值的地方不在于“AI 写更多代码”这件事，而在于它给出了一个较少公开的 operational answer：当 coding agent 真正进入主干开发流程后，安全团队该把控制点放在哪里。对任何想走向 AI-native engineering 的团队，这比抽象 best practices 更接近可执行模板。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是近期最值得读的 Claude Code 实操文之一，因为它讲的是 loops、boundary、identity 和 review placement，而不是泛泛 productivity 叙事。保留意见也清楚：很多效果指标来自内部自报，文章没有展开 false positive、延迟成本、以及这些守护措施对小团队是否经济可行。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>AI-native SDLC</span><span>AppSec</span><span>agent identity</span><span>CI review</span><span>prompt injection</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-07-21</span>
+        <span>Added 2026-07-21</span>
+      </div>
+      <h2>How Datadog built a “universal machine tool” for Claude Code</h2>
+      <a class="original-link" href="https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Datadog 介绍了他们给 Claude Code agents 搭的 “universal machine tool” Temper：不是让 agent 直接吐 application code，而是先产出 specification，再由一个 deterministic kernel 通过 symbolic reasoning、state exploration、seeded simulation 和 randomized property tests 四层验证后部署运行系统。核心目标是把越来越长的 agent session，从一次性 glue code 变成可复用、可检查、可扩展的 software factory primitive。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Datadog 说所有工程师都已在 production code 中使用 AI coding tools，而 Claude Code 占其中至少三分之二</li><li>他们把 agent work 粗分为 targeted changes、large refactors、replacing large parts、building entire systems，复杂度和验证难度会同步上升</li><li>Courier、BitsEvolve、Helix 三个内部项目逐步暴露出 bottleneck：从系统可验证性，到反馈回路，再到把 agent 产物安全地推进生产</li><li>Temper 让 agent 写 behavior / data / authorization 三类 contract；auth 采用 default-deny，并把被拒动作记录为待人类批准的 policy decisions</li><li>每个 spec 都过四层校验：symbolic proof、穷举状态探索、带 fault injection 的 deterministic simulation、以及随机属性测试，文章称小规格 spec 可在秒级完成验证</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇的看点不是又一个“客户故事”，而是它在认真改变 artifact 形态：从任意代码转向 specification + verifier kernel。对于长时程 coding agents，这可能比继续堆 prompt engineering 更接近真正可规模化的工程控制面。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>概念上这篇很强，尤其是把 industrialization 语言落到 contract 和 deterministic verification 上。我的保留点是表达能力边界与维护成本：多少真实业务系统适合被压进 Temper 这种 kernel，团队要付出多少 schema / policy / simulation upkeep，文章还没有给出硬答案。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>Datadog</span><span>Temper</span><span>specifications</span><span>verification</span><span>agent tooling</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-16">
               <div class="date-heading">
                 <h3>2026-07-16</h3>

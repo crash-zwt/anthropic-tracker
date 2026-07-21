@@ -1003,5 +1003,25 @@
     "source_id": "openai_agents_engineering",
     "first_seen_at": "2026-07-19T13:51:09.507958+00:00",
     "manual_codex_summary": true
+  },
+  "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle": {
+    "title": "How Anthropic secures its AI-native software development lifecycle",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-21T13:20:00+00:00"
+  },
+  "https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code": {
+    "title": "How Datadog built a “universal machine tool” for Claude Code",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-21T13:20:00+00:00"
+  },
+  "https://openai.com/index/hugging-face-model-evaluation-security-incident": {
+    "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-21T13:20:00+00:00"
+  },
+  "https://openai.com/index/safety-alignment-long-horizon-models": {
+    "title": "Safety and alignment in an era of long-horizon models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-21T13:20:00+00:00"
   }
 }
