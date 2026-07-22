@@ -1,5 +1,25 @@
 [
   {
+    "checked_at": "2026-07-22T13:37:27+00:00",
+    "checked_at_display": "2026-07-22 21:37 Asia/Shanghai",
+    "new_count": 3,
+    "manual_codex_run": true,
+    "backfill_bootstrap": false,
+    "source_counts": {
+      "anthropic_news": 0,
+      "anthropic_alignment": 0,
+      "claude_agents": 1,
+      "claude_code": 1,
+      "google_gemini_ai_blog": 0,
+      "thinking_machines_site": 0,
+      "openai_model_product": 0,
+      "openai_agents_engineering": 1,
+      "openai_codex_product": 0,
+      "openai_codex_engineering": 0
+    },
+    "errors": []
+  },
+  {
     "checked_at": "2026-07-21T13:20:00+00:00",
     "checked_at_display": "2026-07-21 21:20 Asia/Shanghai",
     "new_count": 4,

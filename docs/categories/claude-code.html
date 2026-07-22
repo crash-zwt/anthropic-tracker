@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-21 21:20 Asia/Shanghai</dd>
+            <dd>2026-07-22 21:37 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>4</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>201</dd>
+            <dd>204</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>59</strong>
+      <strong>61</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>116</strong>
+      <strong>117</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-21"><span>2026-07-21</span><strong>2</strong></a>
+          <a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
+<a href="#date-2026-07-21"><span>2026-07-21</span><strong>2</strong></a>
 <a href="#date-2026-07-16"><span>2026-07-16</span><strong>1</strong></a>
 <a href="#date-2026-07-07"><span>2026-07-07</span><strong>2</strong></a>
 <a href="#date-2026-07-06"><span>2026-07-06</span><strong>1</strong></a>
@@ -122,7 +123,7 @@
       </section>
 
       <footer>
-        Generated: 2026-07-21 21:20 Asia/Shanghai
+        Generated: 2026-07-22 21:37 Asia/Shanghai
       </footer>
     </aside>
 
@@ -138,6 +139,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-07-22">
+              <div class="date-heading">
+                <h3>2026-07-22</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-07-22</span>
+        <span>Added 2026-07-22</span>
+      </div>
+      <h2>Building verification loops in Claude Code with skills</h2>
+      <a class="original-link" href="https://claude.com/blog/building-verification-loops-in-claude-code-with-skills" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 把 verification loop 讲得比常见“跑一下 tests”更系统：Claude Code 已经会从 type checker、linter、runtime error 里读 deterministic signals，但真正能把 agent 质量拉高的，是把你反复手工做的检查显式写成 skills，让 Claude 在 gather context -&gt; take action -&gt; verify results 的 loop 里自己继续修，直到过关或触发升级。文章还把 loop 的落点分成 standalone、embedded、chained、PR-tied 四类，方便团队按 workflow 成熟度放置检查。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>内建 verification 不只是一条 /verify 指令，还包括 toolchain error handling、Code Review、GitHub Actions、spec validation 和 rubric-style grading</li><li>可复用的人工检查都应该被外化成 plain-English rule，再包装成 skill；关键不是高深，而是把团队真正执行的 acceptance check 写清楚</li><li>文章给出一个很实用的判断框架：偶发跨流程检查用 standalone，产物自带检查用 embedded，多个 handoff 串起来用 chained，PR 稳态检查则交给 CI / review flow</li><li>Anthropic 明说 built-in 或 plugin-managed skills 不适合直接嵌改，碰到这类不可控技能时更适合 chain，而不是硬塞进同一个 skill body</li><li>核心思想是把“你总会手工再看一眼的东西”迁移成 agent 能自动闭环的 deterministic or semi-deterministic feedback loop</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇虽然不是模型大新闻，但对真正把 coding agent 放进日常开发的人很重要。团队实际卡住的往往不是生成能力，而是反复返工、人工补验和质量门控位置不清。把这些 check productize 成 skills，本质上是在降低 agent 使用中的 coordination tax。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我认可它的 framing，因为它把“prompt 写得更好”退后了一步，把注意力放到 loop placement 和 verification ownership 上。最值得抄的是 standalone / embedded / chained / PR 这套分层。限制也明显：这仍然要求团队先知道自己在验什么，小团队如果流程本来就松散，skill 只会把混乱写进文件。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>skills</span><span>verification loops</span><span>code review</span><span>CI</span><span>workflow design</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-21">
               <div class="date-heading">
                 <h3>2026-07-21</h3>

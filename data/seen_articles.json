@@ -1023,5 +1023,1807 @@
     "title": "Safety and alignment in an era of long-horizon models",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-07-21T13:20:00+00:00"
+  },
+  "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude": {
+    "title": "How Outtake built a cyber investigator on Claude",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-07-22T13:37:27+00:00"
+  },
+  "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills": {
+    "title": "Building verification loops in Claude Code with skills",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-07-22T13:37:27+00:00"
+  },
+  "https://openai.com/index/introducing-openai-presence": {
+    "title": "Introducing OpenAI Presence",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00"
+  },
+  "https://openai.com/index/unlocking-self-improvement-gpt-red": {
+    "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-5-instant-system-card": {
+    "title": "GPT-5.5 Instant System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/modeling-ai-jobs-transition": {
+    "title": "Modeling an AI jobs transition",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-5-system-card": {
+    "title": "GPT-5.5 System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-4-thinking-system-card": {
+    "title": "GPT-5.4 Thinking System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-3-instant-system-card": {
+    "title": "GPT-5.3 Instant System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-3-instant": {
+    "title": "GPT-5.3 Instant: Smoother, more useful everyday conversations",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/retell-ai": {
+    "title": "Customizable, no-code voice agent automation with GPT-4o",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/unify": {
+    "title": "Driving scalable growth with OpenAI o3, GPT-4.1, and CUA",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/emergent-misalignment": {
+    "title": "Toward understanding and preventing misalignment generalization",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3": {
+    "title": "Addendum to OpenAI o3 and o4-mini system card: OpenAI o3 Operator",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/coderabbit": {
+    "title": "Shipping code faster with o3, o4-mini, and GPT-4.1",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/healthbench": {
+    "title": "Introducing HealthBench",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/image-generation-api": {
+    "title": "Introducing our latest image generation model in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o3-o4-mini-system-card": {
+    "title": "OpenAI o3 and o4-mini System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-o3-and-o4-mini": {
+    "title": "Introducing OpenAI o3 and o4-mini",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4-1": {
+    "title": "Introducing GPT-4.1 in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/security-on-the-path-to-agi": {
+    "title": "Security on the path to AGI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-4o-image-generation": {
+    "title": "Introducing 4o Image Generation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4o-image-generation-system-card-addendum": {
+    "title": "Addendum to GPT-4o System Card: 4o image generation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-our-next-generation-audio-models": {
+    "title": "Introducing next-generation audio models in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/chain-of-thought-monitoring": {
+    "title": "Detecting misbehavior in frontier reasoning models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/mercari": {
+    "title": "Supporting sellers with enhanced product listings",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4-5-system-card": {
+    "title": "OpenAI GPT-4.5 System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/endex": {
+    "title": "Building an autonomous financial analyst with o1 and o3-mini",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/sharing-the-latest-model-spec": {
+    "title": "Sharing the latest Model Spec",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-deep-research": {
+    "title": "Introducing deep research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o3-mini-system-card": {
+    "title": "OpenAI o3-mini System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/strengthening-americas-ai-leadership-with-the-us-national-laboratories": {
+    "title": "Strengthening America’s AI leadership with the U.S. National Laboratories",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/operator-system-card": {
+    "title": "Operator System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/deliberative-alignment": {
+    "title": "Deliberative alignment: reasoning enables safer language models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o1-and-new-tools-for-developers": {
+    "title": "OpenAI o1 and new tools for developers",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/sora-is-here": {
+    "title": "Sora is here",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/sora-system-card": {
+    "title": "Sora System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/grab": {
+    "title": "Building smarter maps with GPT-4o vision fine-tuning",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/rox": {
+    "title": "Rox goes “all in” on OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-simpleqa": {
+    "title": "Introducing SimpleQA",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/simplifying-stabilizing-and-scaling-continuous-time-consistency-models": {
+    "title": "Simplifying, stabilizing, and scaling continuous-time consistency models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-the-realtime-api": {
+    "title": "Introducing the Realtime API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-vision-to-the-fine-tuning-api": {
+    "title": "Introducing vision to the fine-tuning API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/api-prompt-caching": {
+    "title": "Prompt Caching in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/api-model-distillation": {
+    "title": "Model Distillation in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/altera": {
+    "title": "Creating agent and human collaboration with GPT 4o",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/upgrading-the-moderation-api-with-our-new-multimodal-moderation-model": {
+    "title": "Upgrading the Moderation API with our new multimodal moderation model",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/mercado-libre": {
+    "title": "Introducing Verdi, an AI dev platform powered by GPT-4o",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/arco-education": {
+    "title": "Using GPT-4 to improve teaching and learning in Brazil",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning": {
+    "title": "OpenAI o1-mini",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o1-economics": {
+    "title": "Economics and reasoning with OpenAI o1",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/ada": {
+    "title": "Using GPT-4 to deliver a new customer service standard",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4o-fine-tuning": {
+    "title": "Fine-tuning now available for GPT-4o",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-swe-bench-verified": {
+    "title": "Introducing SWE-bench Verified",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4o-system-card": {
+    "title": "GPT-4o System Card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-structured-outputs-in-the-api": {
+    "title": "Introducing Structured Outputs in the API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/searchgpt-prototype": {
+    "title": "SearchGPT is a prototype of new AI search features",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/improving-model-safety-behavior-with-rule-based-rewards": {
+    "title": "Improving Model Safety Behavior with Rule-Based Rewards",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence": {
+    "title": "GPT-4o mini: advancing cost-efficient intelligence",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/prover-verifier-games-improve-legibility": {
+    "title": "Prover-Verifier Games improve legibility of language model outputs",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-and-los-alamos-national-laboratory-work-together": {
+    "title": "OpenAI and Los Alamos National Laboratory announce research partnership",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/consistency-models": {
+    "title": "Consistency Models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/improved-techniques-for-training-consistency-models": {
+    "title": "Improved Techniques for Training Consistency Models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/color-health": {
+    "title": "Using GPT-4o reasoning to transform cancer care",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/expanding-on-how-voice-engine-works-and-our-safety-research": {
+    "title": "Expanding on how Voice Engine works and our safety research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/extracting-concepts-from-gpt-4": {
+    "title": "Extracting Concepts from GPT-4",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/mavenagi": {
+    "title": "Automating customer support agents",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/hello-gpt-4o": {
+    "title": "Hello GPT-4o",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-the-model-spec": {
+    "title": "Introducing the Model Spec",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/api-partnership-with-stack-overflow": {
+    "title": "API Partnership with Stack Overflow",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4-api-general-availability": {
+    "title": "GPT-4 API general availability and deprecation of older models in the Completions API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/the-instruction-hierarchy": {
+    "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-openai-japan": {
+    "title": "Introducing OpenAI Japan",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-improvements-to-the-fine-tuning-api-and-expanding-our-custom-models-program": {
+    "title": "Introducing improvements to the fine-tuning API and expanding our custom models program",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/harvey": {
+    "title": "Customizing models for legal professionals",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/navigating-the-challenges-and-opportunities-of-synthetic-voices": {
+    "title": "Navigating the challenges and opportunities of synthetic voices",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/zelma": {
+    "title": "Making education data accessible",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/lifespan": {
+    "title": "Improving health literacy and patient well-being",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/video-generation-models-as-world-simulators": {
+    "title": "Video generation models as world simulators",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation": {
+    "title": "Building an early warning system for LLM-aided biological threat creation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/new-embedding-models-and-api-updates": {
+    "title": "New embedding models and API updates",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-the-gpt-store": {
+    "title": "Introducing the GPT Store",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/whoop": {
+    "title": "Delivering LLM-powered health solutions",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/weak-to-strong-generalization": {
+    "title": "Weak-to-strong generalization",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/new-models-and-developer-products-announced-at-devday": {
+    "title": "New models and developer products announced at DevDay",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/frontier-model-forum-updates": {
+    "title": "Frontier Model Forum updates",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/typeform": {
+    "title": "Evolving online forms into dynamic data",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/ironclad": {
+    "title": "Simplifying contract reviews with AI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/retool": {
+    "title": "Building AI-powered apps for business",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4v-system-card": {
+    "title": "GPT-4V(ision) system card",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/red-teaming-network": {
+    "title": "OpenAI Red Teaming Network",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-partners-with-scale-to-provide-support-for-enterprises-fine-tuning-models": {
+    "title": "OpenAI partners with Scale to provide support for enterprises fine-tuning models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-3-5-turbo-fine-tuning-and-api-updates": {
+    "title": "GPT-3.5 Turbo fine-tuning and API updates",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/using-gpt-4-for-content-moderation": {
+    "title": "Using GPT-4 for content moderation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/frontier-model-forum": {
+    "title": "Frontier Model Forum",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/viable": {
+    "title": "Accurately analyzing large scale qualitative data",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/function-calling-and-other-api-updates": {
+    "title": "Function calling and other API updates",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/improving-mathematical-reasoning-with-process-supervision": {
+    "title": "Improving mathematical reasoning with process supervision",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/language-models-can-explain-neurons-in-language-models": {
+    "title": "Language models can explain neurons in language models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpts-are-gpts": {
+    "title": "GPTs are GPTs: An early look at the labor market impact potential of large language models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/khan-academy": {
+    "title": "Powering virtual education for the classroom",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/government-of-iceland": {
+    "title": "Preserving languages for the future",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-4-research": {
+    "title": "GPT-4",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/stripe": {
+    "title": "Stripe",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/be-my-eyes": {
+    "title": "Transforming visual accessibility",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/duolingo": {
+    "title": "Filling crucial language learning gaps",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/forecasting-misuse": {
+    "title": "Forecasting potential misuses of language models for disinformation campaigns and how to reduce risk",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/yabble": {
+    "title": "Delivering nuanced insights from customer feedback",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/waymark": {
+    "title": "Fine-tuning GPT-3 to scale video creation",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/inworld-ai-DO-NOT-PUBLISH": {
+    "title": "Creating next-gen characters",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/new-and-improved-embedding-model": {
+    "title": "New and improved embedding model",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/efficient-training-of-language-models-to-fill-in-the-middle": {
+    "title": "Efficient training of language models to fill in the middle",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/a-hazard-analysis-framework-for-code-synthesis-large-language-models": {
+    "title": "A hazard analysis framework for code synthesis large language models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/dall-e-2-extending-creativity": {
+    "title": "DALL·E 2: Extending creativity",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/dall-e-2-pre-training-mitigations": {
+    "title": "DALL·E 2 pre-training mitigations",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/vpt": {
+    "title": "Learning to play Minecraft with Video PreTraining",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/evolution-through-large-models": {
+    "title": "Evolution through large models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/best-practices-for-deploying-language-models": {
+    "title": "Best practices for deploying language models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/teaching-models-to-express-their-uncertainty-in-words": {
+    "title": "Teaching models to express their uncertainty in words",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/economic-impacts-research": {
+    "title": "A research agenda for assessing the economic impacts of code generation models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/language-model-safety-and-misuse": {
+    "title": "Lessons learned on language model safety and misuse",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/economic-impacts": {
+    "title": "Economic impacts research at OpenAI",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/instruction-following": {
+    "title": "Aligning language models to follow instructions",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-text-and-code-embeddings": {
+    "title": "Introducing text and code embeddings",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/webgpt": {
+    "title": "WebGPT: Improving the factual accuracy of language models through web browsing",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/customizing-gpt-3": {
+    "title": "Customizing GPT-3 for your application",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/solving-math-word-problems": {
+    "title": "Solving math word problems",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/truthfulqa": {
+    "title": "TruthfulQA: Measuring how models mimic human falsehoods",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/evaluating-large-language-models-trained-on-code": {
+    "title": "Evaluating large language models trained on code",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/improving-language-model-behavior": {
+    "title": "Improving language model behavior by training on a curated dataset",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-3-apps": {
+    "title": "GPT-3 powers the next generation of apps",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/multimodal-neurons": {
+    "title": "Multimodal neurons in artificial neural networks",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/understanding-the-capabilities-limitations-and-societal-impact-of-large-language-models": {
+    "title": "Understanding the capabilities, limitations, and societal impact of large language models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/clip": {
+    "title": "CLIP: Connecting text and images",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-licenses-gpt-3-technology-to-microsoft": {
+    "title": "OpenAI licenses GPT-3 technology to Microsoft",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/generative-language-modeling-for-automated-theorem-proving": {
+    "title": "Generative language modeling for automated theorem proving",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-to-summarize-with-human-feedback": {
+    "title": "Learning to summarize with human feedback",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/image-gpt": {
+    "title": "Image GPT",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-api": {
+    "title": "OpenAI API",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/language-models-are-few-shot-learners": {
+    "title": "Language models are few-shot learners",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/jukebox": {
+    "title": "Jukebox",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/microscope": {
+    "title": "OpenAI Microscope",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/deep-double-descent": {
+    "title": "Deep double descent",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-2-1-5b-release": {
+    "title": "GPT-2: 1.5B release",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/fine-tuning-gpt-2": {
+    "title": "Fine-tuning GPT-2 from human preferences",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/testing-robustness": {
+    "title": "Testing robustness against unforeseen adversaries",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-2-6-month-follow-up": {
+    "title": "GPT-2: 6-month follow-up",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/musenet": {
+    "title": "MuseNet",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/sparse-transformer": {
+    "title": "Generative modeling with sparse transformers",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/energy-based-models": {
+    "title": "Implicit generation and generalization methods for energy-based models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/better-language-models": {
+    "title": "Better language models and their implications",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-concepts-with-energy-functions": {
+    "title": "Learning concepts with energy functions",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/plan-online-learn-offline": {
+    "title": "Plan online, learn offline: Efficient learning and exploration via model-based control",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/ffjord": {
+    "title": "FFJORD: Free-form continuous dynamics for scalable reversible generative models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/glow": {
+    "title": "Glow: Better reversible generative models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/ingredients-for-robotics-research": {
+    "title": "Ingredients for robotics research",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/block-sparse-gpu-kernels": {
+    "title": "Block-sparse GPU kernels",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/domain-randomization-and-generative-models-for-robotic-grasping": {
+    "title": "Domain randomization and generative models for robotic grasping",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-to-model-other-minds": {
+    "title": "Learning to model other minds",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/prediction-and-control-with-temporal-segment-models": {
+    "title": "Prediction and control with temporal segment models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/attacking-machine-learning-with-adversarial-examples": {
+    "title": "Attacking machine learning with adversarial examples",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/on-the-quantitative-analysis-of-decoder-based-generative-models": {
+    "title": "On the quantitative analysis of decoder-based generative models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/a-connection-between-generative-adversarial-networks-inverse-reinforcement-learning-and-energy-based-models": {
+    "title": "A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/transfer-from-simulation-to-real-world-through-learning-deep-inverse-dynamics-model": {
+    "title": "Transfer from simulation to real world through learning deep inverse dynamics model",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/generative-models": {
+    "title": "Generative models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/managing-ai-investments-in-agentic-era": {
+    "title": "How to manage AI investments in the agentic era",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/how-agents-are-transforming-work": {
+    "title": "How agents are transforming work",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/academy-courses-applying-ai-at-work": {
+    "title": "New OpenAI Academy courses for the next era of work",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-pwc-finance-collaboration": {
+    "title": "OpenAI and PwC collaborate to reimagine the office of the CFO",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/choco": {
+    "title": "Choco automates food distribution with AI agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/safety-bug-bounty": {
+    "title": "Introducing the OpenAI Safety Bug Bounty program",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/powering-product-discovery-in-chatgpt": {
+    "title": "Powering product discovery in ChatGPT",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment": {
+    "title": "How we monitor internal coding agents for misalignment",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-gpt-5-4-mini-and-nano": {
+    "title": "Introducing GPT-5.4 mini and nano",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/designing-agents-to-resist-prompt-injection": {
+    "title": "Designing AI agents to resist prompt injection",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock": {
+    "title": "Introducing the Stateful Runtime Environment for Agents in Amazon Bedrock",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/amazon-partnership": {
+    "title": "OpenAI and Amazon announce strategic partnership",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/pacific-northwest-national-laboratory": {
+    "title": "Pacific Northwest National Laboratory and OpenAI partner to accelerate federal permitting",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/frontier-alliance-partners": {
+    "title": "OpenAI announces Frontier Alliance Partners",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-evmbench": {
+    "title": "Introducing EVMbench",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-openai-frontier": {
+    "title": "Introducing OpenAI Frontier",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/snowflake-partnership": {
+    "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/ai-agent-link-safety": {
+    "title": "Keeping your data safe when an AI agent clicks a link",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/hardening-atlas-against-prompt-injection": {
+    "title": "Continuously hardening ChatGPT Atlas against prompt injection",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/bny": {
+    "title": "BNY builds “AI for everyone, everywhere” with OpenAI",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-gpt-5-2": {
+    "title": "Introducing GPT-5.2",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/agentic-ai-foundation": {
+    "title": "OpenAI co-founds Agentic AI Foundation, donates AGENTS.md",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/mirakl": {
+    "title": "Inside Mirakl's agentic commerce vision",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/accenture-partnership": {
+    "title": "Accenture and OpenAI accelerate enterprise AI success",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-aardvark": {
+    "title": "Introducing Aardvark: OpenAI’s agentic security researcher",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/building-chatgpt-atlas": {
+    "title": "How we built OWL, the new architecture behind our ChatGPT-based browser, Atlas",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/consensus": {
+    "title": "Consensus accelerates research with GPT-5 and Responses API",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-agentkit": {
+    "title": "Introducing AgentKit, new Evals, and RFT for agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-contract-data-agent": {
+    "title": "Turning contracts into searchable data at OpenAI",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/buy-it-in-chatgpt": {
+    "title": "Buy it in ChatGPT: Instant Checkout and the Agentic Commerce Protocol",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/chatgpt-agent-system-card": {
+    "title": "ChatGPT agent System Card",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-chatgpt-agent": {
+    "title": "Introducing ChatGPT agent",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/new-tools-and-features-in-the-responses-api": {
+    "title": "New tools and features in the Responses API",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/browsecomp": {
+    "title": "BrowseComp: a benchmark for browsing agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/paperbench": {
+    "title": "PaperBench: Evaluating AI’s Ability to Replicate AI Research",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/zendesk": {
+    "title": "Moving from intent-based bots to proactive AI agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/hebbia": {
+    "title": "Automating 90% of finance and legal work with agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/new-tools-for-building-agents": {
+    "title": "New tools for building agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/computer-using-agent": {
+    "title": "Computer-Using Agent",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/mle-bench": {
+    "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/clay": {
+    "title": "Achieving 10x growth with agentic sales prospecting",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/klarna": {
+    "title": "Klarna's AI assistant does the work of 700 full-time agents",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/practices-for-governing-agentic-ai-systems": {
+    "title": "Practices for Governing Agentic AI Systems",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/procgen-benchmark": {
+    "title": "Procgen Benchmark",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/safety-gym": {
+    "title": "Safety Gym",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/emergent-tool-use": {
+    "title": "Emergent tool use from multi-agent interaction",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/neural-mmo": {
+    "title": "Neural MMO: A massively multiagent game environment",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/quantifying-generalization-in-reinforcement-learning": {
+    "title": "Quantifying generalization in reinforcement learning",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/reinforcement-learning-with-prediction-based-rewards": {
+    "title": "Reinforcement learning with prediction-based rewards",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-montezumas-revenge-from-a-single-demonstration": {
+    "title": "Learning Montezuma’s Revenge from a single demonstration",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-policy-representations-in-multiagent-systems": {
+    "title": "Learning policy representations in multiagent systems",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/debate": {
+    "title": "AI safety via debate",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/evolved-policy-gradients": {
+    "title": "Evolved Policy Gradients",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-a-hierarchy": {
+    "title": "Learning a hierarchy",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/meta-learning-for-wrestling": {
+    "title": "Meta-learning for wrestling",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/more-on-dota-2": {
+    "title": "More on Dota 2",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-to-cooperate-compete-and-communicate": {
+    "title": "Learning to cooperate, compete, and communicate",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/learning-to-communicate": {
+    "title": "Learning to communicate",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/emergence-of-grounded-compositional-language-in-multi-agent-populations": {
+    "title": "Emergence of grounded compositional language in multi-agent populations",
+    "source_id": "openai_agents_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/australian-payments-plus": {
+    "title": "Australian Payments Plus moves faster with ChatGPT and Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/daybreak-securing-the-world": {
+    "title": "Daybreak: Tools for securing every organization in the world",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-maxxing-long-running-work": {
+    "title": "Codex-maxxing for long-running work",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment": {
+    "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-to-acquire-ona": {
+    "title": "OpenAI to acquire Ona",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/using-codex-to-simulate-black-holes": {
+    "title": "How an astrophysicist uses Codex to help simulate black holes",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-on-oracle-cloud": {
+    "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/nextdoor": {
+    "title": "How engineers at Nextdoor use Codex to build without limits",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/notion": {
+    "title": "What Codex unlocks for Notion",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/endava-frontiers": {
+    "title": "How Endava is redesigning software delivery around AI agents",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/wasmer": {
+    "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-for-every-role-tool-workflow": {
+    "title": "Codex for every role, tool, and workflow",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-for-knowledge-work": {
+    "title": "Codex is becoming a productivity tool for everyone",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws": {
+    "title": "OpenAI frontier models and Codex are now available on AWS",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/braintrust": {
+    "title": "How Braintrust turns customer requests into code with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/endava": {
+    "title": "How Endava builds an agentic organization with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/cisco": {
+    "title": "Cisco and OpenAI redefine enterprise engineering with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/building-self-improving-tax-agents-with-codex": {
+    "title": "Building self-improving tax agents with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gartner-2026-agentic-coding-leader": {
+    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/virgin-atlantic": {
+    "title": "How Virgin Atlantic ships faster with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/ramp": {
+    "title": "How Ramp engineers accelerate code review with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/dell-codex-enterprise-partnership": {
+    "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/sea-david-chen": {
+    "title": "Sea's View on the Future of Agentic Software Development with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/work-with-codex-from-anywhere": {
+    "title": "Work with Codex from anywhere",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/building-codex-windows-sandbox": {
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/nvidia": {
+    "title": "How NVIDIA engineers and researchers build with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/autoscout24": {
+    "title": "AutoScout24 scales engineering with AI-powered workflows",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/running-codex-safely": {
+    "title": "Running Codex safely at OpenAI",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/simplex": {
+    "title": "Simplex rethinks software development with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/singular-bank": {
+    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-b2b-signals": {
+    "title": "How frontier firms are pulling ahead",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-on-aws": {
+    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/open-source-codex-orchestration-symphony": {
+    "title": "An open-source spec for orchestration: Symphony",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/speeding-up-agentic-workflows-with-websockets": {
+    "title": "Speeding up agentic workflows with WebSockets in the Responses API",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-workspace-agents-in-chatgpt": {
+    "title": "Introducing workspace agents in ChatGPT",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/scaling-codex-to-enterprises-worldwide": {
+    "title": "Scaling Codex to enterprises worldwide",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise": {
+    "title": "OpenAI helps Hyatt advance AI among colleagues",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-for-almost-everything": {
+    "title": "Codex for (almost) everything",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/cloudflare-openai-agent-cloud": {
+    "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/cyberagent": {
+    "title": "CyberAgent moves faster with ChatGPT Enterprise and Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/next-phase-of-enterprise-ai": {
+    "title": "The next phase of enterprise AI",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-flexible-pricing-for-teams": {
+    "title": "Codex now offers more flexible pricing for teams",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/accelerating-the-next-phase-ai": {
+    "title": "Accelerating the next phase of AI",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-to-acquire-astral": {
+    "title": "OpenAI to acquire Astral",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/why-codex-security-doesnt-include-sast": {
+    "title": "Why Codex Security Doesn’t Include a SAST Report",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/rakuten": {
+    "title": "Rakuten fixes issues twice as fast with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-security-now-in-research-preview": {
+    "title": "Codex Security: now in research preview",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/figma-partnership": {
+    "title": "OpenAI Codex and Figma launch seamless code-to-design experience",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified": {
+    "title": "Why we no longer evaluate SWE-bench Verified",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/beyond-rate-limits": {
+    "title": "Beyond rate limits: scaling access to Codex and Sora",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-gpt-5-3-codex-spark": {
+    "title": "Introducing GPT-5.3-Codex-Spark",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/harness-engineering": {
+    "title": "Harness engineering: leveraging Codex in an agent-first world",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-gpt-5-3-codex": {
+    "title": "Introducing GPT-5.3-Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-3-codex-system-card": {
+    "title": "GPT-5.3-Codex System Card",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/unlocking-the-codex-harness": {
+    "title": "Unlocking the Codex harness: how we built the App Server",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-the-codex-app": {
+    "title": "Introducing the Codex app",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/inside-our-in-house-data-agent": {
+    "title": "Inside OpenAI’s in-house data agent",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/unrolling-the-codex-agent-loop": {
+    "title": "Unrolling the Codex agent loop",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/datadog": {
+    "title": "Datadog uses Codex for system-level code review",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-gpt-5-2-codex": {
+    "title": "Introducing GPT-5.2-Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-2-codex-system-card": {
+    "title": "Addendum to GPT-5.2 System Card: GPT-5.2-Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/shipping-sora-for-android-with-codex": {
+    "title": "How We Used Codex to Ship Sora for Android in 28 Days",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-1-codex-max-system-card": {
+    "title": "GPT-5.1-Codex-Max System Card",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-1-codex-max": {
+    "title": "Building more with GPT-5.1-Codex-Max",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-now-generally-available": {
+    "title": "Codex is now generally available",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-upgrades-to-codex": {
+    "title": "Introducing upgrades to Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-codex": {
+    "title": "Addendum to GPT-5 system card: GPT-5-Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o3-o4-mini-codex-system-card-addendum": {
+    "title": "Addendum to o3 and o4-mini system card: Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/introducing-codex": {
+    "title": "Introducing Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o1-coding": {
+    "title": "Coding with OpenAI o1",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/o1-genetics": {
+    "title": "Decoding genetics with OpenAI o1",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/paf": {
+    "title": "Surging developer productivity with custom GPTs",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-apps": {
+    "title": "Powering next generation applications with OpenAI Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/gpt-3-edit-insert": {
+    "title": "New GPT-3 capabilities: Edit & insert",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/openai-codex": {
+    "title": "OpenAI Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/japan-economic-blueprint": {
+    "title": "AI in Japan—OpenAI’s Japan Economic Blueprint",
+    "source_id": "openai_codex_engineering",
+    "first_seen_at": "2026-07-22T13:37:27+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community": {
+    "title": "Building AI infrastructure with the Effingham County community",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-22T13:37:27+00:00"
   }
 }

@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-21 21:20 Asia/Shanghai</dd>
+            <dd>2026-07-22 21:37 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>4</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>201</dd>
+            <dd>204</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>59</strong>
+      <strong>61</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="labs/openai.html">
       <span>OpenAI</span>
-      <strong>116</strong>
+      <strong>117</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-21"><span>2026-07-21</span><strong>3</strong></a>
+          <a href="#date-2026-07-22"><span>2026-07-22</span><strong>3</strong></a>
+<a href="#date-2026-07-21"><span>2026-07-21</span><strong>3</strong></a>
 <a href="#date-2026-07-20"><span>2026-07-20</span><strong>1</strong></a>
 <a href="#date-2026-07-16"><span>2026-07-16</span><strong>3</strong></a>
 <a href="#date-2026-07-15"><span>2026-07-15</span><strong>2</strong></a>
@@ -221,7 +222,7 @@
       </section>
 
       <footer>
-        Generated: 2026-07-21 21:20 Asia/Shanghai
+        Generated: 2026-07-22 21:37 Asia/Shanghai
       </footer>
     </aside>
 
@@ -237,6 +238,101 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-07-22">
+              <div class="date-heading">
+                <h3>2026-07-22</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_agents">OpenAI Agents</span>
+        <span>OpenAI Engineering - Agents</span>
+        <span>2026-07-22</span>
+        <span>Added 2026-07-22</span>
+      </div>
+      <h2>Introducing OpenAI Presence</h2>
+      <a class="original-link" href="https://openai.com/index/introducing-openai-presence" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 在 2026-07-22 发布 Presence，这不是单纯的 model launch，而是一个面向 enterprise 的 deployed agent product：围绕 voice / chat agents，把 policy、guardrails、approved actions、simulation、evaluation 和 Codex-powered improvement process 打包进同一套交付面。官方把它定位成“让高价值 workflow 里的 agents 可控地进 production”的系统，而不是 self-serve API feature。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Presence 面向具体 job deployment：例如 billing、insurance claims、employee IT support，agent 只拿完成该任务所需的 knowledge 和 system access</li><li>控制面由企业定义，包括可执行动作、何时需要 approval、何时升级给人，OpenAI 强调的是 policy / escalation / guardrail 而不只是更强模型</li><li>上线前会用 simulations 和 graders 测 outcome correctness、policy compliance、tool use、escalation behavior；上线后再根据 production session 和 escalation 信号持续迭代</li><li>Codex 在这里扮演 post-launch improvement engine：根据真实 session 信号提出更新建议，团队可先对比 production 版本测试，再做 controlled rollout</li><li>OpenAI 给出的最硬数字是：其英文电话支持渠道 1-888-GPT-0090 已由 Presence 驱动，75% inbound issues 无需人工处理，且 Codex-driven loop 在 10 天内把 human handoff 再降了 15 个百分点</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>Presence 的信号在于 OpenAI 正把 agents 商业化为一套带 deployment service、evaluation layer 和 managed improvement loop 的 operating model。对企业买方来说，这比单独购买模型更接近“可上线系统”；对开发者生态来说，也意味着 agent platform 的竞争点正在从 reasoning 质量转向 governance、simulation 和 post-launch adaptation。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一个值得重点记录的 agent product move。它说明 OpenAI 想卖的不只是 frontier model，而是带 FDE 和 systems integrator 的 vertically integrated deployment stack。我的保留判断是：这类产品的真实壁垒不在 demo，而在实施成本、交付速度和客户是否愿意接受非 self-serve 的交付模式；但从方向上看，它已经比普通 enterprise case study 更像一个完整产品线。</p>
+      </section>
+      <div class="tags"><span>OpenAI agents</span><span>Presence</span><span>enterprise deployment</span><span>voice agents</span><span>Codex</span><span>simulations</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-07-22</span>
+        <span>Added 2026-07-22</span>
+      </div>
+      <h2>Building verification loops in Claude Code with skills</h2>
+      <a class="original-link" href="https://claude.com/blog/building-verification-loops-in-claude-code-with-skills" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 把 verification loop 讲得比常见“跑一下 tests”更系统：Claude Code 已经会从 type checker、linter、runtime error 里读 deterministic signals，但真正能把 agent 质量拉高的，是把你反复手工做的检查显式写成 skills，让 Claude 在 gather context -&gt; take action -&gt; verify results 的 loop 里自己继续修，直到过关或触发升级。文章还把 loop 的落点分成 standalone、embedded、chained、PR-tied 四类，方便团队按 workflow 成熟度放置检查。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>内建 verification 不只是一条 /verify 指令，还包括 toolchain error handling、Code Review、GitHub Actions、spec validation 和 rubric-style grading</li><li>可复用的人工检查都应该被外化成 plain-English rule，再包装成 skill；关键不是高深，而是把团队真正执行的 acceptance check 写清楚</li><li>文章给出一个很实用的判断框架：偶发跨流程检查用 standalone，产物自带检查用 embedded，多个 handoff 串起来用 chained，PR 稳态检查则交给 CI / review flow</li><li>Anthropic 明说 built-in 或 plugin-managed skills 不适合直接嵌改，碰到这类不可控技能时更适合 chain，而不是硬塞进同一个 skill body</li><li>核心思想是把“你总会手工再看一眼的东西”迁移成 agent 能自动闭环的 deterministic or semi-deterministic feedback loop</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇虽然不是模型大新闻，但对真正把 coding agent 放进日常开发的人很重要。团队实际卡住的往往不是生成能力，而是反复返工、人工补验和质量门控位置不清。把这些 check productize 成 skills，本质上是在降低 agent 使用中的 coordination tax。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我认可它的 framing，因为它把“prompt 写得更好”退后了一步，把注意力放到 loop placement 和 verification ownership 上。最值得抄的是 standalone / embedded / chained / PR 这套分层。限制也明显：这仍然要求团队先知道自己在验什么，小团队如果流程本来就松散，skill 只会把混乱写进文件。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>skills</span><span>verification loops</span><span>code review</span><span>CI</span><span>workflow design</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-07-22</span>
+        <span>Added 2026-07-22</span>
+      </div>
+      <h2>How Outtake built a cyber investigator on Claude</h2>
+      <a class="original-link" href="https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 用 Outtake 的案例具体展示了一个 long-running cyber investigator 怎么落地：Recon Agent 不只是读 threat intel，而是会沿着仿冒域名、假 Telegram 支持账号、登录流转向等线索持续追踪对手基础设施，单次 session 中位数 16 分钟、常见会拉到 1 小时以上，最长已跑到 2 小时。技术路线也很明确：先用 Claude Code 把调查流程原型化，再迁移到 Claude Agent SDK，把 memory / context / filesystem 控制收回来，同时保留 coding agent 的 improvisation 能力。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Outtake 不是只做单点告警，而是把 public intel、brand impersonation 和 internal access 三段攻击链串起来，让 agent 追整张 adversarial graph</li><li>团队先手工跑真实调查，定义 what good looks like，再把这个标准逐步交给 agent，避免一开始就把 workflow 机械脚本化</li><li>Claude Code 被用作第一代 harness，因为 agent 需要写代码、运行代码、临时造工具，并直接与恶意站点交互验证凭证会被送去哪里</li><li>生产化阶段转向 Claude Agent SDK，但保留 Claude Code 形成的 patterns，用更细粒度的 memory、context、filesystem control 支撑长时程会话</li><li>最关键的是 eval loop：agent 会自己提出“缺什么工具才能查得更好”，另一个 coding agent 根据建议写工具并补测试，人工只在末端判定结果是否变好</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇最有价值的部分是它把“长时程 agent”从抽象架构讨论拉回到攻防一线：真正难的不是让模型说出分析结论，而是让 agent 在陌生、高噪声、对手会变招的环境里持续收集证据、改造工具、保持轨道。对安全团队来说，这比泛泛的 agent 叙事更接近真实部署压力。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会把它看成 Claude Code -&gt; Agent SDK 的一个很实操的迁移样本。亮点不是又一个 customer story，而是他们明确把 orchestration 约束、开放式 coding capability、filesystem memory 和 eval-driven tool growth 拼成一套闭环。保留意见也要写清：文章给了不少架构 intuition，但对误报率、调查失败模式和安全边界仍讲得不够细。</p>
+      </section>
+      <div class="tags"><span>Anthropic agents</span><span>Claude Code</span><span>Agent SDK</span><span>cybersecurity</span><span>long-running agents</span><span>eval loops</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-21">
               <div class="date-heading">
                 <h3>2026-07-21</h3>

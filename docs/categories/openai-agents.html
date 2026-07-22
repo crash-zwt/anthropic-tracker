@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-21 21:20 Asia/Shanghai</dd>
+            <dd>2026-07-22 21:37 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>4</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>201</dd>
+            <dd>204</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>59</strong>
+      <strong>61</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>116</strong>
+      <strong>117</strong>
     </a>
     
 
@@ -96,13 +96,14 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-16"><span>2026-07-16</span><strong>1</strong></a>
+          <a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
+<a href="#date-2026-07-16"><span>2026-07-16</span><strong>1</strong></a>
 <a href="#date-2026-07-09"><span>2026-07-09</span><strong>1</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-21 21:20 Asia/Shanghai
+        Generated: 2026-07-22 21:37 Asia/Shanghai
       </footer>
     </aside>
 
@@ -118,6 +119,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-07-22">
+              <div class="date-heading">
+                <h3>2026-07-22</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_agents">OpenAI Agents</span>
+        <span>OpenAI Engineering - Agents</span>
+        <span>2026-07-22</span>
+        <span>Added 2026-07-22</span>
+      </div>
+      <h2>Introducing OpenAI Presence</h2>
+      <a class="original-link" href="https://openai.com/index/introducing-openai-presence" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 在 2026-07-22 发布 Presence，这不是单纯的 model launch，而是一个面向 enterprise 的 deployed agent product：围绕 voice / chat agents，把 policy、guardrails、approved actions、simulation、evaluation 和 Codex-powered improvement process 打包进同一套交付面。官方把它定位成“让高价值 workflow 里的 agents 可控地进 production”的系统，而不是 self-serve API feature。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Presence 面向具体 job deployment：例如 billing、insurance claims、employee IT support，agent 只拿完成该任务所需的 knowledge 和 system access</li><li>控制面由企业定义，包括可执行动作、何时需要 approval、何时升级给人，OpenAI 强调的是 policy / escalation / guardrail 而不只是更强模型</li><li>上线前会用 simulations 和 graders 测 outcome correctness、policy compliance、tool use、escalation behavior；上线后再根据 production session 和 escalation 信号持续迭代</li><li>Codex 在这里扮演 post-launch improvement engine：根据真实 session 信号提出更新建议，团队可先对比 production 版本测试，再做 controlled rollout</li><li>OpenAI 给出的最硬数字是：其英文电话支持渠道 1-888-GPT-0090 已由 Presence 驱动，75% inbound issues 无需人工处理，且 Codex-driven loop 在 10 天内把 human handoff 再降了 15 个百分点</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>Presence 的信号在于 OpenAI 正把 agents 商业化为一套带 deployment service、evaluation layer 和 managed improvement loop 的 operating model。对企业买方来说，这比单独购买模型更接近“可上线系统”；对开发者生态来说，也意味着 agent platform 的竞争点正在从 reasoning 质量转向 governance、simulation 和 post-launch adaptation。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是一个值得重点记录的 agent product move。它说明 OpenAI 想卖的不只是 frontier model，而是带 FDE 和 systems integrator 的 vertically integrated deployment stack。我的保留判断是：这类产品的真实壁垒不在 demo，而在实施成本、交付速度和客户是否愿意接受非 self-serve 的交付模式；但从方向上看，它已经比普通 enterprise case study 更像一个完整产品线。</p>
+      </section>
+      <div class="tags"><span>OpenAI agents</span><span>Presence</span><span>enterprise deployment</span><span>voice agents</span><span>Codex</span><span>simulations</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-16">
               <div class="date-heading">
                 <h3>2026-07-16</h3>
