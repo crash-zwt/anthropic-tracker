@@ -2825,5 +2825,10 @@
     "title": "Building AI infrastructure with the Effingham County community",
     "source_id": "openai_codex_product",
     "first_seen_at": "2026-07-22T13:37:27+00:00"
+  },
+  "https://openai.com/index/ntt-data": {
+    "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-23T13:00:00+00:00"
   }
 }

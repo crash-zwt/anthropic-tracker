@@ -1,5 +1,37 @@
 [
   {
+    "id": "ce627deb9928",
+    "url": "https://openai.com/index/ntt-data",
+    "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+    "source_id": "openai_codex_product",
+    "source_name": "OpenAI Product - Codex",
+    "category": "openai_code",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-22",
+    "added_at": "2026-07-23T13:00:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 在 2026-07-22 发布这篇 NTT DATA Group case study，核心不是新模型，而是 Codex 在大型 IT 服务企业里的 organization rollout：先用 ChatGPT Enterprise 建立 AI 使用习惯，再把 Codex 扩到约 9,000 名技术和非技术员工，去执行 incident analysis、跨文件 automation 和 reporting 这类边界清晰的任务。最硬的 proof point 是一次原本需要 5 名资深工程师 3 天完成的复杂 incident analysis，被 Codex 压到 30 分钟。",
+      "key_points": [
+        "NTT DATA Group 先在全公司铺开 ChatGPT Enterprise，并由内部 OpenAI Center of Excellence 负责 license、validation、events、usage monitoring 和 knowledge sharing，为后续 Codex rollout 打基础",
+        "最早打出声量的 use case 是 critical system 的 incident analysis：原来要 5 位 experienced engineers 做 3 天，改成 Codex agent 后 30 分钟完成，直接让高层看到 agentic execution 的价值",
+        "使用场景已经从 engineering 扩到 nontechnical roles，包括整理大量文件、分析 Excel 数据、生成报告，以及把信用卡账单中的交通支出转录到差旅报销表",
+        "为了让 9,000 人放心用，NTT DATA Group 明确了 data usage、system access、network handling、sandbox mode、automation level 和 human review 的安全治理规则",
+        "官方给出的进一步结果包括：通过 usage guide 和 hands-on training，把 weekly active Codex users 拉高 1.4 倍；还用 Playwright 做内部系统自动化，并把能力封装成 reusable Skills"
+      ],
+      "why_it_matters": "对这个 tracker 来说，这类 post 的价值在于它展示 Codex 正从 developer assistant 变成 enterprise task-execution layer。重点不只是“写代码更快”，而是把明确、可验证、跨文件或跨系统的工作流程委托给 agent，并用 CoE、training、policy 和 sandbox governance 去支撑规模化扩散。相比泛泛 customer story，这篇给了更像真实 rollout playbook 的 operational detail。",
+      "my_take": "我会把这篇评为 medium practical signal。亮点是 adoption path 很真实：先铺 ChatGPT Enterprise，再由 CoE、security rules、training 和 reusable Skills 把 Codex 扩散到更广的人群。保留点也很明确：30 分钟 incident analysis 是很强的 flagship example，但长期价值取决于这些 automations 能否在更多 team 中稳定复用，而不是靠少数 champion case 拉动叙事。",
+      "tags": [
+        "Codex",
+        "enterprise adoption",
+        "incident analysis",
+        "skills",
+        "governance",
+        "NTT DATA"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "c54f46e53d48",
     "url": "https://openai.com/index/introducing-openai-presence",
     "title": "Introducing OpenAI Presence",
