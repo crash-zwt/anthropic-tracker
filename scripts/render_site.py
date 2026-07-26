@@ -6,6 +6,7 @@ from __future__ import annotations
 import datetime as dt
 import html
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -195,7 +196,7 @@ def main() -> int:
     sources = load_json(ROOT / "config" / "sources.json", {"sources": []})["sources"]
     latest_run = runs[0] if runs else {}
     last_checked = latest_run.get("checked_at_display", "Never")
-    generated_at = dt.datetime.now(dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M Asia/Shanghai")
+    generated_at = os.getenv("TRACKER_GENERATED_AT") or dt.datetime.now(dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime("%Y-%m-%d %H:%M Asia/Shanghai")
 
     total_by_category = {key: 0 for key in CATEGORY_LABELS}
     total_by_lab = {key: 0 for key in LAB_LABELS}
