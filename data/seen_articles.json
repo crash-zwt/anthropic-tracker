@@ -2830,5 +2830,25 @@
     "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
     "source_id": "openai_codex_product",
     "first_seen_at": "2026-07-23T13:00:00+00:00"
+  },
+  "https://www.anthropic.com/news/claude-opus-5": {
+    "title": "Introducing Claude Opus 5",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-07-26T03:56:44+00:00"
+  },
+  "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models": {
+    "title": "The new rules of context engineering for Claude 5 generation models",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-07-26T03:56:44+00:00"
+  },
+  "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case": {
+    "title": "Claude models explained: choosing the best model for your use case",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-07-26T03:56:44+00:00"
+  },
+  "https://openai.com/index/codex-collaborator-creative-team/": {
+    "title": "How Codex became a collaborator for OpenAI’s creative team",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-26T03:56:44+00:00"
   }
 }

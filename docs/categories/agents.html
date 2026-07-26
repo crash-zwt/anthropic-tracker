@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-23 21:00 Asia/Shanghai</dd>
+            <dd>2026-07-26 11:56 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>1</dd>
+            <dd>4</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>205</dd>
+            <dd>209</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>61</strong>
+      <strong>64</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>118</strong>
+      <strong>119</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
+          <a href="#date-2026-07-24"><span>2026-07-24</span><strong>2</strong></a>
+<a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
 <a href="#date-2026-06-10"><span>2026-06-10</span><strong>1</strong></a>
 <a href="#date-2026-05-27"><span>2026-05-27</span><strong>1</strong></a>
 <a href="#date-2026-05-13"><span>2026-05-13</span><strong>1</strong></a>
@@ -114,7 +115,7 @@
       </section>
 
       <footer>
-        Generated: 2026-07-23 21:00 Asia/Shanghai
+        Generated: 2026-07-26 11:56 Asia/Shanghai
       </footer>
     </aside>
 
@@ -130,6 +131,72 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-07-24">
+              <div class="date-heading">
+                <h3>2026-07-24</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-07-24</span>
+        <span>Added 2026-07-26</span>
+      </div>
+      <h2>Claude models explained: choosing the best model for your use case</h2>
+      <a class="original-link" href="https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 在 2026-07-24 发这篇文章，目的不是宣布新模型，而是统一它当前模型族的选型口径。最核心的 advice 很直接：默认先从 most intelligent generally available model 开始，再用 effort level 去调成本和延迟，而不是一上来为了省 token 先选小模型。理由是更强模型往往能用更少 turns、thinking time 和 retry 完成任务，真实 cost-per-task 反而更低，也更容易分辨问题到底出在模型还是 setup。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章把选型问题从“价格/参数量”转成了 workload fit：先问 intelligence requirement、latency sensitivity、cost ceiling，再决定是否往下切型号</li><li>Anthropic 对模型族做了职责划分：Mythos / Fable 面向更高上限与长时程难题，Opus 面向 reasoning-intensive enterprise work，其他层级则更多服务成本或速度约束</li><li>一个反直觉但很实用的判断是：小模型虽然 unit price 低，但常常因为出错、返工和 debugging 成本，导致整体 task cost 更高</li><li>文章也承认另一种方向存在：组织也可以从最便宜模型往上试，但前提是你已经有清晰的 quality bar 与 eval 方法</li><li>整体基调是把 model selection 当成 ops / eval 问题，而不是单次采购决策</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对跟踪 lab 动态的人来说，这篇不是 headline news，但它暴露了 Anthropic 想让客户如何理解其产品线。随着模型等级和 effort knobs 越来越多，真正影响 adoption 的不只是“模型强不强”，而是用户能不能形成稳定的 routing 与 evaluation 方法。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 medium importance。它的价值主要在 practical framing，而不是信息增量。最值得注意的是 Anthropic 把 cost-per-task 讲得非常明确，这跟 enterprise deployment 的真实指标更一致。弱点也明显：文章更像选型原则说明书，缺少跨行业 workload 的具体 decision table，所以真正落地仍需要团队自己补 eval。</p>
+      </section>
+      <div class="tags"><span>Claude models</span><span>model selection</span><span>cost per task</span><span>effort levels</span><span>Anthropic</span><span>evaluation</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-07-24</span>
+        <span>Added 2026-07-26</span>
+      </div>
+      <h2>The new rules of context engineering for Claude 5 generation models</h2>
+      <a class="original-link" href="https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这篇 2026-07-24 的 Claude 博客不是在讲“prompt 再写长一点”，而是在讲 Claude 5 generation models 上下文设计范式的迁移：Anthropic 说他们把 Claude Code system prompt 砍掉了 80% 以上，却没有 measurable eval loss。核心判断是 newer models 的 judgment 已经足够强，很多旧时代靠 rules、examples、重复说明堆起来的 prompt engineering，应该让位给更轻的 context、表达更好的 tools，以及 progressive disclosure。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章把 context engineering 定义成 system prompt、Skills、CLAUDE.md、memory 等跨请求共享上下文的总和，而不是单次 prompt 优化</li><li>最鲜明的结论是“less prompt, more judgment”：以前为了防 worst-case behavior 需要写死很多 guardrails，现在更应该让模型根据周围代码风格和任务语境做判断</li><li>Anthropic 明确反对一些旧习惯，包括给太多 tool examples、把所有规则 upfront 塞进主 prompt、在多个地方重复同一条指令</li><li>替代方案是更重视 interface design 与 progressive disclosure，例如把 verification / code review 放进可按需加载的 skills，而不是长期占用主上下文</li><li>文章还点出 memory、artifacts、skills 已经替代 CLAUDE.md 承担部分长期上下文职责，意味着 agent 运行时上下文正在变成更结构化的系统能力</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对 agent builder 的意义很实际。很多团队还在用 2024-2025 年的 prompt discipline 去约束 2026 代模型，结果是 system prompt 越写越肥、工具越加越难用、冲突规则越来越多。Anthropic 这里给出的不是抽象哲学，而是内部 prompt 退场、tool/skill/interface 上位的产品化经验。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 high importance，但更偏 practical high than headline high。最值得抄的是它把“删规则”说成一种能力升级，而不是偷懒；这跟很多 agent stack 的真实演化方向一致。需要保留的判断是：这类结论只在模型 judgment 足够强、tooling 足够好时成立；如果团队底层接口烂、验收标准模糊，删 prompt 只会把问题暴露得更快。</p>
+      </section>
+      <div class="tags"><span>context engineering</span><span>Claude Code</span><span>agents</span><span>skills</span><span>prompting</span><span>progressive disclosure</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-22">
               <div class="date-heading">
                 <h3>2026-07-22</h3>

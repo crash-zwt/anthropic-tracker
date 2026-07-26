@@ -1,5 +1,133 @@
 [
   {
+    "url": "https://openai.com/index/codex-collaborator-creative-team/",
+    "title": "How Codex became a collaborator for OpenAI’s creative team",
+    "source_id": "openai_codex_product",
+    "source_name": "OpenAI Product - Codex",
+    "category": "openai_code",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-16",
+    "summary": {
+      "tldr": "OpenAI 这篇 2026-07-16 的 internal case study 试图把 Codex 从 engineering tool 扩写成 creative workflow collaborator。文章主角是 OpenAI Creative Specialist Chad Nelson：他不是用 Codex 直接替代创意判断，而是把它当成理解 brief、品牌手册、style guide、构图约束和 prototype intent 的技术搭档，用来快速搭工具、扩写 campaign directions，并缩短从概念到可操作原型的距离。",
+      "key_points": [
+        "文章强调 Codex 对 creative team 的价值不只是 copywriting，而是理解品牌上下文后帮忙搭自定义工具、UI、sliders 和 visual workflow",
+        "一个具体用法是把 brand books、design style guides、composition constraints 等非传统代码材料交给 Codex，让它围绕项目上下文生成更贴近 brief 的工具与方向",
+        "在创意发散阶段，OpenAI 给出的例子是：原本也许只能探索 5 到 10 个 campaign directions，现在能在一天内生成 50 个方向，再由人筛到最强的 10 个",
+        "Codex 被放在 concepting、workflow design 和 technical implementation 的交界处，减少 creative idea 到 working prototype 之间的 handoff friction",
+        "整篇文章的 framing 仍然是 human-in-the-loop：更多 options、更快原型，但最后的 taste、selection 和 judgment 仍由 creative team 自己承担"
+      ],
+      "why_it_matters": "这类案例对 tracker 的意义在于，它把 Codex 的扩散范围继续从 software engineering 推向 broader knowledge and creative work。和单纯“某客户提效”不同，这篇更像在验证一个命题：如果 agent 能理解 full-project context，它就不只是写代码工具，而会变成跨职能的 workflow substrate。",
+      "my_take": "我会给 medium practical signal。文章最有价值的是它没有把创意工作讲成完全自动化，而是强调 Codex 帮人更快搭工具、探索更多方向、减少技术阻塞。这比空泛地说“AI 赋能创意”更可信。限制同样明显：官方没有给出太多 hard metrics，除了更快 idea expansion 之外，长期价值还要看这些 bespoke workflows 能不能被更广泛复用。",
+      "tags": [
+        "Codex",
+        "creative workflows",
+        "prototyping",
+        "OpenAI on OpenAI",
+        "design tools",
+        "human in the loop"
+      ],
+      "importance": "medium"
+    },
+    "id": "8a90bae15238",
+    "added_at": "2026-07-26T03:56:44+00:00"
+  },
+  {
+    "url": "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case",
+    "title": "Claude models explained: choosing the best model for your use case",
+    "source_id": "claude_agents",
+    "source_name": "Claude Blog - Agents",
+    "category": "agents",
+    "vendor": "Anthropic",
+    "published_at": "2026-07-24",
+    "summary": {
+      "tldr": "Anthropic 在 2026-07-24 发这篇文章，目的不是宣布新模型，而是统一它当前模型族的选型口径。最核心的 advice 很直接：默认先从 most intelligent generally available model 开始，再用 effort level 去调成本和延迟，而不是一上来为了省 token 先选小模型。理由是更强模型往往能用更少 turns、thinking time 和 retry 完成任务，真实 cost-per-task 反而更低，也更容易分辨问题到底出在模型还是 setup。",
+      "key_points": [
+        "文章把选型问题从“价格/参数量”转成了 workload fit：先问 intelligence requirement、latency sensitivity、cost ceiling，再决定是否往下切型号",
+        "Anthropic 对模型族做了职责划分：Mythos / Fable 面向更高上限与长时程难题，Opus 面向 reasoning-intensive enterprise work，其他层级则更多服务成本或速度约束",
+        "一个反直觉但很实用的判断是：小模型虽然 unit price 低，但常常因为出错、返工和 debugging 成本，导致整体 task cost 更高",
+        "文章也承认另一种方向存在：组织也可以从最便宜模型往上试，但前提是你已经有清晰的 quality bar 与 eval 方法",
+        "整体基调是把 model selection 当成 ops / eval 问题，而不是单次采购决策"
+      ],
+      "why_it_matters": "对跟踪 lab 动态的人来说，这篇不是 headline news，但它暴露了 Anthropic 想让客户如何理解其产品线。随着模型等级和 effort knobs 越来越多，真正影响 adoption 的不只是“模型强不强”，而是用户能不能形成稳定的 routing 与 evaluation 方法。",
+      "my_take": "我会给 medium importance。它的价值主要在 practical framing，而不是信息增量。最值得注意的是 Anthropic 把 cost-per-task 讲得非常明确，这跟 enterprise deployment 的真实指标更一致。弱点也明显：文章更像选型原则说明书，缺少跨行业 workload 的具体 decision table，所以真正落地仍需要团队自己补 eval。",
+      "tags": [
+        "Claude models",
+        "model selection",
+        "cost per task",
+        "effort levels",
+        "Anthropic",
+        "evaluation"
+      ],
+      "importance": "medium"
+    },
+    "id": "f81b32306f73",
+    "added_at": "2026-07-26T03:56:44+00:00"
+  },
+  {
+    "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "title": "The new rules of context engineering for Claude 5 generation models",
+    "source_id": "claude_agents",
+    "source_name": "Claude Blog - Agents",
+    "category": "agents",
+    "vendor": "Anthropic",
+    "published_at": "2026-07-24",
+    "summary": {
+      "tldr": "这篇 2026-07-24 的 Claude 博客不是在讲“prompt 再写长一点”，而是在讲 Claude 5 generation models 上下文设计范式的迁移：Anthropic 说他们把 Claude Code system prompt 砍掉了 80% 以上，却没有 measurable eval loss。核心判断是 newer models 的 judgment 已经足够强，很多旧时代靠 rules、examples、重复说明堆起来的 prompt engineering，应该让位给更轻的 context、表达更好的 tools，以及 progressive disclosure。",
+      "key_points": [
+        "文章把 context engineering 定义成 system prompt、Skills、CLAUDE.md、memory 等跨请求共享上下文的总和，而不是单次 prompt 优化",
+        "最鲜明的结论是“less prompt, more judgment”：以前为了防 worst-case behavior 需要写死很多 guardrails，现在更应该让模型根据周围代码风格和任务语境做判断",
+        "Anthropic 明确反对一些旧习惯，包括给太多 tool examples、把所有规则 upfront 塞进主 prompt、在多个地方重复同一条指令",
+        "替代方案是更重视 interface design 与 progressive disclosure，例如把 verification / code review 放进可按需加载的 skills，而不是长期占用主上下文",
+        "文章还点出 memory、artifacts、skills 已经替代 CLAUDE.md 承担部分长期上下文职责，意味着 agent 运行时上下文正在变成更结构化的系统能力"
+      ],
+      "why_it_matters": "这篇对 agent builder 的意义很实际。很多团队还在用 2024-2025 年的 prompt discipline 去约束 2026 代模型，结果是 system prompt 越写越肥、工具越加越难用、冲突规则越来越多。Anthropic 这里给出的不是抽象哲学，而是内部 prompt 退场、tool/skill/interface 上位的产品化经验。",
+      "my_take": "我会给 high importance，但更偏 practical high than headline high。最值得抄的是它把“删规则”说成一种能力升级，而不是偷懒；这跟很多 agent stack 的真实演化方向一致。需要保留的判断是：这类结论只在模型 judgment 足够强、tooling 足够好时成立；如果团队底层接口烂、验收标准模糊，删 prompt 只会把问题暴露得更快。",
+      "tags": [
+        "context engineering",
+        "Claude Code",
+        "agents",
+        "skills",
+        "prompting",
+        "progressive disclosure"
+      ],
+      "importance": "high"
+    },
+    "id": "81e43f035001",
+    "added_at": "2026-07-26T03:56:44+00:00"
+  },
+  {
+    "url": "https://www.anthropic.com/news/claude-opus-5",
+    "title": "Introducing Claude Opus 5",
+    "source_id": "anthropic_news",
+    "source_name": "Anthropic News",
+    "category": "model",
+    "vendor": "Anthropic",
+    "published_at": "2026-07-24",
+    "summary": {
+      "tldr": "Anthropic 在 2026-07-24 发布 Claude Opus 5，定位很明确：不是把最强 frontier 能力全面下放，而是把接近 Claude Fable 5 的 coding 与 knowledge work intelligence，压到更适合日常使用的价格带。官方主线是 same-price vs Opus 4.8 的大幅跃升，以及在 Frontier-Bench、GDPval-AA、AutomationBench、OSWorld 2.0 这类 agentic / knowledge-work eval 上更高的 cost efficiency。",
+      "key_points": [
+        "官方把 Opus 5 定位成 daily-use reasoning model：默认进 Claude Max，并成为 Claude Pro 中最强可用模型",
+        "在 coding 侧，Anthropic 强调 Opus 5 在 Frontier-Bench v0.1 超过全部对手，在 CursorBench 3.2 的高 effort 档接近 Fable 5 峰值，但单任务成本约减半",
+        "在 broader knowledge-work 与 computer-use 任务上，文章重点引用 ARC-AGI 3、Zapier AutomationBench 和 OSWorld 2.0，想证明它不只是“会写代码”，而是更强的 long-horizon task executor",
+        "相对 Opus 4.8，Anthropic 还特别强调 life sciences 提升，以及更强的 self-verification、iterative refinement 和 artifact quality",
+        "一个重要边界也被明说了：Opus 5 仍落后于 Mythos 5 的 dual-use cyber 能力，所以它不是 Anthropic 最顶层能力的完全替代品"
+      ],
+      "why_it_matters": "对这个 tracker 来说，这篇的价值在于 Anthropic 又把“高智能 + agentic coding + everyday affordability”往前推了一步。它不是单纯 benchmark 刷分，而是在试图把 Opus 线重新定义成 enterprise 和 pro 用户的默认工作模型：足够强、足够稳、同时比最前沿受限型号更容易规模化部署。",
+      "my_take": "我会给 high importance。原因不是它宣称接近 Fable 5，而是它把 cost-per-task 叙事讲得非常完整，这比单看 price-per-token 更接近真实采购和 rollout 决策。保留点也很清楚：Anthropic 自己承认 Mythos 5 仍是特定高风险领域的上限，所以 Opus 5 更像“最强通用工作马”，不是“绝对最强模型”。",
+      "tags": [
+        "Claude Opus 5",
+        "Anthropic",
+        "coding",
+        "knowledge work",
+        "cost efficiency",
+        "agentic evals"
+      ],
+      "importance": "high"
+    },
+    "id": "e75df1016aa1",
+    "added_at": "2026-07-26T03:56:44+00:00"
+  },
+  {
     "id": "ce627deb9928",
     "url": "https://openai.com/index/ntt-data",
     "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
