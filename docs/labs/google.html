@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-28 10:42 Asia/Shanghai</dd>
+            <dd>2026-07-28 20:28 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>209</dd>
+            <dd>211</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -47,12 +47,12 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>Google</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -75,13 +75,13 @@
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>119</strong>
+      <strong>120</strong>
     </a>
     
 
     <a class="lab-stat lab-google is-active" href="#top">
       <span>Google</span>
-      <strong>11</strong>
+      <strong>12</strong>
     </a>
     
 
@@ -96,12 +96,12 @@
       <section class="panel">
         <h2>Topics</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#topic-gemini"><span>Gemini</span><strong>11</strong></a>
+          <a href="#topic-gemini"><span>Gemini</span><strong>12</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-28 10:42 Asia/Shanghai
+        Generated: 2026-07-28 20:28 Asia/Shanghai
       </footer>
     </aside>
 
@@ -120,9 +120,46 @@
             <section class="topic-section" id="topic-gemini">
               <div class="topic-heading">
                 <h3>Gemini</h3>
-                <span>11 posts</span>
+                <span>12 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-28">
+              <div class="date-heading">
+                <h3>2026-07-28</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-google_gemini">Google Gemini</span>
+        <span>Google AI Blog - Gemini</span>
+        <span>2026-07-28</span>
+        <span>Added 2026-07-28</span>
+      </div>
+      <h2>Gemini API Managed Agents: 3.6 Flash, hooks, and more</h2>
+      <a class="original-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Google 在 2026-07-28 更新 Managed Agents in Gemini API：默认底座切到 Gemini 3.6 Flash，并补上更贴近 production 的控制面，包括 environment hooks、budget controls、scheduled triggers 和 free tier access。它的重心不是再讲一次“agent 能跑起来”，而是把 remote sandbox agent 往可治理、可自动化、可低门槛试用的方向推进。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Managed Agents 默认模型升级为 Gemini 3.6 Flash，现有 agent workflow 无需改代码即可获得新的默认底座</li><li>新增 environment hooks，可在 sandbox 内对 tool calls 做 pre/post 执行拦截，用于 block、lint、audit 或接第三方验证流水线</li><li>加入 max_total_tokens 这类预算控制，避免 autonomous multi-turn agent 在长任务里无上限烧 token</li><li>支持 scheduled triggers，把 agent、environment、prompt 和 cron 绑定成可重复运行的持久任务</li><li>Managed agents 进入 free tier，并提供 Environments API 方便恢复、检查或清理远端 sandbox</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇的意义在于 Google 正把 agent platform 的竞争点从“能不能调用工具”推进到“能不能进生产”。真正让团队敢用的不是单次 demo，而是 hook-based policy enforcement、budget guardrails、scheduled execution 和 sandbox lifecycle management 这些运维能力。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 medium practical signal。内容很工程化，说明 Google 在认真补 agent runtime 的治理层，而不是只堆模型 headline。最有价值的是 hooks 和 budget controls，因为这两项直接决定 managed agent 能否进入有合规与成本压力的真实流程。限制是官方仍然更偏平台能力发布，缺少大规模生产案例和更硬的可靠性指标。</p>
+      </section>
+      <div class="tags"><span>Gemini API</span><span>managed agents</span><span>Gemini 3.6 Flash</span><span>environment hooks</span><span>budget controls</span><span>scheduled triggers</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-16">
               <div class="date-heading">
                 <h3>2026-07-16</h3>

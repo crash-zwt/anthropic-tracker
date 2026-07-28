@@ -1,5 +1,69 @@
 [
   {
+    "id": "df22037e3e0f",
+    "url": "https://openai.com/index/scientific-computing-agentic-ai",
+    "title": "Scientific computing in the age of agentic AI",
+    "source_id": "openai_codex_engineering",
+    "source_name": "OpenAI Engineering - Codex",
+    "category": "openai_code",
+    "vendor": "OpenAI",
+    "published_at": "2026-07-28",
+    "summary": {
+      "importance": "medium",
+      "tldr": "OpenAI 这篇 2026-07-28 field report 讨论的不是新 model launch，而是 coding agents 已经如何进入 scientific software maintenance：八个生命科学为主的项目里，五个只用 Codex，三个结合 Codex 和 Claude Code，覆盖 packaging modernization、language migration、GPU-native redesign 等工作。官方反复强调的核心结论是，agent 已经显著降低实现成本，但真正的 bottleneck 迅速转向 verification、benchmarking 和 long-term stewardship。",
+      "key_points": [
+        "文章总结了八个 agent-assisted scientific computing 项目，范围从 routine maintenance 到大规模语言迁移与性能重写",
+        "案例显示 coding agents 能显著加速软件维护和工程实现，让小团队承担原本更难启动的改造任务",
+        "最稳定的工作方式不是 one-shot 自动生成，而是分阶段推进，并用 external references 或 measurable acceptance targets 做验证",
+        "OpenAI 明确指出研究者角色正在从直接实现转向 specification、verification、orchestration 和 ship/no-ship judgement",
+        "文章同时提醒：如果没有清晰 owner 与维护计划，更便宜的 rewrite 成本也可能放大 scientific software 的碎片化问题"
+      ],
+      "why_it_matters": "这篇对 tracker 的价值在于，它把 coding agents 的讨论从“写业务代码更快”推到了 scientific infrastructure modernization。相比普通 customer story，它更像是一个关于 agent deployment boundary 的现场报告：模型可以把实现成本压下来，但只有把 correctness checks、benchmarks 和维护责任一起补上，agent 产出才会变成可持续资产。",
+      "my_take": "我会给 medium practical signal。文章最扎实的地方是没有把 agent 神化成 autonomous scientist，而是诚实地把价值定位在 maintenance、migration 和 engineering acceleration，并把 hardest part 指向 verification。这个 framing 很可信，也和真实团队 experience 更一致。弱点是它仍是 curated field report，不是系统化对照实验，因此更适合当 deployment pattern 参考，而不是当强因果证据。",
+      "tags": [
+        "Codex",
+        "scientific computing",
+        "coding agents",
+        "verification",
+        "software maintenance",
+        "life sciences"
+      ]
+    },
+    "added_at": "2026-07-28T12:28:00+00:00"
+  },
+  {
+    "id": "be3ca53745f6",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+    "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+    "source_id": "google_gemini_ai_blog",
+    "source_name": "Google AI Blog - Gemini",
+    "category": "google_gemini",
+    "vendor": "Google",
+    "published_at": "2026-07-28",
+    "summary": {
+      "importance": "medium",
+      "tldr": "Google 在 2026-07-28 更新 Managed Agents in Gemini API：默认底座切到 Gemini 3.6 Flash，并补上更贴近 production 的控制面，包括 environment hooks、budget controls、scheduled triggers 和 free tier access。它的重心不是再讲一次“agent 能跑起来”，而是把 remote sandbox agent 往可治理、可自动化、可低门槛试用的方向推进。",
+      "key_points": [
+        "Managed Agents 默认模型升级为 Gemini 3.6 Flash，现有 agent workflow 无需改代码即可获得新的默认底座",
+        "新增 environment hooks，可在 sandbox 内对 tool calls 做 pre/post 执行拦截，用于 block、lint、audit 或接第三方验证流水线",
+        "加入 max_total_tokens 这类预算控制，避免 autonomous multi-turn agent 在长任务里无上限烧 token",
+        "支持 scheduled triggers，把 agent、environment、prompt 和 cron 绑定成可重复运行的持久任务",
+        "Managed agents 进入 free tier，并提供 Environments API 方便恢复、检查或清理远端 sandbox"
+      ],
+      "why_it_matters": "这篇的意义在于 Google 正把 agent platform 的竞争点从“能不能调用工具”推进到“能不能进生产”。真正让团队敢用的不是单次 demo，而是 hook-based policy enforcement、budget guardrails、scheduled execution 和 sandbox lifecycle management 这些运维能力。",
+      "my_take": "我会给 medium practical signal。内容很工程化，说明 Google 在认真补 agent runtime 的治理层，而不是只堆模型 headline。最有价值的是 hooks 和 budget controls，因为这两项直接决定 managed agent 能否进入有合规与成本压力的真实流程。限制是官方仍然更偏平台能力发布，缺少大规模生产案例和更硬的可靠性指标。",
+      "tags": [
+        "Gemini API",
+        "managed agents",
+        "Gemini 3.6 Flash",
+        "environment hooks",
+        "budget controls",
+        "scheduled triggers"
+      ]
+    },
+    "added_at": "2026-07-28T12:28:00+00:00"
+  },
+  {
     "url": "https://openai.com/index/codex-collaborator-creative-team/",
     "title": "How Codex became a collaborator for OpenAI’s creative team",
     "source_id": "openai_codex_product",
