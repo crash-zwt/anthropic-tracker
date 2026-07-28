@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-28
+
+- Refined the Anthropic News filter to exclude open-weights policy posts so the model-release feed stays focused on actual Claude launches.
+- Marked the OpenAI Codex creative-team URL alias without a trailing slash as seen to avoid duplicate rediscovery from RSS canonical drift.
+
 ## 2026-06-09
 
 - Created the initial Anthropic Tracker repo structure.

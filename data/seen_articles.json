@@ -2850,5 +2850,17 @@
     "title": "How Codex became a collaborator for OpenAI’s creative team",
     "source_id": "openai_codex_product",
     "first_seen_at": "2026-07-26T03:56:44+00:00"
+  },
+  "https://www.anthropic.com/news/position-open-weights-models": {
+    "title": "Our position on open-weights models",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-07-28T02:42:16+00:00",
+    "bootstrap_only": true
+  },
+  "https://openai.com/index/codex-collaborator-creative-team": {
+    "title": "How Codex became a collaborator for OpenAI’s creative team",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-07-28T02:42:16+00:00",
+    "bootstrap_only": true
   }
 }
