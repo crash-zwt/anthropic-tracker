@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-28 20:28 Asia/Shanghai</dd>
+            <dd>2026-07-29 20:35 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>1</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>211</dd>
+            <dd>212</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -52,7 +52,7 @@
             
             <li>
               <span>Google</span>
-              <strong>1 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai is-active" href="#top">
       <span>OpenAI</span>
-      <strong>120</strong>
+      <strong>121</strong>
     </a>
     
 
@@ -99,13 +99,13 @@
           <a href="#topic-model"><span>Model</span><strong>28</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>36</strong></a>
 <a href="#topic-agents"><span>Agents</span><strong>21</strong></a>
-<a href="#topic-code"><span>Code</span><strong>19</strong></a>
+<a href="#topic-code"><span>Code</span><strong>20</strong></a>
 <a href="#topic-methods"><span>Methods &amp; Research</span><strong>16</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-28 20:28 Asia/Shanghai
+        Generated: 2026-07-29 20:35 Asia/Shanghai
       </footer>
     </aside>
 
@@ -3229,9 +3229,46 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>19 posts</span>
+                <span>20 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-29">
+              <div class="date-heading">
+                <h3>2026-07-29</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-07-29</span>
+        <span>Added 2026-07-29</span>
+      </div>
+      <h2>How GPT-5.6 fuses frontier intelligence with frontier efficiency</h2>
+      <a class="original-link" href="https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 这篇 2026-07-29 engineering post 讨论的重点不是单点 benchmark，而是 GPT-5.6 全家桶如何把 intelligence-per-token 做到更高：官方称 Sol 在 max reasoning 下以不到一半成本超过 Claude Fable 5 的 Artificial Analysis Coding Agent Index，Terra 以约半价接近 GPT-5.5 水平，Luna 则主打更低成本。更有价值的部分是它把收益拆成 model、inference 和 agentic harness 三层共同优化，而不是把性能提升完全归因于模型本身。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章把 GPT-5.6 的效率来源拆成三层：训练时直接优化 task success + efficiency，推理侧做 routing、scheduling、kernel、cache、speculative decoding 等系统级改进，agent 侧则减少 context bloat 和 repeated work</li><li>OpenAI 明说 GPT-5.6 Sol in Codex 已参与生产优化，包括分析 traffic imbalance、调 routing heuristics、重写 Triton / Gluon kernels，以及改进 speculator training</li><li>文中给出几组很具体的工程收益：kernel 相关优化把 end-to-end serving cost 降低 20%，speculator 改进把 token-generation efficiency 再提高 15% 以上</li><li>对 agent 产品来说，最实用的设计经验是 harness 要保持 append-only history、稳定工具顺序、把 runtime settings 放到执行期处理，以尽量保住 prompt caching 的前缀命中</li><li>OpenAI 反复强调 frontier 竞争不只是更强模型，而是把 latency、availability、reliability 和 cost 一起压到更优点位</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对 tracker 的价值很高，因为它少见地把“前沿模型效率”讲成了 full-stack systems story，而不是 marketing slogan。对做 agent platform、Codex-like tooling 或推理基础设施的人来说，真正可迁移的不是“Sol 超过谁”，而是那些关于 repeated work、prompt caching、load balancing 和 workload-specific tuning 的具体工程抓手。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 medium-high practical signal，但保守标成 medium importance。最有信息量的部分是 harness 和 inference 细节，它们比 headline benchmark 更能迁移到真实系统设计里；尤其是 append-only context、deterministic tool ordering 和 workload-aware KV/cache tuning，这些都是能立刻指导 agent runtime 的东西。需要保留的折扣也很明显：所有数字都来自 OpenAI 自述，比较对象和成本口径没有第三方复核，所以更适合作为 deployment pattern 参考，而不是当作独立性能证据。</p>
+      </section>
+      <div class="tags"><span>GPT-5.6</span><span>inference optimization</span><span>Codex</span><span>agentic harness</span><span>prompt caching</span><span>Triton</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-28">
               <div class="date-heading">
                 <h3>2026-07-28</h3>
