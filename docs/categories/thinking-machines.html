@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-30 21:32 Asia/Shanghai</dd>
+            <dd>2026-07-31 21:45 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>4</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>212</dd>
+            <dd>216</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
         </dl>
       </section>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>121</strong>
+      <strong>124</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>15</strong>
+      <strong>16</strong>
     </a>
     
         </div>
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-15"><span>2026-07-15</span><strong>1</strong></a>
+          <a href="#date-2026-07-30"><span>2026-07-30</span><strong>1</strong></a>
+<a href="#date-2026-07-15"><span>2026-07-15</span><strong>1</strong></a>
 <a href="#date-2026-07-10"><span>2026-07-10</span><strong>1</strong></a>
 <a href="#date-2026-06-30"><span>2026-06-30</span><strong>1</strong></a>
 <a href="#date-2026-05-19"><span>2026-05-19</span><strong>1</strong></a>
@@ -115,7 +116,7 @@
       </section>
 
       <footer>
-        Generated: 2026-07-30 21:32 Asia/Shanghai
+        Generated: 2026-07-31 21:45 Asia/Shanghai
       </footer>
     </aside>
 
@@ -131,6 +132,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-07-30">
+              <div class="date-heading">
+                <h3>2026-07-30</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-thinking_machines">Thinking Machines</span>
+        <span>Thinking Machines</span>
+        <span>2026-07-30</span>
+        <span>Added 2026-07-31</span>
+      </div>
+      <h2>Introducing Inkling-Small</h2>
+      <a class="original-link" href="https://thinkingmachines.ai/news/inkling-small/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Thinking Machines 在 2026-07-30 正式发布 Inkling-Small：276B total / 12B active 的 open-weights MoE，定位是 Inkling 的更轻量 sibling，但在 reasoning 和 agentic coding 上已经能接近甚至部分超过大模型版本。它保留 1M context、音频/图像原生推理、variable thinking effort，并开放 full weights 与 Tinker fine-tuning。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Inkling-Small 号称以 Inkling 四分之一左右的 active size，拿到可比的 reasoning、coding 和 instruction-following 表现。</li><li>文中给出的 headline numbers 很强：HLE text-only 31.6%、SWEBench-Verified 80.2%、Terminal-Bench 2.1 best harness 64.7%。</li><li>官方强调它在 reasoning+agentic workloads 上的 performance-token / performance-cost tradeoff，输出价是 $1.20 / 1M tokens。</li><li>训练上用了改进后的 pretraining recipe，并提到 preview checkpoint 部分使用了 on-policy distillation，以 Inkling 为 teacher。</li><li>不仅开放 full weights，还能在 Tinker 上直接 fine-tune 和跑 text/image/audio chat，这让它更像一个可改造的 base model，而不是纯 benchmark release。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这对 open-weights 生态是个实打实的新节点：不是只追大参数，而是把“够强 + 可定制 + 成本更低”作为第一卖点。对于想做 agentic coding、synthetic data generation、LLM-as-judge 的团队，12B active 且支持可控 thinking effort 的模型非常有吸引力。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是今天最值得跟的文章之一。Thinking Machines 明显不想只做“有趣研究 lab”，而是在拿 open weights + Tinker ecosystem 抢实用开发者心智。需要保留一点怀疑：benchmark 里他们对 harness 和外部参考数据的选择很积极，真实生产稳定性还要继续看。但如果你关心可微调的 agent 基座，Inkling-Small 已经进入必看名单。</p>
+      </section>
+      <div class="tags"><span>inkling-small</span><span>open-weights</span><span>moe</span><span>agentic-coding</span><span>tinker</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-15">
               <div class="date-heading">
                 <h3>2026-07-15</h3>

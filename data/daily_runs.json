@@ -1,5 +1,34 @@
 [
   {
+    "checked_at": "2026-07-31T13:45:00+00:00",
+    "checked_at_display": "2026-07-31 21:45 Asia/Shanghai",
+    "new_count": 4,
+    "manual_codex_run": true,
+    "backfill_bootstrap": false,
+    "source_counts": {
+      "anthropic_news": 0,
+      "anthropic_alignment": 0,
+      "claude_agents": 0,
+      "claude_code": 0,
+      "google_gemini_ai_blog": 0,
+      "thinking_machines_site": 1,
+      "openai_model_product": 2,
+      "openai_agents_engineering": 1,
+      "openai_codex_product": 0,
+      "openai_codex_engineering": 0
+    },
+    "errors": [
+      {
+        "source": "claude_agents",
+        "error": "<urlopen error [Errno 60] Operation timed out>"
+      },
+      {
+        "source": "claude_code",
+        "error": "<urlopen error timed out>"
+      }
+    ]
+  },
+  {
     "checked_at": "2026-07-30T13:32:27+00:00",
     "checked_at_display": "2026-07-30 21:32 Asia/Shanghai",
     "new_count": 0,

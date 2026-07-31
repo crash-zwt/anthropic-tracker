@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-30 21:32 Asia/Shanghai</dd>
+            <dd>2026-07-31 21:45 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>4</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>212</dd>
+            <dd>216</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
         </dl>
       </section>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>121</strong>
+      <strong>124</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>15</strong>
+      <strong>16</strong>
     </a>
     
         </div>
@@ -96,14 +96,15 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
+          <a href="#date-2026-07-30"><span>2026-07-30</span><strong>1</strong></a>
+<a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
 <a href="#date-2026-07-16"><span>2026-07-16</span><strong>1</strong></a>
 <a href="#date-2026-07-09"><span>2026-07-09</span><strong>1</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-30 21:32 Asia/Shanghai
+        Generated: 2026-07-31 21:45 Asia/Shanghai
       </footer>
     </aside>
 
@@ -119,6 +120,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-07-30">
+              <div class="date-heading">
+                <h3>2026-07-30</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_agents">OpenAI Agents</span>
+        <span>OpenAI Engineering - Agents</span>
+        <span>2026-07-30</span>
+        <span>Added 2026-07-31</span>
+      </div>
+      <h2>How avatarin built a 24/7 retail agent with GPT-Realtime</h2>
+      <a class="original-link" href="https://openai.com/index/avatarin" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发了一篇偏 field-report 的客户案例：avatarin 用 GPT-Realtime 为日本 Yamada Denki 搭了一个 24/7 multilingual shopping agent，两周触达约 30,000 名用户，post-use survey 92% positive。技术重点不在新 API，而在 single-model multimodal conversation、RAG grounding、以及会主动追问需求的 conversation design。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>agent 同时处理语音、文本和图像理解，核心卖点是低延迟自然对话，而不是传统 keyword chatbot。</li><li>系统用 RAG 保证商品信息准确，再把门店销售经验编码进 prompts、conversation flows 和 guardrails。</li><li>设计重点是让 agent 主动追问用户约束条件，例如家庭人数、预算、空间等，而不是被动答 FAQ。</li><li>两周 public campaign 内约 30,000 用户实际使用，说明 GPT-Realtime 已经能支撑真实零售流量，而不只是 demo。</li><li>对方把每轮对话当成 customer-insight capture 工具，这比单纯的在线客服替代更有长期价值。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章的信号是 realtime multimodal agent 已经从展示型场景进入真实商业流程，尤其适合服务、导购、支持这类需要持续澄清需求的场景。对做 voice agent 的团队来说，比较有价值的是它把 RAG、prompting、brand persona 和 survey loop 放到了一个闭环里。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>内容偏 polished customer story，技术新意有限，但 deployment pattern 很值得抄。真正重要的不是“92% positive”这种 PR 指标，而是他们明确把 GPT-Realtime 用成了一个会主动收集约束、同时保留品牌语气的 conversation engine。如果你在做 commerce/support agent，这篇比泛泛的成功案例更有可落地细节。</p>
+      </section>
+      <div class="tags"><span>gpt-realtime</span><span>voice-agent</span><span>retail</span><span>rag</span><span>customer-story</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-22">
               <div class="date-heading">
                 <h3>2026-07-22</h3>

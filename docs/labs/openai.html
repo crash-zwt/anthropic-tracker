@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-07-30 21:32 Asia/Shanghai</dd>
+            <dd>2026-07-31 21:45 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>4</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>212</dd>
+            <dd>216</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
         </dl>
       </section>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai is-active" href="#top">
       <span>OpenAI</span>
-      <strong>121</strong>
+      <strong>124</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>15</strong>
+      <strong>16</strong>
     </a>
     
         </div>
@@ -98,14 +98,14 @@
         <nav class="archive-list" aria-label="Article archive by publish date">
           <a href="#topic-model"><span>Model</span><strong>28</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>36</strong></a>
-<a href="#topic-agents"><span>Agents</span><strong>21</strong></a>
-<a href="#topic-code"><span>Code</span><strong>20</strong></a>
+<a href="#topic-agents"><span>Agents</span><strong>23</strong></a>
+<a href="#topic-code"><span>Code</span><strong>21</strong></a>
 <a href="#topic-methods"><span>Methods &amp; Research</span><strong>16</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-07-30 21:32 Asia/Shanghai
+        Generated: 2026-07-31 21:45 Asia/Shanghai
       </footer>
     </aside>
 
@@ -2444,9 +2444,83 @@
             <section class="topic-section" id="topic-agents">
               <div class="topic-heading">
                 <h3>Agents</h3>
-                <span>21 posts</span>
+                <span>23 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-30">
+              <div class="date-heading">
+                <h3>2026-07-30</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_agents">OpenAI Agents</span>
+        <span>OpenAI Engineering - Agents</span>
+        <span>2026-07-30</span>
+        <span>Added 2026-07-31</span>
+      </div>
+      <h2>How avatarin built a 24/7 retail agent with GPT-Realtime</h2>
+      <a class="original-link" href="https://openai.com/index/avatarin" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 发了一篇偏 field-report 的客户案例：avatarin 用 GPT-Realtime 为日本 Yamada Denki 搭了一个 24/7 multilingual shopping agent，两周触达约 30,000 名用户，post-use survey 92% positive。技术重点不在新 API，而在 single-model multimodal conversation、RAG grounding、以及会主动追问需求的 conversation design。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>agent 同时处理语音、文本和图像理解，核心卖点是低延迟自然对话，而不是传统 keyword chatbot。</li><li>系统用 RAG 保证商品信息准确，再把门店销售经验编码进 prompts、conversation flows 和 guardrails。</li><li>设计重点是让 agent 主动追问用户约束条件，例如家庭人数、预算、空间等，而不是被动答 FAQ。</li><li>两周 public campaign 内约 30,000 用户实际使用，说明 GPT-Realtime 已经能支撑真实零售流量，而不只是 demo。</li><li>对方把每轮对话当成 customer-insight capture 工具，这比单纯的在线客服替代更有长期价值。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章的信号是 realtime multimodal agent 已经从展示型场景进入真实商业流程，尤其适合服务、导购、支持这类需要持续澄清需求的场景。对做 voice agent 的团队来说，比较有价值的是它把 RAG、prompting、brand persona 和 survey loop 放到了一个闭环里。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>内容偏 polished customer story，技术新意有限，但 deployment pattern 很值得抄。真正重要的不是“92% positive”这种 PR 指标，而是他们明确把 GPT-Realtime 用成了一个会主动收集约束、同时保留品牌语气的 conversation engine。如果你在做 commerce/support agent，这篇比泛泛的成功案例更有可落地细节。</p>
+      </section>
+      <div class="tags"><span>gpt-realtime</span><span>voice-agent</span><span>retail</span><span>rag</span><span>customer-story</span></div>
+    </article>
+    
+            </section>
+            
+
+            <section class="date-section" id="date-2026-07-29">
+              <div class="date-heading">
+                <h3>2026-07-29</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-07-29</span>
+        <span>Added 2026-07-31</span>
+      </div>
+      <h2>How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</h2>
+      <a class="original-link" href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 解释了 GPT-5.6 Sol 在 ARC-AGI-3 上为何从低分变成高分：关键不是模型突然更强，而是 harness 打开了 retained reasoning 和 compaction。官方 runner 下 public set 只有 13.3%，而在 OpenAI 自己的 Responses API harness 下升到 38.3%，同时 output tokens 还减少约 6x。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>OpenAI 认为很多 eval 实际测到的是 API settings、harness design 和 prompting 的组合，而不是模型裸能力。</li><li>retained reasoning 让 agent 记住自己已经想过和做过什么，减少重复推理；compaction 则在长轨迹里压缩上下文而不是粗暴丢失。</li><li>文中给出结论非常直接：如果你要最大化效果，应该用 Responses API，而不是 legacy Chat Completions API。</li><li>OpenAI 还明确说 retained reasoning + compaction 是 ChatGPT 和 Codex 的真实生产设置，所以 generic harness 会系统性低估产品级表现。</li><li>他们把这件事包装成 benchmark lesson，但对 agent builders 来说，本质是 runtime memory architecture 的经验贴。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对做 agents 和 eval 的人价值很高，因为它少见地把“为什么同一个模型在不同 runner 里像两个模型”讲透了。它也给了一个非常明确的迁移方向：别再把 legacy completion-style harness 当生产近似，真实可用性越来越依赖 retained reasoning、context compaction 和 tool-aware runtime。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>高信号文章。真正的 takeaway 不是“ARC 分数涨了”，而是 OpenAI 公开承认了 agent runtime 是 capability 的一部分。很多团队还在用 stateless 或半 stateless 的 eval harness 做结论，这会系统性误判模型。对 Codex/Responses API 用户来说，这篇几乎可以当 best-practice note：记忆保留和压缩不是优化项，而是默认项。</p>
+      </section>
+      <div class="tags"><span>responses-api</span><span>retained-reasoning</span><span>compaction</span><span>arc-agi-3</span><span>evals</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-15">
               <div class="date-heading">
                 <h3>2026-07-15</h3>
@@ -3229,9 +3303,46 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>20 posts</span>
+                <span>21 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-07-30">
+              <div class="date-heading">
+                <h3>2026-07-30</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-07-30</span>
+        <span>Added 2026-07-31</span>
+      </div>
+      <h2>Advancing the price-performance frontier with GPT-5.6</h2>
+      <a class="original-link" href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 在 2026-07-30 把 GPT-5.6 的效率红利直接传导到价格和延迟：Luna 降价 80%，Terra 降价 20%，Sol API 新增 Fast mode（最高 2.5x 更快，价格是 Standard 的 2x）。这不是新能力发布，而是一次很实在的 price-performance repricing，对 API、Codex、ChatGPT Work 的实际使用成本都有影响。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>GPT-5.6 Luna 现在是 $0.20 / 1M input tokens、$1.20 / 1M output tokens；Terra 是 $2 / $12，Sol 定价不变。</li><li>Fast mode 替代 Priority Processing；旧的 priority 请求会自动映射到 Fast mode，兼容性成本很低。</li><li>OpenAI 明说这轮收益来自 model routing、inference software、kernel 优化和 agentic harness 的 context management，而不只是单点降价。</li><li>Codex 和 ChatGPT Work 中 Terra/Luna 的使用配额消耗也会同步变轻，意味着相同订阅能跑更多真实工作。</li><li>文中多家客户案例都强调同一件事：便宜模型现在已经足够支撑 tool-calling agent loop、background automations 和 routine coding。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对开发者的意义很直接：如果你在做 multi-step workflows，成本最低的一层已经明显下探。很多过去必须交给高价模型的 routine execution，现在更适合用 Luna 跑，Sol 留给规划、歧义消解和高风险步骤。对 Codex 用户来说，这也是配额利用率的实际改善。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>这是典型的 infra leverage，不是 headline model launch，但比很多“新功能”更有生产价值。建议重新做一次 model routing：Sol 负责 high-stakes planning，Luna/Terra 接具体实现与批处理，顺手评估 `/fast` 是否能替代自建 priority lane。真正的信号是 OpenAI 开始把 agent runtime efficiency 当成核心产品卖点，而不只是 benchmark。</p>
+      </section>
+      <div class="tags"><span>gpt-5.6</span><span>pricing</span><span>latency</span><span>codex</span><span>agent-runtime</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-29">
               <div class="date-heading">
                 <h3>2026-07-29</h3>
