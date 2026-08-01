@@ -2897,5 +2897,10 @@
     "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-07-31T13:45:00+00:00"
+  },
+  "https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/": {
+    "title": "A Safe Path to Open Weights",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-08-01T21:38:43+00:00"
   }
 }

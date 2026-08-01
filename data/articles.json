@@ -1,5 +1,36 @@
 [
   {
+    "id": "8ec1c1af6b1a",
+    "url": "https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/",
+    "title": "A Safe Path to Open Weights",
+    "source_id": "thinking_machines_site",
+    "source_name": "Thinking Machines",
+    "category": "thinking_machines",
+    "vendor": "Thinking Machines",
+    "published_at": "2026-07-31",
+    "added_at": "2026-08-01T21:38:43+00:00",
+    "summary": {
+      "tldr": "Thinking Machines 在 2026-07-31 发了一篇 policy-research 风格的长文，核心立场不是简单鼓吹 open weights，而是主张按 evidence 逐步放开：同时评估模型本身的危险能力边界，以及外部 safety ecosystem 是否已经准备好承接更开放的发布。它本质上是在为 Inkling / Inkling-Small 这类 open-weight 模型给出一套 staged-release 安全框架。",
+      "key_points": [
+        "文章把“能不能开源权重”拆成两道题：模型本身是否把危险能力推到新前沿，生态是否已经具备 layered defenses 来承接更广泛访问。",
+        "Thinking Machines 说他们对 Inkling 和 Inkling-Small 做了 internal eval、四家外部机构 red-teaming，以及移除拒绝倾向后的 adversarial fine-tuning，结论是没有显著增加超出既有 open-weight 模型的实质风险。",
+        "文中反复强调 refusal 不是 durable safeguard；对 open weights，真正该看的不是“会不会拒绝”，而是去掉 guardrails 后能力天花板有没有危险抬升。",
+        "他们主张 staged release：limited API access、hosted fine-tuning、vetted defenders / safety researchers、再到更开放的权重发布，用每一步的新证据决定下一步开放程度。",
+        "另一个值得跟的研究方向是 decoupling dangerous capability from general intelligence，例如通过 pretraining data curation 或 post-training intervention 去压低 CBRN / cyber 这类高风险能力。"
+      ],
+      "why_it_matters": "这篇对 tracker 的意义不在于又多了一个 open-weight 宣言，而在于它把“开放”从 ideology 讨论拉回到 release engineering 和 risk management。对做模型发布、fine-tuning 平台、agent safety 或 evaluation 的团队来说，最可迁移的是它的 staged-release 设计和“看 capability ceiling 而不是 refusal surface”的判断框架。",
+      "my_take": "这篇比常见的安全表态更实用，因为它承认 open weights 的价值，也承认不可逆风险，并明确把 hosted fine-tuning 放成 API 和 full weights 之间的中间层。我比较认同这个方向：真正的分水岭不是 open vs closed，而是谁能拿出足够扎实的 eval、defender access 和 stop conditions。需要保留一点折扣的是，很多安全结论仍然来自自述和自选评测，后续还得看外部社区是否复现他们关于 Inkling 风险边界的判断。",
+      "tags": [
+        "open-weights",
+        "safety",
+        "inkling",
+        "staged-release",
+        "cybersecurity"
+      ],
+      "importance": "high"
+    }
+  },
+  {
     "id": "fc362ba711f5",
     "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
     "title": "Advancing the price-performance frontier with GPT-5.6",
