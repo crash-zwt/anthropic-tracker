@@ -1,5 +1,37 @@
 [
   {
+    "id": "d04cc35bd3cc",
+    "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+    "title": "How we built a realtime system for responsive voice AI in six months",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-03",
+    "added_at": "2026-08-03T13:36:41+00:00",
+    "summary": {
+      "tldr": "OpenAI 在 2026-08-03 发了一篇很有含金量的 GPT-Live engineering post：重点不是再发一个新模型，而是把 voice interaction 从 turn-taking 改成 continuous streaming。核心做法是让 full-duplex voice model 直接负责 listen/speak，把 deeper reasoning 和 tool use 异步委托给 GPT-5.5 等 frontier models，同时把实时 media path 和业务逻辑彻底解耦。",
+      "key_points": [
+        "GPT-Live 去掉了传统独立 turn detector，让语音模型自己同时听和说，直接减少打断和响应迟滞。",
+        "OpenAI 用 Go 重写 media frontend 和 inference logic，文中给出的结果是新系统的 p95 frame-delivery smoothness 达到旧系统 p50 水平。",
+        "长会话靠 replacement model instance + parallel prefill/cutover 维持 stateful inference，连 context compaction 也通过热切换完成，避免音频中断。",
+        "deeper reasoning 和 tool use 被放到异步 delegation path；会话启动时就预建 frontier-model session，并结合 prompt caching 与 stable session affinity 压低等待时间。",
+        "他们提出 WARP，把 WebRTC 启动从 6 个 network round trips 压到 1 个，再配合 Instant Connect 把 SDP signaling 移出 critical path。",
+        "真正的上线验证不是 benchmark，而是 shadow production traffic：CPU stream handlers、geography、reconnect、shutdown race 和 observability drift 都是在真实流量里暴露出来的。"
+      ],
+      "why_it_matters": "这篇对做 agent runtime 的人很有参考价值，因为它把“自然语音交互”拆成了一个可复用的系统设计：live path 只保留必须实时的 media loop，reasoning、tools、logging 和应用定制都异步化。即便你不做 voice assistant，这种把 talking path 和 thinking path 分离的思路，对 realtime multimodal agent、low-latency copilots、甚至桌面代理都很有借鉴意义。",
+      "my_take": "这是比一般 launch post 更值得读的 engineering write-up。最值得抄的不是 WARP 这些协议细节，而是 architecture boundary 画法：不要让 tool latency、业务逻辑或长上下文整理回灌到实时媒体路径里。一个 practical takeaway 是，任何想做“natural conversation + agentic actions”的系统，都应该先保护 live path，再去堆更强的 reasoning。",
+      "tags": [
+        "GPT-Live",
+        "voice AI",
+        "realtime",
+        "latency",
+        "system architecture"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "8ec1c1af6b1a",
     "url": "https://thinkingmachines.ai/blog/a-safe-path-to-open-weights/",
     "title": "A Safe Path to Open Weights",

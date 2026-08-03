@@ -2902,5 +2902,16 @@
     "title": "A Safe Path to Open Weights",
     "source_id": "thinking_machines_site",
     "first_seen_at": "2026-08-01T21:38:43+00:00"
+  },
+  "https://openai.com/index/continuous-voice-interaction-with-gpt-live": {
+    "title": "How we built a realtime system for responsive voice AI in six months",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-03T13:36:41+00:00"
+  },
+  "https://openai.com/index/disrupting-malicious-uses-of-ai-bet-bot": {
+    "title": "Bet Bot: Gambling spam network",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-03T13:36:41+00:00",
+    "bootstrap_only": true
   }
 }
