@@ -2913,5 +2913,25 @@
     "source_id": "openai_model_product",
     "first_seen_at": "2026-08-03T13:36:41+00:00",
     "bootstrap_only": true
+  },
+  "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/": {
+    "title": "Inside Kaggle’s AI Agents Intensive Course with Google",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-04T21:36:49.022948+00:00"
+  },
+  "https://openai.com/index/circles": {
+    "title": "Circles powers telco personalization with OpenAI technology",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-08-04T21:36:49.022948+00:00"
+  },
+  "https://openai.com/index/learn-teach-chatgpt-work-codex": {
+    "title": "New ways to learn and teach with ChatGPT Work and Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-08-04T21:36:49.022948+00:00"
+  },
+  "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models": {
+    "title": "Third-party cyber evaluations involving OpenAI models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-04T21:36:49.022948+00:00"
   }
 }
