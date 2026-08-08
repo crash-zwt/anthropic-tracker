@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-07 21:35 Asia/Shanghai</dd>
+            <dd>2026-08-08 21:35 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>223</dd>
+            <dd>226</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>65</strong>
+      <strong>68</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-06"><span>2026-08-06</span><strong>1</strong></a>
+          <a href="#date-2026-08-07"><span>2026-08-07</span><strong>3</strong></a>
+<a href="#date-2026-08-06"><span>2026-08-06</span><strong>1</strong></a>
 <a href="#date-2026-08-04"><span>2026-08-04</span><strong>2</strong></a>
 <a href="#date-2026-08-03"><span>2026-08-03</span><strong>3</strong></a>
 <a href="#date-2026-07-31"><span>2026-07-31</span><strong>1</strong></a>
@@ -230,7 +231,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-07 21:35 Asia/Shanghai
+        Generated: 2026-08-08 21:35 Asia/Shanghai
       </footer>
     </aside>
 
@@ -246,6 +247,101 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-07">
+              <div class="date-heading">
+                <h3>2026-08-07</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-08-07</span>
+        <span>Added 2026-08-08</span>
+      </div>
+      <h2>Auto mode is now the default in Claude Code for Pro, Max, and Team plans</h2>
+      <a class="original-link" href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 在 2026-08-07 宣布：从 2026-08-14 开始，Claude Code 在 Pro、Max、Team 新 session 里默认启用 auto mode，用 classifier 代替逐条人工批准。真正值得记录的不是“默认值改了”本身，而是 Anthropic 公开把 permission UX、prompt injection defense 和 long-running coding agent 的 throughput 绑定成一个产品立场：他们认为大多数用户手动点 approve 的安全性，已经不如 classifier-first。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>auto mode 会把每次 tool call 送进 classifier，重点拦截 irreversible、destructive 或越出当前环境边界的动作；如果连续 3 次被拦或整个 session 里累计 20 次被拦，会退回 manual approvals。</li><li>Anthropic 说从 2026-08-07 起不再对 Pro、Max、Team 用户收取 classifier overhead；Claude Enterprise、API、AWS、Google Cloud Agent Platform 和 Microsoft Foundry 仍先保持 opt-in，给管理员留 review 窗口。</li><li>他们公开了一组比较强的 safety 数据：在 1,053 名付费测试者的受控实验中，人类只拦下 13.6% 的危险命令，而 auto mode 拦下 89%。</li><li>文章还给出真实使用层面的信号：97% 的 permission prompts 最终都会被人工批准，49.5% 的活跃 CLI 用户已经写过 bash allow-rules，25% 的交互 session 直接以 bypass permissions 启动。</li><li>在 Anthropic 引用的第三方 prompt-injection 评测里，启用 auto mode 的 Claude 系列没有出现成功攻击案例；同时他们声称 Teams 与 Enterprise 里使用 auto mode 的用户平均能多 ship 约 25% PR。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 coding agents 来说，这篇代表的不是一个小功能，而是 permission model 的路线切换：把“人类逐条批”从默认安全假设，换成“classifier + intent checks + prompt-injection probes + 人类兜底”。如果这个方向成立，真正能跑长任务的 agent IDE / CLI 会更像 runtime governance 问题，而不只是模型能力问题。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会把它评成 high importance。最有价值的是它终于给了默认权限模式切换的量化理由，而不是只说“更顺滑”。但也要打折看：评测设计、危害定义和 held-out attack 构造仍主要由 Anthropic 主导，false-positive 成本也讲得不够细。即便如此，这仍然是 Claude Code 产品轨迹里一个很实质的转折点。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>auto mode</span><span>permissions</span><span>prompt injection</span><span>agent runtime</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-08-07</span>
+        <span>Added 2026-08-08</span>
+      </div>
+      <h2>Running auto mode in production</h2>
+      <a class="original-link" href="https://claude.com/blog/auto-mode-in-production" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是 Anthropic 在 2026-08-07 配套发的一篇 production case-study，讲 Nuro、Gusto、Garner Health 如何把 Claude Code auto mode 真正接进日常工程和运营流程。它不是新 capability 发布，但比一般 customer story 更有参考价值，因为文中给了几种 guardrail shape：settings deny-list、governed proxy、标准化 skills/workflows，以及只在高风险场景退回人工审批。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Nuro 把 auto mode 用在长时间运行的 research/eval agent 上：夜里启动、持续跑到清晨、按可测指标 hill-climb，并在设置里直接禁止最危险的命令，例如 recursive delete。</li><li>Gusto 把 auto mode 当成比 bypass permissions 更安全、又比逐条点批更快的默认模式；他们自己的统计里，自 2026-05 中旬以来约 10% 的 session transcript 出现过 auto denial，说明 classifier 不是摆设。</li><li>Gusto 仍然把 Terraform、AWS、直接调用生产 API 这类高风险生产基础设施操作切回人工核验，并把 MCP 流量放在受治理的 proxy 层里先做工具权限和 prompt 检查。</li><li>Garner Health 把 Claude Code 接进 Salesforce、Zendesk、Snowflake 等核心系统，推动全公司范围的标准化 SDLC automation；他们会禁止 agent 直接代人发 Slack 或 email。</li><li>文中反复出现的共识是：auto mode 不是放开一切，而是先把 telemetry、standard workflow、tool scoping 和 deny rules 建起来，再把长时自主执行交给模型。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>如果你关心的是 agent 在真实组织里怎么落地，而不是 benchmark，这篇比 launch 文更有用。它说明 production adoption 的关键不在“敢不敢让模型自动跑”，而在你能不能先把权限边界、观测、可复用 workflow 和人工升级路径做成制度化基础设施。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 medium importance。亮点是它提供了几个可以直接迁移的 deployment pattern，尤其是 deny-list + proxy governance + workflow standardization 这一套。限制也很明显：这仍然是 Anthropic 精选客户叙事，没有失败案例、误拦截率、成本曲线或 incident 数据，更适合当实践样式参考，而不是效果证据。</p>
+      </section>
+      <div class="tags"><span>Claude Code</span><span>auto mode</span><span>production</span><span>enterprise guardrails</span><span>workflow standardization</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>2026-08-07</span>
+        <span>Added 2026-08-08</span>
+      </div>
+      <h2>Improving Fable 5&#x27;s biology safeguards</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 在 2026-08-07 更新了 Claude Fable 5 的 biology safeguards，目标不是放松限制，而是把过宽的 biology classifier 收窄，显著减少 benign query 的误伤。最关键的数据点是：他们称新版把 biology-related fallbacks 降低了约 85%，同时仍把 dual-use 的 virology、toxicology、molecular design 等请求回退到能力更低的 Opus 5。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>这次更新的直接用户体验变化是：更多日常 health、education 和临床支持类请求不再被过度拦截，用户更少看到 fallback 到较弱模型的情况。</li><li>Anthropic 明确说 Fable 5 在一些高度复杂的 biology task 上已经能超过专家，并可能为恶意行为者提供显著 uplift，所以 dual-use 专业研究场景仍继续受限。</li><li>技术路径不是简单调阈值，而是重写 classifier constitution、吸收内外部专家反馈、补训练数据并重新训练，再验证 harmful / dual-use 内容依旧会触发。</li><li>他们还给了更细的产品面指标：总 fallback 预计在 Claude.ai 上下降约 67%，Cowork 下降 55%，Claude Code 下降 17%，Claude Platform 下降 7%。</li><li>Anthropic 的长期方向是 trusted access：先在广泛用户层面保守放行 benign biology use，再通过更受控路径逐步开放 frontier biology capability。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对 tracker 的价值在于，它把 frontier model 安全从“全拦或全放”的口号，推进成 classifier precision 和 access-tier design 的工程问题。对做高风险工具调用、双用途能力控制或受限领域产品化的人来说，这比抽象安全原则更可迁移。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 medium importance。不是因为它不重要，而是它更像 safeguard tuning 和 access-policy update，不是核心能力发布。好的地方是 Anthropic 至少给了误伤下降幅度和分产品面的数字。需要保留折扣的是，这些数字仍是官方自报，外界暂时看不到 false negative 侧的完整代价。</p>
+      </section>
+      <div class="tags"><span>Fable 5</span><span>biology</span><span>safeguards</span><span>classifier tuning</span><span>trusted access</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-06">
               <div class="date-heading">
                 <h3>2026-08-06</h3>

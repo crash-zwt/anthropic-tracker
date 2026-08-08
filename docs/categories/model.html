@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-07 21:35 Asia/Shanghai</dd>
+            <dd>2026-08-08 21:35 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>223</dd>
+            <dd>226</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>65</strong>
+      <strong>68</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-24"><span>2026-07-24</span><strong>1</strong></a>
+          <a href="#date-2026-08-07"><span>2026-08-07</span><strong>1</strong></a>
+<a href="#date-2026-07-24"><span>2026-07-24</span><strong>1</strong></a>
 <a href="#date-2026-06-30"><span>2026-06-30</span><strong>2</strong></a>
 <a href="#date-2026-06-12"><span>2026-06-12</span><strong>1</strong></a>
 <a href="#date-2026-06-09"><span>2026-06-09</span><strong>1</strong></a>
@@ -105,7 +106,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-07 21:35 Asia/Shanghai
+        Generated: 2026-08-08 21:35 Asia/Shanghai
       </footer>
     </aside>
 
@@ -121,6 +122,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-07">
+              <div class="date-heading">
+                <h3>2026-08-07</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>2026-08-07</span>
+        <span>Added 2026-08-08</span>
+      </div>
+      <h2>Improving Fable 5&#x27;s biology safeguards</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 在 2026-08-07 更新了 Claude Fable 5 的 biology safeguards，目标不是放松限制，而是把过宽的 biology classifier 收窄，显著减少 benign query 的误伤。最关键的数据点是：他们称新版把 biology-related fallbacks 降低了约 85%，同时仍把 dual-use 的 virology、toxicology、molecular design 等请求回退到能力更低的 Opus 5。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>这次更新的直接用户体验变化是：更多日常 health、education 和临床支持类请求不再被过度拦截，用户更少看到 fallback 到较弱模型的情况。</li><li>Anthropic 明确说 Fable 5 在一些高度复杂的 biology task 上已经能超过专家，并可能为恶意行为者提供显著 uplift，所以 dual-use 专业研究场景仍继续受限。</li><li>技术路径不是简单调阈值，而是重写 classifier constitution、吸收内外部专家反馈、补训练数据并重新训练，再验证 harmful / dual-use 内容依旧会触发。</li><li>他们还给了更细的产品面指标：总 fallback 预计在 Claude.ai 上下降约 67%，Cowork 下降 55%，Claude Code 下降 17%，Claude Platform 下降 7%。</li><li>Anthropic 的长期方向是 trusted access：先在广泛用户层面保守放行 benign biology use，再通过更受控路径逐步开放 frontier biology capability。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对 tracker 的价值在于，它把 frontier model 安全从“全拦或全放”的口号，推进成 classifier precision 和 access-tier design 的工程问题。对做高风险工具调用、双用途能力控制或受限领域产品化的人来说，这比抽象安全原则更可迁移。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 medium importance。不是因为它不重要，而是它更像 safeguard tuning 和 access-policy update，不是核心能力发布。好的地方是 Anthropic 至少给了误伤下降幅度和分产品面的数字。需要保留折扣的是，这些数字仍是官方自报，外界暂时看不到 false negative 侧的完整代价。</p>
+      </section>
+      <div class="tags"><span>Fable 5</span><span>biology</span><span>safeguards</span><span>classifier tuning</span><span>trusted access</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-24">
               <div class="date-heading">
                 <h3>2026-07-24</h3>

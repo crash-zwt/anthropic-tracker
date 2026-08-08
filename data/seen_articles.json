@@ -2938,5 +2938,20 @@
     "title": "Millennium and Anthropic are building a digital risk analyst with Claude",
     "source_id": "claude_agents",
     "first_seen_at": "2026-08-06T13:35:00+00:00"
+  },
+  "https://claude.com/blog/auto-mode-default-in-claude-code": {
+    "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-08-08T13:35:00+00:00"
+  },
+  "https://claude.com/blog/auto-mode-in-production": {
+    "title": "Running auto mode in production",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-08-08T13:35:00+00:00"
+  },
+  "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards": {
+    "title": "Improving Fable 5's biology safeguards",
+    "source_id": "anthropic_news",
+    "first_seen_at": "2026-08-08T13:35:00+00:00"
   }
 }
