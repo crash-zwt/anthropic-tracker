@@ -1,5 +1,67 @@
 [
   {
+    "id": "3a8585570cab",
+    "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+    "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-10",
+    "added_at": "2026-08-10T13:40:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 在 2026-08-10 扩展了 Daybreak，并把 cyber access 明确分成 Daybreak Blue 和 Daybreak Red 两层。真正的核心不是又开了一个安全项目，而是他们开始把 frontier cyber capability productize 成受控访问产品：Blue 给经过批准的 defenders 使用 frontier general-purpose models，Red 则提供为漏洞研究和 exploit validation 专门调过的 GPT-5.6-Cyber。",
+      "key_points": [
+        "Daybreak Blue 面向更广泛的 defensive security workflow，包括 vulnerability discovery、secure code review、malware analysis、incident response 和 patch validation；Daybreak Red 则更偏向 authorized vulnerability research、red teaming 和 exploit validation。",
+        "OpenAI 同时发布 GPT-5.6-Cyber，称它基于 GPT-5.6 Sol 做了专门 cyber 训练，目标是提升 exploit-chain development、zero-day discovery 和高风险双用途场景下的 completion rate。",
+        "文中给出一个非常强的内部指标：在 OpenAI 的 Advanced Cybersecurity Completion Rate 评测里，GPT-5.6-Cyber 完成 95.0% 请求，而 GPT-5.6 Sol 仅 1.5%，Daybreak Blue 下的 Sol 约 2.0%，旧版 GPT-5.5-Cyber 为 57.3%。",
+        "他们还声称模型已帮助发现并报告 V8 高危漏洞 CVE-2026-15903，并在 mobile OS、database 和 kernel 等软件里识别出更多高严重性问题，但其中大部分仍处于协调披露中。",
+        "访问侧的控制也更明确了：身份验证、approved-use restrictions、监控、法律承诺，以及对 Daybreak 个人账户强制硬件安全密钥；同时 OpenAI 明确建议 Daybreak 上的 Codex 默认走 auto-review，而不是 full-access。"
+      ],
+      "why_it_matters": "这篇对 tracker 的价值很高，因为它不是泛泛的“AI helps security”叙事，而是在公开定义一种新的 cyber deployment shape：frontier model capability 可以在严格访问控制下被更直接地开放给 defenders。对做安全 agent、受限工具调用或高风险能力分级的人来说，Blue/Red tier、专门模型、以及 runtime governance 的组合都很值得关注。",
+      "my_take": "我会给它 high importance。最值得注意的是 OpenAI 不再只讲 eval 或 incident，而是把 offensive-adjacent capability 通过 trusted-access 方式正式产品化，这会直接影响未来 cyber agent 的 access model。需要保留的折扣也很明显：completion-rate 和漏洞发现效果大多来自 OpenAI 自述，且很多细节没有外部独立复核，所以更适合视为能力与治理方向信号，而不是已被充分验证的生产结论。",
+      "tags": [
+        "Daybreak",
+        "GPT-5.6-Cyber",
+        "cybersecurity",
+        "trusted access",
+        "auto-review"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "7f776d7829d0",
+    "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+    "title": "Putting frontier cyber models in more trusted hands",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-10",
+    "added_at": "2026-08-10T13:40:00+00:00",
+    "summary": {
+      "tldr": "这是 OpenAI 在同一天发布的配套 partner-program 文章，主题不是新模型本身，而是把 Daybreak Cyber Partner Program 扩大到更多安全服务商和平台厂商。它本质上是在回答一个更现实的问题：多数企业不会自己运营 frontier cyber AI 项目，所以 OpenAI 想通过受控合作伙伴，把这些能力嵌进现有 MSSP、咨询、平台和 remediation workflow。",
+      "key_points": [
+        "文章列出了一大批合作方，包括 Accenture、IBM、Capgemini、Cognizant、EY、KPMG、PwC、NCC Group、SpecterOps，以及 Palo Alto Networks、CrowdStrike、Cisco、Sophos、Cloudflare、Fortinet、Akamai 等。",
+        "OpenAI 把重点放在从“发现漏洞”走向“修复漏洞”：合作伙伴不只做 vulnerability discovery，还会把模型接进 validation、prioritization、incident response、penetration testing 和 remediation 等既有安全流程。",
+        "访问方式仍通过 Daybreak Blue / Red，但底层模型访问权保留在 approved partner 手里，而不是直接转交给最终客户，这一点说明 OpenAI 更倾向 partner-mediated governance，而不是大规模直发高风险 access。",
+        "安全控制也被写得比较具体：defined testing scope、logging、monitoring、identity verification、human oversight，以及由合作伙伴与客户共同界定 engagement 边界。",
+        "整篇文章的重点不是 benchmark，而是 distribution strategy：让 frontier cyber models 先借助已有安全行业渠道进入现实组织，而不是要求每家企业自己搭专门的 cyber AI program。"
+      ],
+      "why_it_matters": "对关注 agent deployment 的人，这篇的信号在于 OpenAI 正把高风险模型能力的 go-to-market 设计成“模型方 + 受信合作伙伴 + 受控客户交付”的三层结构。对企业安全场景，这比单独开放一个 API 更接近真实落地路径，因为权限、责任、审计和 remediation 往往都已经嵌在现有服务商体系里。",
+      "my_take": "我会给它 medium importance。技术含量不如 Daybreak 主文高，更多是 distribution 和 governance 层面的发布，但这恰恰说明 OpenAI 对 cyber capability commercialization 的路径已经更清晰了。实际效果还要看这些合作伙伴是否真能把模型能力转成更快的 triage 和 remediation，而不是停留在联合营销层面。",
+      "tags": [
+        "Daybreak",
+        "partner program",
+        "cybersecurity",
+        "governance",
+        "remediation"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "15e161b5f7dd",
     "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
     "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
