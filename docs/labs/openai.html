@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-10 21:40 Asia/Shanghai</dd>
+            <dd>2026-08-14 10:37 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>4</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>228</dd>
+            <dd>232</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -47,7 +47,7 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>4 new</strong>
             </li>
             
             <li>
@@ -75,7 +75,7 @@
 
     <a class="lab-stat lab-openai is-active" href="#top">
       <span>OpenAI</span>
-      <strong>130</strong>
+      <strong>134</strong>
     </a>
     
 
@@ -98,14 +98,14 @@
         <nav class="archive-list" aria-label="Article archive by publish date">
           <a href="#topic-model"><span>Model</span><strong>29</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>37</strong></a>
-<a href="#topic-agents"><span>Agents</span><strong>25</strong></a>
-<a href="#topic-code"><span>Code</span><strong>23</strong></a>
-<a href="#topic-methods"><span>Methods &amp; Research</span><strong>16</strong></a>
+<a href="#topic-agents"><span>Agents</span><strong>26</strong></a>
+<a href="#topic-code"><span>Code</span><strong>25</strong></a>
+<a href="#topic-methods"><span>Methods &amp; Research</span><strong>17</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-08-10 21:40 Asia/Shanghai
+        Generated: 2026-08-14 10:37 Asia/Shanghai
       </footer>
     </aside>
 
@@ -2518,9 +2518,46 @@
             <section class="topic-section" id="topic-agents">
               <div class="topic-heading">
                 <h3>Agents</h3>
-                <span>25 posts</span>
+                <span>26 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-13">
+              <div class="date-heading">
+                <h3>2026-08-13</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-08-13</span>
+        <span>Added 2026-08-14</span>
+      </div>
+      <h2>The builder’s guide to GPT‑5.6</h2>
+      <a class="original-link" href="https://openai.com/index/builders-guide-to-gpt-5-6" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 这篇不是单纯的 GPT-5.6 宣传稿，而是一个比较值得做笔记的 agent deployment playbook。核心论点是：5.6 family 把 long-horizon agent 的 economics 往前推了一大截，真正的杠杆不只来自模型本身，还来自 Responses API 里的 retained reasoning、native compaction、multi-agent orchestration、programmatic tool calling 和更长的 prompt cache。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>OpenAI 把焦点放在 price-performance 而不是单点 benchmark：文中举例说 GPT‑5.6 Luna Extra High 在 BrowseComp 上达到 84.04%，接近 GPT‑5.5 Extra High 的 84.36%，但成本从 33.27 美元降到 1.33 美元。</li><li>文章明确把 agent architecture 组件化：retained reasoning + native compaction 负责 continuity，native multi-agent orchestration 负责并行拆解，programmatic tool calling 负责把 deterministic orchestration 从上下文窗口搬到代码层。</li><li>OpenAI 还给了一个很强的 harness claim：在 ARC-AGI-3 上，GPT‑5.6 Sol 用标准 harness 是 13.3%，开启 retained reasoning 和 compaction 后升到 38.3%，同时输出 token 还减少约 6 倍。</li><li>Programmatic Tool Calling 的定位很清楚：让模型写 JavaScript 来过滤、聚合、并行调工具，把“搬运/整理数据”的工作移出 model context，把 token 留给 judgment。</li><li>Prompt cache TTL 现在最少 30 分钟，并支持 deterministic cache breakpoints；文中的 startup 例子声称这让共享 29k-token prompt 的 uncached input 降了 28%。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对做 agents 的人，这篇的价值比普通“模型更强了”文章高，因为它把 OpenAI 当前最推崇的 runtime 设计原则说得很直接：不要把所有步骤都塞给一个最贵模型，而要做 model selection、把 reasoning continuity 留住、把并行和工具编排外移。这个思路会直接影响 agent 成本结构、latency 和 context rot。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 medium importance，但 practical signal 很强。最值得抄的不是 headline 数字，而是对 retained reasoning、native compaction、programmatic tool calling 和 cache 这些控制面的强调。需要保留的折扣也很明显：大量证据来自 OpenAI 自选案例和客户证言，benchmark 与成本口径没有外部复核，所以更适合当 architecture playbook，而不是独立性能证明。</p>
+      </section>
+      <div class="tags"><span>GPT-5.6</span><span>Responses API</span><span>multi-agent</span><span>tool calling</span><span>prompt cache</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-04">
               <div class="date-heading">
                 <h3>2026-08-04</h3>
@@ -3451,9 +3488,75 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>23 posts</span>
+                <span>25 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-12">
+              <div class="date-heading">
+                <h3>2026-08-12</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_code">OpenAI Code</span>
+        <span>OpenAI Product - Codex</span>
+        <span>2026-08-12</span>
+        <span>Added 2026-08-14</span>
+      </div>
+      <h2>From assistance to execution: How enterprises put AI to work</h2>
+      <a class="original-link" href="https://openai.com/index/how-enterprises-put-ai-to-work" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这篇更像 OpenAI 的 enterprise adoption report，而不是产品发布。它想证明的核心观点是：企业 AI 正从 assistance 走向 execution，而这个变化在 OpenAI 自己的数据里主要由 Codex、Plugins 和 skills 这类 agent capabilities 拉动。对 tracker 来说，它的价值在于给出了较少见的 adoption signal，而不是新模型细节。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>OpenAI 说截至 2026 年 6 月，Codex 占 enterprise 客户里 Codex + ChatGPT 合计 output tokens 的 64%，用来说明 agentic workflow 已经在生成更长、更委托式的工作。</li><li>他们定义“frontier firms”为每月 AI 使用强度前 10% 的企业，并称这类公司的人均 output tokens 已达到 typical firms 的 8.3 倍，而 2026 年 1 月这个倍数只有 2.6。</li><li>高级能力使用差距也被量化了：frontier firms 每周活跃用户里 21% 使用 Plugins、19% 使用 skills；typical firms 分别只有 9% 和 3%。</li><li>文章把 Codex 的扩散讲得很具体：自 2026 年 2 月以来，weekly active enterprise Codex users 在 legal 增长 108 倍，在 sales 与 recruiting 各增长 41 倍，在 marketing 增长 26 倍，而 engineering 只有 5 倍。</li><li>OpenAI 给出的 management takeaway 不是“买更多模型”，而是补齐 context、tools、permissions、review、governance，以及把个体 workflow 变成团队共享 workflow。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这类文章的价值不在技术深度，而在市场结构信号。它说明 OpenAI 正把 Codex 从“工程工具”叙事，推进成更广义的 knowledge-work agent 平台，而且他们认为 adoption gap 的关键不只是 access，而是 data/tool connectivity 和 organizational workflow。对判断企业 agent 落地路径，这些信号比单个 customer quote 更有用。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 medium importance。正面看，它给了少见的 adoption numbers，尤其是 Codex 在非工程职能里的扩散；但这些数字来自 OpenAI 自家客户样本，且大量指标是 token proxy 而不是 business outcome，所以不能直接当成普遍市场事实。更合理的读法是：这是 OpenAI 在定义“企业 agent 化”叙事时最想让外界接受的指标框架。</p>
+      </section>
+      <div class="tags"><span>Codex</span><span>enterprise</span><span>plugins</span><span>skills</span><span>agent adoption</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_code">OpenAI Code</span>
+        <span>OpenAI Product - Codex</span>
+        <span>2026-08-12</span>
+        <span>Added 2026-08-14</span>
+      </div>
+      <h2>How RingCentral builds AI-native work from engineering to ops</h2>
+      <a class="original-link" href="https://openai.com/index/ringcentral" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>这是一个偏 customer-story 的 OpenAI 案例，但比普通“我们用了 AI 很开心”多一点操作细节。RingCentral 把 ChatGPT Work 和 Codex 同时铺开，一边做 company-wide 的 AI-Native Challenge，让全员交付完整项目；一边把 PMO、状态汇总、跨系统通知这些运营流程也迁到 ChatGPT Work 上。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>RingCentral 给员工广泛开放 ChatGPT Work 和 Codex，并通过 AI-Native Challenge 要求参与者完成 end-to-end project，覆盖 planning、implementation、testing、documentation、CI/CD 和 iteration。</li><li>文章声称几乎所有参与者都创建了可工作的 repository，且有数千名员工交付了 functioning projects，其中包含非技术员工和高管。</li><li>RingCentral 把同样的 Codex-enabled 开发方式用于其 AIR、AVA、ACE 等 AI 产品线，核心叙事是缩短“idea 到 shipped feature”的距离。</li><li>非工程场景也被点名：PMO 用 ChatGPT Work 把 Jira、Google Sheets、CRM 等来源接进状态跟踪、报告、release governance 和知识传递 workflow。</li><li>文章一再强调 humans remain in the loop：人仍负责需求、业务上下文、架构决策，以及最终测试与验证。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对真正要在组织里推 AI-native workflow 的人，这篇的意义不是证明 RingCentral 成绩有多惊人，而是展示 rollout pattern：先给普遍 access，再用挑战赛逼出真实项目，再把成功经验迁移到运营与跨团队流程。相比只看 model benchmark，这种组织层面的 adoption design 更接近企业实际会遇到的问题。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 medium importance。它提供了一些可迁移的组织做法，尤其是全员挑战赛和 PMO workflow productization；但这仍然是明显的成功案例叙事，没有失败率、成本、质量回归或对照组，所以更适合当 rollout 样式参考，而不是当 Codex ROI 的硬证据。</p>
+      </section>
+      <div class="tags"><span>Codex</span><span>ChatGPT Work</span><span>enterprise rollout</span><span>PMO</span><span>AI-native</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-04">
               <div class="date-heading">
                 <h3>2026-08-04</h3>
@@ -4270,9 +4373,46 @@
             <section class="topic-section" id="topic-methods">
               <div class="topic-heading">
                 <h3>Methods &amp; Research</h3>
-                <span>16 posts</span>
+                <span>17 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-13">
+              <div class="date-heading">
+                <h3>2026-08-13</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-08-13</span>
+        <span>Added 2026-08-14</span>
+      </div>
+      <h2>Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed</h2>
+      <a class="original-link" href="https://openai.com/index/previewing-ultrafast" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 在 2026-08-13 预告了一个新的 API service tier：Ultrafast mode。重点不是新模型，而是把 GPT‑5.6 Sol 以最高 14 倍于 Standard processing 的速度提供出来，官方给出的峰值是 750 output tokens/s，并明确把 latency 本身包装成一种新的产品能力。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Ultrafast 首发在 OpenAI API，底层由 Cerebras 支撑；OpenAI 把它定义为“frontier intelligence 的新速度等级”，而不是单纯更便宜或更小的模型。</li><li>文中给出的目标场景都偏 time-sensitive：incident response、金融研究与安全、实时客服/语音、commerce，以及把 overnight research loop 压缩成白天可交互迭代。</li><li>OpenAI 也披露了内部使用方式：工程团队在告警触发后用它快速读 logs、看 traces、综合对话和代码变更、准备或验证 fix；研究团队则用它加快知识检索和实验循环。</li><li>文章最强的 headline 数字是“up to 14× faster than Standard processing”和“up to 750 output tokens per second”；但可用性目前仍是 limited preview，只开放给一小批客户。</li><li>客户引述里的共同点不是更高准确率，而是 workflow shape 改变了：voice stack、实时报表、复杂金融研究和开发协作可以从异步等待变成同步交互。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 agent 系统来说，latency 往往决定能不能进 incident response、voice、interactive research 这类高价值环节。Ultrafast 的信号是 OpenAI 开始把“足够聪明且足够快”作为独立产品维度来卖，而不是默认快就意味着降级到小模型。这会影响很多 runtime 设计：同步回路、human-in-the-loop 节拍、以及哪些任务值得在线而不是离线处理。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给它 high importance，但这是 product-architecture 层面的 high，不是“模型能力本身又跃迁了”的 high。最值得注意的是 OpenAI 把 latency class 正式产品化；保留意见则是明显的：limited preview、Cerebras 依赖、以及效果证据主要来自 OpenAI 与早期客户自述。短期更像是一个强烈的 deployment signal，而不是已经全面可得的默认能力。</p>
+      </section>
+      <div class="tags"><span>GPT-5.6 Sol</span><span>Ultrafast</span><span>latency</span><span>Cerebras</span><span>API</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-05-20">
               <div class="date-heading">
                 <h3>2026-05-20</h3>
