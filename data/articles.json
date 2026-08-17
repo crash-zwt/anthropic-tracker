@@ -1,5 +1,37 @@
 [
   {
+    "id": "9f1cc05b1c69",
+    "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+    "title": "Maximizing the value of your Claude Code sessions",
+    "source_id": "claude_code",
+    "source_name": "Claude Blog - Claude Code",
+    "category": "claude_code",
+    "vendor": "Anthropic",
+    "published_at": "2026-08-14",
+    "added_at": "2026-08-17T02:12:14+00:00",
+    "summary": {
+      "tldr": "Anthropic 这篇 Claude Code 实践指南把 session cost 拆成一个很具体的 runtime 问题：model/effort 决定单价，context、turn 数和并发 session 决定总 token；关键是让每一轮带着的上下文保持短且相关，并尽量命中 prompt cache。",
+      "key_points": [
+        "在新任务之间执行 /clear；无关的历史不再随每个后续请求重复发送，可同时减少 token 与 context distraction。",
+        "在 session 开始前固定 /model 和 /effort：两者以及 Fast mode 都是 cache key，中途切换会让长上下文重新 prefill。",
+        "用 @-mention 直接附加目标文件，避免 Agent 为定位文件额外 Search/Read；但同一文件不要在后续轮次重复附加。",
+        "command output 也会进入并停留在 context；给测试/日志加 quiet flags，或把高噪声排查交给 subagent，能保护主 session 的有效上下文。",
+        "在长时间离开前 /compact：订阅版 prompt cache 约一小时失效，cache 仍在时生成压缩摘要更便宜；若只想丢弃末尾错误分支，用 /rewind 更合适。",
+        "先用 /context 检查启动加载项；把特定 workflow 指令移到按需加载的 skills，关闭当前不用的 MCP server。"
+      ],
+      "why_it_matters": "这不是泛泛的 prompt advice，而是把 agentic coding 的成本、速度和质量统一到了 context hygiene。对长时任务，少读一个无关文件或少保留一段 noisy log，不仅省 input token，也减少模型在过期信息中做判断的机会；这会直接影响 harness 的稳定性。",
+      "my_take": "我给 medium importance。它最有价值的部分不是某个命令，而是把 cache continuity、context budget 与任务切分连成可执行的操作准则。实际采用时不要机械追求最短 context：对正在进行的同一任务，保留关键约束和验证证据仍然比频繁 /clear 更重要；目标应是相关性，不是 token 数最低。",
+      "tags": [
+        "Claude Code",
+        "context engineering",
+        "prompt caching",
+        "subagents",
+        "token efficiency"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "855fa77e93e1",
     "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
     "title": "The builder’s guide to GPT‑5.6",
