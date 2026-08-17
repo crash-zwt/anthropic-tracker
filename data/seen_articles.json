@@ -2988,5 +2988,10 @@
     "title": "How RingCentral builds AI-native work from engineering to ops",
     "source_id": "openai_codex_product",
     "first_seen_at": "2026-08-14T02:37:54+00:00"
+  },
+  "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/": {
+    "title": "AMIE: Advancing medical AI for video consultations",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-17T02:17:47+00:00"
   }
 }

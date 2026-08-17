@@ -1,5 +1,36 @@
 [
   {
+    "id": "dbc30e861442",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+    "title": "AMIE: Advancing medical AI for video consultations",
+    "source_id": "google_gemini_ai_blog",
+    "source_name": "Google AI Blog - Gemini",
+    "category": "google_gemini",
+    "vendor": "Google",
+    "published_at": "2026-08-11",
+    "added_at": "2026-08-17T02:17:47+00:00",
+    "summary": {
+      "tldr": "Google 这篇更新本身是 short post，但指向的核心信号不弱：AMIE 从 text chat 走到 real-time video consultation，底层明确写了 built on Gemini + Project Astra，并采用异步 multi-agent architecture 去同时处理对话流畅度、临床推理和音视频感知。它更像 Gemini-adjacent research milestone，而不是一个可直接落地的产品发布。",
+      "key_points": [
+        "AMIE (Video) 由 Talker、Planner、Perception 三个 agent 异步并行协作：前台负责低延迟对话，后台持续更新 differential diagnosis 和 management plan，同时从音视频流里提取非语言线索。",
+        "官方说系统 built on Gemini and Project Astra，目标是把 text-only medical dialogue 扩展到同步视频问诊，覆盖视觉体征、呼吸/声音线索和引导式 virtual physical exam。",
+        "Google 在 randomized OSCE-style study 里覆盖 100 个 simulated clinical scenarios，并让 20 名有经验的 primary care physicians 盲评 AMIE (Video)、AMIE (Text) 与 10 位 PCP 的表现。",
+        "文中最强结果是：在 history-taking、diagnostic accuracy、management appropriateness 和 communication quality 上，clinical evaluators 认为 AMIE (Video) 与 PCPs 大致持平；在 eliciting physical signs 和引导远程检查上平均评分更高。",
+        "作者反复强调这仍是 research system：全部评估都发生在 simulated settings with patient actors，不是真实患者，也还需要更强的 safety framework 和 real-world validation。"
+      ],
+      "why_it_matters": "对追踪 Gemini / multimodal agents 的人，这篇的价值不在“医疗 AI 又进步了”这种泛叙事，而在 architecture shape：Google 正把实时语音/视频、持续感知和后台推理拆成并行 agent，而不是塞给单个同步回路。这和很多通用 agent 系统正在演化的方向高度一致。",
+      "my_take": "我给 medium importance，但要明确它是 research signal，不是 deployment signal。最值得记的是 Gemini + Astra 支撑的 audio-visual multi-agent design，以及 Google 愿意公开把 latency-sensitive front agent 和 heavier reasoning/perception agents 解耦。需要打折扣的地方也很明显：实验环境高度受控，patient actors 不能代表真实临床复杂性，所以现在更适合把它当 multimodal agent design reference，而不是医疗落地证据。",
+      "tags": [
+        "AMIE",
+        "Gemini",
+        "Project Astra",
+        "medical AI",
+        "multi-agent"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "9f1cc05b1c69",
     "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
     "title": "Maximizing the value of your Claude Code sessions",
