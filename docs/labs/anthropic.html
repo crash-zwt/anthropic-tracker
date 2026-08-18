@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-17 10:40 Asia/Shanghai</dd>
+            <dd>2026-08-18 21:40 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>234</dd>
+            <dd>237</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic is-active" href="#top">
       <span>Anthropic / Claude</span>
-      <strong>69</strong>
+      <strong>70</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>134</strong>
+      <strong>136</strong>
     </a>
     
 
@@ -98,13 +98,13 @@
         <nav class="archive-list" aria-label="Article archive by publish date">
           <a href="#topic-model"><span>Model</span><strong>7</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>12</strong></a>
-<a href="#topic-agents"><span>Agents</span><strong>21</strong></a>
+<a href="#topic-agents"><span>Agents</span><strong>22</strong></a>
 <a href="#topic-code"><span>Code</span><strong>29</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-08-17 10:40 Asia/Shanghai
+        Generated: 2026-08-18 21:40 Asia/Shanghai
       </footer>
     </aside>
 
@@ -834,9 +834,46 @@
             <section class="topic-section" id="topic-agents">
               <div class="topic-heading">
                 <h3>Agents</h3>
-                <span>21 posts</span>
+                <span>22 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-18">
+              <div class="date-heading">
+                <h3>2026-08-18</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-08-18</span>
+        <span>Added 2026-08-18</span>
+      </div>
+      <h2>Claude on call: How Claude Tag serves as Anthropic’s first responder for CI/CD failures</h2>
+      <a class="original-link" href="https://claude.com/blog/ai-ci-cd-on-call" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 把 Claude Tag 变成了 CI/CD on-call 的 first responder：它在 Slack 里持续监听告警、调用 Grafana / GitHub / Kubernetes / PagerDuty 等工具并行排查，通常 15 分钟内给出首份 SITREP，最快 4 分钟命中 root cause。核心不是一个“会聊天的 bot”，而是一套带 memory、skills、connectors、dynamic workflows 的 incident-response system。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Claude Tag 挂在 on-call Slack channel 上，持有跨事件 memory，并通过 natural language schedules 触发例行 handoff / 巡检任务</li><li>告警检测是 deterministic rules + Claude 辅助调参；真正的 triage 则由 orchestration agent 拉起多个 executor subagents 并行查 Grafana、logs、PagerDuty、GitHub、Kubernetes 和 incident channels</li><li>Anthropic 记录的实际收益是：每次 incident 基本都有 instant first responder，首份 evidence-grounded analysis 通常 15 分钟内产出，最快 4 分钟给到 root-cause 假设</li><li>团队把 oncall instructions、bug-class playbooks、lessons learned 都放在 markdown skills / lessons.md 里，像维护代码一样维护 incident knowledge base</li><li>修复层面并不是完全放飞自动化，而是让 Claude 产出 PR、给出 feature-flag 回滚建议、做验证与 handoff，再由人 review / merge / deploy</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇文章把“AI agent 进生产”讲得比大多数营销稿更具体：不是泛泛谈 Copilot 提效，而是把 incident response 这个高压、高并发、强上下文场景拆成 detection / triage / resolution / verification 几段，并说明哪些环节 deterministic、哪些环节 agentic。对做 engineering agents 的人，这比 benchmark 更有参考价值。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我的判断是，这类 on-call agent 的真正壁垒不在模型本身，而在 context engineering + tool surface + org process。Anthropic 这里最值得学的不是“Claude 也能值班”，而是他们把 skills、lessons.md、channel memory、subagents orchestration 和 human review 串成了一个闭环。代价是系统搭建和权限治理要求不低，所以这更像 Team / Enterprise 的范式，不是个人 CLI agent 直接复制就能成功。</p>
+      </section>
+      <div class="tags"><span>agents</span><span>incident-response</span><span>slack</span><span>mcp-connectors</span><span>claude-tag</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-06">
               <div class="date-heading">
                 <h3>2026-08-06</h3>

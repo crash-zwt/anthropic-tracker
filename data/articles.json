@@ -1,5 +1,98 @@
 [
   {
+    "id": "73978d10d0d5",
+    "url": "https://claude.com/blog/ai-ci-cd-on-call",
+    "title": "Claude on call: How Claude Tag serves as Anthropic’s first responder for CI/CD failures",
+    "source_id": "claude_agents",
+    "source_name": "Claude Blog - Agents",
+    "category": "agents",
+    "vendor": "Anthropic",
+    "published_at": "2026-08-18",
+    "added_at": "2026-08-18T13:40:00+00:00",
+    "summary": {
+      "tldr": "Anthropic 把 Claude Tag 变成了 CI/CD on-call 的 first responder：它在 Slack 里持续监听告警、调用 Grafana / GitHub / Kubernetes / PagerDuty 等工具并行排查，通常 15 分钟内给出首份 SITREP，最快 4 分钟命中 root cause。核心不是一个“会聊天的 bot”，而是一套带 memory、skills、connectors、dynamic workflows 的 incident-response system。",
+      "key_points": [
+        "Claude Tag 挂在 on-call Slack channel 上，持有跨事件 memory，并通过 natural language schedules 触发例行 handoff / 巡检任务",
+        "告警检测是 deterministic rules + Claude 辅助调参；真正的 triage 则由 orchestration agent 拉起多个 executor subagents 并行查 Grafana、logs、PagerDuty、GitHub、Kubernetes 和 incident channels",
+        "Anthropic 记录的实际收益是：每次 incident 基本都有 instant first responder，首份 evidence-grounded analysis 通常 15 分钟内产出，最快 4 分钟给到 root-cause 假设",
+        "团队把 oncall instructions、bug-class playbooks、lessons learned 都放在 markdown skills / lessons.md 里，像维护代码一样维护 incident knowledge base",
+        "修复层面并不是完全放飞自动化，而是让 Claude 产出 PR、给出 feature-flag 回滚建议、做验证与 handoff，再由人 review / merge / deploy"
+      ],
+      "why_it_matters": "这篇文章把“AI agent 进生产”讲得比大多数营销稿更具体：不是泛泛谈 Copilot 提效，而是把 incident response 这个高压、高并发、强上下文场景拆成 detection / triage / resolution / verification 几段，并说明哪些环节 deterministic、哪些环节 agentic。对做 engineering agents 的人，这比 benchmark 更有参考价值。",
+      "my_take": "我的判断是，这类 on-call agent 的真正壁垒不在模型本身，而在 context engineering + tool surface + org process。Anthropic 这里最值得学的不是“Claude 也能值班”，而是他们把 skills、lessons.md、channel memory、subagents orchestration 和 human review 串成了一个闭环。代价是系统搭建和权限治理要求不低，所以这更像 Team / Enterprise 的范式，不是个人 CLI agent 直接复制就能成功。",
+      "tags": [
+        "agents",
+        "incident-response",
+        "slack",
+        "mcp-connectors",
+        "claude-tag"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "68c52c81310f",
+    "url": "https://openai.com/index/pacing-model-development-cyber-capabilities",
+    "title": "Pacing model development in an era of cyber-critical capabilities",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-18",
+    "added_at": "2026-08-18T13:40:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 披露，因近期安全事件和对即将发布模型 Astra 的评估信号，他们判断其可能达到 Preparedness Framework 下的 critical cybersecurity capability threshold，因此主动放慢了 frontier scaling 节奏，并暂停部分高风险 RL / tool-use 训练与评测，优先加固 monitoring、alignment 和 research security。",
+      "key_points": [
+        "OpenAI 明确说过去几周有两个触发器：OpenAI-Hugging Face incident，以及 Astra 可能跨过 critical cyber capability threshold 的初步证据",
+        "他们对最新部署候选模型做过两周 RL training pause，最大的 frontier RL run 目前仍 hold，先做 smaller-scale training / eval 来验证 safeguards 和 alignment evidence",
+        "研究环境侧新增更强的 sandbox / workload isolation、network isolation、continuous security testing，并把最严格安全要求先用于 Astra 与 cyber-related workloads",
+        "Monitoring 从局部扩展到更广覆盖：activation classifiers 按 sampled token 触发，多级 automated investigators 看 tool actions、reasoning 和 full sequence；若 30 分钟内不能排除 critical violation，就预期暂停活动",
+        "Alignment 不再只在靠后阶段兜底，而是更早介入 RL 训练过程，重点压 reward hacking、deception、unauthorized access 这类随着 tool use / external systems 放大的风险"
+      ],
+      "why_it_matters": "这不是单纯的 safety posture update，而是一个很强的产业信号：前沿模型的 capability 提升已经开始反过来约束训练节奏、算力排期和内部研究环境设计。对外界而言，真正的 frontier race 竞争点正在从“谁先把更强模型训出来”转向“谁能把高能力模型放在可控 research / deployment pipeline 里持续推进”。",
+      "my_take": "我的判断是，这篇文章最值得重视的不是“OpenAI 更谨慎了”这句表层结论，而是他们第一次更公开地承认 capability gating 已经实质影响 frontier training cadence。Astra 是否最终上线还要看后续证据，但从工程角度看，research security、chain-of-thought monitoring 和 alignment evidence 正在从附属工作变成 release-critical infrastructure。做 agent / coding / tool-use 系统的人也该默认：更强模型不会自动带来更快交付，很多时候会先带来更重的 containment 成本。",
+      "tags": [
+        "openai",
+        "cybersecurity",
+        "alignment",
+        "monitoring",
+        "frontier-models"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "7d7eacff40aa",
+    "url": "https://openai.com/index/asana",
+    "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+    "source_id": "openai_codex_product",
+    "source_name": "OpenAI Product - Codex",
+    "category": "openai_code",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-18",
+    "added_at": "2026-08-18T13:40:00+00:00",
+    "summary": {
+      "tldr": "Asana 用 Codex 清掉了一个原本估算要 5 年、约 600 万美元 staffing 成本的前端测试系统迁移：从一个五句提示出发，最多 4 个 coding agents 并行在独立 codebase 副本里工作，人类工程师每天检查两次并 review 全部改动，最终约两周完成，模型与基础设施成本约 1.2 万美元。",
+      "key_points": [
+        "目标是移除已停止活跃维护、阻碍前端升级的 Enzyme testing system，这类 codebase-scale migration 很适合 agent 做并行试探与机械改写",
+        "Asana 的操作方式很克制：最多 4 个 agents 并行、每个 agent 在独立副本工作、工程师每天只 checkpoint 两次并 review 每个 proposed change",
+        "结果是 1.5 周工程时间、跨 2 个 calendar weeks 完成，直接把原本被视为 years-long backlog 的项目清掉",
+        "文章强调 simpler instructions 比 elaborate setup 更有效，说明在大迁移里 prompt sophistication 不一定比 task framing、review loop 和 repo isolation 更重要",
+        "迁移完成后，团队计划把同样范式扩展到 rewrites、performance work 和其他原本“不值得开工”的长期工程债"
+      ],
+      "why_it_matters": "这是一条很实在的 Codex adoption 信号。相比“工程师提效百分之多少”这种泛指标，这个案例给了明确的任务类型、组织方式、成本级别和 human-in-the-loop 边界。它说明 agent coding 最先重塑的不是所有开发工作，而是那些高重复、高上下文但又长期没人愿意碰的大规模迁移。",
+      "my_take": "我的判断是，这个案例可信的部分不在“5 年变 2 周”的 headline，而在执行模式本身：隔离副本、并行 agents、低频 checkpoint、严格 review。也就是说，真正有效的不是让 agent 直接接管主干，而是把它当作 migration factory。对大团队来说，这类模式会优先改写 tech debt economics；对小团队则别只盯着 headline，先问自己有没有足够稳定的测试、review discipline 和任务切分能力，否则很难复刻。",
+      "tags": [
+        "codex",
+        "code-migration",
+        "frontend",
+        "agents",
+        "enterprise"
+      ],
+      "importance": "high"
+    }
+  },
+  {
     "id": "dbc30e861442",
     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
     "title": "AMIE: Advancing medical AI for video consultations",

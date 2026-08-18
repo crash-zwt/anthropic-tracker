@@ -2993,5 +2993,20 @@
     "title": "AMIE: Advancing medical AI for video consultations",
     "source_id": "google_gemini_ai_blog",
     "first_seen_at": "2026-08-17T02:17:47+00:00"
+  },
+  "https://openai.com/index/asana": {
+    "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-08-18T13:40:00+00:00"
+  },
+  "https://openai.com/index/pacing-model-development-cyber-capabilities": {
+    "title": "Pacing model development in an era of cyber-critical capabilities",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-18T13:40:00+00:00"
+  },
+  "https://claude.com/blog/ai-ci-cd-on-call": {
+    "title": "Claude on call: How Claude Tag serves as Anthropic’s first responder for CI/CD failures",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-08-18T13:40:00+00:00"
   }
 }

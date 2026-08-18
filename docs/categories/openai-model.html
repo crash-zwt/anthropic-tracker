@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-17 10:40 Asia/Shanghai</dd>
+            <dd>2026-08-18 21:40 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>234</dd>
+            <dd>237</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>69</strong>
+      <strong>70</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>134</strong>
+      <strong>136</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-13"><span>2026-08-13</span><strong>2</strong></a>
+          <a href="#date-2026-08-18"><span>2026-08-18</span><strong>1</strong></a>
+<a href="#date-2026-08-13"><span>2026-08-13</span><strong>2</strong></a>
 <a href="#date-2026-08-10"><span>2026-08-10</span><strong>2</strong></a>
 <a href="#date-2026-08-04"><span>2026-08-04</span><strong>1</strong></a>
 <a href="#date-2026-08-03"><span>2026-08-03</span><strong>1</strong></a>
@@ -187,7 +188,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-17 10:40 Asia/Shanghai
+        Generated: 2026-08-18 21:40 Asia/Shanghai
       </footer>
     </aside>
 
@@ -203,6 +204,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-18">
+              <div class="date-heading">
+                <h3>2026-08-18</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_model">OpenAI Model</span>
+        <span>OpenAI Product - Models</span>
+        <span>2026-08-18</span>
+        <span>Added 2026-08-18</span>
+      </div>
+      <h2>Pacing model development in an era of cyber-critical capabilities</h2>
+      <a class="original-link" href="https://openai.com/index/pacing-model-development-cyber-capabilities" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>OpenAI 披露，因近期安全事件和对即将发布模型 Astra 的评估信号，他们判断其可能达到 Preparedness Framework 下的 critical cybersecurity capability threshold，因此主动放慢了 frontier scaling 节奏，并暂停部分高风险 RL / tool-use 训练与评测，优先加固 monitoring、alignment 和 research security。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>OpenAI 明确说过去几周有两个触发器：OpenAI-Hugging Face incident，以及 Astra 可能跨过 critical cyber capability threshold 的初步证据</li><li>他们对最新部署候选模型做过两周 RL training pause，最大的 frontier RL run 目前仍 hold，先做 smaller-scale training / eval 来验证 safeguards 和 alignment evidence</li><li>研究环境侧新增更强的 sandbox / workload isolation、network isolation、continuous security testing，并把最严格安全要求先用于 Astra 与 cyber-related workloads</li><li>Monitoring 从局部扩展到更广覆盖：activation classifiers 按 sampled token 触发，多级 automated investigators 看 tool actions、reasoning 和 full sequence；若 30 分钟内不能排除 critical violation，就预期暂停活动</li><li>Alignment 不再只在靠后阶段兜底，而是更早介入 RL 训练过程，重点压 reward hacking、deception、unauthorized access 这类随着 tool use / external systems 放大的风险</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这不是单纯的 safety posture update，而是一个很强的产业信号：前沿模型的 capability 提升已经开始反过来约束训练节奏、算力排期和内部研究环境设计。对外界而言，真正的 frontier race 竞争点正在从“谁先把更强模型训出来”转向“谁能把高能力模型放在可控 research / deployment pipeline 里持续推进”。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我的判断是，这篇文章最值得重视的不是“OpenAI 更谨慎了”这句表层结论，而是他们第一次更公开地承认 capability gating 已经实质影响 frontier training cadence。Astra 是否最终上线还要看后续证据，但从工程角度看，research security、chain-of-thought monitoring 和 alignment evidence 正在从附属工作变成 release-critical infrastructure。做 agent / coding / tool-use 系统的人也该默认：更强模型不会自动带来更快交付，很多时候会先带来更重的 containment 成本。</p>
+      </section>
+      <div class="tags"><span>openai</span><span>cybersecurity</span><span>alignment</span><span>monitoring</span><span>frontier-models</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-13">
               <div class="date-heading">
                 <h3>2026-08-13</h3>

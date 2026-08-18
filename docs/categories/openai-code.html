@@ -19,15 +19,15 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-17 10:40 Asia/Shanghai</dd>
+            <dd>2026-08-18 21:40 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>234</dd>
+            <dd>237</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>69</strong>
+      <strong>70</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>134</strong>
+      <strong>136</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-12"><span>2026-08-12</span><strong>2</strong></a>
+          <a href="#date-2026-08-18"><span>2026-08-18</span><strong>1</strong></a>
+<a href="#date-2026-08-12"><span>2026-08-12</span><strong>2</strong></a>
 <a href="#date-2026-08-04"><span>2026-08-04</span><strong>1</strong></a>
 <a href="#date-2026-08-03"><span>2026-08-03</span><strong>1</strong></a>
 <a href="#date-2026-07-28"><span>2026-07-28</span><strong>1</strong></a>
@@ -107,7 +108,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-17 10:40 Asia/Shanghai
+        Generated: 2026-08-18 21:40 Asia/Shanghai
       </footer>
     </aside>
 
@@ -123,6 +124,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-18">
+              <div class="date-heading">
+                <h3>2026-08-18</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-openai_code">OpenAI Code</span>
+        <span>OpenAI Product - Codex</span>
+        <span>2026-08-18</span>
+        <span>Added 2026-08-18</span>
+      </div>
+      <h2>Asana cleared 5 years of engineering work in 2 weeks with Codex</h2>
+      <a class="original-link" href="https://openai.com/index/asana" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Asana 用 Codex 清掉了一个原本估算要 5 年、约 600 万美元 staffing 成本的前端测试系统迁移：从一个五句提示出发，最多 4 个 coding agents 并行在独立 codebase 副本里工作，人类工程师每天检查两次并 review 全部改动，最终约两周完成，模型与基础设施成本约 1.2 万美元。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>目标是移除已停止活跃维护、阻碍前端升级的 Enzyme testing system，这类 codebase-scale migration 很适合 agent 做并行试探与机械改写</li><li>Asana 的操作方式很克制：最多 4 个 agents 并行、每个 agent 在独立副本工作、工程师每天只 checkpoint 两次并 review 每个 proposed change</li><li>结果是 1.5 周工程时间、跨 2 个 calendar weeks 完成，直接把原本被视为 years-long backlog 的项目清掉</li><li>文章强调 simpler instructions 比 elaborate setup 更有效，说明在大迁移里 prompt sophistication 不一定比 task framing、review loop 和 repo isolation 更重要</li><li>迁移完成后，团队计划把同样范式扩展到 rewrites、performance work 和其他原本“不值得开工”的长期工程债</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这是一条很实在的 Codex adoption 信号。相比“工程师提效百分之多少”这种泛指标，这个案例给了明确的任务类型、组织方式、成本级别和 human-in-the-loop 边界。它说明 agent coding 最先重塑的不是所有开发工作，而是那些高重复、高上下文但又长期没人愿意碰的大规模迁移。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我的判断是，这个案例可信的部分不在“5 年变 2 周”的 headline，而在执行模式本身：隔离副本、并行 agents、低频 checkpoint、严格 review。也就是说，真正有效的不是让 agent 直接接管主干，而是把它当作 migration factory。对大团队来说，这类模式会优先改写 tech debt economics；对小团队则别只盯着 headline，先问自己有没有足够稳定的测试、review discipline 和任务切分能力，否则很难复刻。</p>
+      </section>
+      <div class="tags"><span>codex</span><span>code-migration</span><span>frontend</span><span>agents</span><span>enterprise</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-12">
               <div class="date-heading">
                 <h3>2026-08-12</h3>
