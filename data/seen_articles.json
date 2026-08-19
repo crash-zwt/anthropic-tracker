@@ -3008,5 +3008,15 @@
     "title": "Claude on call: How Claude Tag serves as Anthropic’s first responder for CI/CD failures",
     "source_id": "claude_agents",
     "first_seen_at": "2026-08-18T13:40:00+00:00"
+  },
+  "https://openai.com/index/replit": {
+    "title": "Replit expands access to software creation with GPT-5.6 Luna",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-19T13:30:00+00:00"
+  },
+  "https://openai.com/index/offering-zero-data-retention-for-frontier-models": {
+    "title": "Offering Zero Data Retention for frontier models",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-19T13:30:00+00:00"
   }
 }

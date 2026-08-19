@@ -1,5 +1,67 @@
 [
   {
+    "id": "ef913e9fdabc",
+    "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+    "title": "Offering Zero Data Retention for frontier models",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-19",
+    "added_at": "2026-08-19T13:30:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 宣布把 Zero Data Retention (ZDR) 能力扩展到 frontier-model 场景，并预告一套叫 Private Safety Processing 的新机制：它试图在不让 OpenAI 人工接触底层 prompts / responses 的前提下，跨多轮交互识别 misuse pattern。对做长链路 agents 的企业来说，这更像是一条 platform trust / deployment infra 更新，而不是单纯的 policy 文案。",
+      "key_points": [
+        "官方把核心矛盾讲得很直接：随着 models 承担更长、更复杂的任务，很多 serious safety risks 只看单轮请求已经不够，必须看跨 interaction 的 pattern。",
+        "Private Safety Processing 的设计目标是兼容 ZDR：客户内容可以留在客户自控基础设施里，或放在 OpenAI 侧但用 customer-controlled keys 加密，OpenAI 人员都拿不到原文。",
+        "系统返回给 OpenAI 的是 narrow safety signal，而不是原始内容本身；客户如果要申诉或协助调查，再自己选择分享相关上下文。",
+        "OpenAI 明说这套方案仍在 early-customer testing，计划 2026 年 9 月开始 rollout，并配套 technical white paper。",
+        "文章把这件事放在 frontier deployment 语境里，说明 privacy-preserving safety monitoring 正在从 enterprise feature 变成高能力模型落地的必要基础设施。"
+      ],
+      "why_it_matters": "这篇最重要的地方在于它试图同时保住两件常被认为互相冲突的东西：更强的 safety monitoring，和更严格的 enterprise data-control promise。对 many-step agent workflows 来说，这个方向如果做成，会直接影响 regulated customers 是否愿意把高敏感任务放到 frontier models 上。",
+      "my_take": "我的判断是，这是一条值得高看但不能过度乐观的 infra signal。价值不在“ZDR 继续可用”这句 headline，而在 OpenAI 承认单轮安全检查已经不够，必须做 cross-interaction safety reasoning。真正难点会在 false positive、appeal workflow 和 customer operability，而不是加密表述本身。如果后续 white paper 讲不清 signal quality 和 enforcement 边界，这套机制很容易变成 enterprise marketing；如果讲清楚，它会是 agent deployment 的关键门槛之一。",
+      "tags": [
+        "ZDR",
+        "privacy",
+        "enterprise",
+        "safety",
+        "agents"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "9ac0643f2427",
+    "url": "https://openai.com/index/replit",
+    "title": "Replit expands access to software creation with GPT-5.6 Luna",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-19",
+    "added_at": "2026-08-19T13:30:00+00:00",
+    "summary": {
+      "tldr": "这篇本质上是 OpenAI x Replit 的 customer story，但它透露的重点不是合作本身，而是 GPT-5.6 Luna 的 economics：Replit 用 Luna 驱动 Free Mode，让用户在不消耗 usage 的前提下做快速问答、想法打磨和项目分析，复杂任务再切到 GPT-5.6 Sol。它说明 model price-performance 已经开始直接决定 agent coding 产品的免费层 shape。",
+      "key_points": [
+        "Replit 把 Free Mode 明确建立在 GPT-5.6 Luna 上，主打 fast, accurate answers、feedback、analysis 和 ideation，目标是把“先想清楚”这一步免费化。",
+        "更重的 reasoning 任务并不是硬塞给同一层，而是按任务切到 GPT-5.6 Sol，再回到 Luna 保持项目上下文连续。",
+        "文中反复强调 recent OpenAI price cuts 和 GPT-5.6 系列的 price performance，说明成本下降而不是纯能力提升，才是 Free Mode 成立的直接原因。",
+        "从产品结构看，Replit 在把 model tiering 显式产品化：Luna 做高频低成本交互，Sol 承担更贵但更强的 execution / reasoning 段。",
+        "对 OpenAI 来说，这也是一个市场信号：前沿 coding model 的竞争已经不只是 benchmark，而是能否支撑 consumer-scale 或 startup-scale 的 acquisition funnel。"
+      ],
+      "why_it_matters": "如果说前一阶段的 AI coding 竞争更多在比“能不能做”，这篇体现的是下一阶段在比“能不能便宜到足以普及”。Free tier 是否成立，会反过来决定产品的分发、留存和用户教育方式。Luna / Sol 这种分层，也比单一大模型更接近真实商业化形态。",
+      "my_take": "我的判断是，这篇的技术新意一般，商业信号更强。它不是证明 GPT-5.6 Luna 有什么全新能力，而是证明一个足够便宜、足够稳的 mid-tier model 可以重构软件生成产品的 entry point。对追踪 AI lab 的人，真正该记的是 model economics 正在成为产品策略的一部分；对做 agent coding 的团队，则要认真思考自己的“free planning / paid execution”分层是不是也会变成默认形态。",
+      "tags": [
+        "GPT-5.6 Luna",
+        "Replit",
+        "coding",
+        "pricing",
+        "product"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "73978d10d0d5",
     "url": "https://claude.com/blog/ai-ci-cd-on-call",
     "title": "Claude on call: How Claude Tag serves as Anthropic’s first responder for CI/CD failures",
