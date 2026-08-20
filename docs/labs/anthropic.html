@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-19 21:30 Asia/Shanghai</dd>
+            <dd>2026-08-20 21:40 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>239</dd>
+            <dd>242</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
         </dl>
       </section>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic is-active" href="#top">
       <span>Anthropic / Claude</span>
-      <strong>70</strong>
+      <strong>72</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>138</strong>
+      <strong>139</strong>
     </a>
     
 
@@ -98,13 +98,13 @@
         <nav class="archive-list" aria-label="Article archive by publish date">
           <a href="#topic-model"><span>Model</span><strong>7</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>12</strong></a>
-<a href="#topic-agents"><span>Agents</span><strong>22</strong></a>
-<a href="#topic-code"><span>Code</span><strong>29</strong></a>
+<a href="#topic-agents"><span>Agents</span><strong>23</strong></a>
+<a href="#topic-code"><span>Code</span><strong>30</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-08-19 21:30 Asia/Shanghai
+        Generated: 2026-08-20 21:40 Asia/Shanghai
       </footer>
     </aside>
 
@@ -834,9 +834,46 @@
             <section class="topic-section" id="topic-agents">
               <div class="topic-heading">
                 <h3>Agents</h3>
-                <span>22 posts</span>
+                <span>23 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-20">
+              <div class="date-heading">
+                <h3>2026-08-20</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-08-20</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>How monday.com transformed its platform into an agent-first product where humans and agents collaborate</h2>
+      <a class="original-link" href="https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 这篇 partner case study 讲的是 monday.com 为什么不再满足于在旧工作流上撒一点 &quot;AI dust&quot;，而是直接把平台重构成 human-agent collaboration system。自 2026-05 上线新版以来，monday 表示客户已经在平台上完成了 500 万次 agent interactions；Claude 被嵌进 board、permissions、workflows 和 governance 里，agents 不再是旁路聊天框，而是 workflow 内的 teammate。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>转折点来自所谓的 &quot;AI dust ceiling&quot;：早期 AI features 有采用，但没有形成持续 usage，于是团队决定从 &quot;给现有产品加 AI&quot; 改成 &quot;把产品原生做成 agent-first platform&quot;。</li><li>monday 把 agents 设计成带名字、头像、权限和提及入口的 teammates，可覆盖 IT ticket triage、HR 招聘协同、营销竞品情报、以及 Chief of Staff 式运营工作。</li><li>文中给出四种 Claude 接入形态：monday Agents、Bring Your Own Agent 接入 Claude Managed Agents、Agents Store 里的预置 agents，以及把 Claude Coding 连到 monday dashboard 的 coding workflow。</li><li>一个典型链路是 campaign board item 内从 brief 到 landing page：Strategist Agent 结构化 brief，Landing Page Builder 在自有环境里生成页面，Brand Reviewer 做 brand/legal review，最后人类经理决定 publish or refine。</li><li>monday 总结的五点 lesson 很实在：最难改的是 mental model；变化期小团队更快；adoption 取决于 trust/gov/permissions；capability 需要数据基础设施匹配；以及最好延展已有产品承诺，而不是凭空造一个 AI 外挂。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这类文章的价值不在 &quot;某公司用了 Claude&quot;，而在它公开了一个比较完整的 agent-first 产品重构范式。相比单点 copilots，这里更接近 workflow substrate 重写：把 context、governance、assignment、handoff、review 和 execution 都嵌回系统本身。对追踪 agents 的读者来说，这是比单条 benchmark 或 feature release 更有参考价值的产品架构信号。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 medium importance，但信号质量高于普通 customer story。最值得看的是它承认 &quot;AI dust&quot; 不够，真正的 product advantage 需要把 workflow、权限和数据层一起重做，甚至还专门提到为 agent volume 重投了 monday DB。这比单纯吹 500 万次 interactions 更说明问题。保留意见是：文中没有 retention、task success 或真实 ROI 的硬指标，所以更适合当 platform redesign playbook，而不是效果证明。</p>
+      </section>
+      <div class="tags"><span>agent-first-product</span><span>human-agent-collaboration</span><span>workflow-platform</span><span>governance</span><span>claude-enterprise</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-18">
               <div class="date-heading">
                 <h3>2026-08-18</h3>
@@ -1616,9 +1653,46 @@
             <section class="topic-section" id="topic-code">
               <div class="topic-heading">
                 <h3>Code</h3>
-                <span>29 posts</span>
+                <span>30 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-20">
+              <div class="date-heading">
+                <h3>2026-08-20</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-08-20</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>The Claude Code Guide For Startups</h2>
+      <a class="original-link" href="https://claude.com/blog/claude-code-guide-for-startups" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 把十多家 fast-growing startup 的 Claude Code 实践压成了一份五条规则的 playbook：Everyone ships、Automate the tedium、Trust, but verify、Build for rebuilding、Prototype, dogfood, productionize。它想强调的不是 &quot;AI 让工程更快&quot; 这种空话，而是 startup 正在把 Claude Code 当成一种新的 product-development operating model。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章开头给出一些浓缩 adoption signals：ClickHouse 表示 shipped features +30%，Omni 说 engineering productivity 2-3x，Clay 把 bug triage 100% 自动化，Artemis Security 每周可处理 6000+ PRs。</li><li>第一条规则是 &quot;Everyone ships&quot;：非工程成员也能把想法直接推到 working prototype，从而缩短 idea -&gt; PM -&gt; design -&gt; engineering 的损耗链路，但这不等于取消专业分工。</li><li>为了让这种模式可持续，团队会把 MCP/CLI 接到 source of truth，把 shared skills、CLAUDE.md 和知识库文件做成组织级基础设施，而不是靠个体 prompt 习惯。</li><li>自动化部分不只是写代码，还包括 flaky test fixer、code review、数据分析、法律文档总结、医院财务异常扫描等 recurring processes；dynamic workflows 和 subagents 被当成常规手段。</li><li>信任机制是整篇的重点：golden eval sets、hooks、root-level CLAUDE.md、loops、git worktrees 和 plan mode 都被拿来约束 &quot;plausible but wrong&quot; 的 agent output。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇对 tracker 的价值在于它把 Claude Code 从单点工具提升为 team operating system 的轮廓画清楚了。对于创业团队，真正难复制的不是模型 access，而是把工具连接、任务拆分、review discipline、验证标准和共享上下文一起组织起来。它也是 Anthropic 近阶段最系统的一篇 Claude Code adoption manual。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance，但实操价值很高。最好的一点是它没有把 &quot;everyone ships&quot; 讲成无成本民主化，而是不断把话题拉回到 evals、invariants、hooks、worktrees 和 human review。换句话说，Claude Code 真正放大的不是 vibe coding，而是组织是否已经具备可验证的 build/review loop。没有这些基础设施，扩大的往往只是错误扩散速度。</p>
+      </section>
+      <div class="tags"><span>startup-playbook</span><span>claude-code</span><span>agentic-coding</span><span>skills</span><span>evals</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-14">
               <div class="date-heading">
                 <h3>2026-08-14</h3>

@@ -3018,5 +3018,20 @@
     "title": "Offering Zero Data Retention for frontier models",
     "source_id": "openai_model_product",
     "first_seen_at": "2026-08-19T13:30:00+00:00"
+  },
+  "https://openai.com/index/stampli": {
+    "title": "Stampli cuts launch hours by 68% using ChatGPT Work",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-08-20T13:40:00+00:00"
+  },
+  "https://claude.com/blog/claude-code-guide-for-startups": {
+    "title": "The Claude Code Guide For Startups",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-08-20T13:40:00+00:00"
+  },
+  "https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate": {
+    "title": "How monday.com transformed its platform into an agent-first product where humans and agents collaborate",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-08-20T13:40:00+00:00"
   }
 }

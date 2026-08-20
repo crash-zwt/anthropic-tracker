@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-19 21:30 Asia/Shanghai</dd>
+            <dd>2026-08-20 21:40 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>239</dd>
+            <dd>242</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
         </dl>
       </section>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>70</strong>
+      <strong>72</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>138</strong>
+      <strong>139</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-18"><span>2026-08-18</span><strong>1</strong></a>
+          <a href="#date-2026-08-20"><span>2026-08-20</span><strong>1</strong></a>
+<a href="#date-2026-08-18"><span>2026-08-18</span><strong>1</strong></a>
 <a href="#date-2026-08-06"><span>2026-08-06</span><strong>1</strong></a>
 <a href="#date-2026-07-24"><span>2026-07-24</span><strong>2</strong></a>
 <a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
@@ -117,7 +118,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-19 21:30 Asia/Shanghai
+        Generated: 2026-08-20 21:40 Asia/Shanghai
       </footer>
     </aside>
 
@@ -133,6 +134,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-20">
+              <div class="date-heading">
+                <h3>2026-08-20</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-08-20</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>How monday.com transformed its platform into an agent-first product where humans and agents collaborate</h2>
+      <a class="original-link" href="https://claude.com/blog/how-monday-com-transformed-its-platform-into-an-agent-first-product-where-humans-and-agents-collaborate" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 这篇 partner case study 讲的是 monday.com 为什么不再满足于在旧工作流上撒一点 &quot;AI dust&quot;，而是直接把平台重构成 human-agent collaboration system。自 2026-05 上线新版以来，monday 表示客户已经在平台上完成了 500 万次 agent interactions；Claude 被嵌进 board、permissions、workflows 和 governance 里，agents 不再是旁路聊天框，而是 workflow 内的 teammate。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>转折点来自所谓的 &quot;AI dust ceiling&quot;：早期 AI features 有采用，但没有形成持续 usage，于是团队决定从 &quot;给现有产品加 AI&quot; 改成 &quot;把产品原生做成 agent-first platform&quot;。</li><li>monday 把 agents 设计成带名字、头像、权限和提及入口的 teammates，可覆盖 IT ticket triage、HR 招聘协同、营销竞品情报、以及 Chief of Staff 式运营工作。</li><li>文中给出四种 Claude 接入形态：monday Agents、Bring Your Own Agent 接入 Claude Managed Agents、Agents Store 里的预置 agents，以及把 Claude Coding 连到 monday dashboard 的 coding workflow。</li><li>一个典型链路是 campaign board item 内从 brief 到 landing page：Strategist Agent 结构化 brief，Landing Page Builder 在自有环境里生成页面，Brand Reviewer 做 brand/legal review，最后人类经理决定 publish or refine。</li><li>monday 总结的五点 lesson 很实在：最难改的是 mental model；变化期小团队更快；adoption 取决于 trust/gov/permissions；capability 需要数据基础设施匹配；以及最好延展已有产品承诺，而不是凭空造一个 AI 外挂。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这类文章的价值不在 &quot;某公司用了 Claude&quot;，而在它公开了一个比较完整的 agent-first 产品重构范式。相比单点 copilots，这里更接近 workflow substrate 重写：把 context、governance、assignment、handoff、review 和 execution 都嵌回系统本身。对追踪 agents 的读者来说，这是比单条 benchmark 或 feature release 更有参考价值的产品架构信号。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 medium importance，但信号质量高于普通 customer story。最值得看的是它承认 &quot;AI dust&quot; 不够，真正的 product advantage 需要把 workflow、权限和数据层一起重做，甚至还专门提到为 agent volume 重投了 monday DB。这比单纯吹 500 万次 interactions 更说明问题。保留意见是：文中没有 retention、task success 或真实 ROI 的硬指标，所以更适合当 platform redesign playbook，而不是效果证明。</p>
+      </section>
+      <div class="tags"><span>agent-first-product</span><span>human-agent-collaboration</span><span>workflow-platform</span><span>governance</span><span>claude-enterprise</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-18">
               <div class="date-heading">
                 <h3>2026-08-18</h3>
