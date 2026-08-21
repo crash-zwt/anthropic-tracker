@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-20 21:40 Asia/Shanghai</dd>
+            <dd>2026-08-21 05:47 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>3</dd>
+            <dd>5</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>242</dd>
+            <dd>247</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -47,12 +47,12 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>1 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
               <span>Google</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>72</strong>
+      <strong>74</strong>
     </a>
     
 
@@ -81,7 +81,7 @@
 
     <a class="lab-stat lab-google" href="labs/google.html">
       <span>Google</span>
-      <strong>14</strong>
+      <strong>17</strong>
     </a>
     
 
@@ -96,8 +96,9 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-20"><span>2026-08-20</span><strong>3</strong></a>
-<a href="#date-2026-08-19"><span>2026-08-19</span><strong>2</strong></a>
+          <a href="#date-2026-08-21"><span>2026-08-21</span><strong>1</strong></a>
+<a href="#date-2026-08-20"><span>2026-08-20</span><strong>5</strong></a>
+<a href="#date-2026-08-19"><span>2026-08-19</span><strong>4</strong></a>
 <a href="#date-2026-08-18"><span>2026-08-18</span><strong>3</strong></a>
 <a href="#date-2026-08-14"><span>2026-08-14</span><strong>1</strong></a>
 <a href="#date-2026-08-13"><span>2026-08-13</span><strong>2</strong></a>
@@ -239,7 +240,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-20 21:40 Asia/Shanghai
+        Generated: 2026-08-21 05:47 Asia/Shanghai
       </footer>
     </aside>
 
@@ -255,12 +256,107 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-21">
+              <div class="date-heading">
+                <h3>2026-08-21</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-08-21</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>The AI-Native SDLC playbook</h2>
+      <a class="original-link" href="https://claude.com/blog/the-ai-native-sdlc-playbook" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 这篇新文的核心判断是：在 agentic coding 时代，写代码已经不再是主瓶颈，真正拖慢交付的是 plan、review、test、deploy 这些仍按 human speed 运转的环节。它据此提出一套 AI-native SDLC：把 intent.md、spec.md、plan.md、diff、review findings 和 incident record 都做成 version-controlled artifacts，再由 Claude 在各阶段接力，让人类把注意力集中在 gate review 和责任判断上。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章把传统六阶段 SDLC 重新解释成一个 agent-in-the-loop 循环：Plan、Design、Build、Test、Deploy、Maintain 都要留下下一阶段可直接读取的 committed artifact。</li><li>Plan 阶段主张让需求提出者先和 Claude 把想法写成 intent.md；Design 阶段再结合组织技能库，把 requirements 和 design 压缩成一次受约束的 spec 生成与审阅流程。</li><li>Build 阶段强调 Claude Code 先跑 plan mode，由工程师先审 plan.md 再开写，避免 reviewer 第一次看到的就是已经成形的大 diff。</li><li>Test 和 Deploy 不再依赖逐行人工兜底，而是把 evals、hooks、policy skills、agentic review 和 approval gates 编进过程本身，让 controls 跟上 agent 产出的速度。</li><li>Anthropic 反复强调 humans remain accountable：AI-native SDLC 不是取消审批，而是把审批对象从零散会议和手工文档，改成 git 里可审计、可追溯的 artifacts chain。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇的价值高于普通 Claude Code adopt guide，因为它第一次比较系统地把“AI-native engineering org”落到整条软件生命周期，而不是只讨论 coding assistant 本身。对追踪 coding agents 的人，这是一条组织级 operating model 信号：真正的瓶颈和护栏都要从代码生成扩展到前后游流程。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 high importance。最有价值的地方不是它又列了一遍 plan mode、skills、hooks，而是它清楚承认：agent 把 build 压到小时级之后，旧 SDLC 的审批/测试/治理结构会先失配。保留意见是，这仍然主要是 Anthropic 的方法论文，不是大规模外部验证；它更像一份 enterprise transformation blueprint，而不是已经被普遍证实的 best practice。</p>
+      </section>
+      <div class="tags"><span>ai-native-sdlc</span><span>claude-code</span><span>governance</span><span>plan-mode</span><span>artifacts</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-20">
               <div class="date-heading">
                 <h3>2026-08-20</h3>
                 <a href="#top">Back to top</a>
               </div>
               
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-08-20</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>Build production agents with computer use, the Skills API, and the Files API</h2>
+      <a class="original-link" href="https://claude.com/blog/computer-use-skills-api-files-api" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 宣布 Claude Platform 上的 computer use、browser use tool、Skills API 和 Files API 全部进入 GA，并把它们包装成一条“生产级 agent 工作流”叙事：agent 既能看屏幕和网页做操作，也能按团队 skill 执行流程、读取/生成文件、再把结果写回系统。对 agent builder 来说，这比单独放一个新 API 更像是把整套执行面补齐。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>computer use 从单步调用走向 multi-action turns，Anthropic 明说这样能减少 model calls、缩短任务时间，并把该能力放进 HIPAA-regulated workload 适用范围。</li><li>新的 browser use tool 在 screenshot 之外加入 page structure，让 agent 在 web app 里能按 field/button 语义定位，而不是只靠像素点击。</li><li>Skills API 把团队专用 instructions、scripts、templates 变成可上传、可版本化、按需加载的 skill folders，目标是把“专家流程”从 prompt 习惯升级成可复用平台资产。</li><li>Files API 则提供长生命周期文档存储与输出回传能力，Anthropic 还特别提到自动过期、5x rate limits 和每组织 1 TB storage。</li><li>官方用 claims agent 举例：读取理赔文档、加载 filing procedure skill、在保险门户里完成提交、再把确认文件写回；这说明 Anthropic 正在主推“API 少但 UI 多”的企业流程自动化场景。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇的重要性在于 Anthropic 终于把 agent execution stack 讲成了一组可以组合的正式产品表面，而不是零散 preview capability。尤其 browser use + skills + files 这套组合，很明显是在对准那些没有完整 API、但有大量网页和文档流程的 enterprise automation 机会。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 high importance。真正值得关注的不是“又多了几个 API”，而是 Anthropic 在把 production agent 的最难几块拼起来：可操作软件界面、可复用团队知识、可进出文件、可在 sandbox 中执行。保留意见是，官方案例里关于 cost/latency/completion 的数字还很有限，GA 并不等于大规模稳定；但方向已经很明确，就是要把 agent 从 chat surface 推向业务系统执行层。</p>
+      </section>
+      <div class="tags"><span>computer-use</span><span>browser-use</span><span>skills-api</span><span>files-api</span><span>claude-platform</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-google_gemini">Google Gemini</span>
+        <span>Google AI Blog - Gemini</span>
+        <span>2026-08-20</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>Inside the Gemmaverse: Celebrating one billion Gemma downloads</h2>
+      <a class="original-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Google 宣布 Gemma 家族累计下载量突破 10 亿，并把重点放在“Gemmaverse”生态而不只是下载数字：官方称社区已经发布了 10 万多个 Gemma 变体，案例横跨轨道卫星、印度国家健康应用、单细胞医学研究和 DolphinGemma 等跨物种通信项目，同时还上线了官方的 Awesome Gemma 仓库来集中展示项目、微调和教程。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Google 明确把 10 亿下载解释成生态成熟度信号，而不是单纯 vanity metric；文章最先强调的是社区已经做出了超过 100,000 个 Gemma model variants。</li><li>官方举的极端部署案例是 NASA、Satlyt、Starcloud 在轨运行 Gemma，用于 onboard image analysis、带宽优化和 intersatellite communications，突出 open model 在受限环境中的可部署性。</li><li>面向大规模公共服务的例子是印度 National Health Authority 把 Gemma 4 和 Medical Data Toolkit 接进 Aarogya Setu 2.0，用于把复杂 medical reports 标准化成可共享数字格式。</li><li>科研侧案例包括基于 Gemma 的 C2S-Scale 和 MedGemma，以及和 Georgia Tech / Wild Dolphin Project 合作的 DolphinGemma，明显在强调“开源模型也能长出高价值垂类生态”。</li><li>Awesome Gemma GitHub 仓库的推出很关键，它把原本分散的项目、fine-tunes、tutorials 和 tools 做成官方目录，等于开始正式经营 Gemma 社区分发层。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇的核心不是“Google 也会报下载量”，而是它展示了 Gemma 正在从一组 open models 变成一个相对成型的生态品牌。对开源模型竞争来说，真正的护城河往往不只是 base model 指标，而是变体数量、部署场景和社区分发目录是否形成正反馈。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance。10 亿下载和 10 万变体当然是强 adoption signal，但文中很多案例仍是 showcase 口径，离可复核的广泛生产指标还有距离。真正值得高看的，是 Google 开始认真经营 Gemma 的 ecosystem layer：如果 Awesome Gemma 和垂类衍生模型持续增长，Gemma 的长期影响力会更多来自社区复用，而不只是 Google 自己发多少代模型。</p>
+      </section>
+      <div class="tags"><span>gemma</span><span>open-models</span><span>ecosystem</span><span>downloads</span><span>awesome-gemma</span></div>
+    </article>
+    
+
     <article class="article-card">
       <div class="article-meta">
         <span class="badge badge-agents">Agents</span>
@@ -356,6 +452,64 @@
                 <a href="#top">Back to top</a>
               </div>
               
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-google_gemini">Google Gemini</span>
+        <span>Google AI Blog - Gemini</span>
+        <span>2026-08-19</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>Waymo is bringing Gemini into its custom Ojai vehicles.</h2>
+      <a class="original-link" href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Google 把 Gemini 带进了 Waymo 的定制 Ojai 车辆，但定位很克制：它不是碰驾驶栈，而是作为独立的车内 AI assistant，在乘客主动唤起后通过语音帮助控制空调、介绍周边地标、推荐附近地点。官方反复强调 Gemini 与 Waymo Driver 完全分离，只有你点开 Gemini 图标时才会启动。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Gemini 在 Ojai 里的主要工作是 cabin-side assistance，而不是 autonomous driving decision making；这条边界被 Google 写得很明确。</li><li>典型用法是语音控制车内功能、获取 location-aware information，或者做 ride-time discovery，比如询问路过地标历史和附近咖啡店。</li><li>Google 强调 hands-free 和 personalized ride，说明它更像把 Gemini 当作车内交互层升级，而不是无人车核心能力升级。</li><li>文章只给出了面向乘客的 product surface，没有披露模型部署方式、latency、安全过滤或 rollout 范围等技术细节。</li><li>官方还把后续细节引流到 Waymo 自己的 Waypoint 博客，这说明这次更偏 product integration announcement，而非深度技术发布。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这条更新的意义在于，它让 Gemini 从手机/浏览器助手进一步进入具身但受约束的真实场景，而且是与自动驾驶产品并存。即便它不控制驾驶，车内 assistant 也意味着大模型开始被包装进高频线下服务体验，而不只是屏幕上的 chat UI。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance，但会带着保留看。好消息是 Google 明确把 Gemini 和 driving stack 隔离，降低了“模型直接碰安全关键控制”的误读；坏消息是官方披露非常浅，几乎没有 rollout 数据和使用指标。所以这更像一条 distribution / product-surface signal，而不是自动驾驶+LLM 深融合已经被证明的证据。</p>
+      </section>
+      <div class="tags"><span>gemini</span><span>waymo</span><span>ojai</span><span>in-car-assistant</span><span>mobility</span></div>
+    </article>
+    
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-google_gemini">Google Gemini</span>
+        <span>Google AI Blog - Gemini</span>
+        <span>2026-08-19</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>Start the semester with one year of Gemini, on us</h2>
+      <a class="original-link" href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Google 面向全球合资格大学生推出了一年的 Gemini 计划免费优惠，并把它和新的 student hub、study notebooks、interactive visualizations、以及 Gemini Live 中的 Deep Research 一起打包成返校季教育分发动作。美国学生拿到的是免费一年 Google AI Pro，海外学生则是免费一年 Google AI Plus，背后明显是在用教育场景做 Gemini 的长期获客和留存。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>产品层面最直接的变化是 plan 分层：美国学生免费拿 AI Pro，强调更高 usage limits、Gemini Spark、Google apps 集成和 5 TB 存储；美国外学生免费拿 AI Plus，给 Gemini Omni、较高 usage limits 和 400 GB 存储。</li><li>Google 新建了 gemini.google.com/students 的 student hub，把 study notebooks、flashcards、practice quizzes 等学习工具做成专门入口，而不是散落在普通对话流里。</li><li>study notebooks 的定位是上传课程资料后，自动给出学习计划、诊断测验、bite-sized lessons 和进度面板，后续还会加入 graphs / images 以及把 syllabus 关键日期写进 Google Calendar。</li><li>interactive visualizations 和 Gemini Live + Deep Research 的组合，说明 Google 正在把 Gemini 的多模态解释、异步研究和对话式学习能力打包成一个“学习 companion”叙事。</li><li>这篇虽然是 back-to-school 营销文，但它透露了一个重要方向：Gemini 的下一阶段增长，不只是比模型能力，也是在比谁能把高频学习场景变成默认使用入口。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 tracker 来说，这条不是前沿技术突破，而是 distribution strategy signal。教育场景天然具备高频、长周期、强留存潜力；如果学生群体在学期内把 Gemini 用成 notebook / research / calendar / docs 的默认工作流，这会比一次性宣传活动更能改变 Gemini 的真实 usage base。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 low importance，但仍值得记一笔。原因不是“免费一年”本身，而是 Google 正在系统性地把 plan bundle、学习工具、Google app integration 和 Deep Research 绑成一条 acquisition funnel。保留意见也很明显：这类 offer 能否转化成长期高质量留存，取决于学生真正留下来的 workflow，而不是返校季营销声量。</p>
+      </section>
+      <div class="tags"><span>gemini</span><span>education</span><span>student-hub</span><span>deep-research</span><span>distribution</span></div>
+    </article>
+    
+
     <article class="article-card">
       <div class="article-meta">
         <span class="badge badge-openai_model">OpenAI Model</span>

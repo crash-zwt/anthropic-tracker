@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-20 21:40 Asia/Shanghai</dd>
+            <dd>2026-08-21 05:47 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>3</dd>
+            <dd>5</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>242</dd>
+            <dd>247</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -47,12 +47,12 @@
             
             <li>
               <span>OpenAI</span>
-              <strong>1 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
               <span>Google</span>
-              <strong>0 new</strong>
+              <strong>3 new</strong>
             </li>
             
             <li>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>72</strong>
+      <strong>74</strong>
     </a>
     
 
@@ -81,7 +81,7 @@
 
     <a class="lab-stat lab-google" href="../labs/google.html">
       <span>Google</span>
-      <strong>14</strong>
+      <strong>17</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-20"><span>2026-08-20</span><strong>1</strong></a>
+          <a href="#date-2026-08-21"><span>2026-08-21</span><strong>1</strong></a>
+<a href="#date-2026-08-20"><span>2026-08-20</span><strong>1</strong></a>
 <a href="#date-2026-08-14"><span>2026-08-14</span><strong>1</strong></a>
 <a href="#date-2026-08-07"><span>2026-08-07</span><strong>2</strong></a>
 <a href="#date-2026-07-22"><span>2026-07-22</span><strong>1</strong></a>
@@ -126,7 +127,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-20 21:40 Asia/Shanghai
+        Generated: 2026-08-21 05:47 Asia/Shanghai
       </footer>
     </aside>
 
@@ -142,6 +143,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-21">
+              <div class="date-heading">
+                <h3>2026-08-21</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-08-21</span>
+        <span>Added 2026-08-20</span>
+      </div>
+      <h2>The AI-Native SDLC playbook</h2>
+      <a class="original-link" href="https://claude.com/blog/the-ai-native-sdlc-playbook" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 这篇新文的核心判断是：在 agentic coding 时代，写代码已经不再是主瓶颈，真正拖慢交付的是 plan、review、test、deploy 这些仍按 human speed 运转的环节。它据此提出一套 AI-native SDLC：把 intent.md、spec.md、plan.md、diff、review findings 和 incident record 都做成 version-controlled artifacts，再由 Claude 在各阶段接力，让人类把注意力集中在 gate review 和责任判断上。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章把传统六阶段 SDLC 重新解释成一个 agent-in-the-loop 循环：Plan、Design、Build、Test、Deploy、Maintain 都要留下下一阶段可直接读取的 committed artifact。</li><li>Plan 阶段主张让需求提出者先和 Claude 把想法写成 intent.md；Design 阶段再结合组织技能库，把 requirements 和 design 压缩成一次受约束的 spec 生成与审阅流程。</li><li>Build 阶段强调 Claude Code 先跑 plan mode，由工程师先审 plan.md 再开写，避免 reviewer 第一次看到的就是已经成形的大 diff。</li><li>Test 和 Deploy 不再依赖逐行人工兜底，而是把 evals、hooks、policy skills、agentic review 和 approval gates 编进过程本身，让 controls 跟上 agent 产出的速度。</li><li>Anthropic 反复强调 humans remain accountable：AI-native SDLC 不是取消审批，而是把审批对象从零散会议和手工文档，改成 git 里可审计、可追溯的 artifacts chain。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这篇的价值高于普通 Claude Code adopt guide，因为它第一次比较系统地把“AI-native engineering org”落到整条软件生命周期，而不是只讨论 coding assistant 本身。对追踪 coding agents 的人，这是一条组织级 operating model 信号：真正的瓶颈和护栏都要从代码生成扩展到前后游流程。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我会给 high importance。最有价值的地方不是它又列了一遍 plan mode、skills、hooks，而是它清楚承认：agent 把 build 压到小时级之后，旧 SDLC 的审批/测试/治理结构会先失配。保留意见是，这仍然主要是 Anthropic 的方法论文，不是大规模外部验证；它更像一份 enterprise transformation blueprint，而不是已经被普遍证实的 best practice。</p>
+      </section>
+      <div class="tags"><span>ai-native-sdlc</span><span>claude-code</span><span>governance</span><span>plan-mode</span><span>artifacts</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-20">
               <div class="date-heading">
                 <h3>2026-08-20</h3>

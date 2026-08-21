@@ -1,4 +1,29 @@
 {
+  "https://claude.com/blog/the-ai-native-sdlc-playbook": {
+    "title": "The AI-Native SDLC playbook",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-08-20T21:47:00+00:00"
+  },
+  "https://claude.com/blog/computer-use-skills-api-files-api": {
+    "title": "Build production agents with computer use, the Skills API, and the Files API",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-08-20T21:47:00+00:00"
+  },
+  "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/": {
+    "title": "Inside the Gemmaverse: Celebrating one billion Gemma downloads",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-20T21:47:00+00:00"
+  },
+  "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/": {
+    "title": "Waymo is bringing Gemini into its custom Ojai vehicles.",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-20T21:47:00+00:00"
+  },
+  "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/": {
+    "title": "Start the semester with one year of Gemini, on us",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-20T21:47:00+00:00"
+  },
   "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions": {
     "title": "Maximizing the value of your Claude Code sessions",
     "source_id": "claude_code",
