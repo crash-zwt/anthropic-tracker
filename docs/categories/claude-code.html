@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-23 10:00 Asia/Shanghai</dd>
+            <dd>2026-08-24 21:40 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>0</dd>
+            <dd>2</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>247</dd>
+            <dd>249</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -69,13 +69,13 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>74</strong>
+      <strong>75</strong>
     </a>
     
 
     <a class="lab-stat lab-openai" href="../labs/openai.html">
       <span>OpenAI</span>
-      <strong>139</strong>
+      <strong>140</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-21"><span>2026-08-21</span><strong>1</strong></a>
+          <a href="#date-2026-08-24"><span>2026-08-24</span><strong>1</strong></a>
+<a href="#date-2026-08-21"><span>2026-08-21</span><strong>1</strong></a>
 <a href="#date-2026-08-20"><span>2026-08-20</span><strong>1</strong></a>
 <a href="#date-2026-08-14"><span>2026-08-14</span><strong>1</strong></a>
 <a href="#date-2026-08-07"><span>2026-08-07</span><strong>2</strong></a>
@@ -127,7 +128,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-23 10:00 Asia/Shanghai
+        Generated: 2026-08-24 21:40 Asia/Shanghai
       </footer>
     </aside>
 
@@ -143,6 +144,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-24">
+              <div class="date-heading">
+                <h3>2026-08-24</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-claude_code">Claude Code</span>
+        <span>Claude Blog - Claude Code</span>
+        <span>2026-08-24</span>
+        <span>Added 2026-08-24</span>
+      </div>
+      <h2>How an Anthropic field marketer uses Claude Code to send weekly personalized updates to every sales rep</h2>
+      <a class="original-link" href="https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 这篇案例把 Claude Code 从 engineering tool 明确拉到了 go-to-market ops：一位 field marketer 用它把每周一次的 sales update meeting 改造成自动化的 Monday brief，按每个 AE 的账户、活动、内容和 webinar 报名情况生成个性化 Slack digest。底层不是“让 AI 写几句文案”，而是把 Claude 接到 BigQuery via MCP，再联动 CRM 和 Slack context，做成一个可持续运行的 internal workflow。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>起点是一个很典型的非技术痛点：周一销售例会和手工 slides 越来越跟不上团队规模，更新也不够 account-specific。</li><li>作者的做法不是先写代码，而是把自己当 product manager，先给 Claude 讲清业务目标、受众和理想输出模板，再逐步收敛 prompt。</li><li>数据层用 BigQuery 作为 marketing source of truth，并通过 MCP 让 Claude 拉取 HubSpot、Clay、Salesforce 相关信息，再结合 Slack 中的账户动态做个性化拼接。</li><li>流程上加入了实际业务规则和鲁棒性处理，比如 retail account 不该收到 finance dinner 邀请、没有账户的新 seller 要收到 welcome note、表格列变化时先验证 header map 再运行。</li><li>效果不只是省时间：文中给出的直接业务信号是，某次 executive dinner 的报名在一周内翻倍，而且同一套 prompt 结构很快复制到了 BDR、customer success 和 alliance 团队。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这类文章的价值在于它证明 Claude Code 的 adoption boundary 正在超出开发团队。对 tracker 而言，这不是前沿模型能力发布，而是一个很强的 workflow signal：只要有清晰模板、结构化数据源和稳定业务规则，coding agent 可以在非工程职能里扮演“流程编排器”而不只是文案助手。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance。最值得看的不是“营销也在用 Claude Code”，而是这套方法非常 productized：模板、MCP data access、异常规则、header validation、manager roll-up、自动归档都已经像一个内部产品而不是一次性 demo。保留意见是，文中仍是 Anthropic 自述案例，成功指标偏局部，离跨企业可复制的 benchmark 还有距离，但它清楚展示了 Claude Code 正在往 business-process automation 扩张。</p>
+      </section>
+      <div class="tags"><span>claude-code</span><span>gtm-ops</span><span>mcp</span><span>bigquery</span><span>sales-digest</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-21">
               <div class="date-heading">
                 <h3>2026-08-21</h3>

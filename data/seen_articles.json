@@ -3058,5 +3058,21 @@
     "title": "How monday.com transformed its platform into an agent-first product where humans and agents collaborate",
     "source_id": "claude_agents",
     "first_seen_at": "2026-08-20T13:40:00+00:00"
+  },
+  "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep": {
+    "title": "How an Anthropic field marketer uses Claude Code to send weekly personalized updates to every sales rep",
+    "source_id": "claude_code",
+    "first_seen_at": "2026-08-24T13:40:00+00:00"
+  },
+  "https://openai.com/index/gpt-5-6-in-kiro": {
+    "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-24T13:40:00+00:00"
+  },
+  "https://claude.com/blog/self-service-data-analytics-in-slack-how-anthropic-deploys-claude-tag-for-ad-hoc-questions": {
+    "title": "Self-service data analytics in Slack: how Anthropic deploys Claude Tag for ad-hoc questions",
+    "source_id": "claude_agents",
+    "first_seen_at": "2026-08-24T13:40:00+00:00",
+    "ignored_reason": "stale_historical_noise"
   }
 }

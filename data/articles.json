@@ -1,5 +1,67 @@
 [
   {
+    "id": "09c735fe0295",
+    "url": "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep",
+    "title": "How an Anthropic field marketer uses Claude Code to send weekly personalized updates to every sales rep",
+    "source_id": "claude_code",
+    "source_name": "Claude Blog - Claude Code",
+    "category": "claude_code",
+    "vendor": "Anthropic",
+    "published_at": "2026-08-24",
+    "added_at": "2026-08-24T13:40:00+00:00",
+    "summary": {
+      "tldr": "Anthropic 这篇案例把 Claude Code 从 engineering tool 明确拉到了 go-to-market ops：一位 field marketer 用它把每周一次的 sales update meeting 改造成自动化的 Monday brief，按每个 AE 的账户、活动、内容和 webinar 报名情况生成个性化 Slack digest。底层不是“让 AI 写几句文案”，而是把 Claude 接到 BigQuery via MCP，再联动 CRM 和 Slack context，做成一个可持续运行的 internal workflow。",
+      "key_points": [
+        "起点是一个很典型的非技术痛点：周一销售例会和手工 slides 越来越跟不上团队规模，更新也不够 account-specific。",
+        "作者的做法不是先写代码，而是把自己当 product manager，先给 Claude 讲清业务目标、受众和理想输出模板，再逐步收敛 prompt。",
+        "数据层用 BigQuery 作为 marketing source of truth，并通过 MCP 让 Claude 拉取 HubSpot、Clay、Salesforce 相关信息，再结合 Slack 中的账户动态做个性化拼接。",
+        "流程上加入了实际业务规则和鲁棒性处理，比如 retail account 不该收到 finance dinner 邀请、没有账户的新 seller 要收到 welcome note、表格列变化时先验证 header map 再运行。",
+        "效果不只是省时间：文中给出的直接业务信号是，某次 executive dinner 的报名在一周内翻倍，而且同一套 prompt 结构很快复制到了 BDR、customer success 和 alliance 团队。"
+      ],
+      "why_it_matters": "这类文章的价值在于它证明 Claude Code 的 adoption boundary 正在超出开发团队。对 tracker 而言，这不是前沿模型能力发布，而是一个很强的 workflow signal：只要有清晰模板、结构化数据源和稳定业务规则，coding agent 可以在非工程职能里扮演“流程编排器”而不只是文案助手。",
+      "my_take": "我给 medium importance。最值得看的不是“营销也在用 Claude Code”，而是这套方法非常 productized：模板、MCP data access、异常规则、header validation、manager roll-up、自动归档都已经像一个内部产品而不是一次性 demo。保留意见是，文中仍是 Anthropic 自述案例，成功指标偏局部，离跨企业可复制的 benchmark 还有距离，但它清楚展示了 Claude Code 正在往 business-process automation 扩张。",
+      "tags": [
+        "claude-code",
+        "gtm-ops",
+        "mcp",
+        "bigquery",
+        "sales-digest"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "df015003760c",
+    "url": "https://openai.com/index/gpt-5-6-in-kiro",
+    "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-24",
+    "added_at": "2026-08-24T13:40:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 宣布把 GPT-5.6 family 接入 AWS 的 Kiro，把 Sol、Terra、Luna 放进一个强调 spec-driven development 的 software agent 环境里。文章核心不是新模型发布，而是 price-performance 和 workflow fit：Kiro 先把高层 intent 压成 requirements、technical design 和 executable tasks，再让 GPT-5.6 在 plan / build / review / test 这些环节里消化结构化上下文。",
+      "key_points": [
+        "这次接入覆盖 GPT-5.6 Sol、Terra、Luna 三档模型，OpenAI 强调的是 teams 可以按 intelligence、speed、cost 去匹配不同 SDLC 阶段。",
+        "Kiro 的定位是把模糊需求先整理成 spec-driven context，再让模型围绕 requirements、design、task list 和 codebase 标准执行复杂多步开发。",
+        "官方列出的使用面包括：把产品想法转成 implementation plan、处理长链路 coding task、在关键 checkpoint 做 review，以及用 property-based testing 校验正确性。",
+        "文章给出的最硬数字是：在 Terminal-Bench 2.1 上，GPT-5.6 Terra 在 Kiro 中实现 successful tasks 的成本大约降低 82%。",
+        "这也是一条 OpenAI x AWS 的 ecosystem signal：两边明确在共同优化 OpenAI models 在 Kiro 中的表现，而不是一次简单的 model listing。"
+      ],
+      "why_it_matters": "对 tracker 来说，这条更像 distribution + packaging 更新，而不是 frontier capability 突破。但它有现实意义：模型厂商的竞争正在下沉到具体 agent runtime 和开发流程里，谁能在结构化 coding environment 中把成功率、成本和 review/test 体验一起做好，谁就更容易拿到真实开发流量。",
+      "my_take": "我给 medium importance。亮点在于 Kiro 这种 spec-first agent shell 和 GPT-5.6 的组合，说明 OpenAI 很清楚下一阶段卖点不只是 model quality，而是把质量/成本曲线嵌进开发工作流。保留意见也很明显：文中 benchmark 只给了一个 cost-reduction 数字，缺少更细的 task mix、success definition 和外部复核，所以它更适合作为 ecosystem adoption signal，而不是单独拿来证明 GPT-5.6 在 coding 上又跳了一代。",
+      "tags": [
+        "gpt-5.6",
+        "kiro",
+        "spec-driven-development",
+        "price-performance",
+        "terminal-bench"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "74ac61e24404",
     "url": "https://claude.com/blog/the-ai-native-sdlc-playbook",
     "title": "The AI-Native SDLC playbook",
