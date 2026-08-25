@@ -3074,5 +3074,36 @@
     "source_id": "claude_agents",
     "first_seen_at": "2026-08-24T13:40:00+00:00",
     "ignored_reason": "stale_historical_noise"
+  },
+  "https://openai.com/index/introducing-admin-plugin": {
+    "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-08-25T13:40:00+00:00"
+  },
+  "https://openai.com/index/jalapeno-first-results": {
+    "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-25T13:40:00+00:00"
+  },
+  "https://openai.com/index/the-full-stack-behind-abundant-intelligence": {
+    "title": "The full stack behind abundant intelligence",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-25T13:40:00+00:00"
+  },
+  "https://thinkingmachines.ai/news/safety-research-grants/": {
+    "title": "Announcing Safety Research Grants",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-08-25T13:40:00+00:00"
+  },
+  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/": {
+    "title": "Introducing Gemini 3.7 Flash",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-25T13:40:00+00:00"
+  },
+  "https://thinkingmachines.ai/news/safety-research-grants/apply/": {
+    "title": "Apply",
+    "source_id": "thinking_machines_site",
+    "first_seen_at": "2026-08-25T13:40:00+00:00",
+    "ignored_reason": "non_article_apply_page"
   }
 }

@@ -1,5 +1,157 @@
 [
   {
+    "id": "cfc376addf8c",
+    "url": "https://openai.com/index/introducing-admin-plugin",
+    "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
+    "source_id": "openai_codex_product",
+    "source_name": "OpenAI Product - Codex",
+    "category": "openai_code",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-25",
+    "added_at": "2026-08-25T13:40:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 发布了面向 ChatGPT Work 和 Codex 的 Admin plugin，把 workspace analytics、member/group 管理、权限排查和 usage-limit 调整折叠进同一个对话界面。它不是在讲新的 coding capability，而是在把 agent 从“帮你写代码”继续推到“可带权限地做运营和治理动作”的 enterprise admin surface。",
+      "key_points": [
+        "管理员可以直接在对话里查看 adoption、credit usage、权限状态，并执行成员增删、group 更新、feature/model access 控制和 spending request 审批。",
+        "插件支持 recurring admin workflows，例如把 usage request 路由到 Slack 或 Teams，再由授权 reviewer 审批或拒绝。",
+        "官方强调它不提升角色权限，所有动作仍受既有 workspace policy、approval requirement 和 role boundary 约束。",
+        "OpenAI 还给了内部使用信号：IT 团队已把它和 ChatGPT Work agent 用在工单分流、支持流程和运营 dashboard 上，披露的 resolved ticket volume 约为 45%。"
+      ],
+      "why_it_matters": "这条更新说明 Codex 的产品边界正在往“permission-aware enterprise operations”扩张。对企业买家来说，agent 的价值不再只是生产内容或代码，而是能不能在受控权限下完成真实管理动作，并把分析到执行闭环压缩进一次对话。",
+      "my_take": "我给 high importance。真正值得注意的不是 plugin 这个形态，而是 OpenAI 正在把 Admin Console 能力工具化给 agent 使用，这会直接影响企业里谁能把 Codex 当成 day-to-day operator。保留意见是，文章给的成效指标还偏内部叙事，外部企业真正关心的 auditability、rollback 和误操作边界还需要更多实证。",
+      "tags": [
+        "codex",
+        "chatgpt-work",
+        "admin-plugin",
+        "enterprise",
+        "workspace-ops"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "9ad99bb5f40a",
+    "url": "https://openai.com/index/jalapeno-first-results",
+    "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-25",
+    "added_at": "2026-08-25T13:40:00+00:00",
+    "summary": {
+      "tldr": "OpenAI 首次披露自研 inference chip Jalapeño 的测量结果，核心 claim 很直接：同一套架构同时拿到更高 throughput 和更低 latency，而不是在两者间做传统 tradeoff。文章把它包装成 full-stack system win，但对开发者更实际的含义是，agent-heavy workloads 的 serving economics 可能继续下探。",
+      "key_points": [
+        "官方称 Jalapeño 在 GPT-OSS 120B、DeepSeek R1 670B 和 Kimi K2.5 1T 上都跑出了更优的 performance-per-watt / latency 组合。",
+        "按文中汇总口径，在三组 public models 上，峰值 throughput per watt 提升约 1.5x 到 1.9x，end-to-end latency 降低约 1.7x 到 3.6x。",
+        "OpenAI 反复强调这块芯片是围绕 interactive agents 设计的，把 chip、memory、network、software 和 rack-scale system 一起 co-design。",
+        "文章还披露 Codex + GPT-Astra 帮团队把 3 个原本不在生产计划内的 open-weight models 在两个月内调到高性能，并称部分 kernel 的 AI-generated implementation 比人工版本快 1.5x 到 1.8x。",
+        "Jalapeño 计划在 2026 年底前开始部署到 OpenAI 自有 compute infrastructure。"
+      ],
+      "why_it_matters": "如果这些数字经得起后续外部 scrutiny，价值不只是 OpenAI 芯片故事，而是更低的 latency 和更高的 power efficiency 会直接放大 long-horizon agents 的可用性。很多 agent 任务是串行多步执行，单步延迟下降会在整条 workflow 上复利。",
+      "my_take": "我给 high importance，但判断偏谨慎。亮点是 OpenAI 终于给出了 public-benchmark 级别的 chip 结果，而且把 agent workload 作为 first-class design target。保留意见是，当前证据仍然来自 OpenAI 自己挑选的比较口径与 workload mix，真正决定影响力的将是量产部署后的稳定性、软件成熟度，以及这些效率收益能否传导到真实 API / product 价格和体验。",
+      "tags": [
+        "jalapeno",
+        "inference",
+        "chips",
+        "latency",
+        "agents"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "829e237a888d",
+    "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+    "title": "The full stack behind abundant intelligence",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-25",
+    "added_at": "2026-08-25T13:40:00+00:00",
+    "summary": {
+      "tldr": "这篇是 Sarah Friar 写的 strategy piece，主张 OpenAI 的竞争优势不只是 frontier model 本身，而是从 chip、data center、serving software 到 platform、products、devices 的 full-stack compounding system。它和 Jalapeño 测试结果是成对出现的：前者给 narrative，后者给测量证据。",
+      "key_points": [
+        "文章把 OpenAI 的 compute strategy 定义成 integrated system：数据中心与芯片、frontier models、developer platform、consumer / enterprise products 以及 AI-native devices 彼此增强。",
+        "文中用 Jalapeño 作为最新例子，称其在 InferenceX 上对 GPT-OSS 120B、DeepSeek R1、Kimi K2 展现出更高 peak throughput per kW 和更低 token latency。",
+        "OpenAI 明确把 portfolio 逻辑讲成“build for leverage, partner for breadth”，既继续使用 Microsoft / NVIDIA，也纳入 AWS、AMD、Broadcom、Cerebras、CoreWeave、Oracle 等。",
+        "面向产品层，文章引用 Artificial Analysis Coding Agent Index，称 GPT-5.6 Sol with max reasoning 在达到新高的同时，相比另一领先模型少用 54% output tokens。"
+      ],
+      "why_it_matters": "这不是一篇单点产品公告，而是 OpenAI 对外重写竞争叙事：未来的护城河不只是训练出更强模型，而是把 serving economics、supply portfolio、产品流量和 agent usage 数据接成一个闭环。对观察行业的人来说，这解释了为什么基础设施新闻现在会直接出现在同一条产品叙事线上。",
+      "my_take": "我给 medium importance。它的信息密度不如 Jalapeño 正文高，但作为 CEO/CFO 级叙事样本很值得跟踪，因为它透露 OpenAI 接下来会越来越强调 economics of useful intelligence，而不只讲 benchmark。保留意见是，文章本身更像 thesis statement，很多关键判断仍需要后续产品定价、部署规模和第三方测量来落地。",
+      "tags": [
+        "openai",
+        "full-stack",
+        "compute",
+        "economics",
+        "gpt-5.6"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "face5a929444",
+    "url": "https://thinkingmachines.ai/news/safety-research-grants/",
+    "title": "Announcing Safety Research Grants",
+    "source_id": "thinking_machines_site",
+    "source_name": "Thinking Machines",
+    "category": "thinking_machines",
+    "vendor": "Thinking Machines",
+    "published_at": "2026-08-24",
+    "added_at": "2026-08-25T13:40:00+00:00",
+    "summary": {
+      "tldr": "Thinking Machines 宣布推出 Tinker safety research grants，最高提供 5 万美元 credits，专门资助 open-weight models 上的 safety work。文章不是在发模型，而是在公开它关心的研究 agenda：defense-over-offense differential acceleration、hazardous data filtering、tamper-resistant safeguards、emergent misalignment、reward hacking 和 worst-case risk forecasting。",
+      "key_points": [
+        "项目背景是 Inkling 与 Inkling-Small 的 open-weights 发布之后，团队开始把“更开放”与“更可验证的 safety research”绑定起来。",
+        "正文列出了三大研究方向：making models safer to open、understanding alignment failure modes、measuring and forecasting risk。",
+        "具体问题都很技术化，例如能否在 fine-tuning 后让 defensive skill uplift 明显高于 offensive uplift，或让训练期 safeguards 在 downstream modification 下仍保持稳健。",
+        "Thinking Machines 还明确把 adversarial fine-tuning、reward hacking、oversight gaming 和 scaling forecast 当成值得资助的实证课题，而不是只谈原则。"
+      ],
+      "why_it_matters": "对这个 lab 来说，这条比普通 company-news 更重要，因为它暴露了其安全研究优先级，也说明它想围绕 open-weight 模型建立一个外部实验生态。相比抽象宣言，credits-based grant 更可能催生可复现、可比较的实证结果。",
+      "my_take": "我给 medium importance。优点是问题设置够具体，和当下 open-weight safety 的真实争议点对得上，不像很多 grant post 只写愿景。保留意见是，credit grant 更适合拉动 Tinker 生态，而不一定天然等于高质量 safety output；最终价值还要看是否能产出可公开复现的 benchmark、negative result 和 attack/defense evidence。",
+      "tags": [
+        "thinking-machines",
+        "open-weights",
+        "safety",
+        "grants",
+        "tinker"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "ccebb06f6c32",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+    "title": "Introducing Gemini 3.7 Flash",
+    "source_id": "google_gemini_ai_blog",
+    "source_name": "Google AI Blog - Gemini",
+    "category": "google_gemini",
+    "vendor": "Google",
+    "published_at": "2026-08-13",
+    "added_at": "2026-08-25T13:40:00+00:00",
+    "summary": {
+      "tldr": "Google 发布 Gemini 3.7 Flash，把它定位成面向 coding 和 agents 的 workhorse model：比 3.6 Flash 更强，同时把价格打到原始 3.6 Flash 的一半。文章最值得看的不是“更强”本身，而是它把 software engineering、web development、document-heavy workflows 和 agent execution 一起当成主战场。",
+      "key_points": [
+        "官方给出的核心 benchmark 包括 FrontierCode 1.1 Main 43.6% vs 34.4%，DeepSWE v1.1 65.3% vs 49.0%，以及 WebDev Arena Elo 1588 vs 1538。",
+        "Google 还强调在 PDF-heavy knowledge work 和 enterprise workflow automation 上的改进，例如 GDP.pdf 34.0% vs 22.0%，AutomationBench 30.4% vs 17.0%。",
+        "3.7 Flash 的定价写得很 aggressive：2026 年底前输入 $0.75 / 1M、输出 $3.75 / 1M tokens，相当于以更低成本卖更高能力。",
+        "产品落地上，它将驱动 Gemini Spark，并支持 Google AI Studio、Android Studio 和 Gemini Enterprise Agent Platform。",
+        "安全部分则提到更新了 CBRN 与 cyber offense safeguards，并附带 model card。"
+      ],
+      "why_it_matters": "这篇直接说明 Google 不再把 Flash 系列只当“便宜快速”的次级档，而是在把它往 production agent default 推。对开发者真正敏感的是 price-performance 斜率：如果一个 workhorse 模型在 coding、web 和 workflow automation 上持续进步，同时价格更低，它会显著改变多 agent 系统的成本结构。",
+      "my_take": "我给 high importance。最强信号是 Google 开始把 coding / agent / enterprise workflow 放在同一套叙事里，而且给了比前代明显更激进的价格。需要保留的怀疑是，文中 benchmark 仍大多来自官方选择的任务集，真实开发环境里 instruction fidelity、tool-call reliability 和 long-run stability 是否同步提升，还需要更多第三方使用证据。",
+      "tags": [
+        "gemini",
+        "flash",
+        "coding",
+        "agents",
+        "price-performance"
+      ],
+      "importance": "high"
+    }
+  },
+  {
     "id": "09c735fe0295",
     "url": "https://claude.com/blog/how-an-anthropic-field-marketer-uses-claude-code-to-send-weekly-personalized-updates-to-every-sales-rep",
     "title": "How an Anthropic field marketer uses Claude Code to send weekly personalized updates to every sales rep",
