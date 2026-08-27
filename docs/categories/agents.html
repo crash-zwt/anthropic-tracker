@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-27 10:20 Asia/Shanghai</dd>
+            <dd>2026-08-28 05:34 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>256</dd>
+            <dd>259</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>75</strong>
+      <strong>77</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>18</strong>
+      <strong>19</strong>
     </a>
     
         </div>
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-20"><span>2026-08-20</span><strong>2</strong></a>
+          <a href="#date-2026-08-26"><span>2026-08-26</span><strong>1</strong></a>
+<a href="#date-2026-08-20"><span>2026-08-20</span><strong>2</strong></a>
 <a href="#date-2026-08-18"><span>2026-08-18</span><strong>1</strong></a>
 <a href="#date-2026-08-06"><span>2026-08-06</span><strong>1</strong></a>
 <a href="#date-2026-07-24"><span>2026-07-24</span><strong>2</strong></a>
@@ -118,7 +119,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-27 10:20 Asia/Shanghai
+        Generated: 2026-08-28 05:34 Asia/Shanghai
       </footer>
     </aside>
 
@@ -134,6 +135,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-26">
+              <div class="date-heading">
+                <h3>2026-08-26</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-08-26</span>
+        <span>Added 2026-08-27</span>
+      </div>
+      <h2>How Warp builds self-improving agents on Claude</h2>
+      <a class="original-link" href="https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Warp 这篇案例介绍了一种很实用的 self-improving agent pattern：把 domain knowledge 放进 base skill，让另一个定期运行的 improver skill 消化人类反馈，只提出小而可审查的 skill patch，再走正常 PR/review 流程合并。重点不是更复杂的 agent scaffold，而是把 feedback 从“会话结束即蒸发”变成可累积、可版本化的知识资产。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Warp 的触发点来自内部 code review agent 质量不稳定：手改 prompt 和补 AGENTS.md 有帮助，但都不具备长期复利。</li><li>他们把 agent 拆成两层：inner/base skill 负责一线任务执行，outer/improver skill 定期读取 thumbs up/down 和文字反馈，提议对 base skill 做 focused edits。</li><li>因为 skills 本质上是普通文件，所以改动可以进入现有 PR/code-review/merge 流程，避免把“自我改进”做成不透明的在线自修改系统。</li><li>文章给了几个写 skill 的经验：写 principles 而不是死规则、解释 why、保留 enough context、让反馈尽量具体。</li><li>Warp 已把这个模式扩展到 spec writing、review、triage 等多个 agents，说明它在真实团队里更像可复制的 process pattern，而不只是单点营销案例。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 agent engineering 来说，这篇文章的价值在于它提供了一个低复杂度、可审计、适合团队落地的持续改进框架。很多团队都知道 agent 需要 memory/feedback，但常见实现要么太 ad hoc，要么太自动化以至于难审计；Warp 这套 file-based skill loop 在工程组织里更容易真正跑起来。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance。它不是 frontier capability 发布，但工程含金量比很多 “agent 成功故事” 高，因为 pattern 足够简单，也尊重代码审查和变更治理。我的保留意见是，这种方法更像让 agent policy 逐步进化，而不是直接提升底层模型能力；如果反馈稀疏、噪音大，improver skill 也可能把局部偏好写死进知识层。</p>
+      </section>
+      <div class="tags"><span>claude</span><span>agents</span><span>warp</span><span>skills</span><span>feedback-loop</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-20">
               <div class="date-heading">
                 <h3>2026-08-20</h3>

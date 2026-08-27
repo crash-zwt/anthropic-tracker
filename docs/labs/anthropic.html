@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-27 10:20 Asia/Shanghai</dd>
+            <dd>2026-08-28 05:34 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>256</dd>
+            <dd>259</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic is-active" href="#top">
       <span>Anthropic / Claude</span>
-      <strong>75</strong>
+      <strong>77</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>18</strong>
+      <strong>19</strong>
     </a>
     
         </div>
@@ -96,15 +96,15 @@
       <section class="panel">
         <h2>Topics</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#topic-model"><span>Model</span><strong>7</strong></a>
+          <a href="#topic-model"><span>Model</span><strong>8</strong></a>
 <a href="#topic-alignment"><span>Alignment</span><strong>12</strong></a>
-<a href="#topic-agents"><span>Agents</span><strong>24</strong></a>
+<a href="#topic-agents"><span>Agents</span><strong>25</strong></a>
 <a href="#topic-code"><span>Code</span><strong>32</strong></a>
         </nav>
       </section>
 
       <footer>
-        Generated: 2026-08-27 10:20 Asia/Shanghai
+        Generated: 2026-08-28 05:34 Asia/Shanghai
       </footer>
     </aside>
 
@@ -123,9 +123,46 @@
             <section class="topic-section" id="topic-model">
               <div class="topic-heading">
                 <h3>Model</h3>
-                <span>7 posts</span>
+                <span>8 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-27">
+              <div class="date-heading">
+                <h3>2026-08-27</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-model">Model</span>
+        <span>Anthropic News</span>
+        <span>2026-08-27</span>
+        <span>Added 2026-08-27</span>
+      </div>
+      <h2>Previewing the Model Hardware Standard</h2>
+      <a class="original-link" href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 发布 Model Hardware Standard (MHS) research preview，目标不是再做一个 lab demo，而是给 AI agents 控制显微镜、液体处理器、机械臂、量子设备等可编程硬件建立统一 driver/spec。核心卖点是把过去需要数周到数月的 bespoke hardware integration 压到小时级，并让 agent 能通过 MCP、CLI 和 API files 在多设备间做闭环 orchestration。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>MHS 把硬件抽象成统一的 read/write primitives，并把设备能力、可调参数和 safety limits 组织成 agent 可读的 reference file，减少每台设备单独写 translator 的成本。</li><li>Anthropic 强调它是 model-agnostic 的标准，不绑定 Claude；任何 agent harness 只要支持标准协议，例如 Model Context Protocol，都可以接入。</li><li>文中给了几个真实早期案例：Genentech 用它编排 BCA protein assay，Claude 在液体处理、机械臂和 plate reader 之间做 closed-loop optimization；其他合作方把它用于 qPCR 监控、机器人交接和激光校准。</li><li>文章也没有回避当前限制：模型在物理、化学、生物约束上的直觉仍不稳定，遇到 bubbles 这类真实实验问题时，需要 harness、技能封装和人工反馈一起兜底。</li><li>Anthropic 当前把 MHS 先放在 research preview 阶段，先和 labs/manufacturers 共建 safety eval 与 best practices，再考虑 open source。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这条对 tracker 的意义很高，因为它把 agent 能力从 screen/software world 明确推进到 physical world。相比单纯宣布 “computer use”，MHS 讨论的是如何给真实仪器建立标准控制面和安全边界，这直接关系到 autonomous science、robotics 和制造场景能否规模化落地。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 high importance。最值得注意的不是 Anthropic 又做了一个 lab automation showcase，而是它开始抢占 “AI-to-hardware standard” 这一层接口定义权，类似把 MCP 的思路继续往 physical tooling 外延。保留意见是，文章里的成功案例仍高度依赖定制 harness 和合作伙伴环境，距离跨厂商即插即用还很远；但如果这个接口层成形，它对 science/robotics agent 生态的影响会比单篇 benchmark 更大。</p>
+      </section>
+      <div class="tags"><span>anthropic</span><span>hardware-agents</span><span>mhs</span><span>mcp</span><span>lab-automation</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-07">
               <div class="date-heading">
                 <h3>2026-08-07</h3>
@@ -834,9 +871,46 @@
             <section class="topic-section" id="topic-agents">
               <div class="topic-heading">
                 <h3>Agents</h3>
-                <span>24 posts</span>
+                <span>25 posts</span>
               </div>
               
+            <section class="date-section" id="date-2026-08-26">
+              <div class="date-heading">
+                <h3>2026-08-26</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-agents">Agents</span>
+        <span>Claude Blog - Agents</span>
+        <span>2026-08-26</span>
+        <span>Added 2026-08-27</span>
+      </div>
+      <h2>How Warp builds self-improving agents on Claude</h2>
+      <a class="original-link" href="https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Warp 这篇案例介绍了一种很实用的 self-improving agent pattern：把 domain knowledge 放进 base skill，让另一个定期运行的 improver skill 消化人类反馈，只提出小而可审查的 skill patch，再走正常 PR/review 流程合并。重点不是更复杂的 agent scaffold，而是把 feedback 从“会话结束即蒸发”变成可累积、可版本化的知识资产。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>Warp 的触发点来自内部 code review agent 质量不稳定：手改 prompt 和补 AGENTS.md 有帮助，但都不具备长期复利。</li><li>他们把 agent 拆成两层：inner/base skill 负责一线任务执行，outer/improver skill 定期读取 thumbs up/down 和文字反馈，提议对 base skill 做 focused edits。</li><li>因为 skills 本质上是普通文件，所以改动可以进入现有 PR/code-review/merge 流程，避免把“自我改进”做成不透明的在线自修改系统。</li><li>文章给了几个写 skill 的经验：写 principles 而不是死规则、解释 why、保留 enough context、让反馈尽量具体。</li><li>Warp 已把这个模式扩展到 spec writing、review、triage 等多个 agents，说明它在真实团队里更像可复制的 process pattern，而不只是单点营销案例。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>对 agent engineering 来说，这篇文章的价值在于它提供了一个低复杂度、可审计、适合团队落地的持续改进框架。很多团队都知道 agent 需要 memory/feedback，但常见实现要么太 ad hoc，要么太自动化以至于难审计；Warp 这套 file-based skill loop 在工程组织里更容易真正跑起来。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance。它不是 frontier capability 发布，但工程含金量比很多 “agent 成功故事” 高，因为 pattern 足够简单，也尊重代码审查和变更治理。我的保留意见是，这种方法更像让 agent policy 逐步进化，而不是直接提升底层模型能力；如果反馈稀疏、噪音大，improver skill 也可能把局部偏好写死进知识层。</p>
+      </section>
+      <div class="tags"><span>claude</span><span>agents</span><span>warp</span><span>skills</span><span>feedback-loop</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-20">
               <div class="date-heading">
                 <h3>2026-08-20</h3>

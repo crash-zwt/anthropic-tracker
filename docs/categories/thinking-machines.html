@@ -19,19 +19,19 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-27 10:20 Asia/Shanghai</dd>
+            <dd>2026-08-28 05:34 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
-            <dd>2</dd>
+            <dd>3</dd>
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>256</dd>
+            <dd>259</dd>
           </div>
           <div>
             <dt>Errors</dt>
-            <dd>2</dd>
+            <dd>0</dd>
           </div>
         </dl>
       </section>
@@ -42,12 +42,12 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>OpenAI</span>
-              <strong>2 new</strong>
+              <strong>0 new</strong>
             </li>
             
             <li>
@@ -57,7 +57,7 @@
             
             <li>
               <span>Thinking Machines</span>
-              <strong>0 new</strong>
+              <strong>1 new</strong>
             </li>
             
         </ul>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>75</strong>
+      <strong>77</strong>
     </a>
     
 
@@ -87,7 +87,7 @@
 
     <a class="lab-stat lab-thinking_machines" href="../labs/thinking-machines.html">
       <span>Thinking Machines</span>
-      <strong>18</strong>
+      <strong>19</strong>
     </a>
     
         </div>
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-08-24"><span>2026-08-24</span><strong>1</strong></a>
+          <a href="#date-2026-08-27"><span>2026-08-27</span><strong>1</strong></a>
+<a href="#date-2026-08-24"><span>2026-08-24</span><strong>1</strong></a>
 <a href="#date-2026-07-31"><span>2026-07-31</span><strong>1</strong></a>
 <a href="#date-2026-07-30"><span>2026-07-30</span><strong>1</strong></a>
 <a href="#date-2026-07-15"><span>2026-07-15</span><strong>1</strong></a>
@@ -118,7 +119,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-27 10:20 Asia/Shanghai
+        Generated: 2026-08-28 05:34 Asia/Shanghai
       </footer>
     </aside>
 
@@ -134,6 +135,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-27">
+              <div class="date-heading">
+                <h3>2026-08-27</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-thinking_machines">Thinking Machines</span>
+        <span>Thinking Machines</span>
+        <span>2026-08-27</span>
+        <span>Added 2026-08-27</span>
+      </div>
+      <h2>Putting Task Expertise into RL Achieves State-of-the-Art Performance on Text-to-SQL</h2>
+      <a class="original-link" href="https://thinkingmachines.ai/news/putting-task-expertise-into-rl/" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Thinking Machines 联合 UIUC/Bridgewater 团队发布一篇很“research-first”的 Text-to-SQL 文章：与其继续叠更多 agent scaffold，不如把 task expertise 直接写进 RL 训练。核心做法是先清洗高噪声 SQL 数据集，再用更贴合任务语义的 reward shaping 做 RLVR，最终让 ReViSQL-K2.6 在 BIRD/Arcwise-Plat-SQL 上达到 human-level 以上表现，而且成本明显低于 frontier closed models。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>文章先批评当前 text-to-SQL 进展过度依赖 multi-stage scaffolding，虽然能提分，但本质是在模型外补流程，离人类专家那种稳定任务直觉还有差距。</li><li>他们审计了 2.5k 条 BIRD Train 样本，认为 61.1% 存在不同形式的标注或知识错误，并把“高质量数据”视为 RLVR 成败的前提。</li><li>方法上有两个关键增强：expert-verified training set，以及针对 text-to-SQL 常见失败模式设计的 reward shaping，而不是只看粗糙 execution match。</li><li>结果是 ReViSQL-K2.6 在 16-sample self-consistency 下首次超过 92.96% 的 human proxy，并宣称成本只有 GPT-5.6 Sol Ultra 和 Claude Fable 5 的约 12% 到 15%。</li><li>文章同时释放了 code、data 和 technical report，说明它更像一次可复现的研究投放，而不是单纯的产品宣传。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这条对 tracker 的价值在于，它反映了 Thinking Machines 当前很明确的路线偏好：优先把 domain expertise 通过数据清洗、reward 设计和训练 recipe 吃进模型，而不是无限堆 orchestration。对关心 agent/evals 的读者，这也是一个提醒: 很多 benchmark 提升未必只能靠更复杂的 scaffold。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 medium importance。它不是通用 agent breakthrough，但在“可验证任务能否靠更干净数据和更好 RL recipe 打穿”这个问题上给了很强信号。需要保留的判断是，text-to-SQL 本身是高度结构化、reward 相对清晰的任务，这种成功未必能直接外推到开放式 agent work；不过对垂直任务建模而言，这条路线比再堆 prompt stage 更扎实。</p>
+      </section>
+      <div class="tags"><span>thinking-machines</span><span>rlvr</span><span>text-to-sql</span><span>reward-shaping</span><span>tinker</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-08-24">
               <div class="date-heading">
                 <h3>2026-08-24</h3>
