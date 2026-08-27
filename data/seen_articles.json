@@ -3105,5 +3105,15 @@
     "source_id": "thinking_machines_site",
     "first_seen_at": "2026-08-25T13:40:00+00:00",
     "ignored_reason": "non_article_apply_page"
+  },
+  "https://openai.com/index/hugging-face-incident-and-the-road-ahead": {
+    "title": "The Hugging Face incident and the road ahead",
+    "source_id": "openai_model_product",
+    "first_seen_at": "2026-08-27T02:20:08+00:00"
+  },
+  "https://openai.com/index/loveholidays": {
+    "title": "How loveholidays is making everyone a builder with Codex",
+    "source_id": "openai_codex_product",
+    "first_seen_at": "2026-08-27T02:20:08+00:00"
   }
 }
