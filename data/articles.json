@@ -1,5 +1,98 @@
 [
   {
+    "id": "293bd11dfc89",
+    "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+    "title": "Automated researchers can reliably mitigate alignment failures",
+    "source_id": "anthropic_alignment",
+    "source_name": "Anthropic Alignment",
+    "category": "alignment",
+    "vendor": "Anthropic",
+    "published_at": "2026-08-28",
+    "added_at": "2026-08-28T21:41:54+00:00",
+    "summary": {
+      "tldr": "Anthropic 这篇研究把 “AI helps align AI” 往前推了一步：他们训练/编排 automated researchers 去审计 frontier models 的隐藏 failure mode，再给出 targeted mitigation。文章最关键的信号不是又做了一次 red-teaming demo，而是这种 researcher-style agent 在 Claude Opus 5、GPT-5.6、Gemini 3.5 等模型上，已经能比较稳定地发现并修补一部分对齐缺陷。",
+      "key_points": [
+        "核心任务是让 model-based researchers 先寻找隐蔽的 alignment failures，再生成可执行的 mitigation proposal，而不是只做开放式安全讨论。",
+        "Anthropic 报告说，这些 automated researchers 在受控评估里能发现相当比例的隐藏问题，并且提出的修复可以提升后续对齐表现，说明它们开始具备实用审计价值。",
+        "文章强调流程化研究而不是单轮 prompt：需要 hypothesis generation, targeted probing, evidence collection, and mitigation drafting 组成一个完整 loop。",
+        "他们同时承认边界：这类系统仍依赖人为设定任务、评估标准和最终审查，离 fully autonomous alignment research 还很远。",
+        "从外部视角看，这也是 Anthropic 在把 alignment 从静态 policy 文档转成可 operationalize 的 agent workflow。"
+      ],
+      "why_it_matters": "这条值得跟踪，因为它把 alignment research 从 “模型会不会更安全” 转成 “能否用自动化研究流程更快定位并修复失效模式”。如果这条路线继续成立，未来安全迭代速度可能会越来越依赖研究-agent 和 eval infrastructure，而不只是人工审稿速度。",
+      "my_take": "我给 high importance。对做 agents / evals 的人来说，最有价值的是它证明 research workflow automation 已经开始碰到真正高杠杆的安全工作，而不只是写报告。保留意见是，文章没有把泛化边界说透: 在更开放、reward 更模糊的 alignment 问题上，这种 “automated researcher” 是否还能可靠工作，仍然要看更长期的外部复现。",
+      "tags": [
+        "anthropic",
+        "alignment",
+        "automated-researchers",
+        "safety-evals",
+        "mitigation"
+      ],
+      "importance": "high"
+    }
+  },
+  {
+    "id": "8ec710c0d694",
+    "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/expert-intelligence-leading-sources/",
+    "title": "Expert Intelligence: A new way for you to engage with leading sources",
+    "source_id": "google_gemini_ai_blog",
+    "source_name": "Google AI Blog - Gemini",
+    "category": "google_gemini",
+    "vendor": "Google",
+    "published_at": "2026-08-27",
+    "added_at": "2026-08-28T21:41:54+00:00",
+    "summary": {
+      "tldr": "Google 把 Gemini Notebook 往 “trusted research workspace” 的方向推了一步。Expert Intelligence 的核心不是再加一个通用 chatbot，而是让用户围绕权威来源做问答、比较和延展阅读，把 complex topic exploration 建在更明确的 source grounding 上。",
+      "key_points": [
+        "新功能的定位是帮助用户更高效地和 leading sources 交互，而不是只从开放网页里抓一层泛化摘要。",
+        "Gemini Notebook 在这里更像一个 source-first reasoning surface：用户先选可信内容，再让模型做 synthesis, comparison, and follow-up exploration。",
+        "从产品方向看，这说明 Google 正在把 Gemini Notebook 从笔记/研究助手，往更强的 domain learning 和 evidence-backed discovery 工具推进。",
+        "这类设计天然更适合 science, policy, finance, and education 等高信息密度场景，因为 provenance 比单次生成花哨度更重要。",
+        "同时它也暗示 Google 想把 Gemini 的价值更多绑定到 content trust and retrieval quality，而不是只卷模型聊天体验。"
+      ],
+      "why_it_matters": "对个人使用判断来说，这条比普通 feature launch 更有实践价值，因为它在回答一个更现实的问题：当大家都能生成答案后，谁能更稳定地把答案锚定到可靠来源。对于做研究、写材料、读论文的人，这个方向比单纯“更会聊”更重要。",
+      "my_take": "我给 medium importance。产品方向是对的，尤其适合我这种重视 source traceability 的工作流；但真正壁垒不在界面名词，而在 source coverage、引用粒度和错误归因处理是否足够强。如果 grounding 只能做到“像引用”，而不是“可核查”，长期价值会被打折。",
+      "tags": [
+        "google",
+        "gemini-notebook",
+        "grounding",
+        "trusted-sources",
+        "research-workflow"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
+    "id": "c5962e7a022b",
+    "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/",
+    "title": "We're introducing flexible usage limits for Gemini Notebook.",
+    "source_id": "google_gemini_ai_blog",
+    "source_name": "Google AI Blog - Gemini",
+    "category": "google_gemini",
+    "vendor": "Google",
+    "published_at": "2026-08-28",
+    "added_at": "2026-08-28T21:41:54+00:00",
+    "summary": {
+      "tldr": "这篇更新不谈新 benchmark，而是 Gemini Notebook 的 product packaging。Google 调整了 usage limits / compute budget 机制，目标是让 Pro 用户在高强度研究或长上下文工作流里少被硬性中断。它本质上是在把 Notebook 从“偶尔试试的 AI 功能”改成更可连续使用的 paid productivity tool。",
+      "key_points": [
+        "官方表述的重点是更 flexible and uninterrupted 的使用体验，说明此前的固定配额对重度用户已经构成明显摩擦。",
+        "这类调整通常意味着产品 usage pattern 已经从轻量尝鲜转向更长时长、更高算力、更持续的会话。",
+        "从商业化角度看，Google 在尝试把 Gemini Notebook 的价值和 compute consumption 更直接绑定，而不是继续用模糊额度维持体验。",
+        "对真实工作流用户来说，usage policy 变化往往比新按钮更重要，因为它直接决定这个工具能不能被放心放进 daily research loop。",
+        "这也说明 Google 开始认真优化 Gemini Notebook 的 retained usage，而不是只追求发布时的新鲜感。"
+      ],
+      "why_it_matters": "Tracker 里保留这类文章是有意义的，因为 agent / research products 的成败常常不只看模型能力，也看 usage model 是否匹配真实工作流。更灵活的 compute limit 往往是产品从 demo 走向日常工具的一个早期信号。",
+      "my_take": "我给 low-to-medium importance，按当前字段落成 medium。它不是能力跃迁，但很实用。我更关心后续是否会继续公开更透明的 quota / burst / overage 机制；如果只是换了一套不透明限额文案，用户感知价值会有限。",
+      "tags": [
+        "google",
+        "gemini-notebook",
+        "usage-limits",
+        "compute-budget",
+        "productization"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
     "title": "Previewing the Model Hardware Standard",
     "source_id": "anthropic_news",

@@ -19,7 +19,7 @@
         <dl class="stats">
           <div>
             <dt>Last checked</dt>
-            <dd>2026-08-28 05:34 Asia/Shanghai</dd>
+            <dd>2026-08-29 05:41 Asia/Shanghai</dd>
           </div>
           <div>
             <dt>Today new</dt>
@@ -27,7 +27,7 @@
           </div>
           <div>
             <dt>Tracked posts</dt>
-            <dd>259</dd>
+            <dd>262</dd>
           </div>
           <div>
             <dt>Errors</dt>
@@ -42,7 +42,7 @@
           
             <li>
               <span>Anthropic / Claude</span>
-              <strong>2 new</strong>
+              <strong>1 new</strong>
             </li>
             
             <li>
@@ -52,12 +52,12 @@
             
             <li>
               <span>Google</span>
-              <strong>0 new</strong>
+              <strong>2 new</strong>
             </li>
             
             <li>
               <span>Thinking Machines</span>
-              <strong>1 new</strong>
+              <strong>0 new</strong>
             </li>
             
         </ul>
@@ -69,7 +69,7 @@
           
     <a class="lab-stat lab-anthropic" href="../labs/anthropic.html">
       <span>Anthropic / Claude</span>
-      <strong>77</strong>
+      <strong>78</strong>
     </a>
     
 
@@ -81,7 +81,7 @@
 
     <a class="lab-stat lab-google" href="../labs/google.html">
       <span>Google</span>
-      <strong>18</strong>
+      <strong>20</strong>
     </a>
     
 
@@ -96,7 +96,8 @@
       <section class="panel">
         <h2>Archive</h2>
         <nav class="archive-list" aria-label="Article archive by publish date">
-          <a href="#date-2026-07-08"><span>2026-07-08</span><strong>1</strong></a>
+          <a href="#date-2026-08-28"><span>2026-08-28</span><strong>1</strong></a>
+<a href="#date-2026-07-08"><span>2026-07-08</span><strong>1</strong></a>
 <a href="#date-2026-05-08"><span>2026-05-08</span><strong>1</strong></a>
 <a href="#date-2026-05-07"><span>2026-05-07</span><strong>1</strong></a>
 <a href="#date-2026-04-14"><span>2026-04-14</span><strong>1</strong></a>
@@ -112,7 +113,7 @@
       </section>
 
       <footer>
-        Generated: 2026-08-28 05:34 Asia/Shanghai
+        Generated: 2026-08-29 05:41 Asia/Shanghai
       </footer>
     </aside>
 
@@ -128,6 +129,43 @@
         </div>
       </div>
       
+            <section class="date-section" id="date-2026-08-28">
+              <div class="date-heading">
+                <h3>2026-08-28</h3>
+                <a href="#top">Back to top</a>
+              </div>
+              
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="badge badge-alignment">Alignment</span>
+        <span>Anthropic Alignment</span>
+        <span>2026-08-28</span>
+        <span>Added 2026-08-28</span>
+      </div>
+      <h2>Automated researchers can reliably mitigate alignment failures</h2>
+      <a class="original-link" href="https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" target="_blank" rel="noreferrer">Original Link</a>
+      <section>
+        <h3>TL;DR</h3>
+        <p>Anthropic 这篇研究把 “AI helps align AI” 往前推了一步：他们训练/编排 automated researchers 去审计 frontier models 的隐藏 failure mode，再给出 targeted mitigation。文章最关键的信号不是又做了一次 red-teaming demo，而是这种 researcher-style agent 在 Claude Opus 5、GPT-5.6、Gemini 3.5 等模型上，已经能比较稳定地发现并修补一部分对齐缺陷。</p>
+      </section>
+      <section>
+        <h3>Key Points</h3>
+        <ul><li>核心任务是让 model-based researchers 先寻找隐蔽的 alignment failures，再生成可执行的 mitigation proposal，而不是只做开放式安全讨论。</li><li>Anthropic 报告说，这些 automated researchers 在受控评估里能发现相当比例的隐藏问题，并且提出的修复可以提升后续对齐表现，说明它们开始具备实用审计价值。</li><li>文章强调流程化研究而不是单轮 prompt：需要 hypothesis generation, targeted probing, evidence collection, and mitigation drafting 组成一个完整 loop。</li><li>他们同时承认边界：这类系统仍依赖人为设定任务、评估标准和最终审查，离 fully autonomous alignment research 还很远。</li><li>从外部视角看，这也是 Anthropic 在把 alignment 从静态 policy 文档转成可 operationalize 的 agent workflow。</li></ul>
+      </section>
+      <section>
+        <h3>Why It Matters</h3>
+        <p>这条值得跟踪，因为它把 alignment research 从 “模型会不会更安全” 转成 “能否用自动化研究流程更快定位并修复失效模式”。如果这条路线继续成立，未来安全迭代速度可能会越来越依赖研究-agent 和 eval infrastructure，而不只是人工审稿速度。</p>
+      </section>
+      <section>
+        <h3>My Take</h3>
+        <p>我给 high importance。对做 agents / evals 的人来说，最有价值的是它证明 research workflow automation 已经开始碰到真正高杠杆的安全工作，而不只是写报告。保留意见是，文章没有把泛化边界说透: 在更开放、reward 更模糊的 alignment 问题上，这种 “automated researcher” 是否还能可靠工作，仍然要看更长期的外部复现。</p>
+      </section>
+      <div class="tags"><span>anthropic</span><span>alignment</span><span>automated-researchers</span><span>safety-evals</span><span>mitigation</span></div>
+    </article>
+    
+            </section>
+            
+
             <section class="date-section" id="date-2026-07-08">
               <div class="date-heading">
                 <h3>2026-07-08</h3>

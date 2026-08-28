@@ -3130,5 +3130,20 @@
     "title": "Previewing the Model Hardware Standard",
     "source_id": "anthropic_news",
     "first_seen_at": "2026-08-27T21:34:50+00:00"
+  },
+  "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/": {
+    "title": "We're introducing flexible usage limits for Gemini Notebook.",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-28T21:41:54+00:00"
+  },
+  "https://blog.google/innovation-and-ai/products/gemini-notebook/expert-intelligence-leading-sources/": {
+    "title": "Expert Intelligence: A new way for you to engage with leading sources",
+    "source_id": "google_gemini_ai_blog",
+    "first_seen_at": "2026-08-28T21:41:54+00:00"
+  },
+  "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures": {
+    "title": "Automated researchers can reliably mitigate alignment failures",
+    "source_id": "anthropic_alignment",
+    "first_seen_at": "2026-08-28T21:41:54+00:00"
   }
 }
