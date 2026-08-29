@@ -1,5 +1,36 @@
 [
   {
+    "id": "092c8de02e8b",
+    "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+    "title": "Our decision on Cursor following its acquisition by SpaceX",
+    "source_id": "openai_model_product",
+    "source_name": "OpenAI Product - Models",
+    "category": "openai_model",
+    "vendor": "OpenAI",
+    "published_at": "2026-08-28",
+    "added_at": "2026-08-29T23:35:42+00:00",
+    "summary": {
+      "tldr": "OpenAI 这篇声明不是模型发布，而是一次很直接的 distribution governance 信号：由于 Cursor 被 SpaceX 收购，OpenAI 决定按合同窗口逐步终止向 Cursor 提供 OpenAI models，计划关停日期是 2026 年 11 月 12 日。文章的重点不在商业八卦，而在 OpenAI 明确把 downstream partner control、terms compliance 和 future frontier model safety 绑定到一起，甚至点名说这也关系到即将到来的 Astra。",
+      "key_points": [
+        "官方给出的核心决定是 wind down Cursor 合同，并保留最长通知期，让现有开发者有过渡时间。",
+        "OpenAI 把原因归结为 change of control 之后的 trust and compliance risk，尤其是对 SpaceX / xAI 相关实体是否会按条款使用模型缺乏信心。",
+        "文章明确说，随着模型能力提升，合作方接入不再只是普通渠道分发问题，而是 safety-at-scale 和 contractual enforcement 的一部分。",
+        "Astra 被单独提到，说明 OpenAI 已经在用更高能力模型的前置风险，反向塑造生态合作边界。",
+        "对开发者生态来说，这意味着第三方 AI IDE 对上游 frontier model 的依赖仍然很深，平台治理变化会直接传导到工具可用性。"
+      ],
+      "why_it_matters": "这条值得进 tracker，因为它把“谁能分发和承载 frontier models”变成了公开治理议题。相比单纯看模型 benchmark，这类动作更能暴露大厂对渠道、合规和高能力模型外溢风险的真实态度。对长期观察 agent/coding ecosystem 的人来说，模型能力、商业合作和 safety control 已经越来越难拆开看。",
+      "my_take": "我给 medium importance。它不是 capability jump，但信号很强：OpenAI 愿意为控制下游使用边界，主动牺牲一个重要开发者入口。我的判断是，这类事件会让 AI IDE / agent product 更重视多模型冗余、供应链 independence 和 contract risk，而不只是比谁接入最新模型更快。",
+      "tags": [
+        "openai",
+        "cursor",
+        "distribution-governance",
+        "developer-ecosystem",
+        "astra"
+      ],
+      "importance": "medium"
+    }
+  },
+  {
     "id": "293bd11dfc89",
     "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
     "title": "Automated researchers can reliably mitigate alignment failures",
